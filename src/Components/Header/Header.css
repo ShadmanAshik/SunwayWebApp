@@ -1,0 +1,61 @@
+.nav-bg{
+    background-color: rgb(0, 0, 0);
+}
+.Nav-bar{
+    text-decoration: none;
+    margin-right: 10px;
+    color: rgb(248, 242, 242);
+    font-size: 1vw;
+} 
+.DropDownItem{
+    text-decoration: none;
+    margin-right: 10px;
+    color: rgb(248, 242, 242);
+}
+.Nav-bar:hover , .DropDownItem:hover{
+    color:orange
+}
+
+.dropdown-menu{
+    background-color: rgb(46, 46, 46);
+    width: max-content;
+}
+.company-dropdown{
+    margin-left: 20px !important;
+    width: 100%;
+}
+.company-dropdown:hover{
+    background-color: white;
+}
+.logo{
+    width: 250px;
+    padding: 0;
+}
+.nav-link{
+    padding:0;
+}
+
+.nav-link::after{
+    color:white;
+}
+
+#signin{
+    background-color: black;
+    color:white;
+    width: max-content;
+}
+#signin:hover{
+    background-color: white;
+    color: black;
+}
+.seperator{
+    color:white;
+}
+.custom-toggler .navbar-toggler-icon {
+    color: white
+}
+.scrwaller{
+    background-color: black;
+    color: red;
+    height:22px;
+}

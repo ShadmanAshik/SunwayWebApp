@@ -1,0 +1,29 @@
+
+/*.heroimg{
+    width: 70vw;
+    height: 34.5vw;
+}
+ */
+ 
+.caurousel-caption {
+  /* top: 50%; */
+  transform: translateY(-50%);
+  background-color: rgba(95, 94, 93, 0.308);
+  margin:1vw;
+  padding: 3vw
+}
+.caurousel-caption h1{
+    color: orange;
+    margin-bottom: 5vh;
+}
+.caurousel-caption p{
+    text-align: justify;
+}
+.heroBtn{
+    color:white;
+    background-color: rgb(253, 167, 7);
+    width: 130px;
+}
+#apply{
+    margin-left:150px ;
+}
