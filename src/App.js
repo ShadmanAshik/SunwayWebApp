@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Components/Header/Header";
@@ -10,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Footer />
+      <Footer/>
       <MessengerCustomerChat pageId="103946112131280" appId="714278166202341" />
     </div>
   );

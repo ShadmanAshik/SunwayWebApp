@@ -16,7 +16,7 @@ const Header = () => {
         <div>         
           <Navbar className="nav-bg" expand="lg">          
             <Container>
-              <Navbar.Brand href="#home">
+              <Navbar.Brand href="/home">
                 <img className="logo" src="https://i.ibb.co/XxzXZFN/Whats-App-Image-2021-12-05-at-8-06-48-PM.jpg"
                   alt="Logo"
                   border="0"
@@ -320,6 +320,7 @@ const Header = () => {
           <Route exact path="about" element={<AboutUS />} />
           <Route exact path="whyssg" element={<WhySSG />} />
           <Route exact path="missionvision" element={<MissionVision />} />
+          
         </Routes>
       </BrowserRouter>
     </div>

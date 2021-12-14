@@ -27,15 +27,6 @@ const HeroSection = () => {
             />
             <Carousel.Caption className="caurousel-caption d-none d-md-block">
               <h1>Welcome to SSG</h1>
-              <p>
-                SSG is one of the most innovative organizations in overseas
-                education consultancy. It works to turn the dreams and personal
-                ambitions of global students into a reality helping them with
-                career counselling, admissions, visa processing, ticketing,
-                pre-departure briefings and accommodation. We envision to be the
-                most authentic and transparent consultancy and to be a pathway
-                of your dream in studying abroad.
-              </p>
               <Button className="heroBtn" id="explore" variant="secondary">
                 Explore more
               </Button>
@@ -52,14 +43,6 @@ const HeroSection = () => {
             />
             <Carousel.Caption className="caurousel-caption d-none d-md-block">
               <h1>World Wide Admission</h1>
-              <p>
-                You, the aspiring students, cherish the dream of further
-                education abroad as studying abroad will give you incredible
-                experiences, a new perspective, a new worldview and a new
-                appreciation for other cultures and people. It is actually a
-                journey to discover the new world. But almost 90% of you are not
-                aware of admission procedure to reach out to success.
-              </p>
               <Button className="heroBtn" id="explore" variant="secondary">
                 Explore more
               </Button>
@@ -108,14 +91,6 @@ const HeroSection = () => {
             />
             <Carousel.Caption className="caurousel-caption d-none d-md-block">
               <h1>Be Our Partner</h1>
-              <p>
-                SSG is a Global Edu-Aid platform where you can grow your
-                business, no matter which country you are applying from. If you
-                already have your own business setup with total communication
-                system, you can apply for being a Global Business Agent with
-                SSG. And you will be empowered to refer students wishing to
-                study abroad and can provide them advice and assistance.
-              </p>
               <Button className="heroBtn" id="explore" variant="secondary">
                 Explore more
               </Button>
