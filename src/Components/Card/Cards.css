@@ -1,0 +1,12 @@
+.cardText{
+    color:black;
+    text-align: left;
+}
+.cardImg{
+    height: 200px;
+    width: auto;
+}
+.cardtitle{
+    font-weight: bold;
+    color: orange;
+}

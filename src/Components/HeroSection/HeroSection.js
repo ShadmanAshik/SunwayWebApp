@@ -30,9 +30,6 @@ const HeroSection = () => {
               <Button className="heroBtn" id="explore" variant="secondary">
                 Explore more
               </Button>
-              <Button className="heroBtn" id="apply" variant="secondary">
-                Apply
-              </Button>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -45,9 +42,6 @@ const HeroSection = () => {
               <h1>World Wide Admission</h1>
               <Button className="heroBtn" id="explore" variant="secondary">
                 Explore more
-              </Button>
-              <Button className="heroBtn" id="apply" variant="secondary">
-                Apply
               </Button>
             </Carousel.Caption>
           </Carousel.Item>
@@ -62,9 +56,7 @@ const HeroSection = () => {
               <Button className="heroBtn" id="explore" variant="secondary">
                 Explore more
               </Button>
-              <Button className="heroBtn" id="apply" variant="secondary">
-                Apply
-              </Button>
+              
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -78,9 +70,7 @@ const HeroSection = () => {
               <Button className="heroBtn" id="explore" variant="secondary">
                 Explore more
               </Button>
-              <Button className="heroBtn" id="apply" variant="secondary">
-                Apply
-              </Button>
+              
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>

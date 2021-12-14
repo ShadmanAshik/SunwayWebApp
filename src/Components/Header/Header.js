@@ -2,313 +2,267 @@ import React from "react";
 import "./Header.css";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../Home/Home";
-import AboutUS from "../About US/about us/AboutUS";
+import Home from "../Pages/Home/Home";
 import { Link } from "react-router-dom";
-import WhySSG from "../About US/why ssg/WhySSG";
-import MissionVision from "../About US/mission & vission/MissionVision";
+import AboutUS from "../Pages/AboutUs/AboutUS";
+import Login from "../Pages/Login/Login";
+import Signup from "../Pages/Login/signup";
 
 const Header = () => {
   return (
     <div>
-      <div className="scrwaller"><marquee scrollamount="5">Admision is going on</marquee> </div>
+      <div className="scrwaller">
+        <marquee scrollamount="10" hspace="15%">
+          Admision is going on
+        </marquee>{" "}
+      </div>
       <BrowserRouter>
-        <div>         
-          <Navbar className="nav-bg" expand="lg">          
+        <div>
+          <Navbar className="nav" expand="lg">
             <Container>
-              <Navbar.Brand href="/home">
-                <img className="logo" src="https://i.ibb.co/XxzXZFN/Whats-App-Image-2021-12-05-at-8-06-48-PM.jpg"
-                  alt="Logo"
-                  border="0"
-                />
-              </Navbar.Brand>
+              <Navbar.Brand  href="/home"><h1 className="logo">SSG</h1></Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
-                  <Link className="Nav-bar" to='/home'>
+                  <Nav.Link id="navlink" href="/home">
                     Home
-                  </Link>
-
-                  <NavDropdown
-                    title={<span className="Nav-bar">About Us</span>}
-                    id="basic-nav-dropdown"
-                  >
-                    <Link className="DropDownItem company-dropdown" to="/about">
+                  </Nav.Link>
+                  <NavDropdown title="About Us" id="basic-nav-dropdown">
+                    <NavDropdown.Item className="dropdownItem" href="about">
                       About SSG
-                    </Link>{" "}
-                    <NavDropdown.Divider className="seperator"></NavDropdown.Divider>
-                    <Link className="DropDownItem company-dropdown" to="/whyssg">
-                      Why SSG ?
-                    </Link>{" "}<br />
-                    <Link
-                      className="DropDownItem company-dropdown" to="/missionvision">
-                      Mission & Vision
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.2"
+                    >
+                      Why SSG
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.3"
+                    >
+                      Mission & Vission
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.4"
+                    >
+                      Policy
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.4"
                     >
                       Our Team
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
-                    >
-                      Quality Policy
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
-                    >
-                      Privacy Policy
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.4"
                     >
                       Contact Us
-                    </Link>{" "}
-                    <br />
+                    </NavDropdown.Item>
                   </NavDropdown>
-                  <NavDropdown
-                    title={<span className="Nav-bar">Programs</span>}
-                    id="basic-nav-dropdown"
-                  >
-                    <Link className="DropDownItem company-dropdown" to="/about">
+                  <NavDropdown title="Programs" id="basic-nav-dropdown">
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.1"
+                    >
                       Overseas
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/whyssg"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.2"
                     >
                       Language
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.3"
                     >
                       Skill Development
-                    </Link>{" "}
-                    <br />
+                    </NavDropdown.Item>
                   </NavDropdown>
-                  <NavDropdown
-                    title={<span className="Nav-bar">University</span>}
-                    id="basic-nav-dropdown"
-                  >
-                    <Link className="DropDownItem company-dropdown" to="/about">
+                  <NavDropdown title="University" id="basic-nav-dropdown">
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.1"
+                    >
                       Bangladeshi University
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/whyssg"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.2"
                     >
-                      International University
-                    </Link>{" "}
-                    <br />
+                      Global University
+                    </NavDropdown.Item>
                   </NavDropdown>
-                  <NavDropdown
-                    title={<span className="Nav-bar">Scholarship</span>}
-                    id="basic-nav-dropdown"
-                  >
-                    <Link className="DropDownItem company-dropdown" to="/about">
-                      Doctor of Philosophy (PhD)
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/whyssg"
+                  <NavDropdown title="Scholarship" id="basic-nav-dropdown">
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.1"
                     >
-                      Master of Philosophy (MPhil)
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/whyssg"
+                      Doctor of Philosphy (PhD)
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.2"
+                    >
+                      Master of Philosophy(MPhil)
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.3"
                     >
                       Post Graduate
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/whyssg"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.4"
                     >
-                      Post graduate diploma
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/whyssg"
+                      Post Graduate Diploma
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.4"
                     >
-                      Under graduate
-                    </Link>{" "}
-                    <br />
+                      Under Graduate
+                    </NavDropdown.Item>
                   </NavDropdown>
-
-                  <NavDropdown
-                    title={<span className="Nav-bar">Courses</span>}
-                    id="basic-nav-dropdown"
-                  >
-                    <Link className="DropDownItem company-dropdown" to="/about">
-                      English Spoken
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/whyssg"
+                  <NavDropdown title="Courses" id="basic-nav-dropdown">
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.1"
                     >
-                      Communivative English
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                      English Spoken
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.2"
+                    >
+                      Communicative English
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.3"
                     >
                       Academic English
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.4"
                     >
                       IELTS Preparation
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.4"
                     >
                       Language Courses
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.4"
                     >
                       Professional Graphic Design
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.4"
                     >
-                      Web Design and Development
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                      Web Design & Development
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.4"
                     >
                       Digital Marketing
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.4"
                     >
                       Interior Design
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.4"
                     >
                       Online Outsourcing
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.4"
                     >
                       Career Counselling
-                    </Link>{" "}
-                    <br />
+                    </NavDropdown.Item>
                   </NavDropdown>
-
-                  <NavDropdown
-                    title={<span className="Nav-bar">News & Media</span>}
-                    id="basic-nav-dropdown"
-                  >
-                    <Link className="DropDownItem company-dropdown" to="/about">
+                  <NavDropdown title="News & Media" id="basic-nav-dropdown">
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.1"
+                    >
                       Blog
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/whyssg"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.2"
                     >
                       News
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.3"
                     >
                       Offer
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.3"
                     >
                       Events
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.3"
                     >
                       Photo Gallery
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.3"
                     >
                       Video Gallery
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/missionvision"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.3"
                     >
                       Testimonial
-                    </Link>{" "}
-                    <br />
+                    </NavDropdown.Item>
                   </NavDropdown>
-                  <NavDropdown
-                    title={<span className="Nav-bar">Apply</span>}
-                    id="basic-nav-dropdown"
-                  >
-                    <Link className="DropDownItem company-dropdown" to="/about">
+                  <NavDropdown title="Apply" id="basic-nav-dropdown">
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.1"
+                    >
                       Admission
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/whyssg"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.2"
                     >
                       Scholarship
-                    </Link>{" "}
-                    <br />
-                    <Link
-                      className="DropDownItem company-dropdown"
-                      to="/whyssg"
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      className="dropdownItem"
+                      href="#action/3.3"
                     >
                       Legal Support
-                    </Link>{" "}
-                    <br />
+                    </NavDropdown.Item>
                   </NavDropdown>
-                  <Link className="Nav-bar" to="/home">
-                  <Button id='signin'className="btn" variant="outline-dark" size="sm">Sign In</Button>
-                  </Link>
-                  
+                  <Nav.Link id="navlink" className="dropdownItem" href="/login">
+                    Sign In
+                  </Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>
@@ -318,9 +272,8 @@ const Header = () => {
           <Route exact path="/" element={<Home />} />
           <Route exact path="home" element={<Home />} />
           <Route exact path="about" element={<AboutUS />} />
-          <Route exact path="whyssg" element={<WhySSG />} />
-          <Route exact path="missionvision" element={<MissionVision />} />
-          
+          <Route exact path="login" element={<Login/>} />
+          <Route exact path="signup" element={<Signup/>} />
         </Routes>
       </BrowserRouter>
     </div>

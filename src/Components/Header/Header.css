@@ -1,19 +1,73 @@
-.nav-bg{
-    background-color: rgb(0, 0, 0);
+.nav{
+    /* background-color: white; */
+    background-image: linear-gradient(to right, rgb(255, 115, 0), rgb(255, 171, 60));
+}
+.scrwaller{
+    background-image: linear-gradient(to right, rgb(255, 115, 0), rgb(255, 171, 60));
+    color: black;
+}
+#navlink, #basic-nav-dropdown{
+    color: black;
+    padding: 3px;
+    font-size: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+#navlink:hover, #basic-nav-dropdown:hover{
+    color: white;
+    background-color:rgb(2, 161, 253);   
+}
+.dropdown-menu{
+    background-color: white;
+    /* background-image: linear-gradient(to right, rgb(0, 119, 255), rgb(0, 173, 253)); */
+}
+.dropdownItem{
+    color:rgb(53, 53, 53);
+}
+.dropdownItem:hover{
+    color: white;
+    background-color: rgb(2, 161, 253);
+}
+.logo{
+    font-weight: bold;
+    font-family: Comic Sans MS;
+}
+
+
+
+
+
+
+
+/* .nav-bg{
+    background-color: white;
+    box-shadow:  10px 10px 5px grey ;
 }
 .Nav-bar{
     text-decoration: none;
     margin-right: 10px;
-    color: rgb(248, 242, 242);
+    color: rgb(0, 0, 0);
     font-size: 1vw;
+    padding-left: 10px;
+    padding-right: 10px;
 } 
 .DropDownItem{
     text-decoration: none;
     margin-right: 10px;
     color: rgb(248, 242, 242);
 }
-.Nav-bar:hover , .DropDownItem:hover{
-    color:orange
+.DropDownItem:hover{
+    text-decoration: none;
+    margin-right: 10px;
+    background-color: white;
+    color: rgb(255, 102, 0);
+}
+.Nav-bar:hover {
+    color:white;
+    background-color: rgb(255, 102, 0);
+    border-radius: 4px;
+    
 }
 
 .dropdown-menu{
@@ -55,7 +109,7 @@
     color: white
 }
 .scrwaller{
-    background-color: black;
+    background-color: white;
     color: red;
     height:22px;
-}
+} */

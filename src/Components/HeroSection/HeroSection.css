@@ -9,14 +9,19 @@
 .caurousel-caption h1{
     color: orange;
     margin-bottom: 1vh;
+    text-align: center;
 }
 .caurousel-caption p{
     text-align: justify;
 }
 .heroBtn{
     color:white;
-    background-color: rgb(253, 167, 7);
+    background-color: orange;
     width: 130px;
+}
+.heroBtn:hover{
+    background-color:  white;
+    color:orange;
 }
 #apply{
     margin-left:2vw ;
