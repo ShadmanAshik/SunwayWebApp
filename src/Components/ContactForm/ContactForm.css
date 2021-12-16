@@ -1,0 +1,155 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+/* body {
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.5;
+  background-color: #f1f3fb;
+  padding: 0 2rem;
+} */
+img {
+  max-width: 100%;
+  display: block;
+}
+/* input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+} */
+.card {
+  margin: 55px auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 425px;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(153, 153, 153, 0.25);
+  padding: 10px;
+}
+.card-image {
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 175px;
+  background-image: linear-gradient(
+    to right,
+    rgb(22, 153, 40),
+    rgb(102, 226, 102)
+  );
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: 0 5%;
+  position: relative;
+}
+.card-heading {
+  position: absolute;
+  left: 10%;
+  top: 2%;
+  right: 10%;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0a165c;
+  line-height: 1.222;
+  text-align: left;
+}
+.card-heading small {
+  display: block;
+  font-size: 0.75em;
+  font-weight: 400;
+  margin-top: 0.25em;
+}
+.card-form {
+  padding: 5px 2px 0;
+}
+.input {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-top: 20px;
+}
+.countryCodeInput{
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-top: 15px;
+}
+.input .col-sm-4 .col-sm-8{
+  margin-top: 0;
+  padding:0px !important;
+}
+.input + .input {
+  margin-top: 10px;
+}
+.input-label {
+  color: #8597a3;
+  position: absolute;
+  top: 1.5rem;
+  transition: 0.25s ease;
+}
+.input-field {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
+  font-size: 1.125rem;
+  padding: 0.25rem 0;
+}
+.input-field:focus, .input-field:valid {
+  outline: 0;
+  border-bottom-color: #04aa0c;
+}
+.input-field:focus + .input-label, .input-field:valid + .input-label {
+  color: black;
+  transform: translateY(-1.5rem);
+}
+.action {
+  margin-top: 5px;
+}
+.action-button {
+  font: inherit;
+  font-size: 24px;
+  padding: 10px;
+  width: 80%;
+  font-weight: 500;
+  background-color: #1fa848;
+  border-radius: 6px;
+  color: #FFF;
+  border: 0;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.action-button:focus {
+  outline: 0;
+}
+.action-button:hover{
+  cursor: pointer;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(22, 153, 40),
+    rgb(102, 226, 102)
+  );
+  color: white;
+  transition: all 0.3s ease;
+}
+.card-info {
+  padding: 1rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #8597a3;
+  display: flex;
+}
+.card-info a {
+  color: rgb(0, 140, 255);
+  text-decoration: none;
+}
+.checkboxinfo{
+  text-align: center;
+  font-size: 0.875rem;
+  color: #8597a3;
+}
+.checkbox{
+  margin: .1rem;
+}
+

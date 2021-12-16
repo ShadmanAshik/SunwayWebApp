@@ -1,44 +1,54 @@
-.nav{
-    /* background-color: white; */
-    background-image: linear-gradient(to right, rgb(255, 115, 0), rgb(255, 171, 60));
+.nav {
+  /* background-color: white; */
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 115, 0),
+    rgb(255, 171, 60)
+  );
 }
-.scrwaller{
-    background-image: linear-gradient(to right, rgb(255, 115, 0), rgb(255, 171, 60));
-    color: black;
+.scrwaller {
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 115, 0),
+    rgb(255, 171, 60)
+  );
+  color: black;
+  font-size: 18px;
 }
-#navlink, #basic-nav-dropdown{
-    color: black;
-    padding: 3px;
-    font-size: 18px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 10px;
+.navItem {
+  text-decoration: none !important;
 }
-#navlink:hover, #basic-nav-dropdown:hover{
-    color: white;
-    background-color:rgb(2, 161, 253);   
+#navlink,
+#basic-nav-dropdown {
+  color: black;
+  padding: 3px;
+  font-size: 18px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 10px;
+  text-decoration: none !important;
 }
-.dropdown-menu{
-    background-color: white;
-    /* background-image: linear-gradient(to right, rgb(0, 119, 255), rgb(0, 173, 253)); */
+#navlink:hover,
+#basic-nav-dropdown:hover {
+  color: white;
+  background-color: rgb(2, 161, 253);
 }
-.dropdownItem{
-    color:rgb(53, 53, 53);
+.dropdown-menu {
+  background-color: white;
+  /* background-image: linear-gradient(to right, rgb(0, 119, 255), rgb(0, 173, 253)); */
 }
-.dropdownItem:hover{
-    color: white;
-    background-color: rgb(2, 161, 253);
+.dropdownItem {
+  color: rgb(53, 53, 53);
+  text-decoration: none;
 }
-.logo{
-    font-weight: bold;
-    font-family: Comic Sans MS;
+.dropdownItem:hover {
+  color: white;
+  background-color: rgb(2, 161, 253);
 }
-
-
-
-
-
-
+.logo {
+  font-weight: bold;
+  font-family: Comic Sans MS;
+}
 
 /* .nav-bg{
     background-color: white;

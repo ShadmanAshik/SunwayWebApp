@@ -3,8 +3,14 @@
   padding-top: 60px;
   padding-bottom: 100px;
   color: white;
+  
 }
-
+.footer-column{
+  text-align: left;
+}
+.footer-part-1 .col-lg-3 .col-lg-2 .col-md-4 .col-md-2 .col-sm-12{
+  text-align: left !important;
+}
 .footer-logo{
   width: 50px;
   margin-top: 10px;
@@ -21,16 +27,17 @@
   text-decoration: none;
   color: white;
   font-size: 18px;
+  text-align: left;
 }
 
 a:hover{
   color: rgb(255, 102, 0);
 }
-
-.col-md-2, .col-md-3{
+/* .col-md-2 .col-md-3, .col-lg-3{
   text-align: left;
-}
-.fa-building, .fa-envelope{
+} */
+
+.fa-building, .fa-envelope, .phone-alt{
    margin-right: 10px;
 } 
 .fa-facebook{
@@ -58,5 +65,8 @@ a:hover{
   color: white;
   padding-top: 20px;
   padding-bottom: 5px;
+  text-align: center;
+}
+.footer-2 p{
   text-align: center;
 }

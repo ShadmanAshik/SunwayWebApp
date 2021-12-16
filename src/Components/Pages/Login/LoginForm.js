@@ -23,7 +23,6 @@ const LoginForm = ({ submitForm }) => {
           <select
             id="group"
             type="text"
-            placeholder="User Group"
             name="group"
             className="form-input-login"
             value={values.loginType}
@@ -44,7 +43,7 @@ const LoginForm = ({ submitForm }) => {
             type="text"
             name="userID"
             className="form-input-login"
-            placeholder="User ID"
+            placeholder="e.g. #69420"
             value={values.userID}
             onChange={handleChange}
           />

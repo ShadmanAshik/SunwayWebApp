@@ -7,33 +7,17 @@ export default class Sliders extends Component {
     const settings = {
       dots: true,
       infinite: true,
-      centerPadding: "60px",
+      // centerPadding: "60px",
+      leftPdding:"40px",
       speed: 2000,
-      slidesToShow: 3,
+      slidesToShow: 2,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 5000,
       pauseOnHover: true,
       responsive: [
         {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 1008,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            initialSlide: 2
-          }
-        },
-        {
-          breakpoint: 769,
+          breakpoint: 1200,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
@@ -43,12 +27,12 @@ export default class Sliders extends Component {
     };
 
     return (
-      <div>
+      <div className="sliderContainer">
         <Slider {...settings}>
           <div>
             <Cards
               title="Student Counceling"
-              imgSrc="/img/Fs 8.jpg"
+              imgSrc="/img/FS 8.jpg"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               btn="See More"
             />

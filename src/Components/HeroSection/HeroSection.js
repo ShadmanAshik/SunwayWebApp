@@ -3,7 +3,7 @@ import { Button, Carousel, Container } from "react-bootstrap";
 import "./HeroSection.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const HeroSection = () => {
+const HeroSection = (props) => {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
@@ -25,9 +25,9 @@ const HeroSection = () => {
               src="/img/Slider1.JPG"
               alt="First slide"
             />
-            <Carousel.Caption className="caurousel-caption d-none d-md-block">
+            <Carousel.Caption className="caurousel-caption ">
               <h1>Welcome to SSG</h1>
-              <Button className="heroBtn" id="explore" variant="secondary">
+              <Button className="heroBtn" id="explore" variant="secondary" >
                 Explore more
               </Button>
             </Carousel.Caption>
@@ -38,7 +38,7 @@ const HeroSection = () => {
               src="/img/Slider1.JPG"
               alt="Second slide"
             />
-            <Carousel.Caption className="caurousel-caption d-none d-md-block">
+            <Carousel.Caption className="caurousel-caption">
               <h1>World Wide Admission</h1>
               <Button className="heroBtn" id="explore" variant="secondary">
                 Explore more
@@ -51,7 +51,7 @@ const HeroSection = () => {
               src="/img/Slider1.JPG"
               alt="Third slide"
             />
-            <Carousel.Caption className="caurousel-caption d-none d-md-block">
+            <Carousel.Caption className="caurousel-caption">
               <h1>Enrich Your Language Proficiency</h1>
               <Button className="heroBtn" id="explore" variant="secondary">
                 Explore more
@@ -65,7 +65,7 @@ const HeroSection = () => {
               src="/img/Slider1.JPG"
               alt="Forth slide"
             />
-            <Carousel.Caption className="caurousel-caption d-none d-md-block">
+            <Carousel.Caption className="caurousel-caption">
               <h1>Develop Your Skills</h1>
               <Button className="heroBtn" id="explore" variant="secondary">
                 Explore more
@@ -79,9 +79,9 @@ const HeroSection = () => {
               src="/img/Slider1.JPG"
               alt="Fifth slide"
             />
-            <Carousel.Caption className="caurousel-caption d-none d-md-block">
+            <Carousel.Caption className="caurousel-caption ">
               <h1>Be Our Partner</h1>
-              <Button className="heroBtn" id="explore" variant="secondary">
+              <Button className="heroBtn" id="explore" variant="secondary" >
                 Explore more
               </Button>
               <Button className="heroBtn" id="apply" variant="secondary">

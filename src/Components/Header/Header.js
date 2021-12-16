@@ -1,12 +1,11 @@
 import React from "react";
 import "./Header.css";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "../Pages/Home/Home";
-import { Link } from "react-router-dom";
 import AboutUS from "../Pages/AboutUs/AboutUS";
 import Login from "../Pages/Login/Login";
-import Signup from "../Pages/Login/signup";
+import Signup from "../Pages/Login/SignUp";
 
 const Header = () => {
   return (
@@ -14,28 +13,33 @@ const Header = () => {
       <div className="scrwaller">
         <marquee scrollamount="10" hspace="15%">
           Admision is going on
-        </marquee>{" "}
+        </marquee>
       </div>
       <BrowserRouter>
         <div>
           <Navbar className="nav" expand="lg">
             <Container>
-              <Navbar.Brand  href="/home"><h1 className="logo">SSG</h1></Navbar.Brand>
+              <Navbar.Brand href="/home">
+                <h1 className="logo">SSG</h1>
+              </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
-                  <Nav.Link id="navlink" href="/home">
-                    Home
-                  </Nav.Link>
+                  <Link className="navItem" to="/home">
+                    <Nav.Item id="navlink">Home</Nav.Item>
+                  </Link>
+
                   <NavDropdown title="About Us" id="basic-nav-dropdown">
-                    <NavDropdown.Item className="dropdownItem" href="about">
-                      About SSG
+                    <NavDropdown.Item className="dropdownItem">
+                      <Link className="dropdownItem" to="/about">
+                        About Us
+                      </Link>
                     </NavDropdown.Item>
-                    <NavDropdown.Item
-                      className="dropdownItem"
-                      href="#action/3.2"
-                    >
-                      Why SSG
+
+                    <NavDropdown.Item className="dropdownItem">
+                      <Link className="dropdownItem" to="/about">
+                        Why SSG
+                      </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       className="dropdownItem"
@@ -260,9 +264,9 @@ const Header = () => {
                       Legal Support
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link id="navlink" className="dropdownItem" href="/login">
-                    Sign In
-                  </Nav.Link>
+                  <Link className="navItem" to="/login">
+                    <Nav.Item id="navlink">Sign In</Nav.Item>
+                  </Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>
@@ -272,8 +276,8 @@ const Header = () => {
           <Route exact path="/" element={<Home />} />
           <Route exact path="home" element={<Home />} />
           <Route exact path="about" element={<AboutUS />} />
-          <Route exact path="login" element={<Login/>} />
-          <Route exact path="signup" element={<Signup/>} />
+          <Route exact path="login" element={<Login />} />
+          <Route exact path="signup" element={<Signup />} />
         </Routes>
       </BrowserRouter>
     </div>
