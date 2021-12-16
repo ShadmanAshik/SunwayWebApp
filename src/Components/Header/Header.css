@@ -5,7 +5,9 @@
     rgb(255, 115, 0),
     rgb(255, 171, 60)
   );
+  /* position:sticky; */
 }
+
 .scrwaller {
   background-image: linear-gradient(
     to right,
@@ -31,11 +33,10 @@
 #navlink:hover,
 #basic-nav-dropdown:hover {
   color: white;
-  background-color: rgb(2, 161, 253);
+  background-color: #00A0CCFF;
 }
 .dropdown-menu {
   background-color: white;
-  /* background-image: linear-gradient(to right, rgb(0, 119, 255), rgb(0, 173, 253)); */
 }
 .dropdownItem {
   color: rgb(53, 53, 53);

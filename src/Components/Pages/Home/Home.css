@@ -10,22 +10,20 @@
 .cardContainer{
     padding-bottom:50px;
     align-content: center;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
 }
 .actionCardContainer{ 
-  padding: 20px 30px;
+  padding: 20px 10px;
   
 }
 .actionCardItems{
   display: inline-flex;
 }
 .cardContainer .row{
-  /* display: inline-flex; */
   align-content: center;
   text-align: center;
-  display: inline-flex;
   margin-bottom: 30px;
   /* margin-left: 30px; */
 }
@@ -36,6 +34,7 @@
   align-content: center;
 }
 .card-item{
-  align-content: center;
+  /* display: inline-flex; */
+  margin-left: 1.6vw;
   margin-bottom:40px;
 }

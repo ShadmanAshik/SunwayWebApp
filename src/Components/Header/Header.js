@@ -6,6 +6,11 @@ import Home from "../Pages/Home/Home";
 import AboutUS from "../Pages/AboutUs/AboutUS";
 import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Login/SignUp";
+import WhySSG from "../Pages/AboutUs/WhySSG";
+import Mission from "../Pages/AboutUs/Mission";
+import OurTeam from "../Pages/AboutUs/OurTeam";
+import Policy from "../Pages/AboutUs/Policy";
+import ContactUs from "../Pages/AboutUs/ContactUs";
 
 const Header = () => {
   return (
@@ -37,33 +42,31 @@ const Header = () => {
                     </NavDropdown.Item>
 
                     <NavDropdown.Item className="dropdownItem">
-                      <Link className="dropdownItem" to="/about">
+                      <Link className="dropdownItem" to="/whyssg">
                         Why SSG
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item className="dropdownItem">
+                      <Link className="dropdownItem" to="/mission">
+                        Mission &amp; Vission
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item className="dropdownItem">
+                      <Link className="dropdownItem" to="/policy">
+                        Policy
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item className="dropdownItem">
+                      <Link className="dropdownItem" to="/ourteam">
+                        Our Team
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       className="dropdownItem"
-                      href="#action/3.3"
-                    >
-                      Mission & Vission
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      className="dropdownItem"
-                      href="#action/3.4"
-                    >
-                      Policy
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      className="dropdownItem"
-                      href="#action/3.4"
-                    >
-                      Our Team
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      className="dropdownItem"
-                      href="#action/3.4"
-                    >
-                      Contact Us
+                      >
+                      <Link className="dropdownItem" to="/contact">
+                        Contact Us
+                      </Link>
                     </NavDropdown.Item>
                   </NavDropdown>
                   <NavDropdown title="Programs" id="basic-nav-dropdown">
@@ -276,6 +279,11 @@ const Header = () => {
           <Route exact path="/" element={<Home />} />
           <Route exact path="home" element={<Home />} />
           <Route exact path="about" element={<AboutUS />} />
+          <Route exact path="whyssg" element={<WhySSG />} />
+          <Route exact path="mission" element={<Mission />} />
+          <Route exact path="ourteam" element={<OurTeam />} />
+          <Route exact path="policy" element={<Policy />} />
+          <Route exact path="contact" element={<ContactUs />} />
           <Route exact path="login" element={<Login />} />
           <Route exact path="signup" element={<Signup />} />
         </Routes>

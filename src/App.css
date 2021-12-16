@@ -1,5 +1,12 @@
+*{
+  font-family: Georgia;
+}
 .App {
   text-align: center;
+  
+}
+.body{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .App-logo {

@@ -23,9 +23,7 @@ function Footer() {
               <div class="col-md-2 col-sm-12 ">
                 <div className="footer-column">
                   <h3 class="footer-title">About Us</h3>
-                  <Link to="/about">
-                    About SSG
-                  </Link><br/>
+                  
                   <a href="/about">About SSG</a>
                   <br />
                   <a href="/">Why SSG</a>

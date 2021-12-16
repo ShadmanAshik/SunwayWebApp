@@ -27,6 +27,7 @@ const Home = () => {
 
             <h1 className="title">Education Programs</h1>
             <div class="row">
+              
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div className="card-item">
                   <ActionAreaCard
@@ -48,8 +49,6 @@ const Home = () => {
                   <ActionAreaCard imgSrc="/img/dummy.jpg" title="Diploma" />
                 </div>
               </div>
-            {/* </div>
-            <div class="row"> */}
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div className="card-item">
                   <ActionAreaCard imgSrc="/img/dummy.jpg" title="MBBS" />
