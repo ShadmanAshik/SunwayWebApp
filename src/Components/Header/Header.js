@@ -4,13 +4,13 @@ import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "../Pages/Home/Home";
 import AboutUS from "../Pages/AboutUs/AboutUS";
-import Login from "../Pages/Login/Login";
-import Signup from "../Pages/Login/SignUp";
+
 import WhySSG from "../Pages/AboutUs/WhySSG";
 import Mission from "../Pages/AboutUs/Mission";
 import OurTeam from "../Pages/AboutUs/OurTeam";
 import Policy from "../Pages/AboutUs/Policy";
 import ContactUs from "../Pages/AboutUs/ContactUs";
+import LoginAndSignup from "../Pages/LoginandSignup/LoginAndSignup";
 
 const Header = () => {
   return (
@@ -284,8 +284,8 @@ const Header = () => {
           <Route exact path="ourteam" element={<OurTeam />} />
           <Route exact path="policy" element={<Policy />} />
           <Route exact path="contact" element={<ContactUs />} />
-          <Route exact path="login" element={<Login />} />
-          <Route exact path="signup" element={<Signup />} />
+          <Route exact path="login" element={<LoginAndSignup />} />
+          
         </Routes>
       </BrowserRouter>
     </div>

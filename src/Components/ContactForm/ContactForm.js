@@ -66,7 +66,7 @@ const ContactForm = ({ submitForm }) => {
 
           <div class="row">
             <div class="col-xs-5 col-sm-5">
-              <div class="countryCodeInput">
+              <div class="input">
                 <select
                   id="CountryCode"
                   type="text"
