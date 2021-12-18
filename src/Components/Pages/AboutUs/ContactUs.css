@@ -1,0 +1,12 @@
+.conatact-container h1{
+    margin-top: 55px;
+    font-weight: bold;
+}
+.conatact-container h3{
+    margin-top: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+.conatact-container p{
+    color: black;
+}
