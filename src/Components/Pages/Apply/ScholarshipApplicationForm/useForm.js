@@ -2,13 +2,18 @@ import { useState, useEffect } from "react";
 
 const useForm = (callback, validate) => {
   const [values, setValues] = useState({
+    name: "",
+    gender: "",
+    degreeObtained: "",
+    englishProficiency: "",
+    avgGrade: "",
+    studyBudget: "",
+    nationality: "",
+    dateofbirth: "",
     email: "",
-    fname: "",
-    lname: "",
     phoneno: "",
-    counselMode: "",
-    Studylevel: "",
-    country:""
+    levelofstudy: "",
+    fieldofstudy: "",
   });
   const [error, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);

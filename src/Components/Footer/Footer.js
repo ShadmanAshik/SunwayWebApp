@@ -1,17 +1,18 @@
 import React from "react";
 import "./Footer.css";
 import { BrowserRouter, Link } from "react-router-dom";
+import AboutUS from "../../Components/Pages/AboutUs/AboutUS";
 
 function Footer() {
   return (
     <>
       <BrowserRouter>
         <div className="footer-part-1">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3 col-md-4 col-sm-12 ">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-3 col-md-4 col-sm-12 ">
                 <div className="footer-column">
-                  <h3 class="footer-title">Be Our Partner</h3>
+                  <h3 className="footer-title">Be Our Partner</h3>
                   <a href="/">Global Business Partner</a>
                   <br />
                   <a href="/">Bangladeshi Business Partner</a>
@@ -20,29 +21,9 @@ function Footer() {
                   <br />
                 </div>
               </div>
-              <div class="col-md-2 col-sm-12 ">
+              <div className="col-lg-3 col-md-4 col-sm-12 ">
                 <div className="footer-column">
-                  <h3 class="footer-title">About Us</h3>
-                  
-                  <a href="/about">About SSG</a>
-                  <br />
-                  <a href="/">Why SSG</a>
-                  <br />
-                  <a href="/">Misson</a>
-                  <br />
-                  <a href="/">Vision</a>
-                  <br />
-                  <a href="/">Our Team</a>
-                  <br />
-                  <a href="/">Quality Policy</a>
-                  <br />
-                  <a href="/">Privacy Policy</a>
-                  <br />
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-4 col-sm-12 ">
-                <div className="footer-column">
-                  <h3 class="footer-title">Important Links</h3>
+                  <h3 className="footer-title">Important Links</h3>
                   <a href="https://www.qs.com/rankings/">QS Ranking</a>
                   <br />
                   <a href="https://www.britishcouncil.org/">British Council</a>
@@ -81,51 +62,79 @@ function Footer() {
                   <br />
                 </div>
               </div>
-              <div class="col-lg-2 col-md-4 col-sm-12">
+              <div className="col-lg-3 col-md-4 col-sm-12">
                 <div className="footer-column">
-                  <h3 class="footer-title">Address</h3>
+                  <h3 className="footer-title">Address</h3>
                   <p>
-                    <i class="far fa-building" id="contactIcon"></i>
+                    <i className="far fa-building" id="contactIcon"></i>
                     Plaza, Level - 12, Suit - C, 08 Shahid Sangbadik Salina
                     Parvin Sarak, Mogbazar, Dhaka-1217.
                   </p>
                   <p>
-                    <i class="far fa-envelope" id="contactIcon"></i>
+                    <i className="far fa-envelope" id="contactIcon"></i>
                     info@educationhub-bd.com
                     <br />
                   </p>
                   <p>
-                    <i class="fas fa-phone-alt" id="contactIcon"></i>
+                    <i className="fas fa-phone-alt" id="contactIcon"></i>
                     +8801721764149
                   </p>
                 </div>
               </div>
-              <div class="col-md-2 col-sm-12">
+              <div className="col-lg-3 col-md-4 col-sm-12">
                 <div className="footer-column">
-                  <h3 class="footer-title">Social</h3>
-                  <a href="/">
-                    <i class="fab fa-facebook"></i>Facebook
-                  </a>
-                  <br />
-                  <a href="/">
-                    <i class="fab fa-youtube"></i>Youtube
-                  </a>
-                  <br />
-                  <a href="/">
-                    <i class="fab fa-twitter"></i>Twitter
-                  </a>
-                  <br />
-
-                  <a href="/">
-                    <i class="fab fa-linkedin"></i>LinkedIn
-                  </a>
+                  <h3 className="footer-title">Social</h3>
+                  <div className="Fb-page">
+                    <img src="/img/dummy.jpg" alt="fs"></img>
+                    <div className="social-icons-container">
+                      <div className="row">
+                        <div className="col-sm-3">
+                          <a href="https://www.facebook.com/Sunway-Study-Group-103946112131280">
+                            <img
+                              className="icons"
+                              src="/img/icons/fb.png"
+                              alt="fb"
+                            ></img>
+                          </a>
+                        </div>
+                        <div className="col-sm-3">
+                        <a href="">
+                            <img
+                              className="icons"
+                              src="/img/icons/yt.png"
+                              alt="linkedin"
+                            ></img>
+                          </a>
+                        </div>
+                        <div className="col-sm-3">
+                          <a href="">
+                            <img
+                              className="icons"
+                              src="/img/icons/twitter.png"
+                              alt="twitter"
+                            ></img>
+                          </a>
+                        </div>
+                        <div className="col-sm-3">
+                          <a href="">
+                            <img
+                              className="icons"
+                              src="/img/icons/linkedin.png"
+                              alt="linkedin"
+                            ></img>
+                          </a>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
                   <br />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer-2">
+        <div className="footer-2">
           <p>Copyright ©2021 All rights reserved |</p>
         </div>
       </BrowserRouter>

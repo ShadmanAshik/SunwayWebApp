@@ -3,16 +3,16 @@
   text-align: left;
 }
 .cardImg {
-  height: 200px;
-  width: auto;
+  height: auto;
+  width: 100%;
   transition: all 0.2s linear;
+  border-radius: 0px !important;
   
 }
 .cardImg:hover {
   transform: scale(1.1);
   cursor: pointer;
   object-fit: cover; 
-  
   transition: all 0.2s linear;
 }
 .cardtitle {
@@ -27,4 +27,9 @@
 .actionCardtitle{
     color:rgb(61, 175, 46);
     font-weight: bold;
+}
+.card{
+  border-radius: 0px !important;
+  width: 100%;
+  display: inline-flex;
 }

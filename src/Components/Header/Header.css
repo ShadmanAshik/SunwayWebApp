@@ -29,12 +29,8 @@
 #navlink:hover,
 #basic-nav-dropdown:hover {
   color: white;
-  background-color: #00A0CCFF;
-  background-image: linear-gradient(
-    to top,
-    #00A0CCFF,
-    rgb(105, 217, 248)
-  );
+  background-color: var(--main-blue);
+  
 }
 .dropdown-menu {
   background-color: white;
@@ -45,12 +41,15 @@
 }
 .dropdownItem:hover {
   color: white;
-  background-color: rgb(2, 161, 253);
+  background-color: var(--main-blue);
 }
 .logo {
   font-weight: bold;
   font-family: Comic Sans MS;
 }
+.dropdown:hover .dorpdown-menu {
+  display : block ;
+  }
 @media only screen and (max-width: 1000px){
   #navlink,
 #basic-nav-dropdown {
