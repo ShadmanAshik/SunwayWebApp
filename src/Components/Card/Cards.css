@@ -1,0 +1,30 @@
+.cardText {
+  color: black;
+  text-align: left;
+}
+.cardImg {
+  height: 200px;
+  width: auto;
+  transition: all 0.2s linear;
+  
+}
+.cardImg:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  object-fit: cover; 
+  
+  transition: all 0.2s linear;
+}
+.cardtitle {
+  font-weight: bold;
+  color: var(--main-deepOrange);
+}
+.actionCard{
+    /* margin:20px; */
+    align-content: center;
+}
+
+.actionCardtitle{
+    color:rgb(61, 175, 46);
+    font-weight: bold;
+}
