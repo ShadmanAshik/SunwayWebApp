@@ -2,19 +2,16 @@
   /* background-color: white; */
   background-image: linear-gradient(
     to right,
-    rgb(255, 115, 0),
+    var(--main-deepOrange),
     rgb(255, 171, 60)
   );
+  padding:0px !important;
   /* position:sticky; */
 }
 
 .scrwaller {
-  background-image: linear-gradient(
-    to right,
-    rgb(255, 115, 0),
-    rgb(255, 171, 60)
-  );
-  color: black;
+  background-color: black;
+  color: rgb(255, 255, 255);
   font-size: 18px;
 }
 .navItem {
@@ -22,18 +19,22 @@
 }
 #navlink,
 #basic-nav-dropdown {
+  padding: 20px 5px;
   color: black;
-  padding: 3px;
   font-size: 18px;
   margin-left: 5px;
   margin-right: 5px;
-  border-radius: 10px;
   text-decoration: none !important;
 }
 #navlink:hover,
 #basic-nav-dropdown:hover {
   color: white;
   background-color: #00A0CCFF;
+  background-image: linear-gradient(
+    to top,
+    #00A0CCFF,
+    rgb(105, 217, 248)
+  );
 }
 .dropdown-menu {
   background-color: white;
@@ -50,4 +51,14 @@
   font-weight: bold;
   font-family: Comic Sans MS;
 }
-
+@media only screen and (max-width: 1000px){
+  #navlink,
+#basic-nav-dropdown {
+  padding: 5px;
+  color: black;
+  font-size: 18px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none !important;
+}
+}

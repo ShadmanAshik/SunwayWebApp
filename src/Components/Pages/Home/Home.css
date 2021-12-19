@@ -1,11 +1,10 @@
 .title {
-  border-radius: 2px;
+  
   background-color: rgb(44, 46, 42);
   margin: 60px 10px 30px 10px;
-  color: orange;
+  color: var(--main-deepOrange);
   text-align: center ;
   padding: 15px 0px 15px 0;
-  border-radius: 10px;
 }
 .cardContainer{
     padding-bottom:50px;

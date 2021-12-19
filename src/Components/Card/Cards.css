@@ -17,7 +17,7 @@
 }
 .cardtitle {
   font-weight: bold;
-  color: orange;
+  color: var(--main-deepOrange);
 }
 .actionCard{
     /* margin:20px; */

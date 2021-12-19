@@ -16,8 +16,8 @@ const LoginAndSignup = ({ submitForm }) => {
             <div class="col-12 text-center align-self-center py-5">
               <div class="section pb-5 pt-5 pt-sm-2 text-align-center">
                 <h6 class="col 12 mb-0 pb-3 text-center">
-                  <span>Log In</span>
-                  <span>Sign Up</span>
+                  <span className="label">Log In</span>
+                  <span className="label">Sign Up</span>
                 </h6>
                 <input
                   class="loginCheckbox"
@@ -31,7 +31,7 @@ const LoginAndSignup = ({ submitForm }) => {
                     <form class="card-front" onSubmit={handleSubmit}>
                       <div class="center-wrap">
                         <div class="section text-center">
-                          <h4 class="mb-4 pb-3">Log In</h4>
+                          <h4 class="heading mb-4 pb-3">Log In</h4>
 
                           <div class="form-group">
                             <select
@@ -54,7 +54,7 @@ const LoginAndSignup = ({ submitForm }) => {
                           <div class="form-group mt-2">
                             <input
                               id="email"
-                              type="text"
+                              type="email"
                               name="email"
                               value={values.email}
                               onChange={handleChange}
@@ -64,9 +64,13 @@ const LoginAndSignup = ({ submitForm }) => {
                               required
                             />
                             <i class="input-icon uil uil-at"></i>
-                            {error.email && <p data-tooltip="Invalid Email Address">{error.email}</p>}
+                            {error.email && (
+                              <p data-tooltip="Invalid Email Address">
+                                {error.email}
+                              </p>
+                            )}
                           </div>
-                          
+
                           <div class="form-group mt-2">
                             <input
                               id="loginPassword"
@@ -84,7 +88,7 @@ const LoginAndSignup = ({ submitForm }) => {
                             Log in
                           </button>
                           <p class="mb-0 mt-4 text-center">
-                            <a className="signinLink" href="#0" class="link">
+                            <a href="#0" class="link">
                               Forgot your password?
                             </a>
                           </p>
@@ -95,7 +99,7 @@ const LoginAndSignup = ({ submitForm }) => {
                     <form class="card-back" onSubmit={handleSubmit}>
                       <div class="center-wrap">
                         <div class="section text-center">
-                          <h4 class="mb-4 pb-3">Sign Up</h4>
+                          <h4 class="heading mb-4 pb-3">Sign Up</h4>
 
                           <div class="form-group">
                             <input
@@ -125,7 +129,11 @@ const LoginAndSignup = ({ submitForm }) => {
                               required
                             />
                             <i class="input-icon uil uil-at"></i>
-                            {error.email && <p data-tooltip="Invalid Email Address" >{error.email}</p>}
+                            {error.email && (
+                              <p data-tooltip="Invalid Email Address">
+                                {error.email}
+                              </p>
+                            )}
                           </div>
 
                           <div class="form-group mt-2">
@@ -170,7 +178,9 @@ const LoginAndSignup = ({ submitForm }) => {
                             />
                             <i class="input-icon uil uil-lock-alt"></i>
                             {error.confirmPassword && (
-                              <p data-tooltip="Passwords Dont Match">{error.confirmPassword}</p>
+                              <p data-tooltip="Passwords Dont Match">
+                                {error.confirmPassword}
+                              </p>
                             )}
                           </div>
 
@@ -528,6 +538,7 @@ const LoginAndSignup = ({ submitForm }) => {
                           <button className="submitButton mt-4" type="submit">
                             Sign Up
                           </button>
+                          
                         </div>
                       </div>
                     </form>

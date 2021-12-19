@@ -7,35 +7,35 @@
   );
   overflow-x: hidden;
 } */
-.signinLink {
+.link {
   cursor: pointer;
   transition: all 200ms linear;
 }
-.signinLink:hover {
+.link:hover {
   text-decoration: none;
 }
 .link {
   color: #c4c3ca;
-}
-.link:hover {
-  color: rgb(241, 150, 12);
-}
-p {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.7;
 }
-h4 {
-  font-weight: 600;
+.link:hover {
   color: rgb(241, 150, 12);
 }
-h6 span {
+.heading {
+  font-weight: 600;
+  color: rgb(241, 150, 12);
+  text-align: left;
+  padding-top: 40px;
+}
+.label {
   margin: 0 25px;
   padding:10px 10px 10px 10px;
   text-transform: uppercase;
   font-weight: 700;
   color: #1f2029;
-  background: #f1f0f75b;
+  background: #8e7de95b;
   border-radius: 10px;
   text-align: center;
 }
