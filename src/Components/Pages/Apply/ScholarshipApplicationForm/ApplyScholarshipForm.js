@@ -3,6 +3,7 @@ import validate from "./validateinfo";
 import useForm from "./useForm";
 import "./ScholarshipForm.css";
 
+
 const ApplyScholarshipForm = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, error } = useForm(
     submitForm,
@@ -12,10 +13,12 @@ const ApplyScholarshipForm = ({ submitForm }) => {
   return (
     <div className="form-content-schlr">
       <form className="form-schlr" onSubmit={handleSubmit}>
-        <h1>
+        <h1 className="form-title">Scholarship Application Form</h1>
+      
+        <p>
           Fill out the form as per the required information, and wait till we
           get back to you after evaluation.
-        </h1>
+        </p>
         <div className="form-inputs-schlr">
           <label htmlFor="name" className="form-label-schlr">
             Name

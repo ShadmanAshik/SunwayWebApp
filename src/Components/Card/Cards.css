@@ -9,6 +9,10 @@
   border-radius: 0px !important;
   
 }
+.btn-primary{
+  background-color: var(--main-deepOrange);
+  border:0px;
+}
 .cardImg:hover {
   transform: scale(1.1);
   cursor: pointer;
@@ -25,7 +29,7 @@
 }
 
 .actionCardtitle{
-    color:rgb(61, 175, 46);
+    color:black;
     font-weight: bold;
 }
 .card{

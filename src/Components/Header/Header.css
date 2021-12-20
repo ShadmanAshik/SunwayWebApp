@@ -1,12 +1,8 @@
+
+
 .nav {
-  /* background-color: white; */
-  background-image: linear-gradient(
-    to right,
-    var(--main-deepOrange),
-    rgb(255, 171, 60)
-  );
+  background-color: white;
   padding:0px !important;
-  /* position:sticky; */
 }
 
 .scrwaller {
@@ -28,20 +24,22 @@
 }
 #navlink:hover,
 #basic-nav-dropdown:hover {
-  color: white;
-  background-color: var(--main-blue);
+  color: white !important;
+  background-color: var(--main-deepBlue);
   
 }
 .dropdown-menu {
   background-color: white;
 }
+
 .dropdownItem {
   color: rgb(53, 53, 53);
   text-decoration: none;
 }
-.dropdownItem:hover {
-  color: white;
-  background-color: var(--main-blue);
+
+.dropdownItem:hover { 
+  color: white !important;
+  background-color: var(--main-deepBlue);
 }
 .logo {
   font-weight: bold;

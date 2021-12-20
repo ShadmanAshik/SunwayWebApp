@@ -9,8 +9,9 @@
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 :root {
-  --main-deepOrange:rgb(255, 115, 0);
+  --main-deepOrange:#F5881F;
   --main-blue: #00A0CCFF;
+  --main-deepBlue:#163651;
 }
 
 

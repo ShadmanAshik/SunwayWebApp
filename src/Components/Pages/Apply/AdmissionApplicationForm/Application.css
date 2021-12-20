@@ -35,7 +35,7 @@
 .form-content-application {
   border-radius: 10px 10px 10px 10px;
   position: relative;
-  background-color: var(--main-blue);
+  background-color: var(--main-deepOrange);
 }
 
 .formdata{
@@ -125,6 +125,9 @@
   color: white;
   transition: all 0.4s ease-out;
   border-color:rgb(0, 0, 0);
+}
+.form-input-apply-application{
+  border:0px;
 }
 
 @media screen and (max-width: 900px) {

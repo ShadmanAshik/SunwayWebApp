@@ -8,7 +8,7 @@ const Mission = () => {
   return (
     <>
       <Container>
-        <HeroImg imgSrc="/img/about.gif" />
+        <HeroImg imgSrc="/img/banner1.jpg" />
         <div className="mission-container">
           <div class="row">
             <div class="col-lg-8 col-md-7 col-sm-12">

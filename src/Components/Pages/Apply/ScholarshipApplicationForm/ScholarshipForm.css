@@ -6,6 +6,9 @@
   padding: 0;
   font-family: "PT Sans", sans-serif;
 }
+.form-title{
+  color: white;
+}
 .form-inputs-schlr p {
   color: red;
 }
@@ -52,11 +55,11 @@
 }
 
 .form-container-schlr h1 {
-  font-size: 1rem;
+  font-size: 34px;
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin-bottom: 1rem;
-  color: black;
+  color: white;
 }
 
 .form-inputs-schlr {

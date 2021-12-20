@@ -84,8 +84,25 @@ function Footer() {
               <div className="col-lg-3 col-md-4 col-sm-12">
                 <div className="footer-column">
                   <h3 className="footer-title">Social</h3>
-                  <div className="Fb-page">
-                    <img src="/img/dummy.jpg" alt="fs"></img>
+                  <div className="fb-page">
+                    <img className="fbpost" src="/img/fbpost.jpg" alt="fs" />
+                    <div id="fb-root"></div>
+                    <script
+                      async
+                      defer
+                      crossorigin="anonymous"
+                      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=714278166202341&autoLogAppEvents=1"
+                      nonce="a0XBKvok"
+                    ></script>
+                    <div
+                      class="fb-like"
+                      data-href="https://www.facebook.com/Sunway-Study-Group-103946112131280"
+                      data-width=""
+                      data-layout="button"
+                      data-action="like"
+                      data-size="large"
+                      data-share="true"
+                    ></div>
                     <div className="social-icons-container">
                       <div className="row">
                         <div className="col-sm-3">
@@ -98,7 +115,7 @@ function Footer() {
                           </a>
                         </div>
                         <div className="col-sm-3">
-                        <a href="">
+                          <a href="">
                             <img
                               className="icons"
                               src="/img/icons/yt.png"
@@ -124,7 +141,6 @@ function Footer() {
                             ></img>
                           </a>
                         </div>
-                        
                       </div>
                     </div>
                   </div>

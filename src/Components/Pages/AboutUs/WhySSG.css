@@ -7,7 +7,7 @@
 .listItem{
     
     border:black;
-    padding:30px 40px 10px;
+    padding:30px 12px 10px;
 }
 .listImg{
     width: 100%;
@@ -16,6 +16,6 @@
 }
 .listPara{
     color:black;
-    margin-top: 20px;
+    
     text-align: justify;
 }

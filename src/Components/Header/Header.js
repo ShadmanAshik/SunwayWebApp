@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "../Pages/Home/Home";
 import AboutUS from "../Pages/AboutUs/AboutUS";
@@ -11,14 +11,12 @@ import BDUni from "../Pages/University/BangladeshUniversity";
 import GUni from "../Pages/University/GlobalUniversity";
 import WebDesignAndDevelopment from "../Pages/Courses/WebDesignAndDevelopment";
 import ProfessionalGraphicDesign from "../Pages/Courses/ProfessionalGraphicDesign";
-import OnlineOutsourcing from "../Pages/Courses/OnlineOutsourcing";
+
 import LanguageCourses from "../Pages/Courses/LanguageCourses";
-import InteriorDesign from "../Pages/Courses/InteriorDesign";
 import IELTSPreparation from "../Pages/Courses/IELTSPreparation";
 import EnglishSpoken from "../Pages/Courses/EnglishSpoken";
 import DigitalMarketing from "../Pages/Courses/DigitalMarketing";
 import CommunicativeEnglish from "../Pages/Courses/CommunicativeEnglish";
-import CareerCounselling from "../Pages/Courses/CareerCounselling";
 import AcademicEnglish from "../Pages/Courses/AcademicEnglish";
 
 import Testimonial from "../Pages/NewsAndMedia/Testimonial";
@@ -29,11 +27,6 @@ import Offer from "../Pages/NewsAndMedia/Offer";
 import News from "../Pages/NewsAndMedia/News";
 import Blog from "../Pages/NewsAndMedia/Blog";
 
-import PHD from "../Pages/Scholarship/DoctorofPhilosphy(PhD)";
-import MPhil from "../Pages/Scholarship/MasterofPhilosophy(MPhil)";
-import PGrad from "../Pages/Scholarship/PostGraduate";
-import PGradD from "../Pages/Scholarship/PostGraduateDiploma";
-import UGrad from "../Pages/Scholarship/UnderGraduate";
 import WhySSG from "../Pages/AboutUs/WhySSG";
 import Mission from "../Pages/AboutUs/Mission";
 import OurTeam from "../Pages/AboutUs/OurTeam";
@@ -45,7 +38,7 @@ import ApplyScholarship from "../Pages/Apply/ScholarshipApplicationForm/ApplySch
 
 const Header = () => {
   return (
-    <div>
+    <div className="navbar-container">
       <div className="scrwaller">
         <marquee scrollamount="10" hspace="10%">
           Admission is going on
@@ -66,7 +59,7 @@ const Header = () => {
                   </Link>
 
                   <NavDropdown title="About Us" id="basic-nav-dropdown">
-                    <NavDropdown.Item className="dropdownItem">
+                    <NavDropdown.Item className="dropdownItems">
                       <Link className="dropdownItem" to="/about">
                         About Us
                       </Link>
@@ -103,13 +96,33 @@ const Header = () => {
                   <NavDropdown title="Programs" id="basic-nav-dropdown">
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/overseas">
-                        Overseas
+                        Overseas Admission
                       </Link>
                     </NavDropdown.Item>
 
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/language">
-                        Language
+                        Student Counselling
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item className="dropdownItem">
+                      <Link className="dropdownItem" to="/language">
+                        Application Processing
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item className="dropdownItem">
+                      <Link className="dropdownItem" to="/language">
+                        Visa Application Assistance
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item className="dropdownItem">
+                      <Link className="dropdownItem" to="/language">
+                        Scholarship Assistance
+                      </Link>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item className="dropdownItem">
+                      <Link className="dropdownItem" to="/language">
+                        Language Courses
                       </Link>
                     </NavDropdown.Item>
 
@@ -130,38 +143,6 @@ const Header = () => {
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/GUni">
                         Global University
-                      </Link>
-                    </NavDropdown.Item>
-                  </NavDropdown>
-
-                  <NavDropdown title="Scholarship" id="basic-nav-dropdown">
-                    <NavDropdown.Item className="dropdownItem">
-                      <Link className="dropdownItem" to="/PHD">
-                        Doctor of Philosphy (PhD)
-                      </Link>
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item className="dropdownItem">
-                      <Link className="dropdownItem" to="/MPhil">
-                        Master of Philosophy(MPhil)
-                      </Link>
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item className="dropdownItem">
-                      <Link className="dropdownItem" to="/PGrad">
-                        Post Graduate
-                      </Link>
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item className="dropdownItem">
-                      <Link className="dropdownItem" to="/PGradD">
-                        Post Graduate Diploma
-                      </Link>
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item className="dropdownItem">
-                      <Link className="dropdownItem" to="/UGrad">
-                        Under Graduate
                       </Link>
                     </NavDropdown.Item>
                   </NavDropdown>
@@ -221,23 +202,7 @@ const Header = () => {
                       </Link>
                     </NavDropdown.Item>
 
-                    <NavDropdown.Item className="dropdownItem">
-                      <Link className="dropdownItem" to="/InteriorDesign">
-                        Interior Design
-                      </Link>
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item className="dropdownItem">
-                      <Link className="dropdownItem" to="/OnlineOutsourcing">
-                        Online Outsourcing
-                      </Link>
-                    </NavDropdown.Item>
-
-                    <NavDropdown.Item className="dropdownItem">
-                      <Link className="dropdownItem" to="/CareerCounselling">
-                        Career Counselling
-                      </Link>
-                    </NavDropdown.Item>
+                    
                   </NavDropdown>
 
                   <NavDropdown title="News & Media" id="basic-nav-dropdown">
@@ -278,18 +243,13 @@ const Header = () => {
                     </NavDropdown.Item>
                   </NavDropdown>
                   <NavDropdown title="Apply" id="basic-nav-dropdown">
-                    <NavDropdown.Item
-                      className="dropdownItem"
-                    >
+                    <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/AdmissionForm">
                         Admission
                       </Link>
                     </NavDropdown.Item>
-                    <NavDropdown.Item
-                      className="dropdownItem"
-                      
-                    >
-                     <Link className="dropdownItem" to="/ScholarshipForm">
+                    <NavDropdown.Item className="dropdownItem">
+                      <Link className="dropdownItem" to="/ScholarshipForm">
                         Scholarship
                       </Link>
                     </NavDropdown.Item>
@@ -317,17 +277,16 @@ const Header = () => {
           <Route exact path="ourteam" element={<OurTeam />} />
           <Route exact path="policy" element={<Policy />} />
           <Route exact path="contact" element={<ContactUs />} />
+
           <Route exact path="login" element={<LoginAndSignup />} />
+
           <Route exact path="overseas" element={<Overseas />} />
           <Route exact path="language" element={<Language />} />
           <Route exact path="skilldev" element={<SkillDev />} />
+
           <Route exact path="BDUni" element={<BDUni />} />
           <Route exact path="GUni" element={<GUni />} />
-          <Route exact path="PHD" element={<PHD />} />
-          <Route exact path="MPhil" element={<MPhil />} />
-          <Route exact path="PGrad" element={<PGrad />} />
-          <Route exact path="PGradD" element={<PGradD />} />
-          <Route exact path="UGrad" element={<UGrad />} />
+
           <Route
             exact
             path="WebDesignAndDevelopment"
@@ -338,13 +297,8 @@ const Header = () => {
             path="ProfessionalGraphicDesign"
             element={<ProfessionalGraphicDesign />}
           />
-          <Route
-            exact
-            path="OnlineOutsourcing"
-            element={<OnlineOutsourcing />}
-          />
+          
           <Route exact path="LanguageCourses" element={<LanguageCourses />} />
-          <Route exact path="InteriorDesign" element={<InteriorDesign />} />
           <Route exact path="IELTSPreparation" element={<IELTSPreparation />} />
           <Route exact path="EnglishSpoken" element={<EnglishSpoken />} />
           <Route exact path="DigitalMarketing" element={<DigitalMarketing />} />
@@ -352,11 +306,6 @@ const Header = () => {
             exact
             path="CommunicativeEnglish"
             element={<CommunicativeEnglish />}
-          />
-          <Route
-            exact
-            path="CareerCounselling"
-            element={<CareerCounselling />}
           />
           <Route exact path="AcademicEnglish" element={<AcademicEnglish />} />
           <Route exact path="Testimonial" element={<Testimonial />} />
@@ -366,7 +315,7 @@ const Header = () => {
           <Route exact path="Offer" element={<Offer />} />
           <Route exact path="News" element={<News />} />
           <Route exact path="Blog" element={<Blog />} />
-          <Route exact path="AdmissionForm" element={<Application/>} />
+          <Route exact path="AdmissionForm" element={<Application />} />
           <Route exact path="ScholarshipForm" element={<ApplyScholarship />} />
         </Routes>
       </BrowserRouter>

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Container } from "react-bootstrap";
+import HeroImg from "../../../HeroSection/HeroImg";
 import ApplyScholarshipForm from "./ApplyScholarshipForm";
 import FormSuccess from "./FormSuccess";
 import "./ScholarshipForm.css";
@@ -12,9 +14,11 @@ export const ApplyScholarship = () => {
 
   return (
     <>
-      
+      <Container>
+        <HeroImg imgSrc="/img/banner1.jpg"/>
+      </Container>
       <div className="form-container-schlr">
-        <h1>Scholarship Application Form</h1>
+        
         {!isSubmitted ? (
           <ApplyScholarshipForm submitForm={submitForm} />
         ) : (

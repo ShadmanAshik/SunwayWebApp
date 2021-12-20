@@ -8,7 +8,7 @@ const WhySSG = () => {
   return (
     <>
       <Container>
-        <HeroImg imgSrc="/img/about.gif"></HeroImg>
+        <HeroImg imgSrc="/img/banner1.jpg"></HeroImg>
         <div className="whyssg-container">
           <div class="row">
             <div class="col-lg-8 col-md-6 col-sm-12">
@@ -16,7 +16,7 @@ const WhySSG = () => {
               <div className="listItem">
                 <div class="row">
                   <div class=" col-sm-12">
-                    <img className="listImg" src="/img/FS 17.jpg" alt="Image" />
+                    <img className="listImg" src="/img/list.jpg" alt="Image" />
                   </div>
                   <div class="col-sm-12">
                     <p className="listPara">
@@ -25,43 +25,16 @@ const WhySSG = () => {
                       employment prospects. We ensure you getting an accurate
                       and unbiased advice.
                     </p>
-                  </div>
-                </div>
-              </div>
-              <div className="listItem">
-                <div class="row">
-                  <div class=" col-sm-12">
-                    <img className="listImg" src="/img/FS 17.jpg" alt="Image" />
-                  </div>
-                  <div class="col-sm-12">
                     <p className="listPara">
                       We are offering a complete 360-degree custom solutions. If
                       you need to take an English test such as IELTS to qualify
                       for your course, SSG will help you to practice hard to get
                       good grades.
                     </p>
-                  </div>
-                </div>
-              </div>
-              <div className="listItem">
-                <div class="row">
-                  <div class=" col-sm-12">
-                    <img className="listImg" src="/img/FS 17.jpg" alt="Image" />
-                  </div>
-                  <div class="col-sm-12">
                     <p className="listPara">
                       We always remain in touch with our students and support
                       them in every related context.
                     </p>
-                  </div>
-                </div>
-              </div>
-              <div className="listItem">
-                <div class="row">
-                  <div class=" col-sm-12">
-                    <img className="listImg" src="/img/FS 17.jpg" alt="Image" />
-                  </div>
-                  <div class="col-sm-12">
                     <p className="listPara">
                       We work on a case by case basis to give proper credential
                       services for both students and education providers. The
@@ -69,28 +42,10 @@ const WhySSG = () => {
                       best management practices, client services and academic
                       freedom.
                     </p>
-                  </div>
-                </div>
-              </div>
-              <div className="listItem">
-                <div class="row">
-                  <div class=" col-sm-12">
-                    <img className="listImg" src="/img/FS 17.jpg" alt="Image" />
-                  </div>
-                  <div class="col-sm-12">
                     <p className="listPara">
                       We ensure the right investment of hard-earnt money of the
                       respected parents.
                     </p>
-                  </div>
-                </div>
-              </div>
-              <div className="listItem">
-                <div class="row">
-                  <div class=" col-sm-12">
-                    <img className="listImg" src="/img/FS 17.jpg" alt="Image" />
-                  </div>
-                  <div class="col-sm-12">
                     <p className="listPara">
                       You can easily make an appointment with one of the SSG
                       counsellors certified professionally, friendly and
@@ -101,6 +56,7 @@ const WhySSG = () => {
                   </div>
                 </div>
               </div>
+              
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
               <ContactForm />

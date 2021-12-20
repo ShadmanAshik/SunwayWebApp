@@ -1,8 +1,8 @@
 .title {
   
-  background-color: rgb(44, 46, 42);
+  background-color: var(--main-deepOrange);
   margin: 65px 10px 30px 10px;
-  color: var(--main-deepOrange);
+  color: white;
   text-align: center ;
   padding: 15px 0px 15px 0;
 }

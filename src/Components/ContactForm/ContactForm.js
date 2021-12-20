@@ -12,15 +12,14 @@ const ContactForm = ({ submitForm }) => {
   return (
     <div className="container" id="formContiner">
       <div className="contact-form">
-        <div className="contact-form-image">
-          <h2 className="card-heading">
-            Interested in Studying Abroad with SSG?
-            <small>
-              Just enter your details bellow And we'll reach you soon.
-            </small>
-          </h2>
-        </div>
         <form className="card-form" onSubmit={handleSubmit}>
+          <div className="contact-form-title">
+            <h2 >
+              Interested in Studying Abroad with SSG?
+             
+            </h2>
+            <p>Just enter your details bellow And we'll reach you soon.</p>
+          </div>
           <div className="input">
             <input
               id="fname"
