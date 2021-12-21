@@ -19,56 +19,54 @@ const Home = () => {
                 <Container>
                   <Sliders />
                 </Container>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <ContactForm/>
-              </div>
-            </div>
-
-            <h1 className="title">Education Programs</h1>
-            <div class="row">
-              
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div className="card-item">
-                  <ActionAreaCard
-                    imgSrc="/img/dummy.jpg"
-                    title="Under Graduate"
-                  />
+                <h1 className="title">Education Programs</h1>
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                    <div className="card-item">
+                      <ActionAreaCard
+                        imgSrc="/img/dummy.jpg"
+                        title="Under Graduate"
+                      />
+                    </div>
+                  </div>
+                  <div class=" col-md-6 col-sm-12">
+                    <div className="card-item">
+                      <ActionAreaCard
+                        imgSrc="/img/dummy.jpg"
+                        title="Post Graduate"
+                      />
+                    </div>{" "}
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <div className="card-item">
+                      <ActionAreaCard imgSrc="/img/dummy.jpg" title="Diploma" />
+                    </div>
+                  </div>
+                  <div class=" col-md-6 col-sm-12">
+                    <div className="card-item">
+                      <ActionAreaCard imgSrc="/img/dummy.jpg" title="MBBS" />
+                    </div>
+                  </div>
+                  <div class=" col-md-6 col-sm-12">
+                    <div className="card-item">
+                      <ActionAreaCard
+                        imgSrc="/img/dummy.jpg"
+                        title="Doctor of Philosophy"
+                      />
+                    </div>
+                  </div>
+                  <div class=" col-md-6 col-sm-12">
+                    <div className="card-item">
+                      <ActionAreaCard
+                        imgSrc="/img/dummy.jpg"
+                        title="Skill Development"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="col-lg-4 col-md-6 col-sm-12">
-                <div className="card-item">
-                  <ActionAreaCard
-                    imgSrc="/img/dummy.jpg"
-                    title="Post Graduate"
-                  />
-                </div>{" "}
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div className="card-item">
-                  <ActionAreaCard imgSrc="/img/dummy.jpg" title="Diploma" />
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div className="card-item">
-                  <ActionAreaCard imgSrc="/img/dummy.jpg" title="MBBS" />
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div className="card-item">
-                  <ActionAreaCard
-                    imgSrc="/img/dummy.jpg"
-                    title="Doctor of Philosophy"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div className="card-item">
-                  <ActionAreaCard
-                    imgSrc="/img/dummy.jpg"
-                    title="Skill Development"
-                  />
-                </div>
+                <ContactForm />
               </div>
             </div>
           </div>

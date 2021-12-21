@@ -1,5 +1,5 @@
 .footer-part-1{
-  background-color: rgb(31,31,31);
+  background-color: var(--main-deepBlue);
   padding-top: 60px;
   padding-bottom: 100px;
   color: white;
@@ -7,6 +7,11 @@
 }
 .footer-column{
   text-align: left;
+  padding: 0 5px;
+}
+.fbpost{
+  width: 300px;
+  height: auto;
 }
 .footer-part-1 .col-lg-3 .col-lg-2 .col-md-4 .col-md-2 .col-sm-12{
   text-align: left !important;
@@ -69,4 +74,31 @@ a:hover{
 }
 .footer-2 p{
   text-align: center;
+}
+.fb-page{
+  
+  
+}
+.social-icons-container{
+  display: inline-flex;
+  
+  
+}
+.icons{
+  width: 40px;
+  margin: 20px 10px;
+
+}
+.fb-btn{
+  position: relative;
+  top: 80%;
+  left: 27%;
+
+}
+.btn-bk{
+  background-image: url("./fbpost.jpg");
+  background-size: 300px 175px;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 175px;
 }

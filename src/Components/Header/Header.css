@@ -1,18 +1,17 @@
+@import url(https://use.fontawesome.com/releases/v5.15.4/css/all.css);
 .nav {
-  /* background-color: white; */
-  background-image: linear-gradient(
-    to right,
-    var(--main-deepOrange),
-    rgb(255, 171, 60)
-  );
-  padding:0px !important;
-  /* position:sticky; */
+  background-color: white;
+  padding: 0px !important;
 }
 
 .scrwaller {
   background-color: black;
   color: rgb(255, 255, 255);
   font-size: 18px;
+}
+.img-logo {
+  height: 55px;
+  width: auto;
 }
 .navItem {
   text-decoration: none !important;
@@ -28,37 +27,53 @@
 }
 #navlink:hover,
 #basic-nav-dropdown:hover {
-  color: white;
-  background-color: #00A0CCFF;
-  background-image: linear-gradient(
-    to top,
-    #00A0CCFF,
-    rgb(105, 217, 248)
-  );
+  color: white !important;
+  background-color: var(--main-deepBlue);
 }
+.nav-link::after {
+  /* border: none;
+  font-family: normal normal normal 12px/1 "Font Awesome 5 Free";
+  content: "\f337";
+  vertical-align: 0; */
+  vertical-align: 0.15em;
+}
+
 .dropdown-menu {
   background-color: white;
 }
+
 .dropdownItem {
   color: rgb(53, 53, 53);
   text-decoration: none;
 }
-.dropdownItem:hover {
-  color: white;
-  background-color: rgb(2, 161, 253);
+.dropdown-item{
+  /* padding:0px !important; */
+}
+
+.dropdown-item:hover {
+  background-color: var(--main-deepBlue);
+}
+.highlightItem:hover {
+  color: white !important;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
 }
 .logo {
   font-weight: bold;
   font-family: Comic Sans MS;
 }
-@media only screen and (max-width: 1000px){
-  #navlink,
-#basic-nav-dropdown {
-  padding: 5px;
-  color: black;
-  font-size: 18px;
-  margin-left: 5px;
-  margin-right: 5px;
-  text-decoration: none !important;
+.dropdown:hover .dorpdown-menu {
+  display: block;
 }
+@media only screen and (max-width: 1000px) {
+  #navlink,
+  #basic-nav-dropdown {
+    padding: 5px;
+    color: black;
+    font-size: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none !important;
+  }
 }

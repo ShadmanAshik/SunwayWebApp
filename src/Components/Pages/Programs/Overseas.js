@@ -1,81 +1,29 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ActionAreaCard from "../../Card/ActionCard";
-import Cards from "../../Card/Cards";
 import ContactForm from "../../ContactForm/ContactForm";
-import HeroSection from "../../HeroSection/HeroSection";
-import Sliders from "../../Slider/Sliders";
+import HeroImg from "../../HeroSection/HeroImg";
 import "./Overseas.css";
-const Home = () => {
+
+const Overseas = () => {
   return (
     <>
-      <Container>
-        <HeroSection />
-        <div class="row">
-          <div className="cardContainer">
+      <div>
+        <Container>
+          <HeroImg imgSrc="/img/banner1.jpg" />
+          <div>
             <div class="row">
-              <div class="col-lg-8 col-md-6 col-sm-12">
-                <h1 className="title">Explore Our Services</h1>
-                <Container>
-                  <Sliders />
-                </Container>
+              <div className="col-lg-8 col-md-6 col-sm-12">
+                <h1 className="renovation">Renovation in progress...</h1>
               </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <ContactForm/>
-              </div>
-            </div>
-
-            <h1 className="title">Education Programs</h1>
-            <div class="row">
-              
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div className="card-item">
-                  <ActionAreaCard
-                    imgSrc="/img/dummy.jpg"
-                    title="Under Graduate"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div className="card-item">
-                  <ActionAreaCard
-                    imgSrc="/img/dummy.jpg"
-                    title="Post Graduate"
-                  />
-                </div>{" "}
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div className="card-item">
-                  <ActionAreaCard imgSrc="/img/dummy.jpg" title="Diploma" />
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div className="card-item">
-                  <ActionAreaCard imgSrc="/img/dummy.jpg" title="MBBS" />
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div className="card-item">
-                  <ActionAreaCard
-                    imgSrc="/img/dummy.jpg"
-                    title="Doctor of Philosophy"
-                  />
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div className="card-item">
-                  <ActionAreaCard
-                    imgSrc="/img/dummy.jpg"
-                    title="Skill Development"
-                  />
-                </div>
+              <div className="col-lg-4 col-md-6 col-sm-12">
+                <ContactForm />
               </div>
             </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </>
   );
 };
 
-export default Home;
+export default Overseas;

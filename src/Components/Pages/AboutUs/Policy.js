@@ -8,7 +8,7 @@ const Policy = () => {
   return (
     <>
       <Container>
-        <HeroImg imgSrc="/img/about.gif" />
+        <HeroImg imgSrc="/img/banner1.jpg" />
         <div>
           <div class="row">
             <div className="col-lg-8 col-md-6 col-sm-12">
