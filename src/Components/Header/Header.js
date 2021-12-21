@@ -49,7 +49,13 @@ const Header = () => {
           <Navbar className="nav" expand="lg">
             <Container>
               <Navbar.Brand href="/home">
-                <h1 className="logo">SSG</h1>
+                <Link to="/home">
+                  <img
+                    className="img-logo"
+                    src="/img/logo.png"
+                    alt="logo"
+                  ></img>
+                </Link>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -58,10 +64,10 @@ const Header = () => {
                     <Nav.Item id="navlink">Home</Nav.Item>
                   </Link>
 
-                  <NavDropdown title="About Us" id="basic-nav-dropdown">
-                    <NavDropdown.Item className="dropdownItems">
+                  <NavDropdown title="About Us" id="basic-nav-dropdown" >
+                    <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/about">
-                        About Us
+                        About Us 
                       </Link>
                     </NavDropdown.Item>
 
@@ -201,8 +207,6 @@ const Header = () => {
                         Digital Marketing
                       </Link>
                     </NavDropdown.Item>
-
-                    
                   </NavDropdown>
 
                   <NavDropdown title="News & Media" id="basic-nav-dropdown">
@@ -297,7 +301,7 @@ const Header = () => {
             path="ProfessionalGraphicDesign"
             element={<ProfessionalGraphicDesign />}
           />
-          
+
           <Route exact path="LanguageCourses" element={<LanguageCourses />} />
           <Route exact path="IELTSPreparation" element={<IELTSPreparation />} />
           <Route exact path="EnglishSpoken" element={<EnglishSpoken />} />

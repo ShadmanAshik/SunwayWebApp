@@ -10,6 +10,10 @@
   color: rgb(255, 255, 255);
   font-size: 18px;
 }
+.img-logo{
+  height: 80px;
+  width: auto;
+}
 .navItem {
   text-decoration: none !important;
 }
@@ -26,6 +30,9 @@
 #basic-nav-dropdown:hover {
   color: white !important;
   background-color: var(--main-deepBlue);
+  
+}
+.nav-link::after{
   
 }
 .dropdown-menu {
