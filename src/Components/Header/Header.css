@@ -63,9 +63,7 @@
   font-weight: bold;
   font-family: Comic Sans MS;
 }
-.dropdown:hover .dorpdown-menu {
-  display: block;
-}
+
 @media only screen and (max-width: 1000px) {
   #navlink,
   #basic-nav-dropdown {
