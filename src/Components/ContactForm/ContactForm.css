@@ -48,16 +48,7 @@
   position: relative;
   padding-top: 20px;
 }
-.countryCodeInput {
-  display: flex;
-  flex-direction: column-reverse;
-  position: relative;
-  padding-top: 15px;
-}
-.input .col-sm-4 .col-sm-8 {
-  margin-top: 0;
-  padding: 0px !important;
-}
+/*   */
 .input + .input {
   margin-top: 10px;
 }
@@ -67,6 +58,19 @@
   top: 1.5rem;
   transition: 0.25s ease;
 }
+.input-labelCountry{
+  color: #8597a3;
+  position: absolute;
+  top: 2.1rem;
+  transition: 0.25s ease;
+}
+
+.input-field:focus + .input-labelCountry,
+.input-field:valid + .input-labelCountry {
+  color: black;
+  transform: translateY(-1.5rem);
+}
+
 .input-field {
   border: 0;
   z-index: 1;
@@ -214,3 +218,11 @@
   opacity: 1;
   transition: all 0.5s ease;
 }
+/* @media only screen and (max-width: 1000px) {
+  .input-labelCountry{
+    color: #8597a3;
+    position: absolute;
+    top: 1.5rem;
+    transition: 0.25s ease;
+  }
+} */

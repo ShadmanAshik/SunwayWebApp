@@ -63,6 +63,10 @@
   font-weight: bold;
   font-family: Comic Sans MS;
 }
+.dropdown-menu[data-bs-popper] {
+  top:95% !important;
+  margin-top: 0rem !important;
+}
 
 @media only screen and (max-width: 1000px) {
   #navlink,

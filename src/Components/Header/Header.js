@@ -202,7 +202,7 @@ const Header = () => {
 
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/IELTSPreparation">
-                        <div>IELTS Preparation</div>
+                        <div className="highlightItem">IELTS Preparation</div>
                       </Link>
                     </NavDropdown.Item>
 
