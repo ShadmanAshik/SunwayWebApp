@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import Cards from "../Card/Cards";
 
-export default class Sliders extends Component {
+export default class ProgramSlider extends Component {
   render() {
     const settings = {
       dots: true,
       infinite: true,
       // centerPadding: "60px",
-      leftPdding:"40px",
+      leftPdding: "40px",
       speed: 2000,
       slidesToShow: 2,
       slidesToScroll: 1,
@@ -20,10 +20,10 @@ export default class Sliders extends Component {
           breakpoint: 1200,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
+            slidesToScroll: 1,
+          },
+        },
+      ],
     };
 
     return (
@@ -31,7 +31,7 @@ export default class Sliders extends Component {
         <Slider {...settings}>
           <div>
             <Cards
-              title="Student Counceling"
+              title="Overseas Admission"
               imgSrc="/img/FS 8.jpg"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               btn="See More"
@@ -39,7 +39,7 @@ export default class Sliders extends Component {
           </div>
           <div>
             <Cards
-              title="Application Processing"
+              title="Language Proficiency"
               imgSrc="/img/FS 10.jpg"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               btn="See More"
@@ -47,7 +47,7 @@ export default class Sliders extends Component {
           </div>
           <div>
             <Cards
-              title="Visa Application"
+              title="Skill Development"
               imgSrc="/img/visa.jpg"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               btn="See More"
@@ -55,7 +55,7 @@ export default class Sliders extends Component {
           </div>
           <div>
             <Cards
-              title="Education Program"
+              title="Tuition Media"
               imgSrc="/img/SF 4.jpg"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               btn="See More"

@@ -76,9 +76,8 @@ a:hover{
   text-align: center;
 }
 .fb-page{
-  /* background-image: url("https://drive.google.com/file/d/1F9bWDvbQByV5SGveK7yjniB9paJF5Pdp/view?usp=sharing"); */
-  width: 400px;
-  height: 225px;
+  
+  
 }
 .social-icons-container{
   display: inline-flex;
@@ -88,6 +87,18 @@ a:hover{
 .icons{
   width: 40px;
   margin: 20px 10px;
-  
-  
+
+}
+.fb-btn{
+  position: relative;
+  top: 80%;
+  left: 27%;
+
+}
+.btn-bk{
+  background-image: url("./fbpost.jpg");
+  background-size: 300px 175px;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 175px;
 }

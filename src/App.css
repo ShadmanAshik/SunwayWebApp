@@ -8,6 +8,9 @@
 .body{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+/* .container{
+  width: 90%;
+} */
 :root {
   --main-deepOrange:#F5881F;
   --main-blue: #00A0CCFF;

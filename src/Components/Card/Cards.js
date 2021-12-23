@@ -4,7 +4,7 @@ import "./Cards.css"
 
 const Cards = (props) => {
   return (
-    <div>
+    <div className="card-containter">
       <Card style={{ width: "90%" }}>
         <Card.Img className="cardImg" variant="top" src={props.imgSrc} alt="Card Image" />
         <Card.Body>

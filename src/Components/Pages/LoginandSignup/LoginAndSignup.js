@@ -17,7 +17,7 @@ const LoginAndSignup = ({ submitForm }) => {
               <div class="section pb-5 pt-5 pt-sm-2 text-align-center">
                 <h6 class="col 12 mb-0 pb-3 text-center">
                   <span className="label">Log In</span>
-                  <span className="label">Sign Up</span>
+                  <span className="label">Register</span>
                 </h6>
                 <input
                   class="loginCheckbox"
@@ -32,24 +32,6 @@ const LoginAndSignup = ({ submitForm }) => {
                       <div class="center-wrap">
                         <div class="section text-center">
                           <h4 class="heading mb-4 pb-3">Log In</h4>
-
-                          <div class="form-group">
-                            <select
-                              id="group"
-                              type="text"
-                              name="group"
-                              class="form-style"
-                              value={values.group}
-                              onChange={handleChange}
-                              required
-                            >
-                              <option value="">Select User</option>
-                              <option value="User">User</option>
-                              <option value="Agent">Agent</option>
-                              <option value="Agent">Agent</option>
-                            </select>
-                            <i class="input-icon uil uil-user"></i>
-                          </div>
 
                           <div class="form-group mt-2">
                             <input
@@ -99,7 +81,7 @@ const LoginAndSignup = ({ submitForm }) => {
                     <form class="card-back" onSubmit={handleSubmit}>
                       <div class="center-wrap">
                         <div class="section text-center">
-                          <h4 class="heading mb-4 pb-3">Sign Up</h4>
+                          <h4 class="heading mb-4 pb-3">Register</h4>
 
                           <div class="form-group">
                             <input
@@ -536,9 +518,8 @@ const LoginAndSignup = ({ submitForm }) => {
                           </div>
 
                           <button className="submitButton mt-4" type="submit">
-                            Sign Up
+                            Register
                           </button>
-                          
                         </div>
                       </div>
                     </form>

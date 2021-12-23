@@ -45,7 +45,7 @@ const Header = () => {
         </marquee>
       </div>
       <BrowserRouter>
-        <div>
+        
           <Navbar className="nav" expand="lg">
             <Container>
               <Navbar.Brand href="/home">
@@ -64,123 +64,151 @@ const Header = () => {
                     <Nav.Item id="navlink">Home</Nav.Item>
                   </Link>
 
-                  <NavDropdown title="About Us" id="basic-nav-dropdown" >
+                  <NavDropdown
+                    renderMenuOnMount={true}
+                    title="About Us"
+                    id="basic-nav-dropdown"
+                  >
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/about">
-                        About Us 
+                        <div className="highlightItem">About Us</div>
                       </Link>
                     </NavDropdown.Item>
 
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/whyssg">
-                        Why SSG
+                        <div className="highlightItem">Why SSG</div>
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/mission">
-                        Mission &amp; Vission
+                        <div className="highlightItem">
+                          Mission &amp; Vission
+                        </div>
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/policy">
-                        Policy
+                        <div className="highlightItem">Policy</div>
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/ourteam">
-                        Our Team
+                        <div className="highlightItem">Our Team</div>
                       </Link>
                     </NavDropdown.Item>
 
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/contact">
-                        Contact Us
+                        <div className="highlightItem">Contact Us</div>
                       </Link>
                     </NavDropdown.Item>
                   </NavDropdown>
 
-                  <NavDropdown title="Programs" id="basic-nav-dropdown">
+                  <NavDropdown
+                    renderMenuOnMount={true}
+                    title="Programs"
+                    id="basic-nav-dropdown"
+                  >
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/overseas">
-                        Overseas Admission
+                        <div className="highlightItem">Overseas Admission</div>
                       </Link>
                     </NavDropdown.Item>
 
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/language">
-                        Student Counselling
+                        <div className="highlightItem">Student Counselling</div>
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/language">
-                        Application Processing
+                        <div className="highlightItem">
+                          Application Processing
+                        </div>
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/language">
-                        Visa Application Assistance
+                        <div className="highlightItem">
+                          Visa Application Assistance
+                        </div>
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/language">
-                        Scholarship Assistance
+                        <div className="highlightItem">
+                          Scholarship Assistance
+                        </div>
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/language">
-                        Language Courses
+                        <div className="highlightItem">Language Courses</div>
                       </Link>
                     </NavDropdown.Item>
 
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/skilldev">
-                        Skill Development
+                        <div className="highlightItem">Skill Development</div>
                       </Link>
                     </NavDropdown.Item>
                   </NavDropdown>
 
-                  <NavDropdown title="University" id="basic-nav-dropdown">
+                  <NavDropdown
+                    renderMenuOnMount={true}
+                    title="University"
+                    id="basic-nav-dropdown"
+                  >
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/BDUni">
-                        Bangladeshi University
+                        <div className="highlightItem">
+                          Bangladeshi University
+                        </div>
                       </Link>
                     </NavDropdown.Item>
 
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/GUni">
-                        Global University
+                        <div className="highlightItem">Global University</div>
                       </Link>
                     </NavDropdown.Item>
                   </NavDropdown>
 
-                  <NavDropdown title="Courses" id="basic-nav-dropdown">
+                  <NavDropdown
+                    renderMenuOnMount={true}
+                    title="Courses"
+                    id="basic-nav-dropdown"
+                  >
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/EnglishSpoken">
-                        English Spoken
+                        <div className="highlightItem">English Spoken</div>
                       </Link>
                     </NavDropdown.Item>
 
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/CommunicativeEnglish">
-                        Communicative English
+                        <div className="highlightItem">
+                          Communicative English
+                        </div>
                       </Link>
                     </NavDropdown.Item>
 
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/AcademicEnglish">
-                        Academic English
+                        <div className="highlightItem">Academic English</div>
                       </Link>
                     </NavDropdown.Item>
 
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/IELTSPreparation">
-                        IELTS Preparation
+                        <div className="highlightItem">IELTS Preparation</div>
                       </Link>
                     </NavDropdown.Item>
 
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/LanguageCourses">
-                        Language Courses
+                        <div className="highlightItem">Language Courses</div>
                       </Link>
                     </NavDropdown.Item>
 
@@ -189,7 +217,9 @@ const Header = () => {
                         className="dropdownItem"
                         to="/ProfessionalGraphicDesign"
                       >
-                        Professional Graphic Design
+                        <div className="highlightItem">
+                          Professional Graphic Design
+                        </div>
                       </Link>
                     </NavDropdown.Item>
 
@@ -198,71 +228,76 @@ const Header = () => {
                         className="dropdownItem"
                         to="/WebDesignAndDevelopment"
                       >
-                        Web Design & Development
+                        <div className="highlightItem">
+                          Web Design & Development
+                        </div>
                       </Link>
                     </NavDropdown.Item>
 
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/DigitalMarketing">
-                        Digital Marketing
+                        <div className="highlightItem">Digital Marketing</div>
                       </Link>
                     </NavDropdown.Item>
                   </NavDropdown>
 
-                  <NavDropdown title="News & Media" id="basic-nav-dropdown">
+                  <NavDropdown
+                    renderMenuOnMount={true}
+                    title="News & Media"
+                    id="basic-nav-dropdown"
+                  >
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/Blog">
-                        Blog
+                        <div className="highlightItem">Blog</div>
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/Events">
-                        Events
+                        <div className="highlightItem">Events</div>
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/News">
-                        News
+                        <div className="highlightItem">News</div>
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/Offer">
-                        Offer
+                        <div className="highlightItem" >Offer</div>
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/PhotoGallery">
-                        Photo Gallery
+                        <div className="highlightItem">Photo Gallery</div>
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/Testimonial">
-                        Testimonial
+                        <div className="highlightItem">Testimonial</div>
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/VideoGallery">
-                        Video Gallery
+                        <div className="highlightItem">Video Gallery</div>
                       </Link>
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <NavDropdown title="Apply" id="basic-nav-dropdown">
+                  <NavDropdown
+                    renderMenuOnMount={true}
+                    title="Apply"
+                    id="basic-nav-dropdown"
+                  >
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/AdmissionForm">
-                        Admission
+                        <div className="highlightItem">Admission</div>
                       </Link>
                     </NavDropdown.Item>
                     <NavDropdown.Item className="dropdownItem">
                       <Link className="dropdownItem" to="/ScholarshipForm">
-                        Scholarship
+                        <div className="highlightItem">Scholarship</div>
                       </Link>
                     </NavDropdown.Item>
-                    <NavDropdown.Item
-                      className="dropdownItem"
-                      href="#action/3.3"
-                    >
-                      Legal Support
-                    </NavDropdown.Item>
+                    
                   </NavDropdown>
                   <Link className="navItem" to="/login">
                     <Nav.Item id="navlink">Sign In</Nav.Item>
@@ -271,29 +306,25 @@ const Header = () => {
               </Navbar.Collapse>
             </Container>
           </Navbar>
-        </div>
+        
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="home" element={<Home />} />
-          <Route exact path="about" element={<AboutUS />} />
-          <Route exact path="whyssg" element={<WhySSG />} />
-          <Route exact path="mission" element={<Mission />} />
-          <Route exact path="ourteam" element={<OurTeam />} />
-          <Route exact path="policy" element={<Policy />} />
-          <Route exact path="contact" element={<ContactUs />} />
-
-          <Route exact path="login" element={<LoginAndSignup />} />
-
-          <Route exact path="overseas" element={<Overseas />} />
-          <Route exact path="language" element={<Language />} />
-          <Route exact path="skilldev" element={<SkillDev />} />
-
-          <Route exact path="BDUni" element={<BDUni />} />
-          <Route exact path="GUni" element={<GUni />} />
-
+          <Route exact path="/home" element={<Home />} />
+          <Route exact path="/about" element={<AboutUS />} />
+          <Route exact path="/whyssg" element={<WhySSG />} />
+          <Route exact path="/mission" element={<Mission />} />
+          <Route exact path="/ourteam" element={<OurTeam />} />
+          <Route exact path="/policy" element={<Policy />} />
+          <Route exact path="/contact" element={<ContactUs />} />
+          <Route exact path="/login" element={<LoginAndSignup />} />
+          <Route exact path="/overseas" element={<Overseas />} />
+          <Route exact path="/language" element={<Language />} />
+          <Route exact path="/skilldev" element={<SkillDev />} />
+          <Route exact path="/BDUni" element={<BDUni />} />
+          <Route exact path="/GUni" element={<GUni />} />
           <Route
             exact
-            path="WebDesignAndDevelopment"
+            path="/WebDesignAndDevelopment"
             element={<WebDesignAndDevelopment />}
           />
           <Route
@@ -301,7 +332,6 @@ const Header = () => {
             path="ProfessionalGraphicDesign"
             element={<ProfessionalGraphicDesign />}
           />
-
           <Route exact path="LanguageCourses" element={<LanguageCourses />} />
           <Route exact path="IELTSPreparation" element={<IELTSPreparation />} />
           <Route exact path="EnglishSpoken" element={<EnglishSpoken />} />

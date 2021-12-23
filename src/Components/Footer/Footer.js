@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import { BrowserRouter, Link } from "react-router-dom";
-import AboutUS from "../../Components/Pages/AboutUs/AboutUS";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import AboutUS from "../Pages/AboutUs/AboutUS";
 
 function Footer() {
   return (
@@ -12,51 +12,83 @@ function Footer() {
             <div className="row">
               <div className="col-lg-3 col-md-4 col-sm-12 ">
                 <div className="footer-column">
-                  <h3 className="footer-title">Be Our Partner</h3>
-                  <a href="/">Global Business Partner</a>
+                  <h3 className="footer-title">Quick Links</h3>
+
+                  <a href="/">Be an Agent</a>
                   <br />
-                  <a href="/">Bangladeshi Business Partner</a>
+                  <a href="/">Admission</a>
                   <br />
-                  <a href="/">Bangladeshi Individual Partner</a>
+                  <a href="/scholarship">Scholarship</a>
+                  <br />
+                  <a href="/contact">Contact Us</a>
+                  <br />
+                  <a href="/login">Login</a>
+                  <br />
+                  <a href="/login">Register</a>
                   <br />
                 </div>
               </div>
               <div className="col-lg-3 col-md-4 col-sm-12 ">
                 <div className="footer-column">
                   <h3 className="footer-title">Important Links</h3>
-                  <a href="https://www.qs.com/rankings/">QS Ranking</a>
+                  <a target="_blank" href="https://www.qs.com/rankings/">
+                    QS Ranking
+                  </a>
                   <br />
-                  <a href="https://www.britishcouncil.org/">British Council</a>
+                  <a target="_blank" href="https://www.britishcouncil.org/">
+                    British Council
+                  </a>
                   <br />
-                  <a href="https://cscuk.fcdo.gov.uk/apply/masters-scholarships/">
+                  <a
+                    target="_blank"
+                    href="https://cscuk.fcdo.gov.uk/apply/masters-scholarships/"
+                  >
                     Commonwealth Scholarship
                   </a>
                   <br />
-                  <a href="https://www.cic.gc.ca/english/helpcentre/results-by-topic.asp?top=29">
+                  <a
+                    target="_blank"
+                    href="https://www.cic.gc.ca/english/helpcentre/results-by-topic.asp?top=29"
+                  >
                     Canada Express Entry
                   </a>
                   <br />
-                  <a href="https://www.gov.uk/browse/visas-immigration">
+                  <a
+                    target="_blank"
+                    href="https://www.gov.uk/browse/visas-immigration"
+                  >
                     Living in UK
                   </a>
                   <br />
-                  <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html">
+                  <a
+                    target="_blank"
+                    href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html"
+                  >
                     Study in Canada
                   </a>
                   <br />
-                  <a href="https://bangladesh.embassy.gov.au/daca/home.html">
+                  <a
+                    target="_blank"
+                    href="https://bangladesh.embassy.gov.au/daca/home.html"
+                  >
                     Australian High Commission
                   </a>
                   <br />
-                  <a href="https://www.internationalstudent.com/study_usa/">
+                  <a
+                    target="_blank"
+                    href="https://www.internationalstudent.com/study_usa/"
+                  >
                     Study in USA
                   </a>
                   <br />
-                  <a href="https://www.biman-airlines.com/">
+                  <a target="_blank" href="https://www.biman-airlines.com/">
                     Bangladesh Airlines
                   </a>
                   <br />
-                  <a href="https://www.timeshighereducation.com/">
+                  <a
+                    target="_blank"
+                    href="https://www.timeshighereducation.com/"
+                  >
                     Times Higher Education
                   </a>
                   <br />
@@ -72,7 +104,8 @@ function Footer() {
                   </p>
                   <p>
                     <i className="far fa-envelope" id="contactIcon"></i>
-                    info@educationhub-bd.com
+                    sunwaystudy@gmail.com<br/>
+                    info@sunwaystudygroup.com
                     <br />
                   </p>
                   <p>
@@ -85,58 +118,56 @@ function Footer() {
                 <div className="footer-column">
                   <h3 className="footer-title">Social</h3>
                   <div className="fb-page">
-                    <img className="fbpost" src="/img/fbpost.jpg" alt="fs" />
-                    <div id="fb-root"></div>
-                    <script
-                      async
-                      defer
-                      crossorigin="anonymous"
-                      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=714278166202341&autoLogAppEvents=1"
-                      nonce="a0XBKvok"
-                    ></script>
-                    <div
-                      class="fb-like"
-                      data-href="https://www.facebook.com/Sunway-Study-Group-103946112131280"
-                      data-width=""
-                      data-layout="button"
-                      data-action="like"
-                      data-size="large"
-                      data-share="true"
-                    ></div>
+                    <div className="btn-bk">
+                      <div className="fb-btn">
+                        <div
+                          class="fb-like"
+                          data-href="https://www.facebook.com/Sunway-Study-Group-104714155413603"
+                          data-width=""
+                          data-layout="button"
+                          data-action="like"
+                          data-size="large"
+                          data-share="true"
+                        ></div>
+                      </div>
+                    </div>
                     <div className="social-icons-container">
                       <div className="row">
                         <div className="col-sm-3">
-                          <a href="https://www.facebook.com/Sunway-Study-Group-103946112131280">
+                          <a
+                            target="_blank"
+                            href="https://www.facebook.com/Sunway-Study-Group-103946112131280"
+                          >
                             <img
                               className="icons"
-                              src="/img/icons/fb.png"
+                              src="/img/Icons/fb.png"
                               alt="fb"
                             ></img>
                           </a>
                         </div>
                         <div className="col-sm-3">
-                          <a href="">
+                          <a target="_blank" href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw">
                             <img
                               className="icons"
-                              src="/img/icons/yt.png"
-                              alt="linkedin"
+                              src="/img/Icons/yt.png"
+                              alt="youtube"
                             ></img>
                           </a>
                         </div>
                         <div className="col-sm-3">
-                          <a href="">
+                          <a target="_blank" href="https://www.instagram.com/sunway_study_group/">
                             <img
                               className="icons"
-                              src="/img/icons/twitter.png"
-                              alt="twitter"
+                              src="/img/Icons/instagram.png"
+                              alt="instagram"
                             ></img>
                           </a>
                         </div>
                         <div className="col-sm-3">
-                          <a href="">
+                          <a target="_blank" href="">
                             <img
                               className="icons"
-                              src="/img/icons/linkedin.png"
+                              src="/img/Icons/linkedin.png"
                               alt="linkedin"
                             ></img>
                           </a>

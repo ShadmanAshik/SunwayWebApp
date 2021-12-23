@@ -26,7 +26,7 @@ const HeroSection = (props) => {
               alt="First slide"
             />
             <Carousel.Caption className="caurousel-caption ">
-              <h1>Welcome to SSG</h1>
+              <h1>Welcome to Sunway Study Group</h1>
               <Button className="heroBtn" id="explore" variant="secondary" >
                 Explore more
               </Button>
@@ -80,7 +80,7 @@ const HeroSection = (props) => {
               alt="Fifth slide"
             />
             <Carousel.Caption className="caurousel-caption ">
-              <h1>Be Our Partner</h1>
+              <h1>Be Our Global Agent</h1>
               <Button className="heroBtn" id="explore" variant="secondary" >
                 Explore more
               </Button>
