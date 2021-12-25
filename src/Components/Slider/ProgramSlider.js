@@ -48,7 +48,7 @@ export default class ProgramSlider extends Component {
           <div>
             <Cards
               title="Skill Development"
-              imgSrc="/img/visa.jpg"
+              imgSrc="/img/FS 14.jpg"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               btn="See More"
             />
