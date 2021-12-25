@@ -45,7 +45,7 @@ const Header = () => {
         </marquee>
       </div>
       <BrowserRouter>
-        <div>
+        
           <Navbar className="nav" expand="lg">
             <Container>
               <Navbar.Brand href="/home">
@@ -297,12 +297,7 @@ const Header = () => {
                         <div className="highlightItem">Scholarship</div>
                       </Link>
                     </NavDropdown.Item>
-                    <NavDropdown.Item
-                      className="dropdownItem"
-                      href="#action/3.3"
-                    >
-                      <div className="highlightItem">Legal Support</div>
-                    </NavDropdown.Item>
+                    
                   </NavDropdown>
                   <Link className="navItem" to="/login">
                     <Nav.Item id="navlink">Sign In</Nav.Item>
@@ -311,25 +306,25 @@ const Header = () => {
               </Navbar.Collapse>
             </Container>
           </Navbar>
-        </div>
+        
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="home" element={<Home />} />
-          <Route exact path="about" element={<AboutUS />} />
-          <Route exact path="whyssg" element={<WhySSG />} />
-          <Route exact path="mission" element={<Mission />} />
-          <Route exact path="ourteam" element={<OurTeam />} />
-          <Route exact path="policy" element={<Policy />} />
-          <Route exact path="contact" element={<ContactUs />} />
-          <Route exact path="login" element={<LoginAndSignup />} />
-          <Route exact path="overseas" element={<Overseas />} />
-          <Route exact path="language" element={<Language />} />
-          <Route exact path="skilldev" element={<SkillDev />} />
-          <Route exact path="BDUni" element={<BDUni />} />
-          <Route exact path="GUni" element={<GUni />} />
+          <Route exact path="/home" element={<Home />} />
+          <Route exact path="/about" element={<AboutUS />} />
+          <Route exact path="/whyssg" element={<WhySSG />} />
+          <Route exact path="/mission" element={<Mission />} />
+          <Route exact path="/ourteam" element={<OurTeam />} />
+          <Route exact path="/policy" element={<Policy />} />
+          <Route exact path="/contact" element={<ContactUs />} />
+          <Route exact path="/login" element={<LoginAndSignup />} />
+          <Route exact path="/overseas" element={<Overseas />} />
+          <Route exact path="/language" element={<Language />} />
+          <Route exact path="/skilldev" element={<SkillDev />} />
+          <Route exact path="/BDUni" element={<BDUni />} />
+          <Route exact path="/GUni" element={<GUni />} />
           <Route
             exact
-            path="WebDesignAndDevelopment"
+            path="/WebDesignAndDevelopment"
             element={<WebDesignAndDevelopment />}
           />
           <Route

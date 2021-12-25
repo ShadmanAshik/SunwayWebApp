@@ -15,7 +15,7 @@ const ContactForm = ({ submitForm }) => {
         <form className="card-form" onSubmit={handleSubmit}>
           <div className="contact-form-title">
             <h2>Interested in Studying Abroad with SSG?</h2>
-            <p>Just enter your details bellow And we'll reach you soon.</p>
+            <p className="title-description">Just enter your details bellow And we'll reach you soon.</p>
           </div>
           <div className="input">
             <input

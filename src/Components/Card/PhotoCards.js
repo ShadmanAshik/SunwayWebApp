@@ -12,7 +12,6 @@ const Cards = (props) => {
           <Card.Text className="cardText">
             {props.text}
           </Card.Text>
-          <Button variant="primary">{props.btn}</Button>
         </Card.Body>
       </Card>
     </div>

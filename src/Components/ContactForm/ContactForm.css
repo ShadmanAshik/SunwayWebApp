@@ -6,8 +6,11 @@
 .contact-form-title{
   padding: 10px;
   color:white;
-  background-color: var(--main-deepOrange);
+  background-color: var(--main-deepBlue);
   text-align: left;
+}
+.title-description{
+  color: white !important;;
 }
 #formContiner {
   padding: 0px 12px;
@@ -23,9 +26,11 @@
   border: 1px solid rgb(221, 217, 217);
   box-shadow: 10px 10px 20px 0 rgba(153, 153, 153, 0.25);
   padding: 10px;
+  transition: 00.5s ease;
 }
 .contact-form:hover {
   box-shadow: 10px 10px 20px 0 rgba(153, 153, 153, 0.472);
+  transition: 00.5s ease;
 }
 
 .card-heading {
@@ -108,9 +113,9 @@
   font: inherit;
   font-size: 24px;
   /* padding: 10px; */
-  width: 50%;
+  padding: 5px 35px;
   font-weight: 500;
-  background-color: var(--main-deepOrange);
+  background-color: var(--main-deepBlue);
   border-radius: 6px;
   color: #fff;
   border: 0;
@@ -124,8 +129,8 @@
   cursor: pointer;
   background-image: linear-gradient(
     to left,
-    var(--main-deepOrange),
-    #ED2B2E
+    var(--main-deepBlue),
+    #575ca5
   );
   color: white;
   transition: all 0.3s ease;
