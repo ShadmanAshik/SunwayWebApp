@@ -16,6 +16,11 @@
 .navItem {
   text-decoration: none !important;
 }
+.dropdown-menu[data-bs-popper] {
+  top: 97%;
+  left: 0;
+  margin-top: 0rem;
+}
 #navlink,
 #basic-nav-dropdown {
   padding: 20px 5px;
@@ -36,9 +41,6 @@
   content: "\f337";
   vertical-align: 0; */
   vertical-align: 0.15em;
-}
-.dropdown-menu[data-bs-popper] {
-  margin-top: 0rem;
 }
 
 .dropdown-menu {
@@ -66,10 +68,7 @@
   font-weight: bold;
   font-family: Comic Sans MS;
 }
-.dropdown-menu [data-bs-popper]{
-top: 95% !important;
-margin-top: 0rem !important;
-}
+
 @media only screen and (max-width: 1000px) {
   #navlink,
   #basic-nav-dropdown {

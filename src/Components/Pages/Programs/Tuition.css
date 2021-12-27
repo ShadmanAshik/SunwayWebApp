@@ -1,0 +1,16 @@
+
+.listItem{
+    
+    border:black;
+    padding:30px 40px 10px;
+}
+.listImg{
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+}
+.listPara{
+    color:black;
+    margin-top: 20px;
+    text-align: justify;
+}

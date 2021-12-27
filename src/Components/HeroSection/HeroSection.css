@@ -2,6 +2,7 @@
   width: 100%;
   height: 25vw;
   align-content: center;
+  padding:0px !important;
 }
 .caurousel-caption {
   top: 50%;

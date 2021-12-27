@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Cards from "../../Card/PhotoCards";
+import PhotoCards from "../../Card/PhotoCards.js";
+
 import ContactForm from "../../ContactForm/ContactForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./PhotoGallery.css";
@@ -14,41 +15,26 @@ const PhotoGallery = () => {
           <div>
             <div class="row">
               <div className="col-lg-8 col-md-6 col-sm-12">
+                <h1 className="photoHeader">Photo Gallary</h1>
                 <Row xs={1} sm={1} md={2} className="news-container">
                   <Col>
-                    <Cards
+                    <PhotoCards
                       imgSrc="/img/dummy.jpg"
-                      title="Photo Title"
-                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                      // title="Photo Title"
+                      text="Photo Title"
                     />
                   </Col>
                   <Col>
-                    <Cards
-                      imgSrc="/img/dummy.jpg"
-                      title="Photo Title"
-                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    />
+                    <PhotoCards imgSrc="/img/dummy.jpg" text="Photo Title" />
                   </Col>
                   <Col>
-                    <Cards
-                      imgSrc="/img/dummy.jpg"
-                      title="Photo Title"
-                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    />
+                    <PhotoCards imgSrc="/img/dummy.jpg" text="Photo Title" />
                   </Col>
                   <Col>
-                    <Cards
-                      imgSrc="/img/dummy.jpg"
-                      title="Photo Title"
-                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    />
+                    <PhotoCards imgSrc="/img/dummy.jpg" text="Photo Title" />
                   </Col>
                   <Col>
-                    <Cards
-                      imgSrc="/img/dummy.jpg"
-                      title="Photo Title"
-                      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    />
+                    <PhotoCards imgSrc="/img/dummy.jpg" text="Photo Title" />
                   </Col>
                 </Row>
               </div>

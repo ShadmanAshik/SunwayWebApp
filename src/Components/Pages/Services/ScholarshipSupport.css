@@ -1,0 +1,20 @@
+.Scholarship-container h1 {
+    text-align: center;
+    font-weight: bold;
+    margin: 55px 0 10px 0px;
+    color: rgb(61, 62, 63);
+  }
+  .Scholarship-listImg {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+  }
+  .Scholarship-listPara {
+    margin-top: 20px;
+    color: black;
+    text-align: justify;
+  }
+  .Scholarship-container {
+    margin: 0px 0px 50px 12px;
+  }
+  

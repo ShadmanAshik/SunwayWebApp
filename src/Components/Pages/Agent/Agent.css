@@ -1,19 +1,22 @@
-.aboutus-container h1{
+.agent-container h1 {
   text-align: center;
   font-weight: bold;
   margin: 55px 0 10px 0px;
-  color:rgb(61, 62, 63);
+  color: rgb(61, 62, 63);
 }
-.listImg-aboutus{
+.agent-listImg {
   width: 100%;
   height: auto;
   display: inline-flex;
 }
-.listPara-aboutus{
+.agent-listPara {
   margin-top: 20px;
-  color:black;
+  color: black;
   text-align: justify;
 }
-.aboutus-container{
+.agent-container {
   margin: 0px 0px 50px 12px;
 }
+/*.row{
+  --bs-gutter-x: 0rem;
+} */

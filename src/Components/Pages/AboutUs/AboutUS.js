@@ -13,13 +13,12 @@ function AboutUS() {
           <div class="row">
             <div class="col-lg-8 col-md-6 col-sm-12">
               <h1> About Us</h1>
-              <div className="listItem">
                 <div class="row">
                   <div class=" col-sm-12">
-                    <img className="listImg" src="/img/list.jpg" alt="Image" />
+                    <img className="listImg-aboutus" src="/img/list.jpg" alt="Image" />
                   </div>
                   <div class="col-sm-12">
-                    <p className="listPara">
+                    <p className="listPara-aboutus">
                       Sunway Study Group (SSG) is one of the most innovative
                       organizations in overseas education consultancy. It works
                       to turn the dreams and personal ambitions of global
@@ -29,7 +28,7 @@ function AboutUS() {
                       be the most authentic and transparent consultancy and to
                       be a pathway of your dream in studying abroad.
                     </p>
-                    <p className="listPara">
+                    <p className="listPara-aboutus">
                       Sunway Study Group (SSG) is also working with the goal to
                       assist learners in developing their language proficiency
                       which they need to become successful in graduate schools
@@ -51,7 +50,6 @@ function AboutUS() {
                     </p>
                   </div>
                 </div>
-              </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
               <ContactForm />

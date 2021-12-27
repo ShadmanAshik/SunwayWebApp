@@ -8,12 +8,12 @@ const VideoGallery = () => {
   return (
     <>
       <div>
-        <Container>
+        <Container className="video-container">
           <HeroImg imgSrc="/img/banner1.jpg" />
           <div>
             <div class="row">
               <div class="col-lg-8 col-md-6 col-sm-12">
-                <h1>Video Gallery</h1>
+                <h1 className="videoHeader">Video Gallery</h1>
                 <div className="listItem">
                   <div class="row">
                     <div class="col-sm-12">

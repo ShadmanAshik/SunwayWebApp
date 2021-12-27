@@ -6,7 +6,7 @@ import AboutUS from "../Pages/AboutUs/AboutUS";
 function Footer() {
   return (
     <>
-      <BrowserRouter>
+      
         <div className="footer-part-1">
           <div className="container">
             <div className="row">
@@ -14,7 +14,7 @@ function Footer() {
                 <div className="footer-column">
                   <h3 className="footer-title">Quick Links</h3>
 
-                  <a href="/">Be an Agent</a>
+                  <a href="/agent">Be an Agent</a>
                   <br />
                   <a href="/">Admission</a>
                   <br />
@@ -104,7 +104,8 @@ function Footer() {
                   </p>
                   <p>
                     <i className="far fa-envelope" id="contactIcon"></i>
-                    sunwaystudy@gmail.com<br/>
+                    sunwaystudy@gmail.com
+                    <br />
                     info@sunwaystudygroup.com
                     <br />
                   </p>
@@ -146,7 +147,10 @@ function Footer() {
                           </a>
                         </div>
                         <div className="col-sm-3">
-                          <a target="_blank" href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw">
+                          <a
+                            target="_blank"
+                            href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw"
+                          >
                             <img
                               className="icons"
                               src="/img/Icons/yt.png"
@@ -155,7 +159,10 @@ function Footer() {
                           </a>
                         </div>
                         <div className="col-sm-3">
-                          <a target="_blank" href="https://www.instagram.com/sunway_study_group/">
+                          <a
+                            target="_blank"
+                            href="https://www.instagram.com/sunway_study_group/"
+                          >
                             <img
                               className="icons"
                               src="/img/Icons/instagram.png"
@@ -181,10 +188,19 @@ function Footer() {
             </div>
           </div>
         </div>
+
         <div className="footer-2">
-          <p>Copyright ©2021 All rights reserved |</p>
+          <p class="col">
+            Copyright ©2021 All rights reserved | Developer Partner
+            <a target="_blank" href="http://www.ositsltd.com/index.html">
+              <img
+                className="ositimg"
+                src="/img/Icons/ositsolutions.png"
+                alt="osit"
+              />
+            </a>
+          </p>
         </div>
-      </BrowserRouter>
     </>
   );
 }

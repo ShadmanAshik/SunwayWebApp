@@ -1,6 +1,11 @@
 .mission-container h1{
-    margin-top: 55px;
-    font-weight: bold;
+    text-align: center;
+  font-weight: bold;
+  margin: 0px 0 10px 0px;
+  color:rgb(61, 62, 63);
+}
+.mission-container {
+    margin: 55px 0px 50px 12px;
 }
 .missionVission{
     /* background-color: rgb(50, 133, 189); */
