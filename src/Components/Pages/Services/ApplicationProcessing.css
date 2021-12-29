@@ -1,0 +1,20 @@
+.Application-container h1 {
+    text-align: center;
+    font-weight: bold;
+    margin:55px 0 10px 0px;
+    color: rgb(61, 62, 63);
+  }
+  .Application-listImg {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+  }
+  .Application-listPara {
+    margin-top: 20px;
+    color: black;
+    text-align: justify;
+  }
+  .Application-container {
+    margin: 0px 0px 50px 0;
+  }
+  

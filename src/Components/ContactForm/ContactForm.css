@@ -13,7 +13,7 @@
   color: white !important;;
 }
 #formContiner {
-  padding: 0px 12px;
+  padding: 0px;
 }
 .contact-form {
   margin: 55px auto;
@@ -26,10 +26,11 @@
   border: 1px solid rgb(221, 217, 217);
   box-shadow: 10px 10px 20px 0 rgba(153, 153, 153, 0.25);
   padding: 10px;
+  transition: 00.5s ease;
 }
 .contact-form:hover {
   box-shadow: 10px 10px 20px 0 rgba(153, 153, 153, 0.472);
-  transition: 00.3s ease-in-out;
+  transition: 00.5s ease;
 }
 
 .card-heading {

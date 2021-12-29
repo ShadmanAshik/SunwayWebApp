@@ -6,9 +6,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const HeroImg = (props) => {
   return (
     <div>
-      <Container>
+      
           <img className="heroImg" src={props.imgSrc} alt="Hero Image"/>    
-      </Container>
+     
     </div>
   );
 };

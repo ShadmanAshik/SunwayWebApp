@@ -10,8 +10,8 @@ const HeroSection = (props) => {
     setIndex(selectedIndex);
   };
   return (
-    <div>
-      <Container>
+    <div className="carousael-container">
+      
         <Carousel
           activeIndex={index}
           onSelect={handleSelect}
@@ -22,7 +22,7 @@ const HeroSection = (props) => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="/img/Slider1.JPG"
+              src="/img/Welcome.jpg"
               alt="First slide"
             />
             <Carousel.Caption className="caurousel-caption ">
@@ -35,7 +35,7 @@ const HeroSection = (props) => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="/img/Slider1.JPG"
+              src="/img/worldwide.jpg"
               alt="Second slide"
             />
             <Carousel.Caption className="caurousel-caption">
@@ -48,7 +48,7 @@ const HeroSection = (props) => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="/img/Slider1.JPG"
+              src="/img/language.jpg"
               alt="Third slide"
             />
             <Carousel.Caption className="caurousel-caption">
@@ -62,7 +62,7 @@ const HeroSection = (props) => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="/img/Slider1.JPG"
+              src="/img/skills.jpg"
               alt="Forth slide"
             />
             <Carousel.Caption className="caurousel-caption">
@@ -76,7 +76,7 @@ const HeroSection = (props) => {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="/img/Slider1.JPG"
+              src="/img/Global.jpg"
               alt="Fifth slide"
             />
             <Carousel.Caption className="caurousel-caption ">
@@ -90,7 +90,7 @@ const HeroSection = (props) => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-      </Container>
+      
     </div>
   );
 };

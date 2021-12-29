@@ -7,24 +7,24 @@ import "./Overseas.css";
 const Overseas = () => {
   return (
     <>
-      <div>
-        <Container>
-          <HeroImg imgSrc="/img/banner1.jpg" />
-          <div>
+      <Container>
+        <HeroImg imgSrc="/img/banner1.jpg" />
+        <div>
+          <div className="overseas-container">
             <div class="row">
               <div className="col-lg-8 col-md-6 col-sm-12">
                 <h1 className="renovation"> Overseas Admission</h1>
-                <div className="listItem">
+                <div>
                   <div class="row">
                     <div class=" col-sm-12">
                       <img
-                        className="listImg"
+                        className="overseas-listImg"
                         src="/img/list.jpg"
                         alt="Image"
                       />
                     </div>
                     <div class="col-sm-12">
-                      <p className="listPara">
+                      <p className="overseas-listPara">
                         You, the aspiring students, cherish the dream of further
                         education abroad as studying abroad will give you
                         incredible experiences, a new perspective, a new
@@ -55,8 +55,8 @@ const Overseas = () => {
               </div>
             </div>
           </div>
-        </Container>
-      </div>
+        </div>
+      </Container>
     </>
   );
 };

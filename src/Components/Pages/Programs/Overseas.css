@@ -1,21 +1,19 @@
-.whyssg-container h1{
-    text-align: center;
-    font-weight: bold;
-    margin: 55px 0 0 0px;
-    color:rgb(61, 62, 63);
+.overseas-container h1 {
+  text-align: center;
+  font-weight: bold;
+  margin: 55px 0 10px 0px;
+  color: rgb(61, 62, 63);
 }
-.listItem{
-    
-    border:black;
-    padding:30px 40px 10px;
+.overseas-listImg {
+  width: 100%;
+  height: auto;
+  display: inline-flex;
 }
-.listImg{
-    width: 100%;
-    height: auto;
-    display: inline-flex;
+.overseas-listPara {
+  margin-top: 20px;
+  color: black;
+  text-align: justify;
 }
-.listPara{
-    color:black;
-    margin-top: 20px;
-    text-align: justify;
+.overseas-container {
+  margin: 0px 0px 50px 0;
 }

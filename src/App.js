@@ -45,6 +45,9 @@ import ScholarshipSupport from "./Components/Pages/Services/ScholarshipSupport";
 import AdmissionSupoort from "./Components/Pages/Services/AdmissionSupoort";
 import StudyTour from "./Components/Pages/Services/StudyTour";
 import Counseling from "./Components/Pages/Services/Counseling";
+import Agent from "./Components/Pages/Agent/Agent"
+import Admin from "./Components/Pages/Admin/Admin";
+
 
 function App() {
   return (
@@ -66,6 +69,7 @@ function App() {
           <Route exact path="/language" element={<Language />} />
           <Route exact path="/skilldev" element={<SkillDevelopment />} />
           <Route exact path="/tuition" element={<Tuition />} />
+          <Route exact path="/agent" element={<Admin/>}/>
 
           <Route exact path="/studentCounseling" element={<Counseling />} />
           <Route

@@ -17,13 +17,9 @@ const Home = () => {
             <div class="row">
               <div class="col-lg-8 col-md-6 col-sm-12">
                 <h1 className="title">Explore Our Programs</h1>
-                <Container>
-                  <ProgramSlider />
-                </Container>
+                <ProgramSlider />
                 <h1 className="title">Explore Our Services</h1>
-                <Container>
-                  <ServicesSlider />
-                </Container>
+                <ServicesSlider />
               </div>
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <ContactForm />

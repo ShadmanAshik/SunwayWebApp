@@ -9,44 +9,49 @@ const WhySSG = () => {
     <>
       <Container>
         <HeroImg imgSrc="/img/banner1.jpg"></HeroImg>
-        <div className="whyssg-container">
-          <div class="row">
-            <div class="col-lg-8 col-md-6 col-sm-12">
+
+        <div class="row">
+          <div class="col-lg-8 col-md-6 col-sm-12">
+            <div className="container-whyssgs">
               <h1> Why Choose SSG?</h1>
-              <div className="listItem">
+              <div>
                 <div class="row">
                   <div class=" col-sm-12">
-                    <img className="listImg" src="/img/list.jpg" alt="Image" />
+                    <img
+                      className="whyssg-listImg"
+                      src="/img/list.jpg"
+                      alt="Image"
+                    />
                   </div>
                   <div class="col-sm-12">
-                    <p className="listPara">
+                    <p className="whyssg-listPara">
                       We do research courses, teaching modules, opportunities,
                       universities and their locations, campus life and
                       employment prospects. We ensure you getting an accurate
                       and unbiased advice.
                     </p>
-                    <p className="listPara">
+                    <p className="whyssg-listPara">
                       We are offering a complete 360-degree custom solutions. If
                       you need to take an English test such as IELTS to qualify
                       for your course, SSG will help you to practice hard to get
                       good grades.
                     </p>
-                    <p className="listPara">
+                    <p className="whyssg-listPara">
                       We always remain in touch with our students and support
                       them in every related context.
                     </p>
-                    <p className="listPara">
+                    <p className="whyssg-listPara">
                       We work on a case by case basis to give proper credential
                       services for both students and education providers. The
                       principles of good governance is practiced to ensure the
                       best management practices, client services and academic
                       freedom.
                     </p>
-                    <p className="listPara">
+                    <p className="whyssg-listPara">
                       We ensure the right investment of hard-earnt money of the
                       respected parents.
                     </p>
-                    <p className="listPara">
+                    <p className="whyssg-listPara">
                       You can easily make an appointment with one of the SSG
                       counsellors certified professionally, friendly and
                       personally experienced. Your counsellor will work through
@@ -56,11 +61,10 @@ const WhySSG = () => {
                   </div>
                 </div>
               </div>
-              
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <ContactForm />
-            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <ContactForm />
           </div>
         </div>
       </Container>

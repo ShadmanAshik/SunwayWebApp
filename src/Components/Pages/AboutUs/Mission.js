@@ -9,9 +9,10 @@ const Mission = () => {
     <>
       <Container>
         <HeroImg imgSrc="/img/banner1.jpg" />
-        <div className="mission-container">
-          <div class="row">
-            <div class="col-lg-8 col-md-7 col-sm-12">
+
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-12">
+            <div className="mission-container">
               <h1>Our Mission and Vision</h1>
               <div className="missionVission">
                 <img
@@ -116,9 +117,9 @@ const Mission = () => {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-5 col-sm-12">
-              <ContactForm />
-            </div>
+          </div>
+          <div class="col-lg-4 col-md-5 col-sm-12">
+            <ContactForm />
           </div>
         </div>
       </Container>
