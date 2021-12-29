@@ -9,14 +9,19 @@ const WhySSG = () => {
     <>
       <Container>
         <HeroImg imgSrc="/img/banner1.jpg"></HeroImg>
-        <div className="container-whyssgs">
-          <div class="row">
-            <div class="col-lg-8 col-md-6 col-sm-12">
+
+        <div class="row">
+          <div class="col-lg-8 col-md-6 col-sm-12">
+            <div className="container-whyssgs">
               <h1> Why Choose SSG?</h1>
               <div>
                 <div class="row">
                   <div class=" col-sm-12">
-                    <img className="whyssg-listImg" src="/img/list.jpg" alt="Image" />
+                    <img
+                      className="whyssg-listImg"
+                      src="/img/list.jpg"
+                      alt="Image"
+                    />
                   </div>
                   <div class="col-sm-12">
                     <p className="whyssg-listPara">
@@ -56,11 +61,10 @@ const WhySSG = () => {
                   </div>
                 </div>
               </div>
-              
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <ContactForm />
-            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <ContactForm />
           </div>
         </div>
       </Container>

@@ -1,13 +1,40 @@
-@import url(https://use.fontawesome.com/releases/v5.15.4/css/all.css);
+ @import url(https://use.fontawesome.com/releases/v5.15.4/css/all.css);
 .nav {
   background-color: white;
   padding: 0px !important;
+  
+}
+
+
+.marquee{
+ padding: 2px 0px;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.fa-angle-down{
+  margin-left: 5px;
+}
+.fa-plane{
+  margin-right: 15px;
+  color:var(--main-deepOrange);
+}
+.signinBtn{
+  margin-left: 20px;
+  color: white;
+  background-color: var(--main-deepOrange);
+  border:0px !important;
+}
+.signinBtn:hover{
+  background-color: white;
+  color: var(--main-deepOrange);
 }
 
 .scrwaller {
   background-color: black;
   color: rgb(255, 255, 255);
   font-size: 18px;
+  vertical-align: center;
 }
 .img-logo {
   height: 55px;

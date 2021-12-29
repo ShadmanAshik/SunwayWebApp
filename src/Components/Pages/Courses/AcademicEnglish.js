@@ -14,7 +14,8 @@ const AcademicEnglish = () => {
           <div class="row">
             <div className="col-lg-8 col-md-6 col-sm-12">
               <h1 className="renovation">Renovation in progress...</h1>
-            </div>
+            </div> 
+            
             <div className="col-lg-4 col-md-6 col-sm-12">
               <ContactForm />
             </div>

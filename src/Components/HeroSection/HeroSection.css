@@ -4,13 +4,21 @@
   align-content: center;
   padding:0px !important;
 }
+#carouselImage{
+  -webkit-filter: grayscale(100%);
+  filter:grayscale(100%);
+}
 .caurousel-caption {
   top: 50%;
-  transform: translateY(-40%);
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  height: fit-content;
+  align-items: left;
 }
 
 .caurousel-caption h1 {
-  color: var(--main-deepOrange);
+  color: white;
+  font-weight: bold;
   margin-bottom: 2vw;
   text-align: center;
 

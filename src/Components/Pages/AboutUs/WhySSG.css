@@ -1,7 +1,7 @@
 .container-whyssgs h1{
     text-align: center;
     font-weight: bold;
-    margin: 0px 0 10px 0px;
+    margin: 55px 0 10px 0px;
     color:rgb(61, 62, 63);
   }
   .whyssg-listImg{
@@ -15,5 +15,5 @@
     text-align: justify;
   }
   .container-whyssgs{
-    margin: 55px 0px 50px 12px;
+    /* margin: 55px 0px 50px 12px; */
   }

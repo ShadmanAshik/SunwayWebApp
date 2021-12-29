@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import ContactForm from "../../ContactForm/ContactForm";
 import GoogleMap from "../../GoogleMap/GoogleMap";
 import HeroImg from "../../HeroSection/HeroImg";
+import ContactUsForm from "./ContactUsForm"
 import "./ContactUs.css";
 const ContactUs = () => {
   return (
@@ -34,7 +35,7 @@ const ContactUs = () => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <ContactForm />
+                <ContactUsForm />
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes, redirect} from "react-router-dom";
 import AboutUS from "../Pages/AboutUs/AboutUS";
 
 function Footer() {
@@ -14,17 +14,17 @@ function Footer() {
                 <div className="footer-column">
                   <h3 className="footer-title">Quick Links</h3>
 
-                  <a href="/agent">Be an Agent</a>
+                  <Link to="/agent">Be an Agent</Link>
                   <br />
-                  <a href="/">Admission</a>
+                  <Link to="/">Admission</Link>
                   <br />
-                  <a href="/scholarship">Scholarship</a>
+                  <Link to="/scholarship">Scholarship</Link>
                   <br />
-                  <a href="/contact">Contact Us</a>
+                  <Link to="/contact">Contact Us</Link>
                   <br />
-                  <a href="/login">Login</a>
+                  <Link to="/login">Login</Link>
                   <br />
-                  <a href="/login">Register</a>
+                  <Link to="/login">Register</Link>
                   <br />
                 </div>
               </div>
@@ -123,7 +123,7 @@ function Footer() {
                       <div className="fb-btn">
                         <div
                           class="fb-like"
-                          data-href="https://www.facebook.com/Sunway-Study-Group-104714155413603"
+                          data-href="https://www.facebook.com/Sunway.Study.Group/"
                           data-width=""
                           data-layout="button"
                           data-action="like"
@@ -191,11 +191,11 @@ function Footer() {
 
         <div className="footer-2">
           <p class="col">
-            Copyright ©2021 All rights reserved | Developer Partner
+            Copyright ©2021 All rights reserved | IT Partner
             <a target="_blank" href="http://www.ositsltd.com/index.html">
               <img
                 className="ositimg"
-                src="/img/Icons/ositsolutions.png"
+                src="/img/osit.png"
                 alt="osit"
               />
             </a>

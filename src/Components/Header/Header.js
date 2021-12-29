@@ -1,20 +1,26 @@
 import React from "react";
 import "./Header.css";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import {  Link } from "react-router-dom";
+import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Marquee from "react-fast-marquee";
 
 const Header = () => {
   return (
     <div className="navbar-container">
       <div className="scrwaller">
-        <marquee scrollamount="10" hspace="10%">
-          Admission is going on
-        </marquee>
+        <Marquee  className="marquee"speed="80" gradientColor={0,0,0} pauseOnHover="true">
+          <i class="fas fa-plane"></i> | Admission is going on |
+          <Link to="/login">
+            <Button className="signinBtn" variant="outline-warning" size="sm">
+              Sign In / Register
+            </Button>
+          </Link>
+        </Marquee>
       </div>
       <Navbar className="nav" expand="lg">
         <Container>
           <Navbar.Brand href="/home">
-            <Link to="/home">
+            <Link to="/home" >
               <img className="img-logo" src="/img/logo.png" alt="logo"></img>
             </Link>
           </Navbar.Brand>
@@ -27,7 +33,8 @@ const Header = () => {
 
               <NavDropdown
                 renderMenuOnMount={true}
-                title="About Us"
+                title={<span> About Us<i class="fas fa-angle-down"></i></span>}
+                
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
@@ -66,7 +73,7 @@ const Header = () => {
 
               <NavDropdown
                 renderMenuOnMount={true}
-                title="Programs"
+                title={<span> Programs<i class="fas fa-angle-down"></i></span>}
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
@@ -95,7 +102,7 @@ const Header = () => {
 
               <NavDropdown
                 renderMenuOnMount={true}
-                title="Services"
+                title={<span> Services<i class="fas fa-angle-down"></i></span>}
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
@@ -135,7 +142,7 @@ const Header = () => {
 
               <NavDropdown
                 renderMenuOnMount={true}
-                title="University"
+                title={<span> University<i class="fas fa-angle-down"></i></span>}
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
@@ -153,7 +160,7 @@ const Header = () => {
 
               <NavDropdown
                 renderMenuOnMount={true}
-                title="Courses"
+                title={<span> Courses<i class="fas fa-angle-down"></i></span>}
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
@@ -214,7 +221,7 @@ const Header = () => {
 
               <NavDropdown
                 renderMenuOnMount={true}
-                title="News & Media"
+                title={<span>News & Media<i class="fas fa-angle-down"></i></span>}
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
@@ -255,7 +262,7 @@ const Header = () => {
               </NavDropdown>
               <NavDropdown
                 renderMenuOnMount={true}
-                title="Apply"
+                title={<span>Apply<i class="fas fa-angle-down"></i></span>}
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
@@ -269,9 +276,7 @@ const Header = () => {
                   </Link>
                 </NavDropdown.Item>
               </NavDropdown>
-              <Link className="navItem" to="/login">
-                <Nav.Item id="navlink">Sign In</Nav.Item>
-              </Link>
+              
             </Nav>
           </Navbar.Collapse>
         </Container>
