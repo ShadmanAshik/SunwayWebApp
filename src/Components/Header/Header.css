@@ -4,7 +4,9 @@
   padding: 0px !important;
   
 }
-
+.navbar-container{
+  z-index: 50;
+}
 
 .marquee{
  padding: 2px 0px;
