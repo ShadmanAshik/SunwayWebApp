@@ -48,7 +48,7 @@ const ContactForm = ({ submitForm }) => {
           <div className="contact-form-title">
             <h2>Interested in Studying Abroad with SSG?</h2>
             <p className="title-description">
-              Just enter your details bellow And we'll reach you soon.
+              Just enter your details below And we'll reach you soon.
             </p>
           </div>
           <div className="input">

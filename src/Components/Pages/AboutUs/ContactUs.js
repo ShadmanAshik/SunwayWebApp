@@ -33,9 +33,12 @@ const ContactUs = () => {
                   <h3>Office Location:</h3>
                   <GoogleMap />
                 </div>
+                <div>
+                <ContactUsForm />
+                </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <ContactUsForm />
+                <ContactForm></ContactForm>
               </div>
             </div>
           </div>

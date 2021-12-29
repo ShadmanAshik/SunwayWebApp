@@ -3,7 +3,7 @@
 *:before {
   box-sizing: border-box;
 }
-.contact-form-title{
+.contactus-form-title{
   padding: 10px;
   color:white;
   background-color: var(--main-deepBlue);
@@ -12,24 +12,20 @@
 .title-description{
   color: white !important;;
 }
+
 #formContiner {
   padding: 0px;
 }
-.contact-form {
+.contactus-form {
   margin: 55px auto;
   margin-right: 12px;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 425px;
-  background-color: #fff;
+  max-width: 100%;
+  background-color: rgba(255, 255, 255, 0.212);
   border: 1px solid rgb(221, 217, 217);
-  box-shadow: 10px 10px 20px 0 rgba(153, 153, 153, 0.25);
+  /* box-shadow: 10px 10px 20px 0 rgba(153, 153, 153, 0.25); */
   padding: 10px;
-  transition: 00.5s ease;
-}
-.contact-form:hover {
-  box-shadow: 10px 10px 20px 0 rgba(153, 153, 153, 0.472);
   transition: 00.5s ease;
 }
 
@@ -70,28 +66,43 @@
   transition: 0.25s ease;
 }
 
-.input-field:focus + .input-labelCountry,
-.input-field:valid + .input-labelCountry {
-  color: black;
-  transform: translateY(-1.5rem);
+#message.input-field-contactus {
+  margin-top: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.185);
+  height: 150px;
+  max-height: 500px;
 }
 
-.input-field {
+.input-label-Message{
+  padding-left: 5px;
+  color: #8597a3;
+  position: absolute;
+  top: 1rem;
+}
+
+.input-field-contactus {
   border: 0;
   z-index: 1;
   background-color: transparent;
-  border-bottom: 2px solid #eee;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.185);
   font: inherit;
   font-size: 1.125rem;
   padding: 0.2rem 0;
 }
-.input-field:focus,
-.input-field:valid {
+
+.input-field-contactus:focus + .input-labelCountry,
+.input-field-contactus:valid + .input-labelCountry {
+  color: black;
+  transform: translateY(-1.5rem);
+}
+
+.input-field-contactus:focus,
+.input-field-contactus:valid {
   outline: 0;
   border-bottom-color: var(--main-blue);
 }
-.input-field:focus + .input-label,
-.input-field:valid + .input-label {
+.input-field-contactus:focus + .input-label,
+.input-field-contactus:valid + .input-label {
   color: black;
   transform: translateY(-1.5rem);
 }
@@ -109,9 +120,9 @@
 .action {
   margin-top: 5px;
 }
-.action-button {
+.action-button-Contactus {
   font: inherit;
-  font-size: 24px;
+  font-size: 20px;
   /* padding: 10px; */
   padding: 5px 35px;
   font-weight: 500;
@@ -120,20 +131,16 @@
   color: #fff;
   border: 0;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 200ms linear;
+  margin-left: 0px;
+  margin-top: 20px;
 }
-.action-button:focus {
-  outline: 0;
-}
-.action-button:hover {
+
+.action-button-Contactus:hover {
   cursor: pointer;
-  background-image: linear-gradient(
-    to left,
-    var(--main-deepBlue),
-    #575ca5
-  );
-  color: white;
-  transition: all 0.3s ease;
+  background-color:#575ca5;
+  color: rgb(255, 255, 255);
+  transition: all 200ms linear;
 }
 .card-info {
   padding: 1rem 1rem;

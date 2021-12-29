@@ -111,7 +111,7 @@
 }
 .action-button {
   font: inherit;
-  font-size: 24px;
+  font-size: 20px;
   /* padding: 10px; */
   padding: 5px 35px;
   font-weight: 500;
@@ -120,20 +120,14 @@
   color: #fff;
   border: 0;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 200ms linear;
 }
-.action-button:focus {
-  outline: 0;
-}
+
 .action-button:hover {
   cursor: pointer;
-  background-image: linear-gradient(
-    to left,
-    var(--main-deepBlue),
-    #575ca5
-  );
-  color: white;
-  transition: all 0.3s ease;
+  background-color:#575ca5;
+  color: rgb(255, 255, 255);
+  transition: all 200ms linear;
 }
 .card-info {
   padding: 1rem 1rem;
@@ -152,7 +146,8 @@
   color: #8597a3;
 }
 .checkbox {
-  margin: 0.1rem;
+  margin-top: 3px !important;
+  margin-right:10px !important;
 }
 
 /**
