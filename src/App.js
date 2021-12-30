@@ -45,15 +45,17 @@ import ScholarshipSupport from "./Components/Pages/Services/ScholarshipSupport";
 import AdmissionSupoort from "./Components/Pages/Services/AdmissionSupoort";
 import StudyTour from "./Components/Pages/Services/StudyTour";
 import Counseling from "./Components/Pages/Services/Counseling";
-import Agent from "./Components/Pages/Agent/Agent"
+import Agent from "./Components/Pages/Agent/Agent";
 import Admin from "./Components/Pages/Admin/Admin";
-
+import Sticky from "react-stickynode";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
+        <Sticky enabled={true} top={0} bottomBoundary={12000} innerZ={20}>
+          <Header />
+        </Sticky>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/home" element={<Home />} />
@@ -69,7 +71,7 @@ function App() {
           <Route exact path="/language" element={<Language />} />
           <Route exact path="/skilldev" element={<SkillDevelopment />} />
           <Route exact path="/tuition" element={<Tuition />} />
-          <Route exact path="/agent" element={<Admin/>}/>
+          <Route exact path="/agent" element={<Admin />} />
 
           <Route exact path="/studentCounseling" element={<Counseling />} />
           <Route

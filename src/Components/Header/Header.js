@@ -1,6 +1,14 @@
 import React from "react";
 import "./Header.css";
-import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import {
+  Button,
+  Col,
+  Container,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Row,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 
@@ -8,19 +16,65 @@ const Header = () => {
   return (
     <div className="navbar-container">
       <div className="scrwaller">
-        <Marquee  className="marquee"speed="80" gradientColor={0,0,0} pauseOnHover="true">
-          <i class="fas fa-plane"></i> | Admission is going on |
-          <Link to="/login">
-            <Button className="signinBtn" variant="outline-warning" size="sm">
-              Sign In / Register
-            </Button>
-          </Link>
-        </Marquee>
+        <div className="marqueeContainer">
+          <div className="row" id="head">
+            <div className="col-lg-4 col-md-6">
+              <div className="iconContainer">
+                <a href="https://www.facebook.com/Sunway.Study.Group/">
+                  <img className="headerIcons" src="/img/fb.png" alt="fb"></img>
+                </a>
+                <a href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw">
+                  <img
+                    className="headerIcons"
+                    src="/img/youtube.png"
+                    alt="fb"
+                  ></img>
+                </a>
+                <a href="https://www.instagram.com/sunway_study_group/">
+                <img
+                  className="headerIcons"
+                  src="/img/instagram.png"
+                  alt="fb"
+                ></img>
+                </a>
+                <a href="https://www.linkedin.com">
+                <img
+                  className="headerIcons"
+                  src="/img/linkedin.png"
+                  alt="fb"
+                ></img>
+                </a>
+
+               
+               
+                <i className="fas fa-phone-alt"></i>
+                <p>+8809642676767</p>
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-3">
+              <Marquee
+                className="marquee"
+                speed="80"
+                gradientColor={(0, 0, 0)}
+                pauseOnHover="true"
+              >
+                <i class="fas fa-plane"></i> Admission is going on
+              </Marquee>
+            </div>
+            <div className="col-lg-2 col-md-2">
+              <i class="fas fa-user-circle"></i>
+              <Link to="/login" className="headerLink">
+                Login/Register
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
+
       <Navbar className="nav" expand="lg">
         <Container>
           <Navbar.Brand href="/home">
-            <Link to="/home" >
+            <Link to="/home">
               <img className="img-logo" src="/img/logo.png" alt="logo"></img>
             </Link>
           </Navbar.Brand>
@@ -33,8 +87,12 @@ const Header = () => {
 
               <NavDropdown
                 renderMenuOnMount={true}
-                title={<span> About Us<i class="fas fa-angle-down"></i></span>}
-                
+                title={
+                  <span>
+                    {" "}
+                    About Us<i class="fas fa-angle-down"></i>
+                  </span>
+                }
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
@@ -73,7 +131,12 @@ const Header = () => {
 
               <NavDropdown
                 renderMenuOnMount={true}
-                title={<span> Programs<i class="fas fa-angle-down"></i></span>}
+                title={
+                  <span>
+                    {" "}
+                    Programs<i class="fas fa-angle-down"></i>
+                  </span>
+                }
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
@@ -102,7 +165,12 @@ const Header = () => {
 
               <NavDropdown
                 renderMenuOnMount={true}
-                title={<span> Services<i class="fas fa-angle-down"></i></span>}
+                title={
+                  <span>
+                    {" "}
+                    Services<i class="fas fa-angle-down"></i>
+                  </span>
+                }
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
@@ -142,7 +210,12 @@ const Header = () => {
 
               <NavDropdown
                 renderMenuOnMount={true}
-                title={<span> University<i class="fas fa-angle-down"></i></span>}
+                title={
+                  <span>
+                    {" "}
+                    University<i class="fas fa-angle-down"></i>
+                  </span>
+                }
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
@@ -160,7 +233,12 @@ const Header = () => {
 
               <NavDropdown
                 renderMenuOnMount={true}
-                title={<span> Courses<i class="fas fa-angle-down"></i></span>}
+                title={
+                  <span>
+                    {" "}
+                    Courses<i class="fas fa-angle-down"></i>
+                  </span>
+                }
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
@@ -221,7 +299,11 @@ const Header = () => {
 
               <NavDropdown
                 renderMenuOnMount={true}
-                title={<span>News & Media<i class="fas fa-angle-down"></i></span>}
+                title={
+                  <span>
+                    News & Media<i class="fas fa-angle-down"></i>
+                  </span>
+                }
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
@@ -262,7 +344,11 @@ const Header = () => {
               </NavDropdown>
               <NavDropdown
                 renderMenuOnMount={true}
-                title={<span>Apply<i class="fas fa-angle-down"></i></span>}
+                title={
+                  <span>
+                    Apply<i class="fas fa-angle-down"></i>
+                  </span>
+                }
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
@@ -276,7 +362,6 @@ const Header = () => {
                   </Link>
                 </NavDropdown.Item>
               </NavDropdown>
-              
             </Nav>
           </Navbar.Collapse>
         </Container>

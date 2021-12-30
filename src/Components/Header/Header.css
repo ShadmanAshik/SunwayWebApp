@@ -4,37 +4,64 @@
   padding: 0px !important;
   
 }
+.headerIcons{
+  margin: 5px 5px;
+  height: 30px;
+}
 
-
+.marqueeContainer{
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+#head{
+  width: inherit;
+}
+.iconContainer{
+  display: inline-flex;
+}
+.iconContainer p{
+  margin-top: 6px;
+}
 .marquee{
  padding: 2px 0px;
 }
 .dropdown-toggle::after {
   display: none;
 }
+.marqueeContainer .fa-phone-alt{
+  color:var(--main-deepOrange);
+  margin: 7px 0 5px 15px;
+  font-size: 25px;
+}
+.fa-user-circle{
+  color:var(--main-deepOrange);
+  margin: 7px 15px 0 5px;  
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+}
 .fa-angle-down{
   margin-left: 5px;
 }
 .fa-plane{
-  margin-right: 15px;
+  margin: 0 15px;
   color:var(--main-deepOrange);
 }
-.signinBtn{
-  margin-left: 20px;
-  color: white;
-  background-color: var(--main-deepOrange);
-  border:0px !important;
-}
-.signinBtn:hover{
-  background-color: white;
-  color: var(--main-deepOrange);
+.headerLink{
+  text-decoration: none;
+  color:white;
+  font-weight:600px;
 }
 
 .scrwaller {
-  background-color: black;
+  background-color:var(--main-deepBlue);
   color: rgb(255, 255, 255);
   font-size: 18px;
-  vertical-align: center;
+  
+  
 }
 .img-logo {
   height: 55px;

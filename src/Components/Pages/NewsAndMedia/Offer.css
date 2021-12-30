@@ -1,21 +1,9 @@
-.whyssg-container h1{
+.Offer-container h1{
     text-align: center;
     font-weight: bold;
     margin: 55px 0 0 0px;
     color:rgb(61, 62, 63);
 }
-.listItem{
-    
-    border:black;
-    padding:30px 40px 10px;
-}
-.listImg{
-    width: 100%;
-    height: auto;
-    display: inline-flex;
-}
-.listPara{
-    color:black;
+.OfferItems{
     margin-top: 20px;
-    text-align: justify;
 }

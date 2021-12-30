@@ -1,55 +1,21 @@
-import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import "./ContactForm.css";
 import validate from "./ValidateInfo";
 import useForm from "./useForm";
-import axios from "axios";
 
 const ContactForm = ({ submitForm }) => {
-  const navigate = useNavigate();
-  // const { handleChange, handleSubmit, values, error } = useForm(
-  //   submitForm,
-  //   validate
-  // );
-  const [fName, setfName] = useState(null);
-  const [lName, setlName] = useState(null);
-  const [email, setemail] = useState(null);
-  const [countryCode, setcountryCode] = useState(null);
-  const [phone, setphone] = useState(null);
-  const [counselingMode, setcounselingMode] = useState(null)
-  const [studyLevel, setstudyLevel] = useState(null)
-  const [country, setcountry] = useState(null)
-
-  const submitData=async()=>{
-    let formField= new FormData()
-    formField.append('fName', fName)
-    formField.append('lName',lName)
-    formField.append('email',email)
-    formField.append('countryCode',countryCode)
-    formField.append('phone',phone)
-    formField.append('counsellingMode',counselingMode)
-    formField.append('studyLevel',studyLevel)
-    formField.append('country',country)
-
-    await axios({
-      method: 'post',
-      url: 'http://127.0.0.1:8000/contactformdata/',
-      data: formField
-    }).then(response=>{
-      navigate('/')
-    })
-  }
-  
+  const { handleChange, handleSubmit, values, error } = useForm(
+    submitForm,
+    validate
+  );
 
   return (
     <div className="container" id="formContiner">
       <div className="contact-form">
-        <form className="card-form">
+        <form className="card-form" onSubmit={handleSubmit}>
           <div className="contact-form-title">
             <h2>Interested in Studying Abroad with SSG?</h2>
-            <p className="title-description">
-              Just enter your details bellow And we'll reach you soon.
-            </p>
+            <p className="title-description">Just enter your details bellow And we'll reach you soon.</p>
           </div>
           <div className="input">
             <input
@@ -57,8 +23,8 @@ const ContactForm = ({ submitForm }) => {
               type="text"
               name="fname"
               className="input-field"
-              value={fName}
-              onChange={(e) => setfName(e.target.value)}
+              value={values.fname}
+              onChange={handleChange}
               required
             />
             <label htmlFor="fname" className="input-label">
@@ -72,8 +38,8 @@ const ContactForm = ({ submitForm }) => {
               type="text"
               name="lname"
               className="input-field"
-              value={lName}
-              onChange={(e) => setlName(e.target.value)}
+              value={values.lname}
+              onChange={handleChange}
               required
             />
 
@@ -88,17 +54,17 @@ const ContactForm = ({ submitForm }) => {
               type="email"
               name="email"
               className="input-field"
-              value={email}
-              onChange={(e) => setemail(e.target.value)}
+              value={values.email}
+              onChange={handleChange}
               required
             />
 
             <label htmlFor="email" className="input-label">
               Email
             </label>
-            {/* {error.email && (
+            {error.email && (
               <p data-tooltip="Invalid Email Address">{error.email}</p>
-            )} */}
+            )}
           </div>
 
           <div className="row">
@@ -108,8 +74,8 @@ const ContactForm = ({ submitForm }) => {
                 type="text"
                 name="CountryCode"
                 className="input-field"
-                value={countryCode}
-                onChange={(e) => setcountryCode(e.target.value)}
+                value={values.CountryCode}
+                onChange={handleChange}
                 required
               >
                 <option value=""></option>
@@ -766,8 +732,8 @@ const ContactForm = ({ submitForm }) => {
                 type="tel"
                 name="phoneno"
                 className="input-field"
-                value={phone}
-                onChange={(e) => setphone(e.target.value)}
+                value={values.phoneno}
+                onChange={handleChange}
                 required
               />
               <label htmlFor="phoneno" className="input-label">
@@ -782,8 +748,8 @@ const ContactForm = ({ submitForm }) => {
               type="text"
               name="counselMode"
               className="input-field"
-              value={counselingMode}
-              onChange={(e) => setcounselingMode(e.target.value)}
+              value={values.counselMode}
+              onChange={handleChange}
               required
             >
               <option value=""></option>
@@ -799,10 +765,10 @@ const ContactForm = ({ submitForm }) => {
             <select
               id="Studylevel"
               type="text"
-              name="studyLevel"
+              name="Studylevel"
               className="input-field"
-              value={studyLevel}
-              onChange={(e) => setstudyLevel(e.target.value)}
+              value={values.Studylevel}
+              onChange={handleChange}
               required
             >
               <option value=""></option>
@@ -834,8 +800,8 @@ const ContactForm = ({ submitForm }) => {
               type="text"
               name="country"
               className="input-field"
-              value={country}
-              onChange={(e) => setcountry(e.target.value)}
+              value={values.country}
+              onChange={handleChange}
               required
             >
               <option value=""></option>
@@ -1117,7 +1083,7 @@ const ContactForm = ({ submitForm }) => {
             </label>
           </div>
           <div className="action">
-            <button className="action-button" type="submit" onClick={submitData}>
+            <button className="action-button" type="submit">
               Submit
             </button>
           </div>

@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import ContactForm from "../../ContactForm/ContactForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Blog.css";
+import Cards from "../../Card/BlogCards";
 
 const Blog = () => {
   return (
@@ -13,7 +14,36 @@ const Blog = () => {
         <div>
           <div class="row">
             <div className="col-lg-8 col-md-6 col-sm-12">
-              <h1 className="renovation">Renovation in progress...</h1>
+              <div className="blog-container">
+                <h1>Blog</h1>
+                <div className="BlogItems">
+                  <Cards
+                  imgSrc="/img/dummy.jpg"
+                  title="A placeat totam"
+                  text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique quos itaque pariatur perspiciatis. A placeat totam sint fugiat enim voluptates, deleniti maxime illum voluptatibus natus modi ducimus esse facilis laboriosam, quisquam fuga temporibus alias neque soluta excepturi minus? Nam, quis magnam itaque doloribus sit facilis officia quasi accusamus praesentium vitae."
+                  btn="Read More"></Cards>
+                  <Cards
+                  imgSrc="/img/dummy.jpg"
+                  title="Lorem ipsum dolor"
+                  text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique quos itaque pariatur perspiciatis. A placeat totam sint fugiat enim voluptates, deleniti maxime illum voluptatibus nodi ducimus esse facilis laboriosam, quisquam fuga temporibus alias neque soluta excepturi minus? Nam, quis magnam itaque doloribus sit facilis officia quasi accusamus praesentium vitae."
+                  btn="Read More"></Cards>
+                  <Cards
+                  imgSrc="/img/dummy.jpg"
+                  title="Nam, quis magnam"
+                  text="Lorem ipsum dolor sit, amet esse facilis laboriosam, quisquam fuga temporibus alias neque soluta excepturi minus? Nam, quis magnam itaque doloribus sit facilis officia quasi accusamus praesentium vitae."
+                  btn="Read More"></Cards>
+                  <Cards
+                  imgSrc="/img/dummy.jpg"
+                  title="Similique quos itaque"
+                  text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique quos itaque pariatur perspiciatis. A placeat totam sint fugiat enim voluptates, deleniti maxime illum voluptatibus natus modi ducimus esse facilis laboriosam, quisquam fuga temporibus alias neque soluta excepturi minus? Nam, quis magnam itaque doloribus sit facilis officia quasi accusamus praesentium vitae."
+                  btn="Read More"></Cards>
+                  <Cards
+                  imgSrc="/img/dummy.jpg"
+                  title="Conoribus alias"
+                  text="Lorem ipsum dolor sit, amet conoribus alias neque soluta excepturi minus? Nam, quis magnam itaque doloribus sit facilis officia quasi accusamus praesentium vitae."
+                  btn="Read More"></Cards>
+                </div>
+              </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
               <ContactForm />

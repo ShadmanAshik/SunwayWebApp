@@ -1,0 +1,42 @@
+.event-card-containter{
+  margin-bottom: 20px;
+}
+.event-cardText {
+  color: black;
+  text-align: left;
+}
+.event-cardImg {
+  height: auto;
+  width: 100%;
+  transition: all 0.2s linear;
+  border-radius: 0px !important;
+  
+}
+.btn-primary{
+  background-color: var(--main-deepOrange);
+  border:0px;
+}
+.event-cardImg:hover {
+  transform:scale(1.03);
+  cursor: pointer;
+  object-fit: cover; 
+  transition: all 0.1s linear;
+}
+.event-cardtitle {
+  font-weight: bold;
+  color: var(--main-deepOrange);
+}
+.event-actionCard{
+    /* margin:20px; */
+    align-content: center;
+}
+
+.event-actionCardtitle{
+    color:black;
+    font-weight: bold;
+}
+.event-card{
+  border-radius: 0px !important;
+  width: 100%;
+  display: inline-flex;
+}

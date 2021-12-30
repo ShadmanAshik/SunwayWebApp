@@ -1,0 +1,34 @@
+.photo-card-containter{
+  margin-bottom: 20px;
+}
+.photo-cardText {
+  color: black;
+  text-align: left;
+}
+.photo-cardImg {
+  height: auto;
+  width: 100%;
+  transition: all 0.2s linear;
+  border-radius: 0px !important;
+  z-index: 5;
+}
+.btn-primary{
+  background-color: var(--main-deepOrange);
+  border:0px;
+}
+.photo-cardImg:hover {
+  transform: scale(1.55);
+  cursor: pointer;
+  object-fit: cover; 
+  transition: all 0.2s linear;
+  
+}
+.photo-cardtitle {
+  font-weight: bold;
+  color: var(--main-deepOrange);
+}
+.card{
+  border-radius: 0px !important;
+  width: 100%;
+  display: inline-flex;
+}

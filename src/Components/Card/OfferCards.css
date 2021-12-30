@@ -1,0 +1,32 @@
+.BlogCard-containter{
+  margin-bottom: 20px;
+}
+.cardTextBlog {
+  color: black;
+}
+
+.btn-primary{
+  background-color: var(--main-deepBlue);
+}
+
+.cardImgBlog {
+  max-width: 25%;
+  height: auto;
+  object-fit:cover;
+  transition: all 0.2s linear;
+  border-radius: 0px !important;
+  
+}
+
+.cardtitleBlog {
+  font-weight: bold;
+  color: var(--main-deepOrange);
+  text-align: left !important;
+}
+
+
+.card{
+  border-radius: 0px !important;
+  width: 100%;
+  display: inline-flex;
+}

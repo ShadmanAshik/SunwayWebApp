@@ -15,8 +15,8 @@ const PhotoGallery = () => {
           <div>
             <div class="row">
               <div className="col-lg-8 col-md-6 col-sm-12">
-                <h1 className="photoHeader">Photo Gallary</h1>
-                <Row xs={1} sm={1} md={2} className="news-container">
+                <h1 className="photoHeader">Photo Gallery</h1>
+                <Row xs={1} sm={1} md={3} className="news-container">
                   <Col>
                     <PhotoCards
                       imgSrc="/img/dummy.jpg"
