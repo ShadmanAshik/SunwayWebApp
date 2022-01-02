@@ -1,14 +1,6 @@
 import React from "react";
 import "./Header.css";
-import {
-  Button,
-  Col,
-  Container,
-  Nav,
-  Navbar,
-  NavDropdown,
-  Row,
-} from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 
@@ -18,40 +10,38 @@ const Header = () => {
       <div className="scrwaller">
         <div className="marqueeContainer">
           <div className="row" id="head">
-            <div className="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-12 col-sm-12">
               <div className="iconContainer">
-                <a href="https://www.facebook.com/Sunway.Study.Group/">
-                  <img className="headerIcons" src="/img/fb.png" alt="fb"></img>
+                <a target="_blank" href="https://www.facebook.com/Sunway.Study.Group/">
+                  <img className="headerIcons" src="https://i.ibb.co/7Y7zYD4/fb.png" alt="fb"></img>
                 </a>
-                <a href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw">
+                <a target="_blank" href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw">
                   <img
                     className="headerIcons"
-                    src="/img/youtube.png"
-                    alt="fb"
+                    src="https://i.ibb.co/nPFvQ0j/youtube.png"
+                    alt="youtube"
                   ></img>
                 </a>
-                <a href="https://www.instagram.com/sunway_study_group/">
-                <img
-                  className="headerIcons"
-                  src="/img/instagram.png"
-                  alt="fb"
-                ></img>
+                <a target="_blank" href="https://www.instagram.com/sunway_study_group/">
+                  <img
+                    className="headerIcons"
+                    src="https://i.ibb.co/gTRKRwh/instagram.png"
+                    alt="instagram"
+                  ></img>
                 </a>
-                <a href="https://www.linkedin.com">
-                <img
-                  className="headerIcons"
-                  src="/img/linkedin.png"
-                  alt="fb"
-                ></img>
+                <a target="_blank" href="https://www.linkedin.com">
+                  <img
+                    className="headerIcons"
+                    src="https://i.ibb.co/60zNZGR/linkedin.png"
+                    alt="linkedin"
+                  ></img>
                 </a>
 
-               
-               
                 <i className="fas fa-phone-alt"></i>
                 <p>+8809642676767</p>
               </div>
             </div>
-            <div className="col-lg-6 col-md-3">
+            <div className="col-lg-6 col-md-10 col-sm-12">
               <Marquee
                 className="marquee"
                 speed="80"
@@ -61,11 +51,14 @@ const Header = () => {
                 <i class="fas fa-plane"></i> Admission is going on
               </Marquee>
             </div>
-            <div className="col-lg-2 col-md-2">
+            <div className="col-lg-2 col-md-2 col-sm-12">
+              <div className="loginContainer">
               <i class="fas fa-user-circle"></i>
               <Link to="/login" className="headerLink">
                 Login/Register
               </Link>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -75,7 +68,7 @@ const Header = () => {
         <Container>
           <Navbar.Brand href="/home">
             <Link to="/home">
-              <img className="img-logo" src="/img/logo.png" alt="logo"></img>
+              <img className="img-logo" src="https://i.ibb.co/pr6TMg0/logo.png" alt="logo"></img>
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -97,7 +90,7 @@ const Header = () => {
               >
                 <NavDropdown.Item className="dropdownItem">
                   <Link className="dropdownItem" to="/about">
-                    <div className="highlightItem">About Us</div>
+                    <div className="highlightItem">About SSG</div>
                   </Link>
                 </NavDropdown.Item>
 

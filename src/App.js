@@ -48,6 +48,8 @@ import Counseling from "./Components/Pages/Services/Counseling";
 import Agent from "./Components/Pages/Agent/Agent";
 import Admin from "./Components/Pages/Admin/Admin";
 import Sticky from "react-stickynode";
+import ContactData from "./Components/Pages/Admin/Components/ContactData";
+import AgentData from "./Components/Pages/Admin/Components/AgentData";
 
 function App() {
   return (
@@ -71,7 +73,7 @@ function App() {
           <Route exact path="/language" element={<Language />} />
           <Route exact path="/skilldev" element={<SkillDevelopment />} />
           <Route exact path="/tuition" element={<Tuition />} />
-          <Route exact path="/agent" element={<Admin />} />
+          <Route exact path="/agent" element={<Agent />} />
 
           <Route exact path="/studentCounseling" element={<Counseling />} />
           <Route
@@ -123,6 +125,11 @@ function App() {
           <Route exact path="Blog" element={<Blog />} />
           <Route exact path="AdmissionForm" element={<Application />} />
           <Route exact path="ScholarshipForm" element={<ApplyScholarship />} />
+
+          <Route exact path="admin" element={<Admin />}>
+            <Route path="contactUsData" element={<ContactData />} />
+            <Route path="agentData" element={<AgentData />} />
+          </Route>
         </Routes>
         <Footer />
       </BrowserRouter>

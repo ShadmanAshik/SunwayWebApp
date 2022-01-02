@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react";
-import axios from "axios"
+import axios from "axios";
+import { useEffect, useState } from "react";
 const useForm = (callback, validate) => {
   const [values, setValues] = useState({
     email: "",
-    fname: "",
-    lname: "",
+    fName: "",
+    lName: "",
     countryCode: "",
-    phoneno: "",
-    counselMode: "",
-    Studylevel: "",
+    phone: "",
+    counselingMode: "",
+    studyLevel: "",
     country:""
   });
   const [error, setErrors] = useState({});
@@ -49,8 +49,9 @@ const useForm = (callback, validate) => {
   useEffect(() => {
     if (Object.keys(error).length === 0 && isSubmitting) {
       console.log("use -- effect");
+      // callback();
     }
-  });
+  },[error]);
 
   return { handleChange, values, handleSubmit, error };
 };

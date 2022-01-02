@@ -15,6 +15,10 @@
 #formContiner {
   padding: 0px;
 }
+.action-button:disabled {
+  background-color: rgb(126, 126, 126);
+  color:white
+}
 .contact-form {
   margin: 55px auto;
   margin-right: 12px;

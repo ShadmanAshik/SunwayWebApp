@@ -43,9 +43,8 @@ const Mission = () => {
                         alt="Mission"
                       />
                       <p>
-                        Conveying international education information to
-                        students and creating faster university admission
-                        opportunity throughout the globe.
+                        Providing students with opportunities to learn English,
+                        Chinese, Japanese, French and Russian language.
                       </p>
                     </div>
                   </div>
@@ -57,9 +56,8 @@ const Mission = () => {
                         alt="Mission"
                       />
                       <p>
-                        Conveying international education information to
-                        students and creating faster university admission
-                        opportunity throughout the globe.
+                        Developing and increasing the effectiveness of human
+                        resources through required skills.
                       </p>
                     </div>
                   </div>
@@ -94,9 +92,10 @@ const Mission = () => {
                         alt="Mission"
                       />
                       <p>
-                        Conveying international education information to
-                        students and creating faster university admission
-                        opportunity throughout the globe.
+                        To become a recognized institute in the national and
+                        international arena to develop language skills in
+                        academic, professional and personal life of the
+                        learners.
                       </p>
                     </div>
                   </div>
@@ -108,9 +107,9 @@ const Mission = () => {
                         alt="Mission"
                       />
                       <p>
-                        Conveying international education information to
-                        students and creating faster university admission
-                        opportunity throughout the globe.
+                        To become a resource center contributing in the
+                        development of highly-skilled employable human resources
+                        with required skills.
                       </p>
                     </div>
                   </div>

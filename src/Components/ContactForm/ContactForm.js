@@ -1,21 +1,65 @@
-import React from "react";
+import { React, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./ContactForm.css";
-import validate from "./ValidateInfo";
-import useForm from "./useForm";
+// import validate from "./ValidateInfo";
+// import useForm from "./useForm";
+import axios from "axios";
 
-const ContactForm = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, error } = useForm(
-    submitForm,
-    validate
-  );
+const ContactForm = ({ }) => {
+  // const navigate = useNavigate();
+  // const { handleChange, handleSubmit, values, error } = useForm(
+  //   submitForm,
+  //   validate
+  // );
+  const [checked,setchecked]=useState(false);
+  const [fName, setfName] = useState("");
+  const [lName, setlName] = useState("");
+  const [email, setemail] = useState("");
+  const [countryCode, setcountryCode] = useState("");
+  const [phone, setphone] = useState("");
+  const [counselingMode, setcounselingMode] = useState("")
+  const [studyLevel, setstudyLevel] = useState("")
+  const [country, setcountry] = useState("")
+
+  const submitData=async()=>{
+    let formField= new FormData()
+    formField.append('fName', fName)
+    formField.append('lName',lName)
+    formField.append('email',email)
+    formField.append('countryCode',countryCode)
+    formField.append('phone',phone)
+    formField.append('counselingMode',counselingMode)
+    formField.append('studyLevel',studyLevel)
+    formField.append('country',country)
+    
+
+    const headers = {
+      'Content-Type': 'application/json',
+      
+    }
+    
+    axios.post('http://127.0.0.1:8000/contactformdata/', formField, {
+        headers: headers
+      })
+      .then((response) => {
+        console.log(response.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+    
+  }
+  
 
   return (
     <div className="container" id="formContiner">
       <div className="contact-form">
-        <form className="card-form" onSubmit={handleSubmit}>
+        <form className="card-form">
           <div className="contact-form-title">
             <h2>Interested in Studying Abroad with SSG?</h2>
-            <p className="title-description">Just enter your details bellow And we'll reach you soon.</p>
+            <p className="title-description">
+              Just enter your details bellow And we'll reach you soon.
+            </p>
           </div>
           <div className="input">
             <input
@@ -23,8 +67,8 @@ const ContactForm = ({ submitForm }) => {
               type="text"
               name="fname"
               className="input-field"
-              value={values.fname}
-              onChange={handleChange}
+              value={fName}
+              onChange={(e) => setfName(e.target.value)}
               required
             />
             <label htmlFor="fname" className="input-label">
@@ -38,8 +82,8 @@ const ContactForm = ({ submitForm }) => {
               type="text"
               name="lname"
               className="input-field"
-              value={values.lname}
-              onChange={handleChange}
+              value={lName}
+              onChange={(e) => setlName(e.target.value)}
               required
             />
 
@@ -54,17 +98,17 @@ const ContactForm = ({ submitForm }) => {
               type="email"
               name="email"
               className="input-field"
-              value={values.email}
-              onChange={handleChange}
+              value={email}
+              onChange={(e) => setemail(e.target.value)}
               required
             />
 
             <label htmlFor="email" className="input-label">
               Email
             </label>
-            {error.email && (
+            {/* {error.email && (
               <p data-tooltip="Invalid Email Address">{error.email}</p>
-            )}
+            )} */}
           </div>
 
           <div className="row">
@@ -74,8 +118,8 @@ const ContactForm = ({ submitForm }) => {
                 type="text"
                 name="CountryCode"
                 className="input-field"
-                value={values.CountryCode}
-                onChange={handleChange}
+                value={countryCode}
+                onChange={(e) => setcountryCode(e.target.value)}
                 required
               >
                 <option value=""></option>
@@ -732,8 +776,8 @@ const ContactForm = ({ submitForm }) => {
                 type="tel"
                 name="phoneno"
                 className="input-field"
-                value={values.phoneno}
-                onChange={handleChange}
+                value={phone}
+                onChange={(e) => setphone(e.target.value)}
                 required
               />
               <label htmlFor="phoneno" className="input-label">
@@ -748,8 +792,8 @@ const ContactForm = ({ submitForm }) => {
               type="text"
               name="counselMode"
               className="input-field"
-              value={values.counselMode}
-              onChange={handleChange}
+              value={counselingMode}
+              onChange={(e) => setcounselingMode(e.target.value)}
               required
             >
               <option value=""></option>
@@ -765,10 +809,10 @@ const ContactForm = ({ submitForm }) => {
             <select
               id="Studylevel"
               type="text"
-              name="Studylevel"
+              name="studyLevel"
               className="input-field"
-              value={values.Studylevel}
-              onChange={handleChange}
+              value={studyLevel}
+              onChange={(e) => setstudyLevel(e.target.value)}
               required
             >
               <option value=""></option>
@@ -800,8 +844,8 @@ const ContactForm = ({ submitForm }) => {
               type="text"
               name="country"
               className="input-field"
-              value={values.country}
-              onChange={handleChange}
+              value={country}
+              onChange={(e) => setcountry(e.target.value)}
               required
             >
               <option value=""></option>
@@ -1074,6 +1118,7 @@ const ContactForm = ({ submitForm }) => {
               className="checkbox"
               type="checkbox"
               id="terms"
+              onChange={(e) => setchecked(!checked)}
               value="agree"
               required
             />
@@ -1083,9 +1128,9 @@ const ContactForm = ({ submitForm }) => {
             </label>
           </div>
           <div className="action">
-            <button className="action-button" type="submit">
+            <button className="action-button" type="submit" onClick={submitData}>
               Submit
-            </button>
+            </button>           
           </div>
         </form>
       </div>

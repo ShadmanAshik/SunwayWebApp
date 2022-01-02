@@ -23,22 +23,21 @@ const ContactUs = () => {
                     Dhaka-1217.
                   </p>
                   <p>
-                    <i class="fas fa-envelope"></i> info@educationhub-bd.com
+                    <i class="fas fa-envelope"></i> sunwaystudy@gmail.com, info@sunwaystudygroup.com
+
                   </p>
                   <p>
-                    <i class="fas fa-headset"></i> +8801721764149
+                    <i class="fas fa-headset"></i> +8809642676767
                   </p>
                 </div>
                 <div className="col-lg-12">
                   <h3>Office Location:</h3>
                   <GoogleMap />
                 </div>
-                <div>
-                <ContactUsForm />
-                </div>
+                
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <ContactForm></ContactForm>
+                <ContactUsForm/>
               </div>
             </div>
           </div>

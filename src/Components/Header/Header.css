@@ -1,14 +1,42 @@
  @import url(https://use.fontawesome.com/releases/v5.15.4/css/all.css);
 .nav {
   background-color: white;
-  padding: 0px !important;
+  padding: 0px !important;  
+}
+.navbar-container{
   
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .headerIcons{
   margin: 5px 5px;
   height: 30px;
 }
+.iconContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2vw;
+}
+.iconContainer p{
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.loginContainer{
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
 
+}
+.headerLink{
+  margin: 0px;
+  padding:0px;
+  display: flex;
+  text-decoration: none;
+  color:white;
+  padding-top: 3px;
+  padding-right: 2vw;
+}
 .marqueeContainer{
   width: 100%;
   display: inline-flex;
@@ -19,12 +47,7 @@
 #head{
   width: inherit;
 }
-.iconContainer{
-  display: inline-flex;
-}
-.iconContainer p{
-  margin-top: 6px;
-}
+
 .marquee{
  padding: 2px 0px;
 }
@@ -33,12 +56,12 @@
 }
 .marqueeContainer .fa-phone-alt{
   color:var(--main-deepOrange);
-  margin: 7px 0 5px 15px;
-  font-size: 25px;
+  margin-left: 3vw;
+  font-size: 22px;
 }
 .fa-user-circle{
   color:var(--main-deepOrange);
-  margin: 7px 15px 0 5px;  
+  margin: 7px 15px 0 0px;  
   font-size: 25px;
   align-items: center;
   justify-content: center;
@@ -50,14 +73,10 @@
   margin: 0 15px;
   color:var(--main-deepOrange);
 }
-.headerLink{
-  text-decoration: none;
-  color:white;
-  font-weight:600px;
-}
+
 
 .scrwaller {
-  background-color:var(--main-deepBlue);
+  background-color: #1D202C;
   color: rgb(255, 255, 255);
   font-size: 18px;
   
@@ -104,9 +123,6 @@
 .dropdownItem {
   color: rgb(53, 53, 53);
   text-decoration: none;
-}
-.dropdown-item{
-  /* padding:0px !important; */
 }
 
 .dropdown-item:hover {

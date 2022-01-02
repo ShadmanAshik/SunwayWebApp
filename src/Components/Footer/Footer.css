@@ -1,103 +1,79 @@
-.footer-part-1{
+.footer-part-1 {
   background-color: var(--main-deepBlue);
   padding-top: 60px;
   padding-bottom: 100px;
   color: white;
-  
 }
-.footer-column{
+.footer-column {
   text-align: left;
   padding: 0 5px;
 }
-.fbpost{
+.fbpost {
 }
-.footer-part-1 .col-lg-3 .col-lg-2 .col-md-4 .col-md-2 .col-sm-12{
+.footer-part-1 .col-lg-3 .col-lg-2 .col-md-4 .col-md-2 .col-sm-12 {
   text-align: left !important;
 }
-.footer-logo{
+.footer-logo {
   width: 50px;
   margin-top: 10px;
 }
-.footer-logo-para{
+.footer-logo-para {
   padding-top: 20px;
 }
-.footer-title{
+.footer-title {
   padding-top: 15px;
   padding-bottom: 10px;
   color: var(--main-deepOrange);
 }
-.footer-part-1 a,p{
+.footer-part-1 a,
+p {
   text-decoration: none;
   color: white;
   font-size: 18px;
   text-align: left;
 }
-.ositimg{
+.ositimg {
   width: 150px;
   height: auto;
   padding-left: 5px;
 }
 
-a:hover{
+a:hover {
   color: var(--main-deepOrange);
 }
 /* .col-md-2 .col-md-3, .col-lg-3{
   text-align: left;
 } */
 
-.fa-building, .fa-envelope, .phone-alt{
-   margin-right: 10px;
-} 
-.fa-facebook{
-  color:rgb(0, 183, 255);
+.fa-building,
+.fa-envelope,
+.phone-alt {
   margin-right: 10px;
-  font-size: 20px;
 }
-.fa-youtube{
-  color:red;
-  margin-right: 10px;
-  font-size: 20px;
-}
-.fa-twitter{
-  color:rgb(0, 225, 255);
-  margin-right: 10px;
-  font-size: 20px;
-}
-.fa-linkedin{
-  color:rgb(47, 138, 199);
-  margin-right: 10px;
-  font-size: 20px;
-}
-.footer-2{
-  background-color: var(--main-deepBlue);
+
+.footer-2 {
+  background-color: #1d202c;
   color: white;
   padding-top: 10px;
   padding-bottom: 5px;
 }
-.footer-2 p{
+.footer-2 p {
   text-align: center;
 }
-.fb-page{
-  
-  
-}
-.social-icons-container{
+
+.social-icons-container {
   display: inline-flex;
-  
-  
 }
-.icons{
+.icons {
   width: 40px;
   margin: 20px 10px;
-
 }
-.fb-btn{
+.fb-btn {
   position: relative;
   top: 80%;
   left: 27%;
-
 }
-.btn-bk{
+.btn-bk {
   background-image: url("./fbpost.jpg");
   background-size: 300px 175px;
   background-repeat: no-repeat;

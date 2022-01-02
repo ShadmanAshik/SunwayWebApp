@@ -40,7 +40,7 @@ const ContactForm = ({ submitForm }) => {
     <div className="container" id="formContiner">
       <div className="contactus-form">
       <div className="contactus-form-title">
-            <h2>Got Queries?</h2>
+            <h2>Contact With Us</h2>
             <p className="title-description">
               Just enter your details below And we'll reach you soon.
             </p>
