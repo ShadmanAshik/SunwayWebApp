@@ -44,12 +44,13 @@ import VisaApplication from "./Components/Pages/Services/VisaApplication";
 import ScholarshipSupport from "./Components/Pages/Services/ScholarshipSupport";
 import AdmissionSupoort from "./Components/Pages/Services/AdmissionSupoort";
 import StudyTour from "./Components/Pages/Services/StudyTour";
-import Counseling from "./Components/Pages/Services/Counseling";
+import Counseling from "./Components/Pages/Services/Counselling";
 import Agent from "./Components/Pages/Agent/Agent";
 import Admin from "./Components/Pages/Admin/Admin";
 import Sticky from "react-stickynode";
 import ContactData from "./Components/Pages/Admin/Components/ContactData";
 import AgentData from "./Components/Pages/Admin/Components/AgentData";
+import Advocacy from "./Components/Pages/Services/Advocacy";
 
 function App() {
   return (
@@ -74,6 +75,7 @@ function App() {
           <Route exact path="/skilldev" element={<SkillDevelopment />} />
           <Route exact path="/tuition" element={<Tuition />} />
           <Route exact path="/agent" element={<Agent />} />
+          <Route exact path="/advocacy" element={<Advocacy />} />
 
           <Route exact path="/studentCounseling" element={<Counseling />} />
           <Route
@@ -103,28 +105,28 @@ function App() {
           />
           <Route
             exact
-            path="ProfessionalGraphicDesign"
+            path="/ProfessionalGraphicDesign"
             element={<ProfessionalGraphicDesign />}
           />
-          <Route exact path="LanguageCourses" element={<LanguageCourses />} />
-          <Route exact path="IELTSPreparation" element={<IELTSPreparation />} />
-          <Route exact path="EnglishSpoken" element={<EnglishSpoken />} />
-          <Route exact path="DigitalMarketing" element={<DigitalMarketing />} />
+          <Route exact path="/LanguageCourses" element={<LanguageCourses />} />
+          <Route exact path="/IELTSPreparation" element={<IELTSPreparation />} />
+          <Route exact path="/EnglishSpoken" element={<EnglishSpoken />} />
+          <Route exact path="/DigitalMarketing" element={<DigitalMarketing />} />
           <Route
             exact
-            path="CommunicativeEnglish"
+            path="/CommunicativeEnglish"
             element={<CommunicativeEnglish />}
           />
-          <Route exact path="AcademicEnglish" element={<AcademicEnglish />} />
-          <Route exact path="Testimonial" element={<Testimonial />} />
-          <Route exact path="VideoGallery" element={<VideoGallery />} />
-          <Route exact path="PhotoGallery" element={<PhotoGallery />} />
-          <Route exact path="Events" element={<Events />} />
-          <Route exact path="Offer" element={<Offer />} />
-          <Route exact path="News" element={<News />} />
-          <Route exact path="Blog" element={<Blog />} />
+          <Route exact path="/AcademicEnglish" element={<AcademicEnglish />} />
+          <Route exact path="/Testimonial" element={<Testimonial />} />
+          <Route exact path="/VideoGallery" element={<VideoGallery />} />
+          <Route exact path="/PhotoGallery" element={<PhotoGallery />} />
+          <Route exact path="/Events" element={<Events />} />
+          <Route exact path="/Offer" element={<Offer />} />
+          <Route exact path="/News" element={<News />} />
+          <Route exact path="/Blog" element={<Blog />} />
           <Route exact path="AdmissionForm" element={<Application />} />
-          <Route exact path="ScholarshipForm" element={<ApplyScholarship />} />
+          <Route exact path="/ScholarshipForm" element={<ApplyScholarship />} />
 
           <Route exact path="admin" element={<Admin />}>
             <Route path="contactUsData" element={<ContactData />} />

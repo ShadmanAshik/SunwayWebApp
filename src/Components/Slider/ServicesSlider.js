@@ -32,33 +32,64 @@ export default class ServicesSlider extends Component {
           <div>
             <Cards
               title="Student Counceling"
-              imgSrc="/img/FS 8.jpg"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              imgSrc="/img/Student-Counselling.jpg"
+              text="Most of the students applying for further education abroad can not go through the right way to success. It’s a crucial point."
               btn="See More"
+              link='/studentCounseling'
             />
           </div>
           <div>
             <Cards
               title="Application Processing"
-              imgSrc="/img/FS 10.jpg"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              imgSrc="/img/Application-Processing.jpg"
+              text="Send your students documents over our online system or  by email. After  sending an email please notify our consultant."
               btn="See More"
+              link='/applicationProcessing'
             />
           </div>
           <div>
             <Cards
               title="Visa Application"
-              imgSrc="/img/visa.jpg"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              imgSrc="/img/visa-application-assistance.png"
+              text="Once student admission is done the next step is visa processing. Different countries have different requirements."
               btn="See More"
+              link="/visaApplication"
             />
           </div>
           <div>
             <Cards
-              title="Education Program"
-              imgSrc="/img/SF 4.jpg"
+              title="Study Tour"
+              imgSrc="/img/StudyTour.png"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               btn="See More"
+              link="/studyTour"
+            />
+          </div>
+          <div>
+            <Cards
+              title="Scholarship Support"
+              imgSrc="/img/scholarship-Support.jpg"
+              text="Scholarships are financial support granted to students depending on their academic performance and other criteria."
+              btn="See More"
+              link="/scholarshipSupport"
+            />
+          </div>
+          <div>
+            <Cards
+              title="Advocacy"
+              imgSrc="/img/Advocacy.png"
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              btn="See More"
+              link="/advocacy"
+            />
+          </div>
+          <div>
+            <Cards
+              title="Admission Support"
+              imgSrc="/img/Admission-Support.jpg"
+              text="Admission application is the most important part for a student aspiring for further education considering  this a first introduction to the  University authority."
+              btn="See More"
+              link="/admissionSupport"
             />
           </div>
         </Slider>

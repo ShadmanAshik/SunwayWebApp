@@ -20,24 +20,24 @@ const Header = () => {
           <div className="row" id="head">
             <div className="col-lg-4 col-md-6">
               <div className="iconContainer">
-                <a href="https://www.facebook.com/Sunway.Study.Group/">
+                <a target="_blank"href="https://www.facebook.com/Sunway.Study.Group/">
                   <img className="headerIcons" src="/img/fb.png" alt="fb"></img>
                 </a>
-                <a href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw">
+                <a target="_blank"href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw">
                   <img
                     className="headerIcons"
                     src="/img/youtube.png"
                     alt="fb"
                   ></img>
                 </a>
-                <a href="https://www.instagram.com/sunway_study_group/">
+                <a target="_blank"href="https://www.instagram.com/sunway_study_group/">
                   <img
                     className="headerIcons"
                     src="/img/instagram.png"
                     alt="fb"
                   ></img>
                 </a>
-                <a href="https://www.linkedin.com">
+                <a target="_blank"href="https://www.linkedin.com/company/sunway-study-group/">
                   <img
                     className="headerIcons"
                     src="/img/linkedin.png"
@@ -181,7 +181,7 @@ const Header = () => {
               >
                 <NavDropdown.Item className="dropdownItem">
                   <Link className="dropdownItem" to="/studentCounseling">
-                    <div className="highlightItem">Student Counseling</div>
+                    <div className="highlightItem">Student Counselling</div>
                   </Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
@@ -210,6 +210,11 @@ const Header = () => {
                 <NavDropdown.Item className="dropdownItem">
                   <Link className="dropdownItem" to="/studyTour">
                     <div className="highlightItem">Study Tour</div>
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item className="dropdownItem">
+                  <Link className="dropdownItem" to="/advocacy">
+                    <div className="highlightItem">Advocacy</div>
                   </Link>
                 </NavDropdown.Item>
               </NavDropdown>

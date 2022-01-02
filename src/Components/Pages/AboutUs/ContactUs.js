@@ -18,9 +18,7 @@ const ContactUs = () => {
               <div className="contacts col-lg-7">
                 <h3>Address:</h3>
                 <p>
-                  <i class="fas fa-home"></i> Gulfeshan Plaza, Level - 12, Suit
-                  - C, 08 Shahid Sangbadik Salina Parvin Sarak, Mogbazar,
-                  Dhaka-1217.
+                  <i class="fas fa-home"></i> Gulfeshan Plaza, Level - 12, Suit - C, 08 Shahid Sangbadik Salina Parvin Sarak, Mogbazar, Dhaka-1217.
                 </p>
                   <a href="mailto:sunwaystudy@gmail.com">
                     <i className="far fa-envelope"></i>

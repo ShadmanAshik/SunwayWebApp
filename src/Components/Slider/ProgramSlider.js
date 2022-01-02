@@ -32,33 +32,38 @@ export default class ProgramSlider extends Component {
           <div>
             <Cards
               title="Overseas Admission"
-              imgSrc="/img/FS 8.jpg"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              imgSrc="/img/Overseas.jpg"
+              text="You, the aspiring students, cherish the dream of further
+              education abroad as studying abroad will give you incredible experiences."
               btn="See More"
+              link="/overseas"
             />
           </div>
           <div>
             <Cards
               title="Language Proficiency"
-              imgSrc="/img/FS 10.jpg"
+              imgSrc="/img/language.jpg"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               btn="See More"
+              link="/language"
             />
           </div>
           <div>
             <Cards
               title="Skill Development"
-              imgSrc="/img/FS 14.jpg"
+              imgSrc="/img/Skill-Development.jpg"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               btn="See More"
+              link="/skilldev"
             />
           </div>
           <div>
             <Cards
               title="Tuition Media"
-              imgSrc="/img/SF 4.jpg"
+              imgSrc="/img/tution-media.jpg"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               btn="See More"
+              link="/tuition"
             />
           </div>
         </Slider>

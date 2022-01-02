@@ -2,9 +2,9 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import ContactForm from '../../ContactForm/ContactForm';
 import HeroImg from '../../HeroSection/HeroImg';
-import './Counseling.css'
+import './Counselling.css'
 
-const Counseling = () => {
+const Counselling = () => {
     return (
       <div>
       <Container>
@@ -19,7 +19,7 @@ const Counseling = () => {
                     <div class=" col-sm-12">
                       <img
                         className="Counselling-listImg"
-                        src="/img/list.jpg"
+                        src="/img/Student-Counselling.jpg"
                         alt="Image"
                       />
                     </div>
@@ -42,4 +42,4 @@ const Counseling = () => {
     );
 };
 
-export default Counseling;
+export default Counselling;

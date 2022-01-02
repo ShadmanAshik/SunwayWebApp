@@ -1,21 +1,21 @@
-.whyssg-container h1{
+.skillDev-container h1 {
     text-align: center;
     font-weight: bold;
-    margin: 55px 0 0 0px;
-    color:rgb(61, 62, 63);
-}
-.listItem{
-    
-    border:black;
-    padding:30px 40px 10px;
-}
-.listImg{
+    margin: 55px 0 10px 0px;
+    color: rgb(61, 62, 63);
+  }
+  .skillDev-listImg {
     width: 100%;
-    height: auto;
+    height: 500px;
     display: inline-flex;
-}
-.listPara{
-    color:black;
+    object-fit: cover;
+  }
+  .skillDev-listPara {
     margin-top: 20px;
+    color: black;
     text-align: justify;
-}
+  }
+  .skillDev-container {
+    margin: 0px 0px 50px 0;
+  }
+  

@@ -19,7 +19,7 @@ const AdmissionSupoort = () => {
                       <div class=" col-sm-12">
                         <img
                           className="Admission-listImg"
-                          src="/img/list.jpg"
+                          src="/img/Admission-Support.jpg"
                           alt="Image"
                         />
                       </div>

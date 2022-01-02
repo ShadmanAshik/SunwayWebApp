@@ -19,45 +19,47 @@ const WhySSG = () => {
                   <div class=" col-sm-12">
                     <img
                       className="whyssg-listImg"
-                      src="/img/list.jpg"
+                      src="/img/Why-SSG.jpg"
                       alt="Image"
                     />
                   </div>
                   <div class="col-sm-12">
-                    <p className="whyssg-listPara">
-                      We do research courses, teaching modules, opportunities,
-                      universities and their locations, campus life and
-                      employment prospects. We ensure you getting an accurate
-                      and unbiased advice.
-                    </p>
-                    <p className="whyssg-listPara">
-                      We are offering a complete 360-degree custom solutions. If
-                      you need to take an English test such as IELTS to qualify
-                      for your course, SSG will help you to practice hard to get
-                      good grades.
-                    </p>
-                    <p className="whyssg-listPara">
-                      We always remain in touch with our students and support
-                      them in every related context.
-                    </p>
-                    <p className="whyssg-listPara">
-                      We work on a case by case basis to give proper credential
-                      services for both students and education providers. The
-                      principles of good governance is practiced to ensure the
-                      best management practices, client services and academic
-                      freedom.
-                    </p>
-                    <p className="whyssg-listPara">
-                      We ensure the right investment of hard-earnt money of the
-                      respected parents.
-                    </p>
-                    <p className="whyssg-listPara">
-                      You can easily make an appointment with one of the SSG
-                      counsellors certified professionally, friendly and
-                      personally experienced. Your counsellor will work through
-                      all the big and small details to ensure the best possible
-                      fit between you and your area of study.
-                    </p>
+                    <ul className="whyssg-listPara">
+                      <li>
+                        We do research courses, teaching modules, opportunities,
+                        universities and their locations, campus life and
+                        employment prospects. We ensure you get accurate and
+                        unbiased advice.
+                      </li>
+                      <li>
+                        We are offering a complete 360-degree custom solution.
+                        If you need to take an English test such as IELTS to
+                        qualify for your course, SSG will help you to practice
+                        hard to get good grades.
+                      </li>
+                      <li>
+                        We always remain in touch with our students and support
+                        them in every related context.
+                      </li>
+                      <li>
+                        We work on a case-by-case basis to give proper
+                        credential services for both students and education
+                        providers. The principles of good governance are
+                        practiced to ensure the best management practices,
+                        client services and academic freedom.
+                      </li>
+                      <li>
+                        We ensure the right investment of hard-earned money of
+                        the respected parents.
+                      </li>
+                      <li>
+                        You can easily make an appointment with one of the SSG
+                        counsellors certified professionally, friendly and
+                        personally experienced. Your counsellor will work
+                        through all the big and small details to ensure the best
+                        possible fit between you and your area of study.
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

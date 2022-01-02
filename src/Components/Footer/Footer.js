@@ -95,8 +95,8 @@ function Footer() {
                 <h3 className="footer-title">Address</h3>
                 <p>
                   <i className="far fa-building" id="contactIcon"></i>
-                  Plaza, Level - 12, Suit - C, 08 Shahid Sangbadik Salina Parvin
-                  Sarak, Mogbazar, Dhaka-1217.
+                  Gulfeshan Plaza, Level - 12, Suit - C, 08 Shahid Sangbadik
+                  Salina Parvin Sarak, Mogbazar, Dhaka-1217.
                 </p>
                 <a href="mailto:sunwaystudy@gmail.com">
                   <i className="far fa-envelope" id="contactIcon"></i>
@@ -110,7 +110,8 @@ function Footer() {
                   <br />
                 </a>
                 <a href="tel:+8809642676767">
-                <i id="contactIcon" class="fas fa-phone-alt"></i>+8809642676767
+                  <i id="contactIcon" class="fas fa-phone-alt"></i>
+                  +8809642676767
                 </a>
               </div>
             </div>
@@ -133,47 +134,44 @@ function Footer() {
                   </div>
                   <div className="social-icons-container">
                     <div className="row">
-                      <div className="col-sm-3">
+                      <div className="social-icons-container">
                         <a
                           target="_blank"
-                          href="https://www.facebook.com/Sunway-Study-Group-103946112131280"
+                          href="https://www.facebook.com/Sunway.Study.Group/"
                         >
                           <img
                             className="icons"
-                            src="/img/Icons/fb.png"
+                            src="/img/fb.png"
                             alt="fb"
                           ></img>
                         </a>
-                      </div>
-                      <div className="col-sm-3">
+
                         <a
                           target="_blank"
                           href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw"
                         >
                           <img
                             className="icons"
-                            src="/img/Icons/yt.png"
+                            src="/img/youtube.png"
                             alt="youtube"
                           ></img>
                         </a>
-                      </div>
-                      <div className="col-sm-3">
+
                         <a
                           target="_blank"
                           href="https://www.instagram.com/sunway_study_group/"
                         >
                           <img
                             className="icons"
-                            src="/img/Icons/instagram.png"
+                            src="/img/instagram.png"
                             alt="instagram"
                           ></img>
                         </a>
-                      </div>
-                      <div className="col-sm-3">
-                        <a target="_blank" href="">
+
+                        <a target="_blank" href="https://www.linkedin.com/company/sunway-study-group/">
                           <img
                             className="icons"
-                            src="/img/Icons/linkedin.png"
+                            src="/img/linkedin.png"
                             alt="linkedin"
                           ></img>
                         </a>

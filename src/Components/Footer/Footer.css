@@ -116,7 +116,10 @@ a{
 .icons{
   width: 40px;
   margin: 20px 10px;
-
+  transition: 0.2s ease;
+}
+.icons:hover{
+  transform: scale(1.3);
 }
 .fb-btn{
   position: relative;
