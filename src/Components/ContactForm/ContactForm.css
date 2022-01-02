@@ -15,6 +15,10 @@
 #formContiner {
   padding: 0px;
 }
+.action-button:disabled {
+  background-color: rgb(126, 126, 126);
+  color:white
+}
 .contact-form {
   margin: 55px auto;
   margin-right: 12px;
@@ -111,7 +115,7 @@
 }
 .action-button {
   font: inherit;
-  font-size: 20px;
+  font-size: 24px;
   /* padding: 10px; */
   padding: 5px 35px;
   font-weight: 500;
@@ -120,14 +124,20 @@
   color: #fff;
   border: 0;
   text-align: center;
-  transition: all 200ms linear;
+  transition: all 0.3s ease;
 }
-
+.action-button:focus {
+  outline: 0;
+}
 .action-button:hover {
   cursor: pointer;
-  background-color:#575ca5;
-  color: rgb(255, 255, 255);
-  transition: all 200ms linear;
+  background-image: linear-gradient(
+    to left,
+    var(--main-deepBlue),
+    #575ca5
+  );
+  color: white;
+  transition: all 0.3s ease;
 }
 .card-info {
   padding: 1rem 1rem;
@@ -146,8 +156,7 @@
   color: #8597a3;
 }
 .checkbox {
-  margin-top: 3px !important;
-  margin-right:10px !important;
+  margin: 0.1rem;
 }
 
 /**

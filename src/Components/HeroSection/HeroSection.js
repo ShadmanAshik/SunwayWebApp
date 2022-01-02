@@ -10,7 +10,7 @@ const HeroSection = (props) => {
     setIndex(selectedIndex);
   };
   return (
-    <div className="carousael-container">
+    <div >
       
         <Carousel
           activeIndex={index}
@@ -21,6 +21,7 @@ const HeroSection = (props) => {
         >
           <Carousel.Item>
             <img
+              id="carouselImage"
               className="d-block w-100"
               src="/img/Welcome.jpg"
               alt="First slide"
@@ -69,6 +70,23 @@ const HeroSection = (props) => {
               <h1>Develop Your Skills</h1>
               <Button className="heroBtn" id="explore" variant="secondary">
                 Explore more
+              </Button>
+              
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="/img/tuition.jpg"
+              alt="Forth slide"
+            />
+            <Carousel.Caption className="caurousel-caption">
+              <h1>Tutoring Z-Generation</h1>
+              <Button className="heroBtn" id="explore" variant="secondary" >
+                Hire A Tutor
+              </Button>
+              <Button className="heroBtn" id="apply" variant="secondary">
+                Become A Tutor
               </Button>
               
             </Carousel.Caption>

@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react";
-
+import axios from "axios";
+import { useEffect, useState } from "react";
 const useForm = (callback, validate) => {
   const [values, setValues] = useState({
     email: "",
-    fname: "",
-    lname: "",
+    fName: "",
+    lName: "",
     countryCode: "",
-    phoneno: "",
-    counselMode: "",
-    Studylevel: "",
+    phone: "",
+    counselingMode: "",
+    studyLevel: "",
     country:""
   });
   const [error, setErrors] = useState({});
@@ -20,20 +20,38 @@ const useForm = (callback, validate) => {
       ...values,
       [name]: value,
     });
+    
   };
-
+  
   const handleSubmit = (e) => {
+    console.log(values);
     e.preventDefault();
 
     setErrors(validate(values));
     setIsSubmitting(true);
+    
   };
-
+  const headers = {
+    'Content-Type': 'application/json',
+    
+  }
+  
+  axios.post('http://127.0.0.1:8000/contactformdata/', values, {
+      headers: headers
+    })
+    .then((response) => {
+      console.log(response.data)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  
   useEffect(() => {
     if (Object.keys(error).length === 0 && isSubmitting) {
-      callback();
+      console.log("use -- effect");
+      // callback();
     }
-  }, [error]);
+  },[error]);
 
   return { handleChange, values, handleSubmit, error };
 };

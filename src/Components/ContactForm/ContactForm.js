@@ -1,24 +1,25 @@
 import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ContactForm.css";
-import validate from "./ValidateInfo";
-import useForm from "./useForm";
+// import validate from "./ValidateInfo";
+// import useForm from "./useForm";
 import axios from "axios";
 
-const ContactForm = ({ submitForm }) => {
-  const navigate = useNavigate();
+const ContactForm = ({ }) => {
+  // const navigate = useNavigate();
   // const { handleChange, handleSubmit, values, error } = useForm(
   //   submitForm,
   //   validate
   // );
-  const [fName, setfName] = useState(null);
-  const [lName, setlName] = useState(null);
-  const [email, setemail] = useState(null);
-  const [countryCode, setcountryCode] = useState(null);
-  const [phone, setphone] = useState(null);
-  const [counselingMode, setcounselingMode] = useState(null)
-  const [studyLevel, setstudyLevel] = useState(null)
-  const [country, setcountry] = useState(null)
+  const [checked,setchecked]=useState(false);
+  const [fName, setfName] = useState("");
+  const [lName, setlName] = useState("");
+  const [email, setemail] = useState("");
+  const [countryCode, setcountryCode] = useState("");
+  const [phone, setphone] = useState("");
+  const [counselingMode, setcounselingMode] = useState("")
+  const [studyLevel, setstudyLevel] = useState("")
+  const [country, setcountry] = useState("")
 
   const submitData=async()=>{
     let formField= new FormData()
@@ -27,19 +28,28 @@ const ContactForm = ({ submitForm }) => {
     formField.append('email',email)
     formField.append('countryCode',countryCode)
     formField.append('phone',phone)
-    formField.append('counsellingMode',counselingMode)
+    formField.append('counselingMode',counselingMode)
     formField.append('studyLevel',studyLevel)
     formField.append('country',country)
+    
 
-    await axios({
-      method: 'post',
-      url: 'http://127.0.0.1:8000/contactformdata/',
-      data: formField
-    }).then(response=>{
-      navigate('/')
-    })
+    const headers = {
+      'Content-Type': 'application/json',
+      
+    }
+    
+    axios.post('http://127.0.0.1:8000/contactformdata/', formField, {
+        headers: headers
+      })
+      .then((response) => {
+        console.log(response.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+    
   }
-
+  
 
   return (
     <div className="container" id="formContiner">
@@ -48,7 +58,7 @@ const ContactForm = ({ submitForm }) => {
           <div className="contact-form-title">
             <h2>Interested in Studying Abroad with SSG?</h2>
             <p className="title-description">
-              Just enter your details below And we'll reach you soon.
+              Just enter your details bellow And we'll reach you soon.
             </p>
           </div>
           <div className="input">
@@ -1108,6 +1118,7 @@ const ContactForm = ({ submitForm }) => {
               className="checkbox"
               type="checkbox"
               id="terms"
+              onChange={(e) => setchecked(!checked)}
               value="agree"
               required
             />
@@ -1119,7 +1130,7 @@ const ContactForm = ({ submitForm }) => {
           <div className="action">
             <button className="action-button" type="submit" onClick={submitData}>
               Submit
-            </button>
+            </button>           
           </div>
         </form>
       </div>
