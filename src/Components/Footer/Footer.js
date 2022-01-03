@@ -15,9 +15,9 @@ function Footer() {
 
                 <Link to="/agent">Be an Agent</Link>
                 <br />
-                <Link to="/">Admission</Link>
+                <Link to="/AdmissionForm">Admission</Link>
                 <br />
-                <Link to="/scholarship">Scholarship</Link>
+                <Link to="/ScholarshipForm">Scholarship</Link>
                 <br />
                 <Link to="/contact">Contact Us</Link>
                 <br />

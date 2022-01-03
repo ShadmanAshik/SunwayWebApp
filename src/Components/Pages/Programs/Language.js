@@ -13,20 +13,45 @@ const Language = () => {
           <div className="language-container">
             <div class="row">
               <div className="col-lg-8 col-md-6 col-sm-12">
-                <h1> Language</h1>
+                <h1>Language Proficiency</h1>
                 <div>
                   <div class="row">
                     <div class=" col-sm-12">
                       <img
                         className="language-listImg"
-                        src="/img/language.jpg"
+                        src="/img/languageProficiency.jpg"
                         alt="Image"
                       />
                     </div>
-                    <div class="col-sm-12">
-                      <p className="language-listPara">
-                        Renovation on progress.
-                      </p>
+                    <div class="textlanguage col-sm-12">
+                      <h2>
+                        LANGUAGE PROFICIENCY AND COMMUNICATIVE COMPETENCE:
+                      </h2>
+                      <ol>
+                        <h3>Key Issues:</h3>
+                        <li>
+                          Language proficiency is multidimensional and entails
+                          linguistic, cognitive, and socio-cultural factors
+                        </li>
+                        <li>
+                          As students learn a second language, they progress at
+                          different rates along a continuum of predictable
+                          stages.
+                        </li>
+                        <li>
+                          <strong>CAN DO</strong> descriptors depict what students can do with
+                          language at different levels of language proficiency.
+                        </li>
+                        <li>
+                          Communicative competence involves more than linguistic
+                          or grammatical competence.
+                        </li>
+                        <li>
+                          Native languages, cultures, and life experiences are
+                          resources to be tapped and provide a solid foundation
+                          for learning language and content.
+                        </li>
+                      </ol>
                     </div>
                   </div>
                 </div>

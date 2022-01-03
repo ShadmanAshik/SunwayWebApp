@@ -96,13 +96,14 @@ a{
   font-size: 20px;
 }
 .footer-2{
-  background-color: var(--main-deepBlue);
+  background-color: #1D202C;
   color: white;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-bottom: 5px;
 }
 .footer-2 p{
   text-align: center;
+  margin-bottom: 0px;
 }
 .fb-page{
   
@@ -110,8 +111,7 @@ a{
 }
 .social-icons-container{
   display: inline-flex;
-  
-  
+  margin-left: 14px;
 }
 .icons{
   width: 40px;

@@ -1,9 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ContactForm from "../../ContactForm/ContactForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Agent.css";
-import AgentForm from "./Applyagent"
+import AgentForm from "./AgentForm"
 
 
 const Agent = () => {
@@ -22,7 +21,7 @@ const Agent = () => {
                       <div class=" col-sm-12">
                         <img
                           className="agent-listImg"
-                          src="/img/list.jpg"
+                          src="/img/Agent.jpg"
                           alt="Image"
                         />
                       </div>

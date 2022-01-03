@@ -67,15 +67,15 @@
   top: 1.5rem;
   transition: 0.25s ease;
 }
-.input-labelCountry{
+.input-labelrow{
   color: #8597a3;
   position: absolute;
   top: 2.1rem;
   transition: 0.25s ease;
 }
 
-.input-field:focus + .input-labelCountry,
-.input-field:valid + .input-labelCountry {
+.input-field:focus + .input-labelrow,
+.input-field:valid + .input-labelrow {
   color: black;
   transform: translateY(-1.5rem);
 }
@@ -124,18 +124,14 @@
   color: #fff;
   border: 0;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 .action-button:focus {
   outline: 0;
 }
 .action-button:hover {
   cursor: pointer;
-  background-image: linear-gradient(
-    to left,
-    var(--main-deepBlue),
-    #575ca5
-  );
+  background-color: rgb(7, 24, 119);
   color: white;
   transition: all 0.3s ease;
 }
@@ -156,7 +152,9 @@
   color: #8597a3;
 }
 .checkbox {
-  margin: 0.1rem;
+  
+  margin-top: 3px !important ;
+  margin-right: 5px !important ;
 }
 
 /**

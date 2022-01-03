@@ -18,7 +18,7 @@ const Header = () => {
       <div className="scrwaller">
         <div className="marqueeContainer">
           <div className="row" id="head">
-            <div className="col-lg-4 col-md-6">
+            <div className="socials col-lg-4 col-md-6">
               <div className="iconContainer">
                 <a target="_blank"href="https://www.facebook.com/Sunway.Study.Group/">
                   <img className="headerIcons" src="/img/fb.png" alt="fb"></img>
@@ -53,7 +53,7 @@ const Header = () => {
                 </a>
               </div>
             </div>
-            <div className="col-lg-6 col-md-3">
+            <div className="marque col-lg-6 col-md-3">
               <Marquee
                 className="marquee"
                 speed="80"
@@ -63,15 +63,19 @@ const Header = () => {
                 <i class="fas fa-plane"></i> Admission is going on
               </Marquee>
             </div>
-            <div className="loginicn col-lg-1 col-md-1">
-              <Link to="/login">
-                <i class="fas fa-user-circle"></i>
-              </Link>
-            </div>
-            <div className="headerLink col-lg-1 col-md-1">
-              <Link to="/login" className="headerLink">
-                Login/Register
-              </Link>
+            <div className="col-lg-2 col-md-2">
+              <div className="login row">
+                <div className="loginicn">
+                  <Link to="/login">
+                    <i class="fas fa-user-circle"></i>
+                  </Link>
+                </div>
+                <div className="headerLink">
+                  <Link to="/login" className="headerLink">
+                    Login/Register
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,8 +1,8 @@
 .language-container h1 {
-    text-align: center;
     font-weight: bold;
     margin: 55px 0 10px 0px;
     color: rgb(61, 62, 63);
+    text-align: center;
   }
   .language-listImg {
     width: 100%;
@@ -13,9 +13,23 @@
   .language-listPara {
     margin-top: 20px;
     color: black;
-    text-align: justify;
   }
   .language-container {
     margin: 0px 0px 50px 0;
+    text-align: left;
   }
-  
+  .textlanguage h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 45px 0 10px 0px;
+  }
+  .textlanguage h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 45px 0 10px 0px;
+  }
+  .textlanguage li{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
