@@ -15,7 +15,20 @@
 #Agent-formContiner {
   padding: 0px;
 }
-
+.arrow{
+  color: #000;
+  font-size: 12px;
+}
+hr.solid {
+  border-top: 2px solid #bbb;
+  margin:0px;
+}
+.divider{
+  margin: 0px;
+  text-align: left;
+  color: rgb(155, 155, 155);
+  font-size: 13px;
+}
 .action-button:disabled {
   background-color: rgb(126, 126, 126);
   color:white
@@ -79,6 +92,27 @@
   font-size: 1.125rem;
   padding: 0.2rem 0;
 }
+.Agent-input-field-file {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border: 1px solid #eee;
+  font: inherit;
+  font-size: 1.125rem;
+  padding: 0.2rem 0.2rem;
+}
+.Agent-input-label-file{
+  text-align: left;
+  margin-left: 5px;
+  color:rgb(146, 146, 146);
+}
+.note{
+  text-align: right !important;
+  margin: 0px;
+  font-size: 12px;
+  color: var(--main-deepOrange);
+}
+
 .Agent-input-field:focus,
 .Agent-input-field:valid {
   outline: 0;
