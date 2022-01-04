@@ -42,7 +42,7 @@ export default class ProgramSlider extends Component {
           <div>
             <Cards
               title="Language Proficiency"
-              imgSrc="/img/language.jpg"
+              imgSrc="/img/languageProficiency.jpg"
               text="LANGUAGE PROFICIENCY AND COMMUNICATIVE COMPETENCE: Key Issues: Language proficiency is multidimensional and entails linguistic. . ."
               btn="See More"
               link="/language"

@@ -57,7 +57,7 @@ const Mission = () => {
                       />
                       <p>
                         Developing and increasing the effectiveness of human
-                        resources through required skills. Vision
+                        resources through required skills.
                       </p>
                     </div>
                   </div>

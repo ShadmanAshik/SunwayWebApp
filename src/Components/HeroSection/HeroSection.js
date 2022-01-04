@@ -27,10 +27,10 @@ const HeroSection = (props) => {
           />
           <Carousel.Caption className="caurousel-caption ">
             <h1>Welcome to Sunway Study Group</h1>
-            <Button href=""className="heroBtn" id="explore" variant="secondary">
+            <Button href="/about"className="heroBtn" id="explore" variant="secondary">
               Explore more
             </Button>
-            <Button  href="" className="heroBtn" id="btn2" variant="secondary">
+            <Button  href="/about" className="heroBtn" id="btn2" variant="secondary">
               Register Now
             </Button>
           </Carousel.Caption>
@@ -46,7 +46,7 @@ const HeroSection = (props) => {
             <Button href="/AdmissionForm" className="heroBtn" id="explore" variant="secondary">
               Explore more
             </Button>
-            <Button  href="" className="heroBtn" id="btn2" variant="secondary">
+            <Button  href="/AdmissionForm" className="heroBtn" id="btn2" variant="secondary">
               Apply Now
             </Button>
           </Carousel.Caption>
@@ -62,7 +62,7 @@ const HeroSection = (props) => {
             <Button href="/language" className="heroBtn" id="explore" variant="secondary">
               Explore more
             </Button>
-            <Button  href="" className="heroBtn" id="btn2" variant="secondary">
+            <Button  href="/language" className="heroBtn" id="btn2" variant="secondary">
               Apply Now
             </Button>
           </Carousel.Caption>
@@ -78,7 +78,7 @@ const HeroSection = (props) => {
             <Button href="/skillDev" className="heroBtn" id="explore" variant="secondary">
               Explore more
             </Button>
-            <Button  href="" className="heroBtn" id="btn2" variant="secondary">
+            <Button  href="/skillDev" className="heroBtn" id="btn2" variant="secondary">
               Apply Now
             </Button>
           </Carousel.Caption>
@@ -102,7 +102,7 @@ const HeroSection = (props) => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="/img/Global.jpg"
+            src="/img/Agent.jpg"
             alt="Fifth slide"
           />
           <Carousel.Caption className="caurousel-caption ">
@@ -110,7 +110,7 @@ const HeroSection = (props) => {
             <Button href="/agent" className="heroBtn" id="explore" variant="secondary">
               Explore more
             </Button>
-            <Button  href="" className="heroBtn" id="btn2" variant="secondary">
+            <Button  href="/agent" className="heroBtn" id="btn2" variant="secondary">
               Register Now
             </Button>
           </Carousel.Caption>
