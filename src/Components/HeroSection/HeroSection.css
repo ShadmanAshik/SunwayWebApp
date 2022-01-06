@@ -16,6 +16,58 @@
   transform: translateY(-35%);
   
 }
+.popup-content {
+  height: 80%;
+  overflow-y:scroll;
+  overflow-x: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes anvil {
+  0% {
+    transform: scale(1) translateY(0px);
+    opacity: 0;
+    box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+  }
+  1% {
+    transform: scale(0.96) translateY(10px);
+    opacity: 2;
+    box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+    box-shadow: 0 0 500px rgba(241, 241, 241, 0);
+  }
+}
+.popup-content {
+  -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+}
+/* width */
+.popup-content::-webkit-scrollbar {
+  width: 10px;
+  position: relative;
+  right:30px;
+}
+
+/* Track */
+.popup-content::-webkit-scrollbar-track {
+  background: #ffffff88; 
+}
+ 
+/* Handle */
+.popup-content::-webkit-scrollbar-thumb {
+  background: var(--main-deepOrange); 
+}
+
+/* Handle on hover */
+.popup-content::-webkit-scrollbar-thumb:hover {
+  background: rgb(160, 104, 0); 
+}
 
 .caurousel-caption h1 {
   color: white;
@@ -61,6 +113,16 @@
   .caurousel-caption h1 {
     font-size: 20px;
     
+  }
+  .hero img{
+    
+    height: 50vw;
+    
+  }
+  
+  .popup-content {
+    height: 60%;
+    width:90%;
   }
   .heroImg {
     height: 200px;

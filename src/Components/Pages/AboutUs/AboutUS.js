@@ -13,7 +13,7 @@ function AboutUS() {
         <div class="row">
           <div class="col-lg-8 col-md-6 col-sm-12">
             <div className="aboutus-container">
-              <h1> About Us</h1>
+              <h1>About SSG</h1>
               <div class="row">
                 <div class=" col-sm-12">
                   <img

@@ -107,7 +107,7 @@ const Header = () => {
               >
                 <NavDropdown.Item className="dropdownItem">
                   <Link className="dropdownItem" to="/about">
-                    <div className="highlightItem">About Us</div>
+                    <div className="highlightItem">About SSG</div>
                   </Link>
                 </NavDropdown.Item>
 

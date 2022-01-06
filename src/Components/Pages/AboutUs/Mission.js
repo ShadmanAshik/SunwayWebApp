@@ -80,7 +80,7 @@ const Mission = () => {
                       <p>
                         To become one of the most reputed and reliable names
                         worldwide in educational consultation and overseas
-                        admission service
+                        admission service.
                       </p>
                     </div>
                   </div>

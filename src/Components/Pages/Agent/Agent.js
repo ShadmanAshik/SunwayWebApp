@@ -64,7 +64,7 @@ const Agent = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-4 col-md-6 col-sm-12">
+                <div className=" col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
                   <AgentForm />
                 </div>
               </div>

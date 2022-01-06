@@ -34,12 +34,10 @@ hr.solid {
   color:white
 }
 .Agent-form {
-  margin: 55px auto;
-  margin-right: 12px;
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 425px;
+  max-width: 400px;
   background-color: #fff;
   border: 1px solid rgb(221, 217, 217);
   box-shadow: 10px 10px 20px 0 rgba(153, 153, 153, 0.25);
@@ -92,6 +90,8 @@ hr.solid {
   font-size: 1.125rem;
   padding: 0.2rem 0;
 }
+
+
 .Agent-input-field-file {
   border: 0;
   z-index: 1;
@@ -101,16 +101,18 @@ hr.solid {
   font-size: 1.125rem;
   padding: 0.2rem 0.2rem;
 }
+
+.Agent-input-field-file:focus, .Agent-input-field-file:valid {
+  border-color: var(--main-blue);
+}
+#passport:valid{
+  border-color:#eee !important;
+}
+
 .Agent-input-label-file{
   text-align: left;
   margin-left: 5px;
   color:rgb(146, 146, 146);
-}
-.note{
-  text-align: right !important;
-  margin: 0px;
-  font-size: 12px;
-  color: var(--main-deepOrange);
 }
 
 .Agent-input-field:focus,
@@ -136,6 +138,8 @@ hr.solid {
 }
 .Agent-action {
   margin-top: 5px;
+  margin-left: 70px;
+  margin-right: 70px;
 }
 .Agent-action-button {
   font: inherit;
@@ -144,9 +148,10 @@ hr.solid {
   padding: 5px 35px;
   font-weight: 500;
   background-color: var(--main-deepBlue);
-  border-radius: 6px;
+  border-radius: 4px;
   color: #fff;
   border: 0;
+  
   text-align: center;
   transition: 0.3s ease;
 }
