@@ -6,8 +6,9 @@
   }
   .Visa-listImg {
     width: 100%;
-    height: auto;
+    height: 500px;
     display: inline-flex;
+    object-fit: cover;
   }
   .Visa-listPara {
     margin-top: 20px;

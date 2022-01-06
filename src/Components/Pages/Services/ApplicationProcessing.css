@@ -6,8 +6,9 @@
   }
   .Application-listImg {
     width: 100%;
-    height: auto;
+    height: 500px;
     display: inline-flex;
+    object-fit: cover;
   }
   .Application-listPara {
     margin-top: 20px;

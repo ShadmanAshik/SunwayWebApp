@@ -19,13 +19,13 @@ const VisaApplication = () => {
                       <div class=" col-sm-12">
                         <img
                           className="Visa-listImg"
-                          src="/img/list.jpg"
+                          src="/img/visa-application-assistance.png"
                           alt="Image"
                         />
                       </div>
                       <div class="col-sm-12">
                         <p className="Visa-listPara">
-                        Once student admission is done the next step is visa processing. Different countries have different requirements. We guide you to  fill up the visa application  form as per requirement  and get your documents ready  for submission .
+                        Once student admission is done the next step is visa processing. Different countries have different requirements. We guide you to  fill up the visa application  form as per requirement  and get your documents ready  for submission.
                         </p>
                       </div>
                     </div>

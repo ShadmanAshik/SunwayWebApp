@@ -13,3 +13,22 @@
 .conatact-container p{
     color: black;
 }
+.contacts a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+.contacts .fa-headset{
+    margin-right: 10px;
+}
+.contacts a:hover{
+    color: var(--main-deepOrange);
+}
+.contacts p{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+.contacts{
+    text-align: left !important;
+}

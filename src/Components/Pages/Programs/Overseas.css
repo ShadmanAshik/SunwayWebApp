@@ -6,8 +6,9 @@
 }
 .overseas-listImg {
   width: 100%;
-  height: auto;
-  display: inline-flex;
+    height: 500px;
+    display: inline-flex;
+    object-fit: cover;
 }
 .overseas-listPara {
   margin-top: 20px;

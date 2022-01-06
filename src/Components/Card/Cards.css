@@ -6,11 +6,11 @@
   text-align: left;
 }
 .cardImg {
-  height: auto;
+  height: 250px;
   width: 100%;
   transition: all 0.2s linear;
   border-radius: 0px !important;
-  
+  object-fit:cover;
 }
 .btn-primary{
   background-color: var(--main-deepOrange);

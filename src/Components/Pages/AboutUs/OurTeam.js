@@ -8,7 +8,7 @@ const OurTeam = () => {
   return (
     <div>
       <Container>
-        <HeroImg imgSrc="/img/banner1.jpg" />
+        <HeroImg imgSrc="https://i.ibb.co/SRz3r8P/banner1.jpg" />
         <div>
           <div class="row">
             <div className="col-lg-8 col-md-6 col-sm-12">

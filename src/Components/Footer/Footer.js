@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import { Link } from "react-router-dom";
-
+import { BrowserRouter, Link, Route, Routes, redirect } from "react-router-dom";
+import AboutUS from "../Pages/AboutUs/AboutUS";
 
 function Footer() {
   return (
@@ -12,13 +12,12 @@ function Footer() {
             <div className="col-lg-3 col-md-4 col-sm-12 ">
               <div className="footer-column">
                 <h3 className="footer-title">Quick Links</h3>
-                {/* <Link to="/admin">Temp Admin</Link>
-                <br /> */}
+
                 <Link to="/agent">Be an Agent</Link>
                 <br />
-                <Link to="/">Admission</Link>
+                <Link to="/AdmissionForm">Admission</Link>
                 <br />
-                <Link to="/scholarship">Scholarship</Link>
+                <Link to="/ScholarshipForm">Scholarship</Link>
                 <br />
                 <Link to="/contact">Contact Us</Link>
                 <br />
@@ -39,27 +38,45 @@ function Footer() {
                   British Council
                 </a>
                 <br />
-                <a target="_blank" href="https://cscuk.fcdo.gov.uk/apply/masters-scholarships/">
+                <a
+                  target="_blank"
+                  href="https://cscuk.fcdo.gov.uk/apply/masters-scholarships/"
+                >
                   Commonwealth Scholarship
                 </a>
                 <br />
-                <a target="_blank" href="https://www.cic.gc.ca/english/helpcentre/results-by-topic.asp?top=29">
+                <a
+                  target="_blank"
+                  href="https://www.cic.gc.ca/english/helpcentre/results-by-topic.asp?top=29"
+                >
                   Canada Express Entry
                 </a>
                 <br />
-                <a target="_blank" href="https://www.gov.uk/browse/visas-immigration">
+                <a
+                  target="_blank"
+                  href="https://www.gov.uk/browse/visas-immigration"
+                >
                   Living in UK
                 </a>
                 <br />
-                <a target="_blank"href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html">
+                <a
+                  target="_blank"
+                  href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html"
+                >
                   Study in Canada
                 </a>
                 <br />
-                <a target="_blank" href="https://bangladesh.embassy.gov.au/daca/home.html">
+                <a
+                  target="_blank"
+                  href="https://bangladesh.embassy.gov.au/daca/home.html"
+                >
                   Australian High Commission
                 </a>
                 <br />
-                <a target="_blank"href="https://www.internationalstudent.com/study_usa/">
+                <a
+                  target="_blank"
+                  href="https://www.internationalstudent.com/study_usa/"
+                >
                   Study in USA
                 </a>
                 <br />
@@ -81,17 +98,21 @@ function Footer() {
                   Gulfeshan Plaza, Level - 12, Suit - C, 08 Shahid Sangbadik
                   Salina Parvin Sarak, Mogbazar, Dhaka-1217.
                 </p>
-                <p>
+                <a href="mailto:sunwaystudy@gmail.com">
                   <i className="far fa-envelope" id="contactIcon"></i>
                   sunwaystudy@gmail.com
                   <br />
+                </a>
+                <a href="mailto:info@sunwaystudygroup.com">
+                  <i className="far fa-envelope" id="contactIcon"></i>
                   info@sunwaystudygroup.com
                   <br />
-                </p>
-                <p>
-                  <i className="fas fa-phone-alt" id="contactIcon"></i>
+                  <br />
+                </a>
+                <a href="tel:+8809642676767">
+                  <i id="contactIcon" class="fas fa-phone-alt"></i>
                   +8809642676767
-                </p>
+                </a>
               </div>
             </div>
             <div className="col-lg-3 col-md-4 col-sm-12">
@@ -112,39 +133,50 @@ function Footer() {
                     </div>
                   </div>
                   <div className="social-icons-container">
-                    <a target="_blank" href="https://www.facebook.com/Sunway.Study.Group/">
-                      <img className="icons" src="/img/fb.png" alt="fb"></img>
-                    </a>
+                    <div className="row">
+                      <div className="social-icons-container">
+                        <a
+                          target="_blank"
+                          href="https://www.facebook.com/Sunway.Study.Group/"
+                        >
+                          <img
+                            className="icons"
+                            src="https://i.ibb.co/7Y7zYD4/fb.png"
+                            alt="fb"
+                          ></img>
+                        </a>
 
-                    <a
-                      // target="_blank"
-                      href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw"
-                    >
-                      <img
-                        className="icons"
-                        src="/img/youtube.png"
-                        alt="youtube"
-                      ></img>
-                    </a>
+                        <a
+                          target="_blank"
+                          href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw"
+                        >
+                          <img
+                            className="icons"
+                            src="https://i.ibb.co/nPFvQ0j/youtube.png"
+                            alt="youtube"
+                          ></img>
+                        </a>
 
-                    <a
-                      // target="_blank"
-                      href="https://www.instagram.com/sunway_study_group/"
-                    >
-                      <img
-                        className="icons"
-                        src="/img/instagram.png"
-                        alt="instagram"
-                      ></img>
-                    </a>
+                        <a
+                          target="_blank"
+                          href="https://www.instagram.com/sunway_study_group/"
+                        >
+                          <img
+                            className="icons"
+                            src="https://i.ibb.co/gTRKRwh/instagram.png"
+                            alt="instagram"
+                          ></img>
+                        </a>
 
-                    <a target="_blank" href="">
-                      <img
-                        className="icons"
-                        src="/img/linkedin.png"
-                        alt="linkedin"
-                      ></img>
-                    </a>
+                        <a target="_blank" href="https://www.linkedin.com/company/sunway-study-group/">
+                          <img
+                            className="icons"
+                            src="https://i.ibb.co/60zNZGR/linkedin.png"
+                            alt="linkedin"
+                          ></img>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <br />
@@ -158,7 +190,7 @@ function Footer() {
         <p class="col">
           Copyright ©2021 All rights reserved | IT Partner
           <a target="_blank" href="http://www.ositsltd.com/index.html">
-            <img className="ositimg" src="/img/osit.png" alt="osit" />
+            <img className="ositimg" src="http://www.ositsltd.com/images/os%20logolatest2.png" alt="osit" />
           </a>
         </p>
       </div>

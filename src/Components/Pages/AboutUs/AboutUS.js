@@ -8,17 +8,17 @@ function AboutUS() {
   return (
     <>
       <Container>
-        <HeroImg imgSrc="/img/banner1.jpg"></HeroImg>
+        <HeroImg imgSrc="https://i.ibb.co/SRz3r8P/banner1.jpg"></HeroImg>
 
         <div class="row">
           <div class="col-lg-8 col-md-6 col-sm-12">
             <div className="aboutus-container">
-              <h1> About Us</h1>
+              <h1>About SSG</h1>
               <div class="row">
                 <div class=" col-sm-12">
                   <img
                     className="listImg-aboutus"
-                    src="/img/list.jpg"
+                    src="https://i.ibb.co/JQY73ZF/About-Us.png"
                     alt="Image"
                   />
                 </div>
@@ -38,7 +38,7 @@ function AboutUS() {
                     assist learners in developing their language proficiency
                     which they need to become successful in graduate schools and
                     in their professional lives. It focuses on implementing
-                    student-cantered and creative language teaching techniques
+                    student-centered and creative language teaching techniques
                     by developing modules based on students’ proficiency level.
                     It also ensures small classes with excellent interaction
                     between teachers and learners.
@@ -46,10 +46,10 @@ function AboutUS() {
                   <p className="listPara">
                     In the 21st century, skills are a major differentiator for
                     employability and success in life. A study found that 80% of
-                    achievements in career are determined by soft skills and 20%
-                    by hard skills. So SSG’s timely initiative is Skill
+                    achievements in a career are determined by soft skills and
+                    20% by hard skills. So SSG’s timely initiative is Skill
                     Development Program (SDP) to develop the Z-Generation to get
-                    competitive advantage in their work place. SSG ensures
+                    competitive advantage in their workplace. SSG ensures
                     knowledge, skills and attitude through Competency Based
                     Training (CBT).
                   </p>

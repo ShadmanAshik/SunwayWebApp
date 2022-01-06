@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Container } from 'react-bootstrap';
-import { DataGrid } from '@mui/x-data-grid';
+
 
 export class ContactData extends Component {
     constructor(){
@@ -11,7 +11,7 @@ export class ContactData extends Component {
     }
 
     fetchData(){
-        fetch('http://127.0.0.1:8000/contactformdata/')
+        fetch('cfd/contactformdata/')
         .then(response=>response.json())
         .then((data)=>{
             this.setState({
@@ -25,7 +25,7 @@ export class ContactData extends Component {
     }
 
     deleteData(id){
-        fetch('http://127.0.0.1:8000/contactfromdata/'+id+'/',{
+        fetch('cfd/contactfromdata/'+id+'/',{
             method:'DELETE',
             body:JSON.stringify(this.state),
         })
@@ -40,32 +40,7 @@ export class ContactData extends Component {
     render(){
        
         const empData=this.state.dataOfTable;
-        const columns = [
-            { field: 'id', headerName: 'ID', width: 70 },
-            { field: 'fName', headerName: 'First name', width: 130 },
-            { field: 'lName', headerName: 'Last name', width: 130 },
-            { field: 'email', headerName: 'Email', width: 130 },
-            {
-                field: 'phoneNumber',
-                headerName: 'Phone',
-                description: 'This column has a value getter and is not sortable.',
-                sortable: false,
-                width: 160,
-                valueGetter: (params) =>
-                  `${params.getValue(params.id, 'countryCode') || ''} ${
-                    params.getValue(params.id, 'phone') || ''
-                  }`,
-              },
-            { field: 'country', headerName: 'Intended Country', width: 130 },
-            { field: 'counselingMode', headerName: 'Counseling Mode', width: 130 },
-            {
-              field: 'age',
-              headerName: 'Age',
-              type: 'number',
-              width: 90,
-            },
-           
-          ];
+        
         const rows=empData.map((formdata)=>
             <tr key={formdata.id}>
                 <td>{formdata.fName}</td>

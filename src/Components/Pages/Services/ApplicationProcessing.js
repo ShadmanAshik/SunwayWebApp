@@ -19,13 +19,13 @@ const ApplicationProcessing = () => {
                       <div class=" col-sm-12">
                         <img
                           className="Application-listImg"
-                          src="/img/list.jpg"
+                          src="/img/Application-Processing.jpg"
                           alt="Image"
                         />
                       </div>
                       <div class="col-sm-12">
                         <p className="Application-listPara">
-                        Send your students documents over our online system or  by email . After  sending an email please notify our consultant. keep in touch with consultants for assistance.
+                        Send your students documents over our online system or  by email. After  sending an email please notify our consultant. Keep in touch with consultants for assistance.
                         </p>
                       </div>
                     </div>

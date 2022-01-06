@@ -38,7 +38,7 @@ const ContactForm = ({ }) => {
       
     }
     
-    axios.post('http://127.0.0.1:8000/contactformdata/', formField, {
+    axios.post('cfd/contactformdata/', formField, {
         headers: headers
       })
       .then((response) => {
@@ -61,37 +61,37 @@ const ContactForm = ({ }) => {
               Just enter your details bellow And we'll reach you soon.
             </p>
           </div>
-          <div className="input">
-            <input
-              id="fname"
-              type="text"
-              name="fname"
-              className="input-field"
-              value={fName}
-              onChange={(e) => setfName(e.target.value)}
-              required
-            />
-            <label htmlFor="fname" className="input-label">
-              First Name
-            </label>
+          <div className="row">
+            <div className="input col-6">
+              <input
+                id="fname"
+                type="text"
+                name="fname"
+                className="input-field"
+                value={fName}
+                onChange={(e) => setfName(e.target.value)}
+                required
+              />
+              <label htmlFor="fname" className="input-labelrow">
+                First Name
+              </label>
+            </div>
+
+            <div className="input col-6">
+              <input
+                id="lname"
+                type="text"
+                name="lname"
+                className="input-field"
+                value={lName}
+                onChange={(e) => setlName(e.target.value)}
+                required
+              />
+              <label htmlFor="lname" className="input-label">
+                Last Name
+              </label>
+            </div>
           </div>
-
-          <div className="input">
-            <input
-              id="lname"
-              type="text"
-              name="lname"
-              className="input-field"
-              value={lName}
-              onChange={(e) => setlName(e.target.value)}
-              required
-            />
-
-            <label htmlFor="lname" className="input-label">
-              Last Name
-            </label>
-          </div>
-
           <div className="input">
             <input
               id="email"
@@ -106,9 +106,7 @@ const ContactForm = ({ }) => {
             <label htmlFor="email" className="input-label">
               Email
             </label>
-            {/* {error.email && (
-              <p data-tooltip="Invalid Email Address">{error.email}</p>
-            )} */}
+            
           </div>
 
           <div className="row">
@@ -766,7 +764,7 @@ const ContactForm = ({ }) => {
                   ZW (+263)
                 </option>
               </select>
-              <label htmlFor="CountryCode" className="input-labelCountry">
+              <label htmlFor="CountryCode" className="input-labelrow">
                 Country Code:
               </label>
             </div>

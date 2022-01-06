@@ -1,9 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ContactForm from "../../ContactForm/ContactForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Agent.css";
-import AgentForm from "./Applyagent"
+import AgentForm from "./AgentForm"
 
 
 const Agent = () => {
@@ -11,7 +10,7 @@ const Agent = () => {
     <>
       <div>
         <Container>
-          <HeroImg imgSrc="/img/banner1.jpg" />
+          <HeroImg imgSrc="https://i.ibb.co/m5t56hL/Why-SSG.jpg" />
           <div>
             <div className="agent-container">
               <div class="row">
@@ -22,7 +21,7 @@ const Agent = () => {
                       <div class=" col-sm-12">
                         <img
                           className="agent-listImg"
-                          src="/img/list.jpg"
+                          src="https://i.ibb.co/54d4BhX/Agent.jpg"
                           alt="Image"
                         />
                       </div>
@@ -65,7 +64,7 @@ const Agent = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-4 col-md-6 col-sm-12">
+                <div className=" col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
                   <AgentForm />
                 </div>
               </div>
