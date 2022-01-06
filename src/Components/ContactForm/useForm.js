@@ -1,15 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-const useForm = (callback, validate) => {
+
+const useForm = (props, validate) => {
   const [values, setValues] = useState({
     email: "",
     fName: "",
     lName: "",
-    countryCode: "",
     phone: "",
     counselingMode: "",
-    studyLevel: "",
-    country:""
+    studylevel: "",
+    countryCode:""
   });
   const [error, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,38 +20,36 @@ const useForm = (callback, validate) => {
       ...values,
       [name]: value,
     });
-    
   };
+
+  const headers = {
+    'Content-Type': 'application/json',
+  }
   
   const handleSubmit = (e) => {
-    console.log(values);
     e.preventDefault();
 
     setErrors(validate(values));
     setIsSubmitting(true);
-    
-  };
-  const headers = {
-    'Content-Type': 'application/json',
-    
-  }
-  
-  axios.post('http://127.0.0.1:8000/contactformdata/', values, {
+    axios.post('http://localhost:8080/cfd/contactformdata/', values, {
       headers: headers
     })
     .then((response) => {
-      console.log(response.data)
+      console.log(response.data);
+      window.location.reload();
     })
     .catch((error) => {
       console.log(error)
     })
-  
+  };
+
+
+
   useEffect(() => {
     if (Object.keys(error).length === 0 && isSubmitting) {
-      console.log("use -- effect");
-      // callback();
+      
     }
-  },[error]);
+  }, [error]);
 
   return { handleChange, values, handleSubmit, error };
 };
