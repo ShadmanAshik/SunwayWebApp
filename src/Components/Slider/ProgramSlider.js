@@ -43,7 +43,7 @@ export default class ProgramSlider extends Component {
             <Cards
               title="Language Proficiency"
               imgSrc="/img/languageProficiency.jpg"
-              text="LANGUAGE PROFICIENCY AND COMMUNICATIVE COMPETENCE: Key Issues: Language proficiency is multidimensional and entails linguistic. . ."
+              text="Language proficiency is multidimensional and entails linguistic, cognitive, and socio-cultural factors. . . ."
               btn="See More"
               link="/language"
             />
@@ -52,7 +52,7 @@ export default class ProgramSlider extends Component {
             <Cards
               title="Skill Development"
               imgSrc="/img/Skill-Development.jpg"
-              text="CHALLENGES AND OPPORTUNITIES FOR SKILLS DEVELOPMENT: Competing in today’s global economy is complex. Countries not only need. . ."
+              text="Competing in today’s global economy is complex. Countries not only need advanced technical and vocational skills. . ."
               btn="See More"
               link="/skilldev"
             />
@@ -61,7 +61,7 @@ export default class ProgramSlider extends Component {
             <Cards
               title="Tuition Media"
               imgSrc="/img/tution-media.jpg"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              text="In Bangladesh science the competition is very high, the system of our education becoming more exam centric, Parents are increasingly concerned. . ."
               btn="See More"
               link="/tuition"
             />

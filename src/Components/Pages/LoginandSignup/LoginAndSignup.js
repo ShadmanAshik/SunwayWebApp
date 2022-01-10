@@ -16,8 +16,8 @@ const LoginAndSignup = ({ submitForm }) => {
             <div class="col-12 text-center align-self-center py-5">
               <div class="section pb-5 pt-5 pt-sm-2 text-align-center">
                 <h6 class="col 12 mb-0 pb-3 text-center">
-                  <span className="label">Log In</span>
-                  <span className="label">Register</span>
+                  <span className="label1">Log In</span>
+                  <span className="label2">Register</span>
                 </h6>
                 <input
                   class="loginCheckbox"

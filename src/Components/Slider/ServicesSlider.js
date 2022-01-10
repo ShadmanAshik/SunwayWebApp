@@ -31,7 +31,7 @@ export default class ServicesSlider extends Component {
         <Slider {...settings}>
           <div>
             <Cards
-              title="Student Counceling"
+              title="Student Counseling"
               imgSrc="/img/Student-Counselling.jpg"
               text="Most of the students applying for further education abroad can not go through the right way to success. It’s a crucial point."
               btn="See More"
@@ -60,7 +60,7 @@ export default class ServicesSlider extends Component {
             <Cards
               title="Study Tour"
               imgSrc="/img/StudyTour.png"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              text="Study tour is an experience where students study abroad as an alternative to traditional classroom based learning. . . ."
               btn="See More"
               link="/studyTour"
             />

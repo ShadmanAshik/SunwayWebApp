@@ -24,14 +24,11 @@ const Language = () => {
                       />
                     </div>
                     <div class="textlanguage col-sm-12">
-                      <h2>
-                        LANGUAGE PROFICIENCY AND COMMUNICATIVE COMPETENCE:
-                      </h2>
                       <ol>
                         <h3>Key Issues:</h3>
                         <li>
                           Language proficiency is multidimensional and entails
-                          linguistic, cognitive, and socio-cultural factors
+                          linguistic, cognitive, and socio-cultural factors.
                         </li>
                         <li>
                           As students learn a second language, they progress at
@@ -39,8 +36,9 @@ const Language = () => {
                           stages.
                         </li>
                         <li>
-                          <strong>CAN DO</strong> descriptors depict what students can do with
-                          language at different levels of language proficiency.
+                          <strong>CAN DO</strong> Descriptors depict what
+                          students can do with language at different levels of
+                          language proficiency.
                         </li>
                         <li>
                           Communicative competence involves more than linguistic

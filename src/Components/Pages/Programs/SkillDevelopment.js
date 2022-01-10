@@ -24,23 +24,14 @@ const SkillDevelopment = () => {
                       />
                     </div>
                     <div class="textSkillDev col-sm-12">
-                      <h2>
-                        CHALLENGES AND OPPORTUNITIES FOR SKILLS DEVELOPMENT:
-                      </h2>
                       <div className="skillDev-listPara">
-                        Competing in today’s global economy is complex.
-                        Countries not only need advanced technical and
-                        vocational skills, but also a flexible workforce that
-                        can adjust to rapid shifts in demand.
+                      Competing in today’s global economy is complex. Countries not only need advanced technical and vocational skills, but also a flexible workforce that can adjust to rapid shifts in demand.
                       </div>
                       <div className="skillDev-listPara">
-                        As you know, the demand for job-specific skills has been
-                        growing around the world. Globally,
+                      As you know, the demand for job-specific skills has been growing around the world.
                       </div>
                       <div className="skillDev-listPara">
-                        Employers around the world are demanding that new hires
-                        have both technical and “soft” skills. Across South
-                        Asia,
+                      Employers around the world are demanding that new hires have both technical and “soft” skills.
                       </div>
                       <div className="skillDev-listPara">Today’s global economy requires advanced, flexible and fungible skills. Workers must be able to adjust not only to domestic shifts in demand but also to what is happening in the global economy and labor market. With the right skills in the workforce, firms can be more productive and competitive and the economy can grow faster, creating more and better jobs. The other side of this coin is that skills are essential both to reduce poverty and to improve personal well-being.  There is international evidence that cognitive, social, and technical skills affect wage premiums, earnings, and employment and occupation status.</div>
                     </div>
