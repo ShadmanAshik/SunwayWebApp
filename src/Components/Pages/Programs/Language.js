@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ContactForm from "../../ContactForm/ContactForm";
+import LangForm from "./LangForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Language.css";
 
@@ -54,8 +54,8 @@ const Language = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <ContactForm />
+              <div className=" col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
+                <LangForm />
               </div>
             </div>
           </div>

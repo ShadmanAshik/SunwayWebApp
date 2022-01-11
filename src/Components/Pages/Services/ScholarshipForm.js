@@ -1,128 +1,109 @@
 import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./ContactForm.css";
+import "./ScholarshipForm.css"
 // import validate from "./ValidateInfo";
 // import useForm from "./useForm";
 import axios from "axios";
 
-const ContactForm = ({ }) => {
-  // const navigate = useNavigate();
-  // const { handleChange, handleSubmit, values, error } = useForm(
-  //   submitForm,
-  //   validate
-  // );
-  const [checked,setchecked]=useState(false);
+const ScholarshipForm = ({}) => {
+
+  const [checked, setchecked] = useState(false);
   const [fName, setfName] = useState("");
   const [lName, setlName] = useState("");
   const [email, setemail] = useState("");
   const [countryCode, setcountryCode] = useState("");
   const [phone, setphone] = useState("");
-  const [counselingMode, setcounselingMode] = useState("")
+  
+  const [counselMode, setcounselMode] = useState("");
+  const [studycountry, setstudycountry] = useState("");
   const [studyLevel, setstudyLevel] = useState("")
-  const [country, setcountry] = useState("")
+  const [studywhen, setstudywhen] = useState("")
 
-  const submitData=async()=>{
-    let formField= new FormData()
-    formField.append('fName', fName)
-    formField.append('lName',lName)
-    formField.append('email',email)
-    formField.append('countryCode',countryCode)
-    formField.append('phone',phone)
-    formField.append('counselingMode',counselingMode)
-    formField.append('studyLevel',studyLevel)
-    formField.append('country',country)
-    
+
+  const submitData = async () => {
+    let formField = new FormData();
+    formField.append("fName", fName);
+    formField.append("lName", lName);
+    formField.append("email", email);
+    formField.append("countryCode", countryCode);
+    formField.append("phone", phone);
+    formField.append("counselMode", counselMode);
+    formField.append("studycountry", studycountry);
+    formField.append('studyLevel',studyLevel);
+    formField.append('studywhen',studywhen);
+
 
     const headers = {
-      'Content-Type': 'application/json',
-      
-    }
-    
-    axios.post('http://127.0.0.1:8000/contactformdata/', formField, {
-        headers: headers
+      "Content-Type": "application/json",
+    };
+
+    axios
+      .post("http://127.0.0.1:8000/contactformdata/", formField, {
+        headers: headers,
       })
       .then((response) => {
-        console.log(response.data)
+        console.log(response.data);
       })
       .catch((error) => {
-        console.log(error)
-      })
-    
-  }
-  
+        console.log(error);
+      });
+  };
 
   return (
-    <div className="container" id="formContiner">
-      <div className="contact-form">
-        <form className="card-form">
-          <div className="contact-form-title">
-            <h2>Interested in Studying Abroad with SSG?</h2>
-            <p className="title-description">
-              Just enter your details bellow And we'll reach you soon.
+    <div className="container" id="Scholarship-formContiner">
+      <div className="Scholarship-form">
+        <form className="Scholarship-card-form">
+          <div className="Scholarship-form-title">
+            <h2>Scholarships to Study Abroad.</h2>
+            <p className="Scholarship-title-description">
+              Just enter your details below And we'll reach you soon.
             </p>
           </div>
           <div className="row">
-            <div className="input col-6">
+            <div className="Scholarship-input col-6">
               <input
                 id="fname"
                 type="text"
                 name="fname"
-                className="input-field"
+                className="Scholarship-input-field"
                 value={fName}
                 onChange={(e) => setfName(e.target.value)}
                 required
               />
-              <label htmlFor="fname" className="input-labelrow">
+              <label htmlFor="fname" className="Scholarship-input-labelrowAgent">
                 First Name
               </label>
             </div>
 
-            <div className="input col-6">
+            <div className="Scholarship-input col-6">
               <input
                 id="lname"
                 type="text"
                 name="lname"
-                className="input-field"
+                className="Scholarship-input-field"
                 value={lName}
                 onChange={(e) => setlName(e.target.value)}
                 required
               />
-              <label htmlFor="lname" className="input-label">
+              <label htmlFor="lname" className="Scholarship-input-label">
                 Last Name
               </label>
             </div>
           </div>
-          <div className="input">
-            <input
-              id="email"
-              type="email"
-              name="email"
-              className="input-field"
-              value={email}
-              onChange={(e) => setemail(e.target.value)}
-              required
-            />
-
-            <label htmlFor="email" className="input-label">
-              Email
-            </label>
-            {/* {error.email && (
-              <p data-tooltip="Invalid Email Address">{error.email}</p>
-            )} */}
-          </div>
 
           <div className="row">
-            <div className="input col-5">
+            <div className="Scholarship-input col-5">
               <select
                 id="CountryCode"
                 type="text"
                 name="CountryCode"
-                className="input-field"
+                className="Scholarship-input-field"
                 value={countryCode}
                 onChange={(e) => setcountryCode(e.target.value)}
                 required
               >
                 <option value=""></option>
+                <option value="N/A">N/A</option>
                 <option data-countryCode="DZ" value="213">
                   DZ (+213)
                 </option>
@@ -766,92 +747,71 @@ const ContactForm = ({ }) => {
                   ZW (+263)
                 </option>
               </select>
-              <label htmlFor="CountryCode" className="input-labelrow">
+              <label
+                htmlFor="CountryCode"
+                className="Scholarship-input-labelrowAgent"
+              >
                 Country Code:
               </label>
             </div>
-            <div className="input col-7">
+            <div className="Scholarship-input col-7">
               <input
                 id="phoneno"
                 type="tel"
                 name="phoneno"
-                className="input-field"
+                className="Scholarship-input-field"
                 value={phone}
                 onChange={(e) => setphone(e.target.value)}
                 required
               />
-              <label htmlFor="phoneno" className="input-label">
+              <label htmlFor="phoneno" className="Scholarship-input-label">
                 Phone no.
               </label>
             </div>
           </div>
 
-          <div className="input">
-            <select
-              id="counselMode"
-              type="text"
-              name="counselMode"
-              className="input-field"
-              value={counselingMode}
-              onChange={(e) => setcounselingMode(e.target.value)}
+          <div className="Scholarship-input">
+            <input
+              id="email"
+              type="email"
+              name="email"
+              className="Scholarship-input-field"
+              value={email}
+              onChange={(e) => setemail(e.target.value)}
               required
-            >
-              <option value=""></option>
-              <option value="In person">In Person</option>
-              <option value="Virtual counselling">Virtual Counselling</option>
-            </select>
-            <label htmlFor="counselMode" className="input-label">
-              Counselling Mode:
+            />
+            <label htmlFor="email" className="Scholarship-input-label">
+              Email
             </label>
           </div>
 
-          <div className="input">
-            <select
-              id="Studylevel"
+          <div className="Scholarship-input">
+            <input
+              id="studywhen"
               type="text"
-              name="studyLevel"
-              className="input-field"
-              value={studyLevel}
-              onChange={(e) => setstudyLevel(e.target.value)}
+              name="studywhen"
+              className="Scholarship-input-field"
+              value={studywhen}
+              onChange={(e) => setstudywhen(e.target.value)}
               required
-            >
-              <option value=""></option>
-              <option value="Doctor of Philosophy (PhD)">
-                Doctor of Philosophy (PhD)
-              </option>
-              <option value="Master of Philosophy (MPhil)">
-                Master of Philosophy (MPhil)
-              </option>
-              <option value="Post graduate">Post graduate</option>
-              <option value="Post graduate diploma">
-                Post graduate diploma
-              </option>
-              <option value="Under graduate">Under graduate</option>
-              <option value="Admission preparation">
-                Admission preparation
-              </option>
-              <option value="MBBS">MBBS</option>
-              <option value="Academic Coaching">Academic Coaching</option>
-              <option value="Engineering">Engineering</option>
-              <option value="Language courses">Language courses</option>
-              <option value="IELTS">IELTS</option>
-            </select>
-            <label htmlFor="Studylevel" className="input-label">
-              Study Level:
+            />
+            <label htmlFor="studywhen" className="Scholarship-input-label">
+              When do you plan to study?
             </label>
           </div>
 
-          <div className="input">
+          <div className="Scholarship-input">
             <select
-              id="country"
+              id="studycountry"
               type="text"
-              name="country"
-              className="input-field"
-              value={country}
-              onChange={(e) => setcountry(e.target.value)}
+              name="studycountry"
+              className="Agent-input-field"
+              value={studycountry}
+              onChange={(e) => setstudycountry(e.target.value)}
               required
             >
               <option value=""></option>
+              <option value="N/A">N/A</option>
               <option value="Afganistan">Afghanistan</option>
               <option value="Albania">Albania</option>
               <option value="Algeria">Algeria</option>
@@ -1111,33 +1071,89 @@ const ContactForm = ({ }) => {
               <option value="Zambia">Zambia</option>
               <option value="Zimbabwe">Zimbabwe</option>
             </select>
-            <label htmlFor="country" className="input-label">
-              Country:
+            <label htmlFor="studycountry" className="Agent-input-label">
+              Preferred Study Destination:
             </label>
           </div>
 
-          <div className="card-info">
+          <div className="Scholarship-input">
+            <select
+              id="counselMode"
+              type="text"
+              name="counselMode"
+              className="input-field"
+              value={counselMode}
+              onChange={(e) => setcounselMode(e.target.value)}
+              required
+            >
+              <option value=""></option>
+              <option value="In person">In Person</option>
+              <option value="Virtual counselling">Virtual Counselling</option>
+            </select>
+            <label htmlFor="counselMode" className="input-label">
+              Counselling Mode:
+            </label>
+          </div>
+
+          <div className="Scholarship-input">
+            <select
+              id="Studylevel"
+              type="text"
+              name="studyLevel"
+              className="input-field"
+              value={studyLevel}
+              onChange={(e) => setstudyLevel(e.target.value)}
+              required
+            >
+              <option value=""></option>
+              <option value="Doctor of Philosophy (PhD)">
+                Doctor of Philosophy (PhD)
+              </option>
+              <option value="Master of Philosophy (MPhil)">
+                Master of Philosophy (MPhil)
+              </option>
+              <option value="Post graduate">Post graduate</option>
+              <option value="Post graduate diploma">
+                Post graduate diploma
+              </option>
+              <option value="Under graduate">Under graduate</option>
+              <option value="MBBS">MBBS</option>
+              <option value="Engineering">Engineering</option>
+            </select>
+            <label htmlFor="Studylevel" className="input-label">
+              Preferred Study Level:
+            </label>
+          </div>
+
+          
+
+          <div className="Scholarship-card-info">
             <input
-              className="checkbox"
+              className="Scholarship-checkbox"
               type="checkbox"
               id="terms"
               onChange={(e) => setchecked(!checked)}
               value="agree"
               required
             />
-            <label className="checkboxinfo" htmlfor="terms">
+            <label className="Scholarship-checkboxinfo" htmlfor="terms">
               I agree to the <a href="#">Terms and Conditions</a> and{" "}
               <a href="#">Privacy Policy</a>
             </label>
           </div>
-          <div className="action">
-            <button className="action-button" type="submit" onClick={submitData}>
+
+          <div className="Scholarship-action row">
+            <button
+              className="Scholarship-action-button"
+              type="submit"
+              onClick={submitData}
+            >
               Submit
-            </button>           
+            </button>
           </div>
         </form>
       </div>
     </div>
   );
 };
-export default ContactForm;
+export default ScholarshipForm;

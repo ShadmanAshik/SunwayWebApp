@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import HeroImg from "../../../HeroSection/HeroImg";
-import ApplyScholarshipForm from "./ApplyScholarshipForm";
-import FormSuccess from "./FormSuccess";
 import "./ScholarshipForm.css";
+import ScholarshipForm from "../../Services/ScholarshipForm";
 
 export const ApplyScholarship = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -19,11 +18,7 @@ export const ApplyScholarship = () => {
       </Container>
       <div className="form-container-schlr">
         
-        {!isSubmitted ? (
-          <ApplyScholarshipForm submitForm={submitForm} />
-        ) : (
-          <FormSuccess />
-        )}
+        <ScholarshipForm></ScholarshipForm>
 
         
       </div>

@@ -112,15 +112,17 @@
 }
 .action {
   margin-top: 5px;
+  margin-left: 70px;
+  margin-right: 70px;
 }
 .action-button {
   font: inherit;
   font-size: 24px;
   /* padding: 10px; */
-  padding: 5px 35px;
+  padding: 5px 35px; 
   font-weight: 500;
   background-color: var(--main-deepBlue);
-  border-radius: 6px;
+  border-radius: 4px;
   color: #fff;
   border: 0;
   text-align: center;

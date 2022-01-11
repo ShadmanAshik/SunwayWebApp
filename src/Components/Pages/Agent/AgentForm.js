@@ -35,6 +35,7 @@ const AgentForm = ({}) => {
   const [tradelicense, settradelicense] = useState("");
   const [busninessReg, setbusninessReg] = useState("");
   const [tinbin, settinbin] = useState("");
+  const [contactyou, setcontactyou] = useState("");
 
   const submitData = async () => {
     let formField = new FormData();
@@ -61,6 +62,7 @@ const AgentForm = ({}) => {
     formField.append("tradelicense", tradelicense);
     formField.append("busninessReg", busninessReg);
     formField.append("tinbin", tinbin);
+    formField.append("contactyou", contactyou);
 
     const headers = {
       "Content-Type": "application/json",
@@ -2582,12 +2584,12 @@ const AgentForm = ({}) => {
 
           <div className="Agent-input">
             <select
-              id="countryCode"
+              id="contactyou"
               type="text"
-              name="countryCode"
+              name="contactyou"
               className="Agent-input-field"
-              value={countryCode}
-              onChange={(e) => setcountryCode(e.target.value)}
+              value={contactyou}
+              onChange={(e) => setcontactyou(e.target.value)}
               required
             >
               <option value=""></option>

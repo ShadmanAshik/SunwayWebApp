@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import ContactForm from "../../ContactForm/ContactForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./SkillDevelopment.css";
+import SkillDevForm from "./SkillDevForm";
 
 const SkillDevelopment = () => {
   return (
@@ -38,8 +39,8 @@ const SkillDevelopment = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <ContactForm />
+              <div className="col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
+                <SkillDevForm />
               </div>
             </div>
           </div>

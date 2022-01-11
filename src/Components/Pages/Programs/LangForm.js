@@ -1,128 +1,108 @@
 import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./ContactForm.css";
+import "./LangForm.css"
 // import validate from "./ValidateInfo";
 // import useForm from "./useForm";
 import axios from "axios";
 
-const ContactForm = ({ }) => {
+const LangForm = ({}) => {
   // const navigate = useNavigate();
   // const { handleChange, handleSubmit, values, error } = useForm(
   //   submitForm,
   //   validate
   // );
-  const [checked,setchecked]=useState(false);
+  const [checked, setchecked] = useState(false);
   const [fName, setfName] = useState("");
   const [lName, setlName] = useState("");
   const [email, setemail] = useState("");
   const [countryCode, setcountryCode] = useState("");
   const [phone, setphone] = useState("");
-  const [counselingMode, setcounselingMode] = useState("")
-  const [studyLevel, setstudyLevel] = useState("")
-  const [country, setcountry] = useState("")
+  const [language, setlanguage] = useState("");
+  const [counselMode, setcounselMode] = useState("");
+  const [country, setcountry] = useState("");
 
-  const submitData=async()=>{
-    let formField= new FormData()
-    formField.append('fName', fName)
-    formField.append('lName',lName)
-    formField.append('email',email)
-    formField.append('countryCode',countryCode)
-    formField.append('phone',phone)
-    formField.append('counselingMode',counselingMode)
-    formField.append('studyLevel',studyLevel)
-    formField.append('country',country)
-    
+  const submitData = async () => {
+    let formField = new FormData();
+    formField.append("fName", fName);
+    formField.append("lName", lName);
+    formField.append("email", email);
+    formField.append("countryCode", countryCode);
+    formField.append("phone", phone);
+    formField.append("language", language);
+    formField.append("counselMode", counselMode);
+    formField.append("country", country);
 
     const headers = {
-      'Content-Type': 'application/json',
-      
-    }
-    
-    axios.post('http://127.0.0.1:8000/contactformdata/', formField, {
-        headers: headers
+      "Content-Type": "application/json",
+    };
+
+    axios
+      .post("http://127.0.0.1:8000/contactformdata/", formField, {
+        headers: headers,
       })
       .then((response) => {
-        console.log(response.data)
+        console.log(response.data);
       })
       .catch((error) => {
-        console.log(error)
-      })
-    
-  }
-  
+        console.log(error);
+      });
+  };
 
   return (
-    <div className="container" id="formContiner">
-      <div className="contact-form">
-        <form className="card-form">
-          <div className="contact-form-title">
-            <h2>Interested in Studying Abroad with SSG?</h2>
-            <p className="title-description">
-              Just enter your details bellow And we'll reach you soon.
+    <div className="container" id="Lang-formContiner">
+      <div className="Lang-form">
+        <form className="Lang-card-form">
+          <div className="Lang-form-title">
+            <h2>Interested in Enriching Your Language Proficiency with SSG?</h2>
+            <p className="Lang-title-description">
+              Just enter your details below And we'll reach you soon.
             </p>
           </div>
           <div className="row">
-            <div className="input col-6">
+            <div className="Lang-input col-6">
               <input
                 id="fname"
                 type="text"
                 name="fname"
-                className="input-field"
+                className="Lang-input-field"
                 value={fName}
                 onChange={(e) => setfName(e.target.value)}
                 required
               />
-              <label htmlFor="fname" className="input-labelrow">
+              <label htmlFor="fname" className="Lang-input-labelrowAgent">
                 First Name
               </label>
             </div>
 
-            <div className="input col-6">
+            <div className="Lang-input col-6">
               <input
                 id="lname"
                 type="text"
                 name="lname"
-                className="input-field"
+                className="Lang-input-field"
                 value={lName}
                 onChange={(e) => setlName(e.target.value)}
                 required
               />
-              <label htmlFor="lname" className="input-label">
+              <label htmlFor="lname" className="Lang-input-label">
                 Last Name
               </label>
             </div>
           </div>
-          <div className="input">
-            <input
-              id="email"
-              type="email"
-              name="email"
-              className="input-field"
-              value={email}
-              onChange={(e) => setemail(e.target.value)}
-              required
-            />
-
-            <label htmlFor="email" className="input-label">
-              Email
-            </label>
-            {/* {error.email && (
-              <p data-tooltip="Invalid Email Address">{error.email}</p>
-            )} */}
-          </div>
 
           <div className="row">
-            <div className="input col-5">
+            <div className="Lang-input col-5">
               <select
                 id="CountryCode"
                 type="text"
                 name="CountryCode"
-                className="input-field"
+                className="Lang-input-field"
                 value={countryCode}
                 onChange={(e) => setcountryCode(e.target.value)}
                 required
               >
                 <option value=""></option>
+                <option value="N/A">N/A</option>
                 <option data-countryCode="DZ" value="213">
                   DZ (+213)
                 </option>
@@ -766,34 +746,52 @@ const ContactForm = ({ }) => {
                   ZW (+263)
                 </option>
               </select>
-              <label htmlFor="CountryCode" className="input-labelrow">
+              <label
+                htmlFor="CountryCode"
+                className="Lang-input-labelrowAgent"
+              >
                 Country Code:
               </label>
             </div>
-            <div className="input col-7">
+            <div className="Lang-input col-7">
               <input
                 id="phoneno"
                 type="tel"
                 name="phoneno"
-                className="input-field"
+                className="Lang-input-field"
                 value={phone}
                 onChange={(e) => setphone(e.target.value)}
                 required
               />
-              <label htmlFor="phoneno" className="input-label">
+              <label htmlFor="phoneno" className="Lang-input-label">
                 Phone no.
               </label>
             </div>
           </div>
 
-          <div className="input">
+          <div className="Lang-input">
+            <input
+              id="email"
+              type="email"
+              name="email"
+              className="Lang-input-field"
+              value={email}
+              onChange={(e) => setemail(e.target.value)}
+              required
+            />
+            <label htmlFor="email" className="Lang-input-label">
+              Email
+            </label>
+          </div>
+
+          <div className="Lang-input">
             <select
               id="counselMode"
               type="text"
               name="counselMode"
               className="input-field"
-              value={counselingMode}
-              onChange={(e) => setcounselingMode(e.target.value)}
+              value={counselMode}
+              onChange={(e) => setcounselMode(e.target.value)}
               required
             >
               <option value=""></option>
@@ -805,53 +803,41 @@ const ContactForm = ({ }) => {
             </label>
           </div>
 
-          <div className="input">
+          <div className="Lang-input">
             <select
-              id="Studylevel"
+              id="language"
               type="text"
-              name="studyLevel"
-              className="input-field"
-              value={studyLevel}
-              onChange={(e) => setstudyLevel(e.target.value)}
+              name="language"
+              className="Lang-input-field"
+              value={language}
+              onChange={(e) => setlanguage(e.target.value)}
               required
             >
               <option value=""></option>
-              <option value="Doctor of Philosophy (PhD)">
-                Doctor of Philosophy (PhD)
-              </option>
-              <option value="Master of Philosophy (MPhil)">
-                Master of Philosophy (MPhil)
-              </option>
-              <option value="Post graduate">Post graduate</option>
-              <option value="Post graduate diploma">
-                Post graduate diploma
-              </option>
-              <option value="Under graduate">Under graduate</option>
-              <option value="Admission preparation">
-                Admission preparation
-              </option>
-              <option value="MBBS">MBBS</option>
-              <option value="Academic Coaching">Academic Coaching</option>
-              <option value="Engineering">Engineering</option>
-              <option value="Language courses">Language courses</option>
-              <option value="IELTS">IELTS</option>
+              <option value="English">English</option>
+              <option value="Chinese">Chinese</option>
+              <option value="Japanese">Japanese</option>
+              <option value="Russian">Russian</option>
+              <option value="French">French</option>
+              <option value="Arabic">Arabic</option>
             </select>
-            <label htmlFor="Studylevel" className="input-label">
-              Study Level:
+            <label htmlFor="language" className="Lang-input-label">
+              Language:
             </label>
           </div>
 
-          <div className="input">
+          <div className="Lang-input">
             <select
               id="country"
               type="text"
               name="country"
-              className="input-field"
+              className="Agent-input-field"
               value={country}
               onChange={(e) => setcountry(e.target.value)}
               required
             >
               <option value=""></option>
+              <option value="N/A">N/A</option>
               <option value="Afganistan">Afghanistan</option>
               <option value="Albania">Albania</option>
               <option value="Algeria">Algeria</option>
@@ -1111,33 +1097,38 @@ const ContactForm = ({ }) => {
               <option value="Zambia">Zambia</option>
               <option value="Zimbabwe">Zimbabwe</option>
             </select>
-            <label htmlFor="country" className="input-label">
+            <label htmlFor="country" className="Agent-input-label">
               Country:
             </label>
           </div>
 
-          <div className="card-info">
+          <div className="Lang-card-info">
             <input
-              className="checkbox"
+              className="Lang-checkbox"
               type="checkbox"
               id="terms"
               onChange={(e) => setchecked(!checked)}
               value="agree"
               required
             />
-            <label className="checkboxinfo" htmlfor="terms">
+            <label className="Lang-checkboxinfo" htmlfor="terms">
               I agree to the <a href="#">Terms and Conditions</a> and{" "}
               <a href="#">Privacy Policy</a>
             </label>
           </div>
-          <div className="action">
-            <button className="action-button" type="submit" onClick={submitData}>
+
+          <div className="Lang-action row">
+            <button
+              className="Lang-action-button"
+              type="submit"
+              onClick={submitData}
+            >
               Submit
-            </button>           
+            </button>
           </div>
         </form>
       </div>
     </div>
   );
 };
-export default ContactForm;
+export default LangForm;

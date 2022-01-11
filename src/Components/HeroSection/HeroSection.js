@@ -4,6 +4,11 @@ import Popup from "reactjs-popup";
 import AgentForm from "../Pages/Agent/AgentForm";
 import "./HeroSection.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import LoginandSignup from "../Pages/LoginandSignup/LoginAndSignup";
+import LangForm from "../Pages/Programs/LangForm";
+import SkillDevForm from "../Pages/Programs/SkillDevForm";
+import HireTutor from "../Pages/Programs/TuitionFroms/HireTutorForm"
+import TutorRegForm from "../Pages/Programs/TuitionFroms/TutorRegForm";
 
 const HeroSection = (props) => {
   const [index, setIndex] = useState(0);
@@ -37,14 +42,20 @@ const HeroSection = (props) => {
             >
               Explore more
             </Button>
-            <Button
-              href="/about"
-              className="heroBtn"
-              id="btn2"
-              variant="secondary"
+            <Popup
+              className="regbtn"
+              trigger={
+                <Button className="heroBtn" id="btn2" variant="secondary">
+                  Register Now
+                </Button>
+              }
+              modal
+              contentStyle
+              lockScroll
+              overlayStyle
             >
-              Register Now
-            </Button>
+              <LoginandSignup></LoginandSignup>
+            </Popup>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -89,14 +100,20 @@ const HeroSection = (props) => {
             >
               Explore more
             </Button>
-            <Button
-              href="/language"
-              className="heroBtn"
-              id="btn2"
-              variant="secondary"
+            <Popup
+              className="applybtn"
+              trigger={
+                <Button className="heroBtn" id="btn2" variant="secondary">
+                  Apply Now
+                </Button>
+              }
+              modal
+              contentStyle
+              lockScroll
+              overlayStyle
             >
-              Apply Now
-            </Button>
+              <LangForm />
+            </Popup>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -115,14 +132,20 @@ const HeroSection = (props) => {
             >
               Explore more
             </Button>
-            <Button
-              href="/skillDev"
-              className="heroBtn"
-              id="btn2"
-              variant="secondary"
+            <Popup
+            className="applybtn"
+              trigger={
+                <Button className="heroBtn" id="btn2" variant="secondary">
+                  Apply Now
+                </Button>
+              }
+              modal
+              contentStyle
+              lockScroll
+              overlayStyle
             >
-              Apply Now
-            </Button>
+              <SkillDevForm />
+            </Popup>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -133,22 +156,34 @@ const HeroSection = (props) => {
           />
           <Carousel.Caption className="caurousel-caption">
             <h1>Tutoring Z-Generation</h1>
-            <Button
-              href="/tuition"
-              className="heroBtn"
-              id="explore"
-              variant="secondary"
+            <Popup
+              className="applybtn"
+              trigger={
+                <Button className="heroBtn" id="btn2" variant="secondary">
+                  Hire Tutor
+                </Button>
+              }
+              modal
+              contentStyle
+              lockScroll
+              overlayStyle
             >
-              Hire A Tutor
-            </Button>
-            <Button
-              href="/tuition"
-              className="heroBtn"
-              id="btn2"
-              variant="secondary"
+              <HireTutor />
+            </Popup>
+            <Popup
+              className="applybtn"
+              trigger={
+                <Button className="heroBtn" id="btn2" variant="secondary">
+                  Tutor Register
+                </Button>
+              }
+              modal
+              contentStyle
+              lockScroll
+              overlayStyle
             >
-              Become A Tutor
-            </Button>
+              <TutorRegForm />
+            </Popup>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -168,7 +203,11 @@ const HeroSection = (props) => {
               Explore more
             </Button>
             <Popup
-              trigger={<Button className="heroBtn" id="btn2" variant="secondary">Register Now</Button>}
+              trigger={
+                <Button className="heroBtn" id="btn2" variant="secondary">
+                  Register Now
+                </Button>
+              }
               modal
               contentStyle
               lockScroll
