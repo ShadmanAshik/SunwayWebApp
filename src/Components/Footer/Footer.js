@@ -120,17 +120,14 @@ function Footer() {
                 <h3 className="footer-title">Social</h3>
                 <div className="fb-page">
                   <div className="btn-bk">
-                    <div className="fb-btn">
                       <div
                         class="fb-like"
                         data-href="https://www.facebook.com/Sunway.Study.Group/"
-                        data-width=""
                         data-layout="button"
                         data-action="like"
                         data-size="large"
                         data-share="true"
-                      ></div>
-                    </div>
+                      />
                   </div>
                   <div className="social-icons-container">
                     <div className="row">
