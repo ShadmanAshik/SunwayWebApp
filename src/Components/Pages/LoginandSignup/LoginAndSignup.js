@@ -2,12 +2,28 @@ import "../LoginandSignup/LoginAndSignup.css";
 import validate from "./ValidateInfo";
 import UseForm from "./UseForm";
 import React from "react";
+import { Navigate } from "react-router-dom";
 
-const LoginAndSignup = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, error } = UseForm(
-    submitForm,
+const LoginAndSignup = ( props ) => {
+  
+  console.log("==> props: ", props);
+  const { handleChange, loginSubmit, signupSubmit, values, error } = UseForm(
+    props,
     validate
   );
+  console.log("===> loginsignup values: ", values);
+  if (values.is_authenticated === true && values.group === "Agent") {
+    console.log("===> employee home", values);
+    return <Navigate to="/adminDashboard" />;
+  } else if (values.is_authenticated === true && values.group === "Student") {
+    console.log("===> appointee home", values);
+    return <Navigate to="/studentHomePage" />;
+  } else if (values.is_authenticated === true && values.group === "Admin") {
+    console.log("===> appointee home", values);
+    return <Navigate to="/adminDashboard/contactUsData" />;
+  }
+  console.log("====> reg-log: ", document.getElementById("reg-log"));
+
   return (
     <div>
       <div class="section">
@@ -28,7 +44,7 @@ const LoginAndSignup = ({ submitForm }) => {
                 <label for="reg-log"></label>
                 <div class="card-3d-wrap mx-auto">
                   <div class="card-3d-wrapper">
-                    <form class="card-front" onSubmit={handleSubmit}>
+                    <form class="card-front" onSubmit={loginSubmit}>
                       <div class="center-wrap">
                         <div class="section text-center">
                           <h4 class="heading mb-4 pb-3">Log In</h4>
@@ -78,7 +94,7 @@ const LoginAndSignup = ({ submitForm }) => {
                       </div>
                     </form>
 
-                    <form class="card-back" onSubmit={handleSubmit}>
+                    <form class="card-back" onSubmit={signupSubmit}>
                       <div class="center-wrap">
                         <div class="section text-center">
                           <h4 class="heading mb-4 pb-3">Register</h4>

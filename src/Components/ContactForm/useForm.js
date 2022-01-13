@@ -8,7 +8,7 @@ const useForm = (props, validate) => {
     lName: "",
     phone: "",
     counselingMode: "",
-    studylevel: "",
+    studyLevel: "",
     countryCode:""
   });
   const [error, setErrors] = useState({});
@@ -31,7 +31,7 @@ const useForm = (props, validate) => {
 
     setErrors(validate(values));
     setIsSubmitting(true);
-    axios.post('http://localhost:8080/cfd/contactformdata/', values, {
+    axios.post('http://127.0.0.1:8000/cfd/contactformdata/', values, {
       headers: headers
     })
     .then((response) => {
@@ -47,9 +47,9 @@ const useForm = (props, validate) => {
 
   useEffect(() => {
     if (Object.keys(error).length === 0 && isSubmitting) {
-      
+      alert("Form Submitted.")
     }
-  }, [error]);
+  });
 
   return { handleChange, values, handleSubmit, error };
 };

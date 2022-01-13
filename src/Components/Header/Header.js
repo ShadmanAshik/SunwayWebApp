@@ -37,7 +37,7 @@ const Header = () => {
                 <a target="_blank"href="https://www.linkedin.com/company/sunway-study-group/">
                   <img
                     className="headerIcons"
-                    src="https://i.ibb.co/nPFvQ0j/youtube.png"
+                    src="https://i.ibb.co/60zNZGR/linkedin.png"
                     alt="linkedin"
                   ></img>
                 </a>

@@ -53,6 +53,7 @@ import AgentData from "./Components/Pages/Admin/Components/AgentData";
 import Advocacy from "./Components/Pages/Services/Advocacy";
 
 function App() {
+  const base_url="http://127.0.0.1:8000";
   return (
     <div className="App">
       <BrowserRouter>
@@ -60,7 +61,10 @@ function App() {
           <Header />
         </Sticky>
         <Routes>
+        studentHomePage
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/agentHomePage" element={<Home />} />
+          <Route exact path="/studentHomePage" element={<Home />} />
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/about" element={<AboutUS />} />
           <Route exact path="/whyssg" element={<WhySSG />} />
@@ -69,7 +73,7 @@ function App() {
           <Route exact path="/ourteam" element={<OurTeam />} />
           <Route exact path="/policy" element={<Policy />} />
           <Route exact path="/contact" element={<ContactUs />} />
-          <Route exact path="/login" element={<LoginAndSignup />} />
+          <Route exact path="/login" element={<LoginAndSignup base_url={base_url} />} />
           <Route exact path="/overseas" element={<Overseas />} />
           <Route exact path="/language" element={<Language />} />
           <Route exact path="/skilldev" element={<SkillDevelopment />} />
@@ -128,7 +132,7 @@ function App() {
           <Route exact path="AdmissionForm" element={<Application />} />
           <Route exact path="/ScholarshipForm" element={<ApplyScholarship />} />
 
-          <Route exact path="admin" element={<Admin />}>
+          <Route exact path="adminDashboard" element={<Admin />}>
             <Route path="contactUsData" element={<ContactData />} />
             <Route path="agentData" element={<AgentData />} />
           </Route>

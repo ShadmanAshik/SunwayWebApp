@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 export class ContactData extends Component {
@@ -11,7 +12,7 @@ export class ContactData extends Component {
     }
 
     fetchData(){
-        fetch('cfd/contactformdata/')
+        fetch('http://127.0.0.1:8000/cfd/contactformdata/')
         .then(response=>response.json())
         .then((data)=>{
             this.setState({
@@ -25,7 +26,7 @@ export class ContactData extends Component {
     }
 
     deleteData(id){
-        fetch('cfd/contactfromdata/'+id+'/',{
+        fetch('/cfd/contactfromdata/'+id+'/',{
             method:'DELETE',
             body:JSON.stringify(this.state),
         })
@@ -49,10 +50,10 @@ export class ContactData extends Component {
                 <td>{formdata.countryCode}{formdata.phone}</td>
                 <td>{formdata.country}</td>
                 <td>{formdata.counselingMode}</td>
-                {/* <td>
+                <td>
                     <Link to={'update/'+formdata.id} className="btn btn-info mr-2">Update</Link>
                     <button onClick={()=>this.deleteData(formdata.id)} className="btn btn-danger">Delete</button>
-                </td> */}
+                </td>
             </tr>
         );
         return (
@@ -67,7 +68,7 @@ export class ContactData extends Component {
                         <th>Contact</th>
                         <th>Country</th>
                         <th>Counselling Mode</th>
-                        {/* <th>Action</th> */}
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
