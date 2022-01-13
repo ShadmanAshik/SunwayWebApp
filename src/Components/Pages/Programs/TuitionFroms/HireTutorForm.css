@@ -16,11 +16,49 @@
   padding: 0px;
 }
 
+/* for the phone no component */
+.special-label{
+  top:2px !important;
+  left: 55px !important;
+  color: #66737c !important;
+  font-size: inherit !important;
+}
+.react-tel-input{
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  padding-top: 20px !important;
+}
+.form-control {
+  border: 0 !important;
+  z-index: 1 !important;
+  background-color: transparent !important;
+  border-bottom: 2px solid #eee !important;
+  font: inherit !important;
+  font-size: 1.125rem !important;
+  margin: 0px 0px 0px 58px !important;
+  padding: 0.2rem 0 !important;
+  width:auto !important;
+  border-radius: 0px!important;
+  outline: none !important;
+  transition: 0.25s ease !important;
+}
+.flag{
+  position:absolute !important;
+  top: 50%;
+  margin-top: 0px !important;
+  z-index: 2 !important;
+}
+
+.form-control:focus,.form-control:valid{
+  outline: none !important;
+  border-bottom-color: var(--main-blue) !important;
+  box-shadow:none !important;
+}
+/* for the phone no component */
 .HireTutor-form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 400px;
   background-color: #fff;
   border: 1px solid rgb(221, 217, 217);
   box-shadow: 10px 10px 20px 0 rgba(153, 153, 153, 0.25);
@@ -51,6 +89,24 @@
   top: 1.5rem;
   transition: 0.25s ease;
 }
+
+.input-label-Requirement{
+  color: #8597a3;
+  position: absolute;
+  top: 0rem;
+  transition: 0.25s ease;
+}
+.HireTutor-input-field-Requirement{
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
+  font-size: 1.125rem;
+  padding: 0.2rem 0;
+  outline: none;
+}
+
 .HireTutor-input-labelrowAgent{
   color: #8597a3;
   position: absolute;
@@ -85,7 +141,7 @@
   padding: 0.2rem 0.2rem;
 }
 
-.HireTutor-input-field-file:focus, .HireTutor-input-field-file:valid {
+.HireTutor-input-field-Requirement:focus,.HireTutor-input-field-file:focus, .HireTutor-input-field-file:valid {
   border-color: var(--main-blue);
 }
 

@@ -14,15 +14,11 @@ function Application() {
   return (
     <>
       <Container>
-        <HeroImg imgSrc="/img/banner1.jpg"/>
+        <HeroImg imgSrc="/img/banner1.jpg" />
+        <div className="ApplicationForm">
+          <ApplicationForm />
+        </div>
       </Container>
-      <div className="form-container-application">
-        {!isSubmitted ? (
-          <ApplicationForm submitForm={submitForm} />
-        ) : (
-          <AdmissionFormSuccess />
-        )}
-      </div>
     </>
   );
 }

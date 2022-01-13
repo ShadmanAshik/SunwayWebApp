@@ -14,7 +14,7 @@ const Tuition = () => {
         <div>
           <div className="tuition-container">
             <div class="row">
-              <div className="col-lg-8 col-md-6 col-sm-12">
+              <div className="col">
                 <h1>Tuition Media</h1>
                 <div>
                   <div class="row">
@@ -42,12 +42,11 @@ const Tuition = () => {
                       </p>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-12 mt-5">
-                <HireTutorForm />
-                <div className="mt-5">
-                  <TutorRegForm />
+                  <div
+                  className="row">
+                    <div className="TutorRegForm col-6 mt-5"><TutorRegForm/></div>
+                    <div className="HireTutorForm col-6 mt-5"><HireTutorForm/></div>
+                  </div>
                 </div>
               </div>
             </div>

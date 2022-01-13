@@ -160,7 +160,7 @@ const HeroSection = (props) => {
               className="applybtn"
               trigger={
                 <Button className="heroBtn" id="btn2" variant="secondary">
-                  Hire Tutor
+                  Hire a Tutor
                 </Button>
               }
               modal
@@ -174,7 +174,7 @@ const HeroSection = (props) => {
               className="applybtn"
               trigger={
                 <Button className="heroBtn" id="btn2" variant="secondary">
-                  Tutor Register
+                  Become a Tutor
                 </Button>
               }
               modal

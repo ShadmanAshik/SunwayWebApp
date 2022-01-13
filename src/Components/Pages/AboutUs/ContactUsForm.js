@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ContactUsForm.css";
+import PhoneInput from "react-phone-input-2";
 
 import axios from "axios";
 
@@ -11,40 +12,39 @@ const ContactForm = ({ submitForm }) => {
   //   validate
   // );
   const [Name, setName] = useState(null);
-  
+
   const [message, setmessage] = useState(null);
   const [email, setemail] = useState(null);
   const [countryCode, setcountryCode] = useState(null);
   const [phone, setphone] = useState(null);
 
-  const submitData=async()=>{
-    let formField= new FormData()
-    formField.append('Name', Name)
-    
-    formField.append('email',email)
-    formField.append('countryCode',countryCode)
-    formField.append('phone',phone)
-    formField.append('message',message)
+  const submitData = async () => {
+    let formField = new FormData();
+    formField.append("Name", Name);
+
+    formField.append("email", email);
+    formField.append("countryCode", countryCode);
+    formField.append("phone", phone);
+    formField.append("message", message);
 
     await axios({
-      method: 'post',
-      url: 'http://127.0.0.1:8000/contactformdata/',
-      data: formField
-    }).then(response=>{
-      navigate('/')
-    })
-  }
-
+      method: "post",
+      url: "http://127.0.0.1:8000/contactformdata/",
+      data: formField,
+    }).then((response) => {
+      navigate("/");
+    });
+  };
 
   return (
     <div className="container" id="formContiner">
       <div className="contactus-form">
-      <div className="contactus-form-title">
-            <h2>Contact With Us</h2>
-            <p className="title-description">
-              Just enter your details below And we'll reach you soon.
-            </p>
-          </div>
+        <div className="contactus-form-title">
+          <h2>Contact With Us</h2>
+          <p className="title-description">
+            Just enter your details below And we'll reach you soon.
+          </p>
+        </div>
         <form className="card-form">
           <div className="input">
             <input
@@ -57,7 +57,7 @@ const ContactForm = ({ submitForm }) => {
               required
             />
             <label htmlFor="fname" className="input-label">
-             Name
+              Name
             </label>
           </div>
 
@@ -81,20 +81,23 @@ const ContactForm = ({ submitForm }) => {
           </div>
 
           <div>
-           
-            <div className="input">
-              <input
-                id="phoneno"
+            <div>
+              <PhoneInput
+                inputProps={{
+                  name: "phone",
+                  required: true,
+                }}
+                id="phone"
+                placeholder=""
                 type="tel"
-                name="phoneno"
-                className="input-field-contactus"
                 value={phone}
-                onChange={(e) => setphone(e.target.value)}
-                required
+                onChange={setphone}
+                enableSearch
+                specialLabel="Phone:"
+                countryCodeEditable={false}
+                country=" "
+                disableSearchIcon={false}
               />
-              <label htmlFor="phoneno" className="input-label">
-                Phone no.
-              </label>
             </div>
           </div>
 
@@ -113,7 +116,11 @@ const ContactForm = ({ submitForm }) => {
             </label>
           </div>
           <div className="action">
-            <button className="action-button-Contactus m-2 col-6" type="submit" onClick={submitData}>
+            <button
+              className="action-button-Contactus m-2 col-6"
+              type="submit"
+              onClick={submitData}
+            >
               Submit
             </button>
           </div>

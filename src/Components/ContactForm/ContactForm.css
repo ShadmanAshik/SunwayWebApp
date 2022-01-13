@@ -19,6 +19,7 @@
   background-color: rgb(126, 126, 126);
   color:white
 }
+
 .contact-form {
   margin: 55px auto;
   margin-right: 12px;
@@ -51,6 +52,95 @@
 .card-form {
   padding: 5px 2px 0;
 }
+
+
+/* for the phone no component */
+/* .PhoneInputInput{
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
+  font-size: 1.125rem;
+  padding: 0.2rem 0;
+}
+.PhoneInputInput:focus,
+.PhoneInputInput:valid{
+  outline: none;
+  border-bottom-color: var(--main-blue);
+}
+
+
+.input-label-flag {
+  color: #66737c;
+  position: absolute;
+  top: 1.5rem;
+  left:2.5rem;
+  transition: 0.25s ease;
+}
+
+.PhoneInputInput:valid + .input-label-flag {
+  color: black !important;
+  transform: translateY(-1.5rem) !important;
+}
+.PhoneInput--focus + .input-label-flag {
+  color: black !important;
+  transform: translateY(-1.5rem) !important;
+} */
+
+
+/* .form-control:focus + .input-label-flag {
+  color: black !important;
+  transform: translateY(-7rem) !important;
+} */
+/* .input-label-flag {
+  color: #66737c;
+  position: absolute;
+  top: 1.5rem;
+  left:2.5rem;
+  transition: 0.25s ease;
+} */
+
+/* for the phone no component */
+.special-label{
+  top:2px !important;
+  left: 55px !important;
+  color: #66737c !important;
+  font-size: inherit !important;
+}
+.react-tel-input{
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  padding-top: 20px !important;
+}
+.form-control {
+  border: 0 !important;
+  z-index: 1 !important;
+  background-color: transparent !important;
+  border-bottom: 2px solid #eee !important;
+  font: inherit !important;
+  font-size: 1.125rem !important;
+  margin: 0px 0px 0px 58px !important;
+  padding: 0.2rem 0 !important;
+  width:auto !important;
+  border-radius: 0px!important;
+  outline: none !important;
+  transition: 0.25s ease !important;
+}
+.flag{
+  position:absolute !important;
+  top: 50%;
+  margin-top: 0px !important;
+  z-index: 2 !important;
+}
+
+.form-control:focus,.form-control:valid{
+  outline: none !important;
+  border-bottom-color: var(--main-blue) !important;
+  box-shadow:none !important;
+}
+/* for the phone no component */
+
 .input {
   display: flex;
   flex-direction: column-reverse;
@@ -58,9 +148,7 @@
   padding-top: 20px;
 }
 /*   */
-.input + .input {
-  margin-top: 10px;
-}
+
 .input-label {
   color: #8597a3;
   position: absolute;
@@ -73,6 +161,8 @@
   top: 2.1rem;
   transition: 0.25s ease;
 }
+
+
 
 .input-field:focus + .input-labelrow,
 .input-field:valid + .input-labelrow {

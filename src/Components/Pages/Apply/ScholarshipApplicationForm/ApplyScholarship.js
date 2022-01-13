@@ -14,15 +14,11 @@ export const ApplyScholarship = () => {
   return (
     <>
       <Container>
-        <HeroImg imgSrc="/img/banner1.jpg"/>
+        <HeroImg imgSrc="/img/banner1.jpg" />
+        <div className="ScholarshipForm">
+          <ScholarshipForm />
+        </div>
       </Container>
-      <div className="form-container-schlr">
-        
-        <ScholarshipForm></ScholarshipForm>
-
-        
-      </div>
-      
     </>
   );
 };
