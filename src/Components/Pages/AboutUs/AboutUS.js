@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ContactForm from "../../ContactForm/ContactForm";
+import ContactForm from "../../Forms/ContactForm/ContactForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./AboutUS.css";
 
@@ -18,7 +18,7 @@ function AboutUS() {
                 <div class=" col-sm-12">
                   <img
                     className="listImg-aboutus"
-                    src="https://i.ibb.co/JQY73ZF/About-Us.png"
+                    src="/img/About-Us.png"
                     alt="Image"
                   />
                 </div>
