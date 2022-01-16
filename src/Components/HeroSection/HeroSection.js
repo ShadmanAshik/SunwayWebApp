@@ -9,6 +9,7 @@ import LangForm from "../Pages/Programs/LangForm";
 import SkillDevForm from "../Pages/Programs/SkillDevForm";
 import HireTutor from "../Pages/Programs/TuitionFroms/HireTutorForm"
 import TutorRegForm from "../Pages/Programs/TuitionFroms/TutorRegForm";
+import ApplicationForm from "../Pages/Apply/AdmissionApplicationForm/ApplicationForm";
 
 const HeroSection = (props) => {
   const [index, setIndex] = useState(0);
@@ -74,14 +75,20 @@ const HeroSection = (props) => {
             >
               Explore more
             </Button>
-            <Button
-              href="/AdmissionForm"
-              className="heroBtn"
-              id="btn2"
-              variant="secondary"
+            <Popup
+              className="regbtn"
+              trigger={
+                <Button className="heroBtn" id="btn2" variant="secondary">
+                  Register Now
+                </Button>
+              }
+              modal
+              contentStyle
+              lockScroll
+              overlayStyle
             >
-              Apply Now
-            </Button>
+              <ApplicationForm></ApplicationForm>
+            </Popup>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
