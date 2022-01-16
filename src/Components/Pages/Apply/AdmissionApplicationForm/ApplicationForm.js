@@ -537,6 +537,39 @@ const ApplicationForm = ({}) => {
               />
             </div>
           </div>
+          <div className="row">
+          <div className="Application-input col-6">
+          
+          <input required
+            id="applyuniveristy"
+            type="text"
+            name="applyuniveristy"
+            className="Application-input-field"
+            placeholder=""
+            value={demo}
+            onChange={(e) => setdemo(e.target.value)}
+          />
+          <label htmlFor="applyuniveristy" className="Application-input-labelrow">
+            Apply University
+          </label>
+        </div>
+
+        <div className="Application-input col-6">
+          
+          <input required
+            id="majorsub"
+            type="text"
+            name="majorsub"
+            className="Application-input-field"
+            placeholder=""
+            value={demo}
+            onChange={(e) => setdemo(e.target.value)}
+          />
+          <label htmlFor="majorsub" className="Application-input-label">
+            Major Subject
+          </label>
+        </div>
+          </div>
 
           <div  className="Application-card-info" style={{margin:"0px auto"
           }}>
