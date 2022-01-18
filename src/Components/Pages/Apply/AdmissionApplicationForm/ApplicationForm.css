@@ -83,10 +83,10 @@
   padding: 0.2rem 0.2rem;
 }
 
-.Applicationinput-label-hearaboutus{
+.Application-input-label-hearaboutus{
   color: #8597a3;
   position: absolute;
-  top: 0rem;
+  top: .4rem;
   transition: 0.25s ease;
 }
 .Application-input-field-hearaboutus{

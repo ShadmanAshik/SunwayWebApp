@@ -688,7 +688,11 @@ const AgentForm = ({}) => {
             </label>
           </div>
 
-          <div className="Agent-input">
+          <div className="Agent-input" style={
+              agentType === "buninessagent"
+                ? { display: "flex" }
+                : { display: "none" }
+            }>
             <input
               id="tradelicense"
               type="file"
@@ -696,6 +700,7 @@ const AgentForm = ({}) => {
               className="Agent-input-field-file"
               accept="application/pdf"
               value={tradelicense}
+              disabled={agentType === "buninessagent" ? false : true}
               onChange={(e) => settradelicense(e.target.value)}
               required
             />
