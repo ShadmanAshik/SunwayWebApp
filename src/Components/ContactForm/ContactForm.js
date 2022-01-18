@@ -145,7 +145,7 @@ const ContactForm = ({}) => {
             >
               <option value=""></option>
               <option value="In person">In Person</option>
-              <option value="Virtual counselling">Virtual Counselling</option>
+              <option value="Virtual">Virtual</option>
             </select>
             <label htmlFor="counselMode" className="input-label">
               Counselling Mode:
