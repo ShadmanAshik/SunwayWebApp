@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 
-
-export class AgentData extends Component {
+export class CommonData extends Component {
     constructor(){
         super();
         this.state={
@@ -11,7 +10,7 @@ export class AgentData extends Component {
     }
 
     fetchData(){
-        fetch('http://127.0.0.1:8000/contactformdata/')
+        fetch('http://127.0.0.1:8000/cfd/Contactformdata/')
         .then(response=>response.json())
         .then((data)=>{
             this.setState({
@@ -24,23 +23,9 @@ export class AgentData extends Component {
         this.fetchData();
     }
 
-    deleteData(id){
-        fetch('http://127.0.0.1:8000/contactfromdata/'+id+'/',{
-            method:'DELETE',
-            body:JSON.stringify(this.state),
-        })
-        .then(response=>response)
-        .then((data)=>{
-            if(data){
-                this.fetchData();
-            }
-        });
-    }
-
     render(){
        
         const empData=this.state.dataOfTable;
-       
         const rows=empData.map((formdata)=>
             <tr key={formdata.id}>
                 <td>{formdata.fName}</td>
@@ -57,7 +42,7 @@ export class AgentData extends Component {
         );
         return (
             <Container>
-                <h1>Agent Informations</h1>
+                <h1>Contact Information of Students</h1>
                 <table className="table table-bordered">
                 <thead>
                     <tr>
@@ -80,5 +65,5 @@ export class AgentData extends Component {
     }
 }
 
-export default AgentData
+export default CommonData
 

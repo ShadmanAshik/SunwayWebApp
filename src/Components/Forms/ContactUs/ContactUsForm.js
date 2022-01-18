@@ -15,7 +15,7 @@ const ContactForm = ({ submitForm }) => {
 
   const [message, setmessage] = useState(null);
   const [email, setemail] = useState(null);
-  const [countryCode, setcountryCode] = useState(null);
+  
   const [phone, setphone] = useState(null);
 
   const submitData = async () => {
@@ -23,7 +23,7 @@ const ContactForm = ({ submitForm }) => {
     formField.append("Name", Name);
 
     formField.append("email", email);
-    formField.append("countryCode", countryCode);
+    
     formField.append("phone", phone);
     formField.append("message", message);
 
@@ -75,9 +75,7 @@ const ContactForm = ({ submitForm }) => {
             <label htmlFor="email" className="input-label">
               Email
             </label>
-            {/* {error.email && (
-              <p data-tooltip="Invalid Email Address">{error.email}</p>
-            )} */}
+            
           </div>
 
           <div>

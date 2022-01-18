@@ -15,7 +15,12 @@ import Policy from "./Components/Pages/AboutUs/Policy";
 import WhySSG from "./Components/Pages/AboutUs/WhySSG";
 import Admin from "./Components/Pages/Admin/Admin";
 import AgentData from "./Components/Pages/Admin/Components/AgentData";
+import CommonData from "./Components/Pages/Admin/Components/CommonData";
 import ContactData from "./Components/Pages/Admin/Components/ContactData";
+import LanguageFormData from "./Components/Pages/Admin/Components/LanguageFormData";
+import SkillFormData from "./Components/Pages/Admin/Components/SkillFormData";
+import TuitionsData from "./Components/Pages/Admin/Components/TuitionsData";
+import TutorData from "./Components/Pages/Admin/Components/TutorData";
 import Agent from "./Components/Pages/Agent/Agent";
 import Application from "./Components/Pages/Apply/AdmissionApplicationForm/Application";
 import ApplyScholarship from "./Components/Pages/Apply/ScholarshipApplicationForm/ApplyScholarship";
@@ -132,8 +137,13 @@ function App() {
           <Route exact path="/ScholarshipForm" element={<ApplyScholarship />} />
 
           <Route exact path="adminDashboard" element={<Admin />}>
+            <Route path="commonFormData" element={<CommonData />} />
             <Route path="contactUsData" element={<ContactData />} />
             <Route path="agentData" element={<AgentData />} />
+            <Route path="languageFormData" element={<LanguageFormData />} />
+            <Route path="skillFormData" element={<SkillFormData />} />
+            <Route path="tutorData" element={<TutorData />} />
+            <Route path="tuitionData" element={<TuitionsData />} />
             <Route path="snippets" element={<Snippets />} />
           </Route>
 
