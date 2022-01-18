@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
-import ContactForm from "../../ContactForm/ContactForm";
+
 import HeroImg from "../../HeroSection/HeroImg";
 import Slider from "react-slick";
 import "./Testimonial.css"
+import CommonForm from "../../Forms/CommonForm/CommonForm";
 
 export default class ProgramSlider extends Component {
   render() {
@@ -27,7 +28,7 @@ export default class ProgramSlider extends Component {
       <>
       <div>
         <Container className="testimonial-container">
-          <HeroImg imgSrc="/img/banner1.jpg" />
+          <HeroImg imgSrc="/static/banner1.jpg" />
           <div>
             <div class="row">
               <div className="sliderContainer col-lg-8 col-md-6 col-sm-12">
@@ -175,7 +176,7 @@ export default class ProgramSlider extends Component {
               </div>
 
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <ContactForm />
+                <CommonForm />
               </div>
             </div>
           </div>

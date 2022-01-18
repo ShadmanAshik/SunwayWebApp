@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import "./EventCards.css"
 import {Link} from "react-router-dom";
 const EventCards = (props) => {

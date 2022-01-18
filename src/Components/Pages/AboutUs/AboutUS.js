@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ContactForm from "../../Forms/ContactForm/ContactForm";
+
+import CommonForm from "../../Forms/CommonForm/CommonForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./AboutUS.css";
 
@@ -8,7 +9,7 @@ function AboutUS() {
   return (
     <>
       <Container>
-        <HeroImg imgSrc="https://i.ibb.co/SRz3r8P/banner1.jpg"></HeroImg>
+        <HeroImg imgSrc="/static/banner1.jpg"></HeroImg>
 
         <div class="row">
           <div class="col-lg-8 col-md-6 col-sm-12">
@@ -18,8 +19,8 @@ function AboutUS() {
                 <div class=" col-sm-12">
                   <img
                     className="listImg-aboutus"
-                    src="/img/About-Us.png"
-                    alt="Image"
+                    src="/static/About-Us.png"
+                    alt="aboutus"
                   />
                 </div>
                 <div class="col-sm-12">
@@ -59,7 +60,7 @@ function AboutUS() {
           </div>
 
           <div class="col-lg-4 col-md-6 col-sm-12">
-            <ContactForm />
+            <CommonForm/>
           </div>
         </div>
       </Container>

@@ -1,0 +1,202 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+.skilldev-form-title{
+  padding: 10px;
+  color:white;
+  background-color: var(--main-deepBlue);
+  text-align: left;
+}
+.skilldev-title-description{
+  color: white !important;;
+}
+#skilldev-formContiner {
+  padding: 0px;
+}
+
+/* for the phone no component */
+.special-label{
+  top:2px !important;
+  left: 55px !important;
+  color: #66737c !important;
+  font-size: inherit !important;
+}
+.react-tel-input{
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  padding-top: 20px !important;
+}
+.form-control {
+  border: 0 !important;
+  z-index: 1 !important;
+  background-color: transparent !important;
+  border-bottom: 2px solid #eee !important;
+  font: inherit !important;
+  font-size: 1.125rem !important;
+  margin: 0px 0px 0px 58px !important;
+  padding: 0.2rem 0 !important;
+  width:auto !important;
+  border-radius: 0px!important;
+  outline: none !important;
+  transition: 0.25s ease !important;
+}
+.flag{
+  position:absolute !important;
+  top: 50%;
+  margin-top: 0px !important;
+  z-index: 2 !important;
+}
+
+.form-control:focus,.form-control:valid{
+  outline: none !important;
+  border-bottom-color: var(--main-blue) !important;
+  box-shadow:none !important;
+}
+/* for the phone no component */
+
+.skilldev-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  border: 1px solid rgb(221, 217, 217);
+  box-shadow: 10px 10px 20px 0 rgba(153, 153, 153, 0.25);
+  padding: 10px;
+  transition: 00.5s ease;
+}
+.skilldev-form:hover {
+  box-shadow: 10px 10px 20px 0 rgba(153, 153, 153, 0.472);
+  transition: 00.5s ease;
+}
+
+.skilldev-card-form {
+  padding: 5px 2px 0;
+}
+.skilldev-input {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-top: 20px;
+}
+
+.skilldev-input + .skilldev-input {
+  margin-top: 10px;
+}
+.skilldev-input-label {
+  color: #8597a3;
+  position: absolute;
+  top: 1.5rem;
+  transition: 0.25s ease;
+}
+.skilldev-input-labelrowAgent{
+  color: #8597a3;
+  position: absolute;
+  top: 2.1rem;
+  transition: 0.25s ease;
+}
+
+.skilldev-input-field:focus + .skilldev-input-labelrowAgent,
+.skilldev-input-field:valid + .skilldev-input-labelrowAgent {
+  color: black;
+  transform: translateY(-1.5rem);
+}
+
+.skilldev-input-field {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
+  font-size: 1.125rem;
+  padding: 0.2rem 0;
+}
+
+
+.skilldev-input-field-file {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border: 1px solid #eee;
+  font: inherit;
+  font-size: 1.125rem;
+  padding: 0.2rem 0.2rem;
+}
+
+.skilldev-input-field-file:focus, .skilldev-input-field-file:valid {
+  border-color: var(--main-blue);
+}
+
+.skilldev-input-label-file{
+  text-align: left;
+  margin-left: 5px;
+  color:rgb(146, 146, 146);
+}
+
+.skilldev-input-field:focus,
+.skilldev-input-field:valid {
+  outline: 0;
+  border-bottom-color: var(--main-blue);
+}
+.skilldev-input-field:focus + .skilldev-input-label,
+.skilldev-input-field:valid + .skilldev-input-label {
+  color: black;
+  transform: translateY(-1.5rem);
+}
+.skilldev-input p {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 7px;
+  line-height: 75px;
+  text-align: right;
+  color: rgb(241, 12, 12);
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.skilldev-action {
+  margin-top: 5px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.skilldev-action-button {
+  font: inherit;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: var(--main-deepBlue);
+  border-radius: 4px;
+  color: #fff;
+  border: 0;
+  text-align: center;
+  transition: 0.3s ease;
+}
+.skilldev-action-button:focus {
+  outline: 0;
+}
+.skilldev-action-button:hover {
+  cursor: pointer;
+  background-color: rgb(7, 24, 119);
+  color: white;
+  transition: all 0.3s ease;
+}
+.skilldev-card-info {
+  padding: 1rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #8597a3;
+  display: flex;
+}
+.skilldev-card-info a {
+  color: rgb(0, 140, 255);
+  text-decoration: none;
+}
+.skilldev-checkboxinfo {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #8597a3;
+}
+.skilldev-checkbox {
+  margin: 0.2rem;
+}

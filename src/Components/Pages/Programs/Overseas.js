@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ContactForm from "../../ContactForm/ContactForm";
+import CommonForm from "../../Forms/CommonForm/CommonForm";
+
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Overseas.css";
 
@@ -8,7 +9,7 @@ const Overseas = () => {
   return (
     <>
       <Container>
-        <HeroImg imgSrc="/img/banner1.jpg" />
+        <HeroImg imgSrc="/static/banner1.jpg" />
         <div>
           <div className="overseas-container">
             <div class="row">
@@ -19,8 +20,8 @@ const Overseas = () => {
                     <div class=" col-sm-12">
                       <img
                         className="overseas-listImg"
-                        src="/img/Overseas.jpg"
-                        alt="Image"
+                        src="/static/Overseas.jpg"
+                        alt="os"
                       />
                     </div>
                     <div class="col-sm-12">
@@ -52,7 +53,7 @@ const Overseas = () => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <ContactForm />
+                <CommonForm />
               </div>
             </div>
           </div>

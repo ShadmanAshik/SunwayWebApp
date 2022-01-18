@@ -91,9 +91,7 @@ const UseForm = (props, validate) => {
       'email': values.email,
       'password': values.signupPassword,
       're_password': values.confirmPassword,
-      'name': values.name,
-      'phoneno': values.phoneno,
-      'country':values.country
+      'name': values.name
     };
 
 

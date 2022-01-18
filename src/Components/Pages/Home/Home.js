@@ -1,8 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ActionAreaCard from "../../Card/ActionCard";
-import Cards from "../../Card/Cards";
-import ContactForm from "../../ContactForm/ContactForm";
+import CommonForm from "../../Forms/CommonForm/CommonForm";
 import HeroSection from "../../HeroSection/HeroSection";
 import ProgramSlider from "../../Slider/ProgramSlider";
 import ServicesSlider from "../../Slider/ServicesSlider";
@@ -22,7 +20,7 @@ const Home = () => {
                 <ServicesSlider />
               </div>
               <div class="col-lg-4 col-md-6 col-sm-12">
-                <ContactForm />
+                <CommonForm />
               </div>
             </div>
           </div>

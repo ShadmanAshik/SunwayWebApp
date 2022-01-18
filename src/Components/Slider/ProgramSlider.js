@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import Cards from "../Card/Cards";
+import "./Slider.css"
+import { Container } from "react-bootstrap";
 
 export default class ProgramSlider extends Component {
   render() {
@@ -27,47 +29,49 @@ export default class ProgramSlider extends Component {
     };
 
     return (
-      <div className="sliderContainer">
-        <Slider {...settings}>
-          <div>
-            <Cards
-              title="Overseas Admission"
-              imgSrc="https://i.ibb.co/T1PKFp3/Overseas.jpg"
-              text="You, the aspiring students, cherish the dream of further
-              education abroad as studying abroad will give you incredible experiences."
-              btn="See More"
-              link="/overseas"
-            />
-          </div>
-          <div>
-            <Cards
-              title="Language Proficiency"
-              imgSrc="https://i.ibb.co/sb5Snv8/Language.jpg"
-              text="LANGUAGE PROFICIENCY AND COMMUNICATIVE COMPETENCE: Key Issues: Language proficiency is multidimensional and entails linguistic. . ."
-              btn="See More"
-              link="/language"
-            />
-          </div>
-          <div>
-            <Cards
-              title="Skill Development"
-              imgSrc="https://i.ibb.co/CJVP9z9/Skill-Development.jpg"
-              text="CHALLENGES AND OPPORTUNITIES FOR SKILLS DEVELOPMENT: Competing in today’s global economy is complex. Countries not only need. . ."
-              btn="See More"
-              link="/skilldev"
-            />
-          </div>
-          <div>
-            <Cards
-              title="Tuition Media"
-              imgSrc="https://i.ibb.co/HBz9GWg/tution-media.jpg"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              btn="See More"
-              link="/tuition"
-            />
-          </div>
-        </Slider>
-      </div>
+      <Container>
+        <div className="sliderContainer">
+          <Slider {...settings}>
+            <div>
+              <Cards
+                title="Overseas Admission"
+                imgSrc="/img/Overseas.jpg"
+                text="You, the aspiring students, cherish the dream of further
+                education abroad as studying abroad will give you incredible experiences."
+                btn="See More"
+                link="/overseas"
+              />
+            </div>
+            <div>
+              <Cards
+                title="Language Proficiency"
+                imgSrc="/img/languageProficiency.jpg"
+                text="Language proficiency is multidimensional and entails linguistic, cognitive, and socio-cultural factors. . . ."
+                btn="See More"
+                link="/language"
+              />
+            </div>
+            <div>
+              <Cards
+                title="Skill Development"
+                imgSrc="/img/Skill-Development.jpg"
+                text="Competing in today’s global economy is complex. Countries not only need advanced technical and vocational skills. . ."
+                btn="See More"
+                link="/skilldev"
+              />
+            </div>
+            <div>
+              <Cards
+                title="Tuition Media"
+                imgSrc="/img/tution-media.jpg"
+                text="In Bangladesh science the competition is very high, the system of our education becoming more exam centric, Parents are increasingly concerned. . ."
+                btn="See More"
+                link="/tuition"
+              />
+            </div>
+          </Slider>
+        </div>
+      </Container>
     );
   }
 }

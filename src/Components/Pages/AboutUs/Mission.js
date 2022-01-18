@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ContactForm from "../../ContactForm/ContactForm";
+import CommonForm from "../../Forms/CommonForm/CommonForm";
+
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Mission.css";
 
@@ -8,7 +9,7 @@ const Mission = () => {
   return (
     <>
       <Container>
-        <HeroImg imgSrc="https://i.ibb.co/SRz3r8P/banner1.jpg" />
+        <HeroImg imgSrc="/static/banner1.jpg" />
 
         <div class="row">
           <div class="col-lg-8 col-md-7 col-sm-12">
@@ -17,7 +18,7 @@ const Mission = () => {
               <div className="missionVission">
                 <img
                   className="sectionImg"
-                  src="https://i.ibb.co/61X6fMR/mission1.png"
+                  src="/static/mission1.png"
                   alt="Mission"
                 />
                 <div class="row">
@@ -25,7 +26,7 @@ const Mission = () => {
                     <div className="points">
                       <img
                         className="icon"
-                        src="https://i.ibb.co/Lg72Ly6/mission2.png"
+                        src="/static/mission2.png"
                         alt="Mission"
                       />
                       <p>
@@ -39,7 +40,7 @@ const Mission = () => {
                     <div className="points">
                       <img
                         className="icon"
-                        src="https://i.ibb.co/rQs8DNx/mission3.png"
+                        src="/static/mission3.png"
                         alt="Mission"
                       />
                       <p>
@@ -52,7 +53,7 @@ const Mission = () => {
                     <div className="points">
                       <img
                         className="icon"
-                        src="https://i.ibb.co/JmJbKPw/mission4.png"
+                        src="/static/mission4.png"
                         alt="Mission"
                       />
                       <p>
@@ -66,7 +67,7 @@ const Mission = () => {
               <div className="missionVission">
                 <img
                   className="sectionImg"
-                  src="https://i.ibb.co/PGG9kJq/vision.png"
+                  src="/static/vision.png"
                   alt="Mission"
                 />
                 <div class="row">
@@ -74,7 +75,7 @@ const Mission = () => {
                     <div className="points">
                       <img
                         className="icon"
-                        src="https://i.ibb.co/q1cXBKL/vision1.png"
+                        src="/static/vision1.png"
                         alt="Mission"
                       />
                       <p>
@@ -88,7 +89,7 @@ const Mission = () => {
                     <div className="points">
                       <img
                         className="icon"
-                        src="https://i.ibb.co/GvnfFXj/vision2.png"
+                        src="/static/vision2.png"
                         alt="Mission"
                       />
                       <p>
@@ -103,7 +104,7 @@ const Mission = () => {
                     <div className="points">
                       <img
                         className="icon"
-                        src="https://i.ibb.co/rFLzzJc/vision3.png"
+                        src="/static/vision3.png"
                         alt="Mission"
                       />
                       <p>
@@ -118,7 +119,7 @@ const Mission = () => {
             </div>
           </div>
           <div class="col-lg-4 col-md-5 col-sm-12">
-            <ContactForm />
+            <CommonForm />
           </div>
         </div>
       </Container>

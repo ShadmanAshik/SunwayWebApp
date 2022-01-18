@@ -12,6 +12,48 @@
 .Agent-title-description{
   color: white !important;;
 }
+/* for the phone no component */
+.special-label{
+  top:2px !important;
+  left: 55px !important;
+  color: #66737c !important;
+  font-size: inherit !important;
+}
+.react-tel-input{
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  padding-top: 20px !important;
+}
+::placeholder{
+  font-size: 16px!important;
+}
+.form-control {
+  border: 0 !important;
+  z-index: 1 !important;
+  background-color: transparent !important;
+  border-bottom: 2px solid #eee !important;
+  font: inherit !important;
+  font-size: 1.125rem !important;
+  margin: 0px 0px 0px 58px !important;
+  padding: 0.2rem 0 !important;
+  width:auto !important;
+  border-radius: 0px!important;
+  outline: none !important;
+  transition: 0.25s ease !important;
+}
+.flag{
+  position:absolute !important;
+  top: 50%;
+  margin-top: 0px !important;
+  z-index: 2 !important;
+}
+
+.form-control:focus,.form-control:valid{
+  outline: none !important;
+  border-bottom-color: var(--main-blue) !important;
+  box-shadow:none !important;
+}
+/* for the phone no component */
 #Agent-formContiner {
   padding: 0px;
 }
@@ -33,6 +75,7 @@ hr.solid {
   background-color: rgb(126, 126, 126);
   color:white
 }
+
 .Agent-form {
   display: flex;
   flex-direction: column;
@@ -144,8 +187,8 @@ hr.solid {
 .Agent-action-button {
   font: inherit;
   font-size: 24px;
-  /* padding: 10px; */
-  padding: 5px 35px;
+  /* padding: 10px;
+  padding: 5px 35px; */
   font-weight: 500;
   background-color: var(--main-deepBlue);
   border-radius: 4px;

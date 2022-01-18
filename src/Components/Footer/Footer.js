@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import { BrowserRouter, Link, Route, Routes, redirect } from "react-router-dom";
-import AboutUS from "../Pages/AboutUs/AboutUS";
+import {Link } from "react-router-dom";
+
 
 function Footer() {
   return (
@@ -120,17 +120,14 @@ function Footer() {
                 <h3 className="footer-title">Social</h3>
                 <div className="fb-page">
                   <div className="btn-bk">
-                    <div className="fb-btn">
                       <div
                         class="fb-like"
                         data-href="https://www.facebook.com/Sunway.Study.Group/"
-                        data-width=""
                         data-layout="button"
                         data-action="like"
                         data-size="large"
                         data-share="true"
-                      ></div>
-                    </div>
+                      />
                   </div>
                   <div className="social-icons-container">
                     <div className="row">
@@ -141,7 +138,7 @@ function Footer() {
                         >
                           <img
                             className="icons"
-                            src="https://i.ibb.co/7Y7zYD4/fb.png"
+                            src="/static/fb.png"
                             alt="fb"
                           ></img>
                         </a>
@@ -152,7 +149,7 @@ function Footer() {
                         >
                           <img
                             className="icons"
-                            src="https://i.ibb.co/nPFvQ0j/youtube.png"
+                            src="/static/youtube.png"
                             alt="youtube"
                           ></img>
                         </a>
@@ -163,7 +160,7 @@ function Footer() {
                         >
                           <img
                             className="icons"
-                            src="https://i.ibb.co/gTRKRwh/instagram.png"
+                            src="/static/instagram.png"
                             alt="instagram"
                           ></img>
                         </a>
@@ -171,7 +168,7 @@ function Footer() {
                         <a target="_blank" href="https://www.linkedin.com/company/sunway-study-group/">
                           <img
                             className="icons"
-                            src="https://i.ibb.co/60zNZGR/linkedin.png"
+                            src="/static/linkedin.png"
                             alt="linkedin"
                           ></img>
                         </a>
@@ -190,7 +187,7 @@ function Footer() {
         <p class="col">
           Copyright ©2021 All rights reserved | IT Partner
           <a target="_blank" href="http://www.ositsltd.com/index.html">
-            <img className="ositimg" src="http://www.ositsltd.com/images/os%20logolatest2.png" alt="osit" />
+            <img className="ositimg" src="/static/osit.png" alt="osit" />
           </a>
         </p>
       </div>

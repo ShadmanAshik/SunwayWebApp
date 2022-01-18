@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ContactForm from "../../ContactForm/ContactForm";
+import CommonForm from "../../Forms/CommonForm/CommonForm";
+
 import HeroImg from "../../HeroSection/HeroImg";
 import "./WhySSG.css";
 
@@ -8,7 +9,7 @@ const WhySSG = () => {
   return (
     <>
       <Container>
-        <HeroImg imgSrc="https://i.ibb.co/SRz3r8P/banner1.jpg"></HeroImg>
+        <HeroImg imgSrc="/static/banner1.jpg"></HeroImg>
 
         <div class="row">
           <div class="col-lg-8 col-md-6 col-sm-12">
@@ -19,8 +20,8 @@ const WhySSG = () => {
                   <div class=" col-sm-12">
                     <img
                       className="whyssg-listImg"
-                      src="https://i.ibb.co/m5t56hL/Why-SSG.jpg"
-                      alt="Image"
+                      src="/img/Why-SSG.jpg"
+                      alt="whyssg"
                     />
                   </div>
                   <div class="col-sm-12">
@@ -66,7 +67,7 @@ const WhySSG = () => {
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12">
-            <ContactForm />
+            <CommonForm />
           </div>
         </div>
       </Container>

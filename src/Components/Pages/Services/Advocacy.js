@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ContactForm from "../../ContactForm/ContactForm";
+import CommonForm from "../../Forms/CommonForm/CommonForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Advocacy.css";
 
@@ -32,7 +32,7 @@ const Advocacy = () => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <ContactForm />
+                <CommonForm />
               </div>
             </div>
           </div>

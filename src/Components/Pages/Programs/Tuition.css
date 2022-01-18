@@ -16,6 +16,13 @@
     text-align: justify;
   }
   .tuition-container {
-    margin: 0px 0px 50px 0;
+    margi-topn-top: 0px 0px 50px 0;
   }
-  
+.HireTutorForm{
+  width: 37%;
+  margin: 100px auto;
+}
+.TutorRegForm{
+  width: 37%;
+  margin: 100px auto;
+}

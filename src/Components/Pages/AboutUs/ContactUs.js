@@ -1,15 +1,15 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-
+import ContactForm from "../../Forms/ContactUs/ContactUsForm";
 import GoogleMap from "../../GoogleMap/GoogleMap";
 import HeroImg from "../../HeroSection/HeroImg";
-import ContactUsForm from "./ContactUsForm";
+
 import "./ContactUs.css";
 const ContactUs = () => {
   return (
     <div>
       <Container>
-        <HeroImg imgSrc="https://i.ibb.co/SRz3r8P/banner1.jpg" />
+        <HeroImg imgSrc="/static/banner1.jpg" />
 
         <div className="conatact-container">
           <div class="row">
@@ -42,7 +42,7 @@ const ContactUs = () => {
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <ContactUsForm />
+              <ContactForm/>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ContactForm from "../../ContactForm/ContactForm";
+import LangForm from "./LangForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Language.css";
 
@@ -8,7 +8,7 @@ const Language = () => {
   return (
     <>
       <Container>
-        <HeroImg imgSrc="/img/banner1.jpg" />
+        <HeroImg imgSrc="/static/banner1.jpg" />
         <div>
           <div className="language-container">
             <div class="row">
@@ -19,19 +19,16 @@ const Language = () => {
                     <div class=" col-sm-12">
                       <img
                         className="language-listImg"
-                        src="/img/languageProficiency.jpg"
-                        alt="Image"
+                        src="/static/languageProficiency.jpg"
+                        alt="LangImg"
                       />
                     </div>
                     <div class="textlanguage col-sm-12">
-                      <h2>
-                        LANGUAGE PROFICIENCY AND COMMUNICATIVE COMPETENCE:
-                      </h2>
                       <ol>
                         <h3>Key Issues:</h3>
                         <li>
                           Language proficiency is multidimensional and entails
-                          linguistic, cognitive, and socio-cultural factors
+                          linguistic, cognitive, and socio-cultural factors.
                         </li>
                         <li>
                           As students learn a second language, they progress at
@@ -39,8 +36,9 @@ const Language = () => {
                           stages.
                         </li>
                         <li>
-                          <strong>CAN DO</strong> descriptors depict what students can do with
-                          language at different levels of language proficiency.
+                          <strong>CAN DO</strong> Descriptors depict what
+                          students can do with language at different levels of
+                          language proficiency.
                         </li>
                         <li>
                           Communicative competence involves more than linguistic
@@ -56,8 +54,8 @@ const Language = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <ContactForm />
+              <div className=" col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
+                <LangForm />
               </div>
             </div>
           </div>

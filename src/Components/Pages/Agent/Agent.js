@@ -10,7 +10,7 @@ const Agent = () => {
     <>
       <div>
         <Container>
-          <HeroImg imgSrc="https://i.ibb.co/m5t56hL/Why-SSG.jpg" />
+          <HeroImg imgSrc="/static/banner1.jpg" />
           <div>
             <div className="agent-container">
               <div class="row">
@@ -21,7 +21,7 @@ const Agent = () => {
                       <div class=" col-sm-12">
                         <img
                           className="agent-listImg"
-                          src="https://i.ibb.co/54d4BhX/Agent.jpg"
+                          src="/static/Agent.jpg"
                           alt="Image"
                         />
                       </div>

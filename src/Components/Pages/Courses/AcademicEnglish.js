@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ContactForm from "../../ContactForm/ContactForm";
+import CommonForm from "../../Forms/CommonForm/CommonForm";
+
 import HeroImg from "../../HeroSection/HeroImg";
 import "./AcademicEnglish.css";
 
@@ -9,7 +10,7 @@ const AcademicEnglish = () => {
     <>
       <div>
       <Container>
-        <HeroImg imgSrc="/img/banner1.jpg" />
+        <HeroImg imgSrc="/static/banner1.jpg" />
         <div>
           <div class="row">
             <div className="col-lg-8 col-md-6 col-sm-12">
@@ -17,7 +18,7 @@ const AcademicEnglish = () => {
             </div> 
             
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <ContactForm />
+              <CommonForm />
             </div>
           </div>
         </div>

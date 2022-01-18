@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import {
+import { 
   Container,
   Nav,
   Navbar,
@@ -18,27 +18,27 @@ const Header = () => {
             <div className="socials col-lg-4 col-md-6">
               <div className="iconContainer">
                 <a target="_blank"href="https://www.facebook.com/Sunway.Study.Group/">
-                  <img className="headerIcons" src="https://i.ibb.co/7Y7zYD4/fb.png" alt="fb"></img>
+                  <img className="headerIcons" src="/static/fb.png" alt="fb"></img>
                 </a>
                 <a target="_blank"href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw">
                   <img
                     className="headerIcons"
-                    src="https://i.ibb.co/nPFvQ0j/youtube.png"
-                    alt="youtube"
+                    src="/static/youtube.png"
+                    alt="fb"
                   ></img>
                 </a>
                 <a target="_blank"href="https://www.instagram.com/sunway_study_group/">
                   <img
                     className="headerIcons"
-                    src="https://i.ibb.co/gTRKRwh/instagram.png"
-                    alt="instagram"
+                    src="/static/instagram.png"
+                    alt="fb"
                   ></img>
                 </a>
                 <a target="_blank"href="https://www.linkedin.com/company/sunway-study-group/">
                   <img
                     className="headerIcons"
-                    src="https://i.ibb.co/60zNZGR/linkedin.png"
-                    alt="linkedin"
+                    src="/static/linkedin.png"
+                    alt="fb"
                   ></img>
                 </a>
 
@@ -82,7 +82,7 @@ const Header = () => {
         <Container>
           <Navbar.Brand href="/home">
             <Link to="/home">
-              <img className="img-logo" src="https://i.ibb.co/QmDxzRX/logo.png" alt="logo"></img>
+              <img className="img-logo" src="/static/logo.png" alt="logo"></img>
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

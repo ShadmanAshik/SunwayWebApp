@@ -1,9 +1,15 @@
 import { React, useState } from "react";
-import { Button, Carousel, Container } from "react-bootstrap";
+import { Button, Carousel} from "react-bootstrap";
 import Popup from "reactjs-popup";
 import AgentForm from "../Pages/Agent/AgentForm";
 import "./HeroSection.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import LoginandSignup from "../Pages/LoginandSignup/LoginAndSignup";
+import LangForm from "../Pages/Programs/LangForm";
+import SkillDevForm from "../Pages/Programs/SkillDevForm";
+import TutorRegForm from "../Forms/TuitionFroms/TutorRegForm";
+import HireTutorForm from "../Forms/TuitionFroms/HireTutorForm";
+
 
 const HeroSection = (props) => {
   const [index, setIndex] = useState(0);
@@ -24,7 +30,7 @@ const HeroSection = (props) => {
           <img
             id="carouselImage"
             className="d-block w-100"
-            src="https://i.ibb.co/S7TTrs6/Welcome.jpg"
+            src="/static/Welcome.jpg"
             alt="First slide"
           />
           <Carousel.Caption className="caurousel-caption ">
@@ -37,20 +43,26 @@ const HeroSection = (props) => {
             >
               Explore more
             </Button>
-            <Button
-              href="/about"
-              className="heroBtn"
-              id="btn2"
-              variant="secondary"
+            <Popup
+              className="regbtn"
+              trigger={
+                <Button className="heroBtn" id="btn2" variant="secondary">
+                  Register Now
+                </Button>
+              }
+              modal
+              contentStyle
+              lockScroll
+              overlayStyle
             >
-              Register Now
-            </Button>
+              <LoginandSignup></LoginandSignup>
+            </Popup>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://i.ibb.co/mHLYzXR/worldwide.jpg"
+            src="/static/worldwide.jpg"
             alt="Second slide"
           />
           <Carousel.Caption className="caurousel-caption">
@@ -76,7 +88,7 @@ const HeroSection = (props) => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://i.ibb.co/sb5Snv8/Language.jpg"
+            src="/static/language.jpg"
             alt="Third slide"
           />
           <Carousel.Caption className="caurousel-caption">
@@ -89,20 +101,26 @@ const HeroSection = (props) => {
             >
               Explore more
             </Button>
-            <Button
-              href="/language"
-              className="heroBtn"
-              id="btn2"
-              variant="secondary"
+            <Popup
+              className="applybtn"
+              trigger={
+                <Button className="heroBtn" id="btn2" variant="secondary">
+                  Apply Now
+                </Button>
+              }
+              modal
+              contentStyle
+              lockScroll
+              overlayStyle
             >
-              Apply Now
-            </Button>
+              <LangForm />
+            </Popup>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://i.ibb.co/HGyryKv/skills.jpg"
+            src="/static/skills.jpg"
             alt="Forth slide"
           />
           <Carousel.Caption className="caurousel-caption">
@@ -115,46 +133,64 @@ const HeroSection = (props) => {
             >
               Explore more
             </Button>
-            <Button
-              href="/skillDev"
-              className="heroBtn"
-              id="btn2"
-              variant="secondary"
+            <Popup
+            className="applybtn"
+              trigger={
+                <Button className="heroBtn" id="btn2" variant="secondary">
+                  Apply Now
+                </Button>
+              }
+              modal
+              contentStyle
+              lockScroll
+              overlayStyle
             >
-              Apply Now
-            </Button>
+              <SkillDevForm />
+            </Popup>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://i.ibb.co/tz71NLN/tuition.jpg"
+            src="/static/tuition.jpg"
             alt="Forth slide"
           />
           <Carousel.Caption className="caurousel-caption">
             <h1>Tutoring Z-Generation</h1>
-            <Button
-              href="/tuition"
-              className="heroBtn"
-              id="explore"
-              variant="secondary"
+            <Popup
+              className="applybtn"
+              trigger={
+                <Button className="heroBtn" id="btn2" variant="secondary">
+                  Hire a Tutor
+                </Button>
+              }
+              modal
+              contentStyle
+              lockScroll
+              overlayStyle
             >
-              Hire A Tutor
-            </Button>
-            <Button
-              href="/tuition"
-              className="heroBtn"
-              id="btn2"
-              variant="secondary"
+              <HireTutorForm />
+            </Popup>
+            <Popup
+              className="applybtn"
+              trigger={
+                <Button className="heroBtn" id="btn2" variant="secondary">
+                  Become a Tutor
+                </Button>
+              }
+              modal
+              contentStyle
+              lockScroll
+              overlayStyle
             >
-              Become A Tutor
-            </Button>
+              <TutorRegForm />
+            </Popup>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://i.ibb.co/pbK8B2R/Be-our-Global-Agent.jpg"
+            src="/static/Be-our-Global-Agent.jpg"
             alt="Fifth slide"
           />
           <Carousel.Caption className="caurousel-caption ">
@@ -168,7 +204,11 @@ const HeroSection = (props) => {
               Explore more
             </Button>
             <Popup
-              trigger={<Button className="heroBtn" id="btn2" variant="secondary">Register Now</Button>}
+              trigger={
+                <Button className="heroBtn" id="btn2" variant="secondary">
+                  Register Now
+                </Button>
+              }
               modal
               contentStyle
               lockScroll
