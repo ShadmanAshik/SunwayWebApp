@@ -109,8 +109,9 @@
 .heroBtn {
   color: white;
   background-color: var(--main-deepOrange);
-  width: 130px;
+  width: 140px;
   border:0px !important;
+  border-radius: 5px !important;
 }
 .heroBtn:hover {
   background-color: white;

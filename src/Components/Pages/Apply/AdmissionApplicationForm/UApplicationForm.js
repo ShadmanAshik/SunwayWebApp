@@ -8,7 +8,39 @@ const ApplicationForm = ({ submitForm }) => {
     submitForm,
     validate
   );
+<div className="Application-input col-6">
+              <input
+                required
+                id="fieldofstudy"
+                type="text"
+                name="fieldofstudy"
+                className="Application-input-field"
+                placeholder=""
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label htmlFor="fieldofstudy" className="Application-input-label">
+                Field/Program of study
+              </label>
+            </div>
+          </div>
 
+          <input
+                required
+                id="institutename"
+                type="text"
+                name="institutename"
+                className="Application-input-field"
+                placeholder=""
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="institutename"
+                className="Application-input-label"
+              >
+                Institute Name
+              </label>
   return (
     <div className="form-content-application">
       <form className="form-application" onSubmit={handleSubmit}>
@@ -20,110 +52,8 @@ const ApplicationForm = ({ submitForm }) => {
 
         
 
-
-        <div className="Application-input col-6">
-          
-          <input required
-            id="homeaddress"
-            type="text"
-            name="homeaddress"
-            className="Application-input-field"
-            placeholder=""
-            value={demo}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-          <label htmlFor="homeaddress" className="Application-input-label">
-            Homeland Address
-          </label>
-        </div>
-
-        <div className="Application-input col-6">
-          
-          <input required
-            id="homephone"
-            type="text"
-            name="homephone"
-            className="Application-input-field"
-            placeholder=""
-            value={demo}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-          <label htmlFor="homephone" className="Application-input-label">
-            Home Phone Number
-          </label>
-        </div>
-
-        <div className="Application-input col-6">
-          <label htmlFor="applyuniveristy" className="Application-input-label">
-            Apply University
-          </label>
-          <input required
-            id="applyuniveristy"
-            type="text"
-            name="applyuniveristy"
-            className="Application-input-field"
-            placeholder=""
-            value={values.applyuniveristy}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-          {error.applyuniveristy && <p>{error.applyuniveristy}</p>}
-        </div>
-
-        <div className="Application-input col-6">
-          <label htmlFor="majorsub" className="Application-input-label">
-            Major Subject
-          </label>
-          <input required
-            id="majorsub"
-            type="text"
-            name="majorsub"
-            className="Application-input-field"
-            placeholder=""
-            value={values.majorsub}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-          {error.majorsub && <p>{error.majorsub}</p>}
-        </div>
-
-        <h1>
-        _________________________________
-          <br />
-          <br />
-          Educational Background
-        </h1>
-
-        <h2>Educational History 1:</h2>
-        <div className="Application-input col-6">
-          <label htmlFor="institutename" className="Application-input-label">
-            Institute Name
-          </label>
-          <input required
-            id="institutename"
-            type="text"
-            name="institutename"
-            className="Application-input-field"
-            placeholder=""
-            value={values.institutename}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-          {error.institutename && <p>{error.institutename}</p>}
-        </div>
-
-        <div className="Application-input col-6">
-          <label htmlFor="fieldofstudy" className="Application-input-label">
-            Field/Program of study
-          </label>
-          <input required
-            id="fieldofstudy"
-            type="text"
-            name="fieldofstudy"
-            className="Application-input-field"
-            placeholder=""
-            value={values.fieldofstudy}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-          {error.fieldofstudy && <p>{error.fieldofstudy}</p>}
-        </div>
+        
+        
 
         <div className="Application-input col-6">
           <label htmlFor="startdate" className="Application-input-label">
@@ -265,64 +195,34 @@ const ApplicationForm = ({ submitForm }) => {
         </h1>
 
         <div className="Application-input col-6">
-          <label htmlFor="profession" className="Application-input-label">
-            Applicant Profession
-          </label>
           <input required
             id="profession"
             type="text"
             name="profession"
             className="Application-input-field"
-            value={values.profession}
+            value={demo}
             onChange={(e) => setdemo(e.target.value)}
           />
-          {error.profession && <p>{error.profession}</p>}
+          <label htmlFor="profession" className="Application-input-label">
+            Applicant Profession
+          </label>
         </div>
 
         <div className="Application-input col-6">
-          <label htmlFor="language" className="Application-input-label">
-            Mother Language
-          </label>
           <input required
             id="language"
             type="text"
             name="language"
             className="Application-input-field"
-            value={values.language}
+            value={demo}
             onChange={(e) => setdemo(e.target.value)}
           />
-          {error.language && <p>{error.language}</p>}
+          <label htmlFor="language" className="Application-input-label">
+            Mother Language
+          </label>
         </div>
 
-        <div className="Application-input col-6">
-          <label htmlFor="fathername" className="Application-input-label">
-            Fathers Name
-          </label>
-          <input required
-            id="fathername"
-            type="text"
-            name="fathername"
-            className="Application-input-field"
-            value={values.fathername}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-          {error.fathername && <p>{error.fathername}</p>}
-        </div>
-
-        <div className="Application-input col-6">
-          <label htmlFor="mothername" className="Application-input-label">
-            Mothers Name
-          </label>
-          <input required
-            id="mothername"
-            type="text"
-            name="mothername"
-            className="Application-input-field"
-            value={values.mothername}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-          {error.mothername && <p>{error.mothername}</p>}
-        </div>
+        
 
         <div className="Application-input col-6">
           <label htmlFor="fatherage" className="Application-input-label">
@@ -354,35 +254,7 @@ const ApplicationForm = ({ submitForm }) => {
           {error.motherage && <p>{error.motherage}</p>}
         </div>
 
-        <div className="Application-input col-6">
-          <label htmlFor="fatheremployement" className="Application-input-label">
-            Father's Employment
-          </label>
-          <input required
-            id="fatheremployement"
-            type="text"
-            name="fatheremployement"
-            className="Application-input-field"
-            value={values.fatheremployement}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-          {error.fatheremployement && <p>{error.fatheremployement}</p>}
-        </div>
-
-        <div className="Application-input col-6">
-          <label htmlFor="motheremployement" className="Application-input-label">
-            Mother's Employment
-          </label>
-          <input required
-            id="motheremployement"
-            type="text"
-            name="motheremployement"
-            className="Application-input-field"
-            value={values.motheremployement}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-          {error.motheremployement && <p>{error.motheremployement}</p>}
-        </div>
+        
 
         <div className="Application-input col-6">
           <label htmlFor="fathernumber" className="Application-input-label">
@@ -428,33 +300,7 @@ const ApplicationForm = ({ submitForm }) => {
           />
         </div>
         <h1>_________________________________</h1>
-        <div className="Application-input col-6">
-          <label htmlFor="passportscan" className="Application-input-label">
-            Passport Scan Copy*
-          </label>
-          <input required
-            id="passportscan"
-            type="file"
-            name="passportscan"
-            className="Application-input-field"
-            value={values.passportscan}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-        </div>
-
-        <div className="Application-input col-6">
-          <label htmlFor="academiccertificate" className="Application-input-label">
-            Last Academic Certificates*
-          </label>
-          <input required
-            id="academiccertificate"
-            type="file"
-            name="academiccertificate"
-            className="Application-input-field"
-            value={values.academiccertificate}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-        </div>
+        
 
         <div className="Application-input col-6">
           <label htmlFor="transcript" className="Application-input-label">
@@ -484,33 +330,7 @@ const ApplicationForm = ({ submitForm }) => {
           />
         </div>
 
-        <div className="Application-input col-6">
-          <label htmlFor="policyclearance" className="Application-input-label">
-            Policy Clearance (if have)
-          </label>
-          <input required
-            id="policyclearance"
-            type="file"
-            name="policyclearance"
-            className="Application-input-field"
-            value={values.policyclearance}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-        </div>
-
-        <div className="Application-input col-6">
-          <label htmlFor="bankstatement" className="Application-input-label">
-            Bank Statement 1 (if have)
-          </label>
-          <input required
-            id="bankstatement"
-            type="file"
-            name="bankstatement"
-            className="Application-input-field"
-            value={values.bankstatement}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-        </div>
+        
 
         <div className="Application-input col-6">
           <label htmlFor="bankstatement2" className="Application-input-label">
@@ -526,33 +346,7 @@ const ApplicationForm = ({ submitForm }) => {
           />
         </div>
 
-        <div className="Application-input col-6">
-          <label htmlFor="englishprofeciencydoc" className="Application-input-label">
-            English Proficiency Document (if have)
-          </label>
-          <input required
-            id="englishprofeciencydoc"
-            type="file"
-            name="englishprofeciencydoc"
-            className="Application-input-field"
-            value={values.englishprofeciencydoc}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-        </div>
-
-        <div className="Application-input col-6">
-          <label htmlFor="otherdoc" className="Application-input-label">
-            Any Other Document (if have)
-          </label>
-          <input required
-            id="otherdoc"
-            type="file"
-            name="otherdoc"
-            className="Application-input-field"
-            value={values.otherdoc}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-        </div>
+        
         <h1>
           _________________________________
           <br />
@@ -560,60 +354,36 @@ const ApplicationForm = ({ submitForm }) => {
           ONLY FOR MASTERS & PhD 
         </h1>
         <div className="Application-input col-6">
-          <label htmlFor="recommendationletter" className="Application-input-label">
-          Recommendation Letter
-          </label>
+          
           <input required
             id="recommendationletter"
             type="file"
             name="recommendationletter"
             className="Application-input-field"
-            value={values.recommendationletter}
+            value={demo}
             onChange={(e) => setdemo(e.target.value)}
           />
+          <label htmlFor="recommendationletter" className="Application-input-label">
+          Recommendation Letter
+          </label>
         </div>
 
         <div className="Application-input col-6">
-          <label htmlFor="recommendationletter2" className="Application-input-label">
-          Recommendation Letter 2
-          </label>
+          
           <input required
             id="recommendationletter2"
             type="file"
             name="recommendationlette2r"
             className="Application-input-field"
-            value={values.recommendationletter2}
+            value={demo}
             onChange={(e) => setdemo(e.target.value)}
           />
+          <label htmlFor="recommendationletter2" className="Application-input-label">
+          Recommendation Letter 2
+          </label>
         </div>
 
-        <div className="Application-input col-6">
-          <label htmlFor="recommendationletter3" className="Application-input-label">
-          Recommendation Letter 3
-          </label>
-          <input required
-            id="recommendationletter3"
-            type="file"
-            name="recommendationletter3"
-            className="Application-input-field"
-            value={values.recommendationletter3}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-        </div>
-
-        <div className="Application-input col-6">
-          <label htmlFor="studyplan" className="Application-input-label">
-          Study Plan / Research Proposal
-          </label>
-          <input required
-            id="studyplan"
-            type="file"
-            name="studyplan"
-            className="Application-input-field"
-            value={values.studyplan}
-            onChange={(e) => setdemo(e.target.value)}
-          />
-        </div>
+        
         </div>
         </div>
         <button className="form-input-apply-application" type="submit">
