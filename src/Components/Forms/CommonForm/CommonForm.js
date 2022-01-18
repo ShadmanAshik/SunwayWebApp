@@ -1,16 +1,17 @@
 import { React } from "react";
-
 import "./CommonForm.css";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-number-input/style.css";
-
 import "react-phone-input-2/lib/material.css";
 import validate from "./ValidateInfo";
 import useForm from "./useForm";
 
 const CommonForm = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, setValues } = useForm(submitForm, validate);
+  const { handleChange, handleSubmit, values, setValues } = useForm(
+    submitForm,
+    validate
+  );
   return (
     <div className="container" id="formContiner">
       <div className="contact-form">
@@ -66,41 +67,21 @@ const CommonForm = ({ submitForm }) => {
             <label htmlFor="email" className="input-label">
               Email
             </label>
-            
           </div>
 
           <div>
-            {/* <PhoneInput
+            <PhoneInput
               inputProps={{
                 name: "phone",
                 required: true,
-                onChange: { handleChange },
-                
+                autoFocus: true,
               }}
-
-              // name="phone"
-              // id="phone"
-              placeholder=""
-              type="tel"
-              // onChange={(e)=> handleChange(e)}
+              country={"bd"}
               value={values.phone}
-              specialLabel="Phone:"
-              countryCodeEditable={false}
-              country=" "
-              required
-            /> */}
-            <PhoneInput
-            inputProps={{
-              name: 'phone',
-              required: true,
-              autoFocus: true
-            }}
-            country={"bd"}
-            value={values.phone}
-            onChange={(phone, country, e, fv) => {
-              setValues({...values, phone: fv, country: country.name});
-            }}
-          />
+              onChange={(phone, country, e, fv) => {
+                setValues({ ...values, phone: fv, country: country.name });
+              }}
+            />
           </div>
 
           <div className="input">
