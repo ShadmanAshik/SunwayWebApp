@@ -1,56 +1,55 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./Components/Header/Header";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "./Components/Footer/Footer";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 import MessengerCustomerChat from "react-messenger-customer-chat";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Components/Pages/Home/Home";
+import Sticky from "react-stickynode";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "./App.css";
+import Footer from "./Components/Footer/Footer";
+import Header from "./Components/Header/Header";
 import AboutUS from "./Components/Pages/AboutUs/AboutUS";
-import WhySSG from "./Components/Pages/AboutUs/WhySSG";
 import ContactUs from "./Components/Pages/AboutUs/ContactUs";
 import Mission from "./Components/Pages/AboutUs/Mission";
 import OurTeam from "./Components/Pages/AboutUs/OurTeam";
 import Policy from "./Components/Pages/AboutUs/Policy";
-import LoginAndSignup from "./Components/Pages/LoginandSignup/LoginAndSignup";
-import Overseas from "./Components/Pages/Programs/Overseas";
-import Language from "./Components/Pages/Programs/Language";
-import SkillDevelopment from "./Components/Pages/Programs/SkillDevelopment";
-import Tuition from "./Components/Pages/Programs/Tuition";
-import BangladeshUniversity from "./Components/Pages/University/BangladeshUniversity";
-import WebDesignAndDevelopment from "./Components/Pages/Courses/WebDesignAndDevelopment";
-import ProfessionalGraphicDesign from "./Components/Pages/Courses/ProfessionalGraphicDesign";
-import LanguageCourses from "./Components/Pages/Courses/LanguageCourses";
-import IELTSPreparation from "./Components/Pages/Courses/IELTSPreparation";
-import EnglishSpoken from "./Components/Pages/Courses/EnglishSpoken";
-import DigitalMarketing from "./Components/Pages/Courses/DigitalMarketing";
-import CommunicativeEnglish from "./Components/Pages/Courses/CommunicativeEnglish";
-import AcademicEnglish from "./Components/Pages/Courses/AcademicEnglish";
-import Testimonial from "./Components/Pages/NewsAndMedia/Testimonial";
-import VideoGallery from "./Components/Pages/NewsAndMedia/VideoGallery";
-import PhotoGallery from "./Components/Pages/NewsAndMedia/PhotoGallery";
-import Events from "./Components/Pages/NewsAndMedia/Events";
-import Offer from "./Components/Pages/NewsAndMedia/Offer";
-import News from "./Components/Pages/NewsAndMedia/News";
-import Blog from "./Components/Pages/NewsAndMedia/Blog";
+import WhySSG from "./Components/Pages/AboutUs/WhySSG";
+import Admin from "./Components/Pages/Admin/Admin";
+import AgentData from "./Components/Pages/Admin/Components/AgentData";
+import ContactData from "./Components/Pages/Admin/Components/ContactData";
+import Agent from "./Components/Pages/Agent/Agent";
 import Application from "./Components/Pages/Apply/AdmissionApplicationForm/Application";
 import ApplyScholarship from "./Components/Pages/Apply/ScholarshipApplicationForm/ApplyScholarship";
-import GlobalUniversity from "./Components/Pages/University/GlobalUniversity";
-import ApplicationProcessing from "./Components/Pages/Services/ApplicationProcessing";
-import VisaApplication from "./Components/Pages/Services/VisaApplication";
-import ScholarshipSupport from "./Components/Pages/Services/ScholarshipSupport";
+import AcademicEnglish from "./Components/Pages/Courses/AcademicEnglish";
+import CommunicativeEnglish from "./Components/Pages/Courses/CommunicativeEnglish";
+import DigitalMarketing from "./Components/Pages/Courses/DigitalMarketing";
+import EnglishSpoken from "./Components/Pages/Courses/EnglishSpoken";
+import IELTSPreparation from "./Components/Pages/Courses/IELTSPreparation";
+import LanguageCourses from "./Components/Pages/Courses/LanguageCourses";
+import ProfessionalGraphicDesign from "./Components/Pages/Courses/ProfessionalGraphicDesign";
+import WebDesignAndDevelopment from "./Components/Pages/Courses/WebDesignAndDevelopment";
+import Home from "./Components/Pages/Home/Home";
+import LoginAndSignup from "./Components/Pages/LoginandSignup/LoginAndSignup";
+import Blog from "./Components/Pages/NewsAndMedia/Blog";
+import Events from "./Components/Pages/NewsAndMedia/Events";
+import News from "./Components/Pages/NewsAndMedia/News";
+import Offer from "./Components/Pages/NewsAndMedia/Offer";
+import PhotoGallery from "./Components/Pages/NewsAndMedia/PhotoGallery";
+import Testimonial from "./Components/Pages/NewsAndMedia/Testimonial";
+import VideoGallery from "./Components/Pages/NewsAndMedia/VideoGallery";
+import Language from "./Components/Pages/Programs/Language";
+import Overseas from "./Components/Pages/Programs/Overseas";
+import SkillDevelopment from "./Components/Pages/Programs/SkillDevelopment";
+import Tuition from "./Components/Pages/Programs/Tuition";
 import AdmissionSupoort from "./Components/Pages/Services/AdmissionSupoort";
-import StudyTour from "./Components/Pages/Services/StudyTour";
-import Counseling from "./Components/Pages/Services/Counselling";
-import Agent from "./Components/Pages/Agent/Agent";
-import Admin from "./Components/Pages/Admin/Admin";
-import Sticky from "react-stickynode";
-import ContactData from "./Components/Pages/Admin/Components/ContactData";
-import AgentData from "./Components/Pages/Admin/Components/AgentData";
 import Advocacy from "./Components/Pages/Services/Advocacy";
+import ApplicationProcessing from "./Components/Pages/Services/ApplicationProcessing";
+import Counseling from "./Components/Pages/Services/Counselling";
+import ScholarshipSupport from "./Components/Pages/Services/ScholarshipSupport";
+import StudyTour from "./Components/Pages/Services/StudyTour";
+import VisaApplication from "./Components/Pages/Services/VisaApplication";
+import BangladeshUniversity from "./Components/Pages/University/BangladeshUniversity";
+import GlobalUniversity from "./Components/Pages/University/GlobalUniversity";
+import Snippets from "./Components/Snippet/Snippets";
 
 function App() {
   const base_url="http://127.0.0.1:8000";
@@ -135,7 +134,9 @@ function App() {
           <Route exact path="adminDashboard" element={<Admin />}>
             <Route path="contactUsData" element={<ContactData />} />
             <Route path="agentData" element={<AgentData />} />
+            <Route path="snippets" element={<Snippets />} />
           </Route>
+
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -30,7 +30,7 @@ const useForm = (props, validate) => {
 
     setErrors(validate(values));
     setIsSubmitting(true);
-    axios.post('http://127.0.0.1:8000/cfd/contactformdata/', values, {
+    axios.post('http://127.0.0.1:8000/cfd/Contactformdata/', values, {
       headers: headers
     })
     .then((response) => {

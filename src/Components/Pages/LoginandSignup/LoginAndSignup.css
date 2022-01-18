@@ -31,7 +31,7 @@
 }
 .label {
   margin: 0 25px;
-  padding:10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
   text-transform: uppercase;
   font-weight: 700;
   color: white;
@@ -163,8 +163,8 @@
   color: rgb(241, 12, 12);
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
-  }
-  
+}
+
 .form-style {
   padding: 13px 20px;
   padding-left: 55px;
@@ -274,18 +274,15 @@
   border: none;
   background-color: var(--main-deepOrange);
   color: var(--main-deepBlue);
-  
 }
 .submitButton:active,
 .submitButton:focus {
-  background-color: var(--main-deepBlue);;
+  background-color: var(--main-deepBlue);
   color: rgb(250, 205, 139);
-  
 }
 .submitButton:hover {
   background-color: #102770;
   color: rgb(250, 205, 139);
-  
 }
 
 /**

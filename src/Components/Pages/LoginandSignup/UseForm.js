@@ -11,7 +11,7 @@ const UseForm = (props, validate) => {
     email: "",
     country: "",
     name: "",
-    phoneno: "",
+    phone: "",
     is_authenticated: "",
     base_url: props.base_url,
     access_token: "",
@@ -91,7 +91,8 @@ const UseForm = (props, validate) => {
       'email': values.email,
       'password': values.signupPassword,
       're_password': values.confirmPassword,
-      'name': values.name
+      'name': values.name,
+      'phone':values.phone
     };
 
 

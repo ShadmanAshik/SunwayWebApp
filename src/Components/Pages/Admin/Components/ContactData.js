@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 
 export class ContactData extends Component {
@@ -10,7 +10,7 @@ export class ContactData extends Component {
     }
 
     fetchData(){
-        fetch('http://127.0.0.1:8000/cfd/contactformdata/')
+        fetch('http://127.0.0.1:8000/cfd/Contactformdata/')
         .then(response=>response.json())
         .then((data)=>{
             this.setState({
@@ -21,19 +21,6 @@ export class ContactData extends Component {
 
     componentDidMount(){
         this.fetchData();
-    }
-
-    deleteData(id){
-        fetch('http://127.0.0.1:8000/contactfromdata/'+id+'/',{
-            method:'DELETE',
-            body:JSON.stringify(this.state),
-        })
-        .then(response=>response)
-        .then((data)=>{
-            if(data){
-                this.fetchData();
-            }
-        });
     }
 
     render(){

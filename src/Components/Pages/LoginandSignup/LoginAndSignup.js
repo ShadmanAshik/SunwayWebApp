@@ -1,8 +1,8 @@
-import "../LoginandSignup/LoginAndSignup.css";
-import validate from "./ValidateInfo";
-import UseForm from "./UseForm";
 import React from "react";
 import { Navigate } from "react-router-dom";
+import "../LoginandSignup/LoginAndSignup.css";
+import UseForm from "./UseForm";
+import validate from "./ValidateInfo";
 
 const LoginAndSignup = ( props ) => {
   
@@ -138,8 +138,8 @@ const LoginAndSignup = ( props ) => {
                             <input
                               id="phoneno"
                               type="tel"
-                              name="phoneno"
-                              value={values.phoneno}
+                              name="phone"
+                              value={values.phone}
                               onChange={handleChange}
                               class="form-style"
                               placeholder="Your Phone No."
