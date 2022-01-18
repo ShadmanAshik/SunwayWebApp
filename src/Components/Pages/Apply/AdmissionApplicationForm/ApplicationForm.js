@@ -12,6 +12,7 @@ const ApplicationForm = ({}) => {
   //   submitForm,
   //   validate
   // );
+  const [count, setCount] = useState(1);
   const [checked, setchecked] = useState(false);
   const [fName, setfName] = useState("");
   const [lName, setlName] = useState("");
@@ -21,6 +22,15 @@ const ApplicationForm = ({}) => {
   const [language, setlanguage] = useState("");
   const [demo, setdemo] = useState("");
   const [country, setcountry] = useState("");
+
+  function decrement() {
+    setCount((prevCount) => prevCount - 1);
+    if (count == 1) setCount(1);
+  }
+  function increment() {
+    setCount((prevCount) => prevCount + 1);
+    if (count == 5) setCount(5);
+  }
 
   const submitData = async () => {
     let formField = new FormData();
@@ -538,9 +548,643 @@ const ApplicationForm = ({}) => {
             </div>
           </div>
 
-          <div  className="Application-card-info" style={{margin:"0px auto"
-          }}>
-            <input 
+          <div className="row">
+            <div className="Application-input col-6">
+              <input
+                required
+                id="applyuniveristy"
+                type="text"
+                name="applyuniveristy"
+                className="Application-input-field"
+                placeholder=""
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="applyuniveristy"
+                className="Application-input-labelrow"
+              >
+                Apply University
+              </label>
+            </div>
+
+            <div className="Application-input col-6">
+              <input
+                required
+                id="majorsub"
+                type="text"
+                name="majorsub"
+                className="Application-input-field"
+                placeholder=""
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label htmlFor="majorsub" className="Application-input-label">
+                Major Subject
+              </label>
+            </div>
+          </div>
+
+          <br />
+          <hr class="line solid" />
+          <p className="divider-application">
+            {count} Educational Background
+            <i onClick={decrement} class="minus uil uil-minus-circle"></i>
+            <i onClick={increment} class="plus uil uil-plus-circle"></i>
+          </p>
+
+          <div className="row">
+            <div className="Application-input col-6">
+              <input
+                id="certificate1"
+                type="file"
+                name="certificate1"
+                className="Application-input-field-file"
+                value={demo}
+                accept="application/pdf"
+                onChange={(e) => demo(e.target.value)}
+                required
+              />
+              <label
+                htmlFor="certificate1"
+                className="Application-input-label-file"
+              >
+                Certificate 1 Pdf
+                <i class="arrow uil uil-arrow-down-right" />
+              </label>
+            </div>
+
+            <div className="Application-input col-6">
+              <input
+                id="transcript1"
+                type="file"
+                name="transcript1"
+                className="Application-input-field-file"
+                value={demo}
+                accept="application/pdf"
+                onChange={(e) => demo(e.target.value)}
+                required
+              />
+              <label
+                htmlFor="transcript1"
+                className="Application-input-label-file"
+              >
+                Transcript 1 Pdf
+                <i class="arrow uil uil-arrow-down-right" />
+              </label>
+            </div>
+          </div>
+
+          <div
+            className="row"
+            style={count >= 2 ? { display: "flex" } : { display: "none" }}
+          >
+            <div className="Application-input col-6">
+              <input
+                id="certificate2"
+                type="file"
+                name="certificate2"
+                className="Application-input-field-file"
+                value={demo}
+                accept="application/pdf"
+                onChange={(e) => demo(e.target.value)}
+                disabled={count < 2 ? true : false}
+                required
+              />
+              <label
+                htmlFor="certificate2"
+                className="Application-input-label-file"
+              >
+                Certificate 2 Pdf
+                <i class="arrow uil uil-arrow-down-right" />
+              </label>
+            </div>
+
+            <div className="Application-input col-6">
+              <input
+                id="transcript2"
+                type="file"
+                name="transcript2"
+                className="Application-input-field-file"
+                value={demo}
+                accept="application/pdf"
+                onChange={(e) => demo(e.target.value)}
+                disabled={count < 2 ? true : false}
+                required
+              />
+              <label
+                htmlFor="transcript2"
+                className="Application-input-label-file"
+              >
+                Transcript 2 Pdf
+                <i class="arrow uil uil-arrow-down-right" />
+              </label>
+            </div>
+          </div>
+
+          <div
+            className="row"
+            style={count > 2 ? { display: "flex" } : { display: "none" }}
+          >
+            <div className="Application-input col-6">
+              <input
+                id="certificate3"
+                type="file"
+                name="certificate3"
+                className="Application-input-field-file"
+                value={demo}
+                accept="application/pdf"
+                onChange={(e) => demo(e.target.value)}
+                disabled={count < 3 ? true : false}
+                required
+              />
+              <label
+                htmlFor="certificate3"
+                className="Application-input-label-file"
+              >
+                Certificate 3 Pdf
+                <i class="arrow uil uil-arrow-down-right" />
+              </label>
+            </div>
+
+            <div className="Application-input col-6">
+              <input
+                id="transcript3"
+                type="file"
+                name="transcript3"
+                className="Application-input-field-file"
+                value={demo}
+                accept="application/pdf"
+                onChange={(e) => demo(e.target.value)}
+                disabled={count < 3 ? true : false}
+                required
+              />
+              <label
+                htmlFor="transcript3"
+                className="Application-input-label-file"
+              >
+                Transcript 3 Pdf
+                <i class="arrow uil uil-arrow-down-right" />
+              </label>
+            </div>
+          </div>
+
+          <div
+            className="row"
+            style={count > 3 ? { display: "flex" } : { display: "none" }}
+          >
+            <div className="Application-input col-6">
+              <input
+                id="certificate4"
+                type="file"
+                name="certificate4"
+                className="Application-input-field-file"
+                value={demo}
+                accept="application/pdf"
+                onChange={(e) => demo(e.target.value)}
+                disabled={count < 4 ? true : false}
+                required
+              />
+              <label
+                htmlFor="certificate4"
+                className="Application-input-label-file"
+              >
+                Certificate 4 Pdf
+                <i class="arrow uil uil-arrow-down-right" />
+              </label>
+            </div>
+
+            <div className="Application-input col-6">
+              <input
+                id="transcript4"
+                type="file"
+                name="transcript4"
+                className="Application-input-field-file"
+                value={demo}
+                accept="application/pdf"
+                onChange={(e) => demo(e.target.value)}
+                disabled={count < 4 ? true : false}
+                required
+              />
+              <label
+                htmlFor="transcript4"
+                className="Application-input-label-file"
+              >
+                Transcript 4 Pdf
+                <i class="arrow uil uil-arrow-down-right" />
+              </label>
+            </div>
+          </div>
+
+          <div
+            className="row"
+            style={count > 4 ? { display: "flex" } : { display: "none" }}
+          >
+            <div className="Application-input col-6">
+              <input
+                id="certificate5"
+                type="file"
+                name="certificate5"
+                className="Application-input-field-file"
+                value={demo}
+                accept="application/pdf"
+                onChange={(e) => demo(e.target.value)}
+                disabled={count < 5 ? true : false}
+                required
+              />
+              <label
+                htmlFor="certificate5"
+                className="Application-input-label-file"
+              >
+                Certificate 5 Pdf
+                <i class="arrow uil uil-arrow-down-right" />
+              </label>
+            </div>
+
+            <div className="Application-input col-6">
+              <input
+                id="transcript5"
+                type="file"
+                name="transcript5"
+                className="Application-input-field-file"
+                value={demo}
+                accept="application/pdf"
+                onChange={(e) => demo(e.target.value)}
+                disabled={count < 5 ? true : false}
+                required
+              />
+              <label
+                htmlFor="transcript5"
+                className="Application-input-label-file"
+              >
+                Transcript 5 Pdf
+                <i class="arrow uil uil-arrow-down-right" />
+              </label>
+            </div>
+          </div>
+
+          <br />
+          <hr class="line solid" />
+
+          <div className="row">
+            <div className="Application-input col-6">
+              <input
+                required
+                id="profession"
+                type="text"
+                name="profession"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="profession"
+                className="Application-input-labelrow"
+              >
+                Applicant Profession
+              </label>
+            </div>
+            <div className="Application-input col-6">
+              <input
+                required
+                id="language"
+                type="text"
+                name="language"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label htmlFor="language" className="Application-input-label">
+                Mother Language
+              </label>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="Application-input col-6">
+              <input
+                required
+                id="fathername"
+                type="text"
+                name="fathername"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="fathername"
+                className="Application-input-labelrow"
+              >
+                Father's Name
+              </label>
+            </div>
+
+            <div className="Application-input col-6">
+              <input
+                required
+                id="mothername"
+                type="text"
+                name="mothername"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label htmlFor="mothername" className="Application-input-label">
+                Mother's Name
+              </label>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="Application-input col-6">
+              <input
+                required
+                id="fatheremployement"
+                type="text"
+                name="fatheremployement"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="fatheremployement"
+                className="Application-input-labelrow"
+              >
+                Father's Employment
+              </label>
+            </div>
+
+            <div className="Application-input col-6">
+              <input
+                required
+                id="motheremployement"
+                type="text"
+                name="motheremployement"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="motheremployement"
+                className="Application-input-label"
+              >
+                Mother's Employment
+              </label>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-6">
+              <PhoneInput
+                inputProps={{
+                  name: "fathernumber",
+                  required: true,
+                }}
+                id="fathernumber"
+                placeholder=""
+                type="tel"
+                value={phone}
+                onChange={setphone}
+                enableSearch
+                specialLabel="Father's Number:"
+                countryCodeEditable={false}
+                country=" "
+                disableSearchIcon={false}
+              />
+            </div>
+            <div className="col-6">
+              <PhoneInput
+                inputProps={{
+                  name: "mothernumber",
+                  required: true,
+                }}
+                id="mothernumber"
+                placeholder=""
+                type="tel"
+                value={phone}
+                onChange={setphone}
+                enableSearch
+                specialLabel="Mother's Number:"
+                countryCodeEditable={false}
+                country=" "
+                disableSearchIcon={false}
+              />
+            </div>
+          </div>
+
+          <div className="Application-input">
+            <textarea
+              id="requirements"
+              type="text"
+              name="requirements"
+              className="Application-input-field-hearaboutus"
+              value={demo}
+              onChange={(e) => setdemo(e.target.value)}
+            />
+            <label
+              htmlFor="requirements"
+              className="Application-input-label-hearaboutus"
+            >
+              Where did you hear about us?
+            </label>
+          </div>
+          <br />
+          <hr class="line solid" />
+
+          <div className="row">
+            <div className="Application-input col-6">
+              <input
+                required
+                id="passportscan"
+                type="file"
+                name="passportscan"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="passportscan"
+                className="Application-input-label-file"
+              >
+                Passport Scan Copy*
+              </label>
+            </div>
+
+            <div className="Application-input col-6">
+              <input
+                required
+                id="academiccertificate"
+                type="file"
+                name="academiccertificate"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="academiccertificate"
+                className="Application-input-label-file"
+              >
+                Last Academic Certificates*
+              </label>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="Application-input col-6">
+              <input
+                required
+                id="policyclearance"
+                type="file"
+                name="policyclearance"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="policyclearance"
+                className="Application-input-label-file"
+              >
+                Police Clearance (if have)
+              </label>
+            </div>
+
+            <div className="Application-input col-6">
+              <input
+                required
+                id="bankstatement"
+                type="file"
+                name="bankstatement"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="bankstatement"
+                className="Application-input-label-file"
+              >
+                Bank Statement (if have)
+              </label>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="Application-input col-6">
+              <input
+                required
+                id="englishprofeciencydoc"
+                type="file"
+                name="englishprofeciencydoc"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="englishprofeciencydoc"
+                className="Application-input-label-file"
+              >
+                English Proficiency Document (if have)
+              </label>
+            </div>
+
+            <div className="Application-input col-6">
+              <input
+                required
+                id="otherdoc"
+                type="file"
+                name="otherdoc"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="otherdoc"
+                className="Application-input-label-file"
+              >
+                Any Other Document (if have)
+              </label>
+            </div>
+          </div>
+
+          <br />
+          <hr class="line solid" />
+          <p className="divider">
+            ONLY FOR MASTERS & PhD<i class="arrow uil uil-arrow-down-right"></i>
+          </p>
+          <div className="row">
+            <div className="Application-input col-6">
+              <input
+                required
+                id="recommendationletter"
+                type="file"
+                name="recommendationletter"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="recommendationletter"
+                className="Application-input-label-file"
+              >
+                Recommendation Letter
+              </label>
+            </div>
+
+            <div className="Application-input col-6">
+              <input
+                required
+                id="recommendationletter2"
+                type="file"
+                name="recommendationlette2r"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="recommendationletter2"
+                className="Application-input-label-file"
+              >
+                Recommendation Letter 2
+              </label>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="Application-input col-6">
+              <input
+                required
+                id="recommendationletter3"
+                type="file"
+                name="recommendationletter3"
+                className="Application-input-field"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label
+                htmlFor="recommendationletter3"
+                className="Application-input-label-file"
+              >
+                Recommendation Letter 3
+              </label>
+            </div>
+
+            <div className="Application-input col-6">
+              <input
+                required
+                id="studyplan"
+                type="file"
+                name="studyplan"
+                className="Application-input-field-file"
+                value={demo}
+                onChange={(e) => setdemo(e.target.value)}
+              />
+              <label htmlFor="studyplan" className="Application-input-label-file">
+                Study Plan / Research Proposal
+              </label>
+            </div>
+          </div>
+
+          <div className="Application-card-info" style={{ margin: "0px auto" }}>
+            <input
               className="Application-checkbox"
               type="checkbox"
               id="terms"

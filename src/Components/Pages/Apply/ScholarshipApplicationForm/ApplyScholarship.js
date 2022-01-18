@@ -14,7 +14,7 @@ export const ApplyScholarship = () => {
   return (
     <>
       <Container>
-        <HeroImg imgSrc="/static/banner1.jpg" />
+        <HeroImg imgSrc="/img/banner1.jpg" />
         <div className="ScholarshipForm">
           <ScholarshipForm />
         </div>

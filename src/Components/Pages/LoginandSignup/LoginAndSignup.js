@@ -1,14 +1,12 @@
+import "../LoginandSignup/LoginAndSignup.css";
+import validate from "./ValidateInfo";
+import UseForm from "./UseForm";
 import React from "react";
 import { Navigate } from "react-router-dom";
-import "../LoginandSignup/LoginAndSignup.css";
-import UseForm from "./UseForm";
-import validate from "./ValidateInfo";
 
-const LoginAndSignup = ( props ) => {
-  
-  console.log("==> props: ", props);
-  const { handleChange, loginSubmit, signupSubmit, values, error } = UseForm(
-    props,
+const LoginAndSignup = ({ submitForm }) => {
+  const { handleChange, handleSubmit, values, error } = UseForm(
+    submitForm,
     validate
   );
   console.log("===> loginsignup values: ", values);
@@ -32,10 +30,11 @@ const LoginAndSignup = ( props ) => {
             <div class="col-12 text-center align-self-center py-5">
               <div class="section pb-5 pt-5 pt-sm-2 text-align-center">
                 <h6 class="col 12 mb-0 pb-3 text-center">
-                  <span className="label">Log In</span>
-                  <span className="label">Register</span>
+                  <span className="label1">Register</span>
+                  <span className="label2">Login</span>
                 </h6>
                 <input
+                  
                   class="loginCheckbox"
                   type="checkbox"
                   id="reg-log"
@@ -44,7 +43,7 @@ const LoginAndSignup = ( props ) => {
                 <label for="reg-log"></label>
                 <div class="card-3d-wrap mx-auto">
                   <div class="card-3d-wrapper">
-                    <form class="card-front" onSubmit={loginSubmit}>
+                    <form class="card-back" onSubmit={handleSubmit}>
                       <div class="center-wrap">
                         <div class="section text-center">
                           <h4 class="heading mb-4 pb-3">Log In</h4>
@@ -94,7 +93,7 @@ const LoginAndSignup = ( props ) => {
                       </div>
                     </form>
 
-                    <form class="card-back" onSubmit={signupSubmit}>
+                    <form class="card-front" onSubmit={handleSubmit}>
                       <div class="center-wrap">
                         <div class="section text-center">
                           <h4 class="heading mb-4 pb-3">Register</h4>
@@ -138,8 +137,8 @@ const LoginAndSignup = ( props ) => {
                             <input
                               id="phoneno"
                               type="tel"
-                              name="phone"
-                              value={values.phone}
+                              name="phoneno"
+                              value={values.phoneno}
                               onChange={handleChange}
                               class="form-style"
                               placeholder="Your Phone No."

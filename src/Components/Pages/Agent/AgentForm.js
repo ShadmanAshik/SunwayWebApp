@@ -688,7 +688,11 @@ const AgentForm = ({}) => {
             </label>
           </div>
 
-          <div className="Agent-input">
+          <div className="Agent-input" style={
+              agentType === "buninessagent"
+                ? { display: "flex" }
+                : { display: "none" }
+            }>
             <input
               id="tradelicense"
               type="file"
