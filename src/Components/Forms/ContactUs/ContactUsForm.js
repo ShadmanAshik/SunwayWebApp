@@ -1,41 +1,15 @@
 import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./ContactUsForm.css";
+import validate from "./ValidateInfo";
 import PhoneInput from "react-phone-input-2";
+import useForm from "./useForm";
 
-import axios from "axios";
-
-const ContactForm = ({ submitForm }) => {
-  const navigate = useNavigate();
-  // const { handleChange, handleSubmit, values, error } = useForm(
-  //   submitForm,
-  //   validate
-  // );
-  const [Name, setName] = useState(null);
-
-  const [message, setmessage] = useState(null);
-  const [email, setemail] = useState(null);
+const ContactForm = (props) => {
+  const { handleChange, handleSubmit, values, error, setValues } = useForm(
+    props,
+    validate
+  );
   
-  const [phone, setphone] = useState(null);
-
-  const submitData = async () => {
-    let formField = new FormData();
-    formField.append("Name", Name);
-
-    formField.append("email", email);
-    
-    formField.append("phone", phone);
-    formField.append("message", message);
-
-    await axios({
-      method: "post",
-      url: "http://127.0.0.1:8000/contactformdata/",
-      data: formField,
-    }).then((response) => {
-      navigate("/");
-    });
-  };
-
   return (
     <div className="container" id="formContiner">
       <div className="contactus-form">
@@ -45,15 +19,15 @@ const ContactForm = ({ submitForm }) => {
             Just enter your details below And we'll reach you soon.
           </p>
         </div>
-        <form className="card-form">
+        <form className="card-form" onSubmit={handleSubmit}>
           <div className="input">
             <input
               id="name"
               type="text"
               name="name"
               className="input-field-contactus"
-              value={Name}
-              onChange={(e) => setName(e.target.value)}
+              value={values.name}
+              onChange={handleChange}
               required
             />
             <label htmlFor="fname" className="input-label">
@@ -67,8 +41,8 @@ const ContactForm = ({ submitForm }) => {
               type="email"
               name="email"
               className="input-field-contactus"
-              value={email}
-              onChange={(e) => setemail(e.target.value)}
+              value={values.email}
+              onChange={handleChange}
               required
             />
 
@@ -80,22 +54,18 @@ const ContactForm = ({ submitForm }) => {
 
           <div>
             <div>
-              <PhoneInput
-                inputProps={{
-                  name: "phone",
-                  required: true,
-                }}
-                id="phone"
-                placeholder=""
-                type="tel"
-                value={phone}
-                onChange={setphone}
-                enableSearch
-                specialLabel="Phone:"
-                countryCodeEditable={false}
-                country=" "
-                disableSearchIcon={false}
-              />
+            <PhoneInput
+            inputProps={{
+              name: 'phone',
+              required: true,
+              autoFocus: true
+            }}
+            country={'bd'}
+            value={values.phone}
+            onChange={(phone, country, e, fv) => {
+              setValues({...values, phone: fv});
+            }}
+          />
             </div>
           </div>
 
@@ -105,8 +75,8 @@ const ContactForm = ({ submitForm }) => {
               type="text"
               name="message"
               className="input-field-contactus"
-              value={message}
-              onChange={(e) => setmessage(e.target.value)}
+              value={values.message}
+              onChange={handleChange}
               required
             />
             <label htmlFor="message" className="input-label-Message">
@@ -117,7 +87,6 @@ const ContactForm = ({ submitForm }) => {
             <button
               className="action-button-Contactus m-2 col-6"
               type="submit"
-              onClick={submitData}
             >
               Submit
             </button>

@@ -1,8 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-
+import ScholarshipForm from "../../Forms/ScholarshipApplication/ScholarshipForm";
 import HeroImg from "../../HeroSection/HeroImg";
-import ScholarshipForm from "./ScholarshipForm";
+
 import './ScholarshipSupport.css'
 
 const ScholarshipSupport = () => {
@@ -21,7 +21,7 @@ const ScholarshipSupport = () => {
                         <img
                           className="ScholarshipSupport-listImg"
                           src="/img/scholarship-Support.jpg"
-                          alt="Image"
+                          alt="scholarship"
                         />
                       </div>
                       <div class="col-sm-12">

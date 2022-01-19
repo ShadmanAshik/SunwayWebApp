@@ -14,10 +14,12 @@ import OurTeam from "./Components/Pages/AboutUs/OurTeam";
 import Policy from "./Components/Pages/AboutUs/Policy";
 import WhySSG from "./Components/Pages/AboutUs/WhySSG";
 import Admin from "./Components/Pages/Admin/Admin";
+import AdmissionApplications from "./Components/Pages/Admin/Components/AdmissionApplications";
 import AgentData from "./Components/Pages/Admin/Components/AgentData";
 import CommonData from "./Components/Pages/Admin/Components/CommonData";
 import ContactData from "./Components/Pages/Admin/Components/ContactData";
 import LanguageFormData from "./Components/Pages/Admin/Components/LanguageFormData";
+import ScholarshipFormData from "./Components/Pages/Admin/Components/ScholarshipFormData";
 import SkillFormData from "./Components/Pages/Admin/Components/SkillFormData";
 import TuitionsData from "./Components/Pages/Admin/Components/TuitionsData";
 import TutorData from "./Components/Pages/Admin/Components/TutorData";
@@ -54,7 +56,7 @@ import StudyTour from "./Components/Pages/Services/StudyTour";
 import VisaApplication from "./Components/Pages/Services/VisaApplication";
 import BangladeshUniversity from "./Components/Pages/University/BangladeshUniversity";
 import GlobalUniversity from "./Components/Pages/University/GlobalUniversity";
-import Snippets from "./Components/Snippet/Snippets";
+
 
 function App() {
   const base_url="http://127.0.0.1:8000";
@@ -144,7 +146,9 @@ function App() {
             <Route path="skillFormData" element={<SkillFormData />} />
             <Route path="tutorData" element={<TutorData />} />
             <Route path="tuitionData" element={<TuitionsData />} />
-            <Route path="snippets" element={<Snippets />} />
+            <Route path="scholarshipFormData" element={<ScholarshipFormData />} />
+            <Route path="admissionFormData" element={<AdmissionApplications />} />
+            
           </Route>
 
         </Routes>

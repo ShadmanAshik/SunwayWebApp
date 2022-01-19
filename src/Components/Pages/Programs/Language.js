@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import LangForm from "./LangForm";
+import LangForm from "../../Forms/LanguageForm/LangForm";
+
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Language.css";
 

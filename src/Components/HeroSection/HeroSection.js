@@ -5,11 +5,11 @@ import AgentForm from "../Pages/Agent/AgentForm";
 import "./HeroSection.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import LoginandSignup from "../Pages/LoginandSignup/LoginAndSignup";
-import LangForm from "../Pages/Programs/LangForm";
-import SkillDevForm from "../Pages/Programs/SkillDevForm";
 import TutorRegForm from "../Forms/TuitionFroms/TutorRegForm";
 import HireTutorForm from "../Forms/TuitionFroms/HireTutorForm";
 import ApplicationForm from "../Pages/Apply/AdmissionApplicationForm/ApplicationForm"
+import SkillDevForm from "../Forms/SkillDev/SkillDevForm";
+import LangForm from "../Forms/LanguageForm/LangForm";
 
 
 const HeroSection = (props) => {

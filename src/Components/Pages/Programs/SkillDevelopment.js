@@ -1,9 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import SkillDevForm from "../../Forms/SkillDev/SkillDevForm";
 
 import HeroImg from "../../HeroSection/HeroImg";
 import "./SkillDevelopment.css";
-import SkillDevForm from "./SkillDevForm";
+
 
 const SkillDevelopment = () => {
   return (

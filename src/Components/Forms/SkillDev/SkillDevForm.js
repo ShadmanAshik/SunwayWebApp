@@ -1,180 +1,141 @@
+import { React } from "react";
+
+import "./SkillDevForm.css"
 import PhoneInput from "react-phone-input-2";
-import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./LangForm.css"
-// import validate from "./ValidateInfo";
-// import useForm from "./useForm";
-import axios from "axios";
+import validate from "./ValidateInfo";
+import useForm from "./useForm";
 
-const LangForm = ({}) => {
-  // const navigate = useNavigate();
-  // const { handleChange, handleSubmit, values, error } = useForm(
-  //   submitForm,
-  //   validate
-  // );
-  const [checked, setchecked] = useState(false);
-  const [fName, setfName] = useState("");
-  const [lName, setlName] = useState("");
-  const [email, setemail] = useState("");
-  const [countryCode, setcountryCode] = useState("");
-  const [phone, setphone] = useState("");
-  const [language, setlanguage] = useState("");
-  const [counselMode, setcounselMode] = useState("");
-  const [country, setcountry] = useState("");
 
-  const submitData = async () => {
-    let formField = new FormData();
-    formField.append("fName", fName);
-    formField.append("lName", lName);
-    formField.append("email", email);
-    formField.append("countryCode", countryCode);
-    formField.append("phone", phone);
-    formField.append("language", language);
-    formField.append("counselMode", counselMode);
-    formField.append("country", country);
-
-    const headers = {
-      "Content-Type": "application/json",
-    };
-
-    axios
-      .post("http://127.0.0.1:8000/contactformdata/", formField, {
-        headers: headers,
-      })
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
+const SkillDevForm = (props) => {
+  
+  const { handleChange, handleSubmit, values, error, setValues } = useForm(
+    props,
+    validate
+  );
+  
   return (
-    <div className="container" id="Lang-formContiner">
-      <div className="Lang-form">
-        <form className="Lang-card-form">
-          <div className="Lang-form-title">
-            <h2>Interested in Enriching Your Language Proficiency with SSG?</h2>
-            <p className="Lang-title-description">
+    <div className="container" id="skilldev-formContiner">
+      <div className="skilldev-form">
+        <form className="skilldev-card-form" onSubmit={handleSubmit}>
+          <div className="skilldev-form-title">
+            <h2>Interested in Developing Your Skills with SSG?</h2>
+            <p className="skilldev-title-description">
               Just enter your details below And we'll reach you soon.
             </p>
           </div>
           <div className="row">
-            <div className="Lang-input col-6">
+            <div className="skilldev-input col-6">
               <input
                 id="fname"
                 type="text"
-                name="fname"
-                className="Lang-input-field"
-                value={fName}
-                onChange={(e) => setfName(e.target.value)}
+                name="fName"
+                className="skilldev-input-field"
+                value={values.fName}
+                onChange={handleChange}
                 required
               />
-              <label htmlFor="fname" className="Lang-input-labelrowAgent">
+              <label htmlFor="fname" className="skilldev-input-labelrowAgent">
                 First Name
               </label>
             </div>
 
-            <div className="Lang-input col-6">
+            <div className="skilldev-input col-6">
               <input
-                id="lname"
+                id="lName"
                 type="text"
-                name="lname"
-                className="Lang-input-field"
-                value={lName}
-                onChange={(e) => setlName(e.target.value)}
+                name="lName"
+                className="skilldev-input-field"
+                value={values.lName}
+                onChange={handleChange}
                 required
               />
-              <label htmlFor="lname" className="Lang-input-label">
+              <label htmlFor="lname" className="skilldev-input-label">
                 Last Name
               </label>
             </div>
           </div>
 
           <div>
-            <PhoneInput
+          <PhoneInput
             inputProps={{
               name: 'phone',
               required: true,
+              autoFocus: true
             }}
-              id="phone"
-              placeholder=""
-              type="tel"
-              value={phone}
-              onChange={setphone}
-              enableSearch
-              specialLabel="Phone:"
-              countryCodeEditable={false}
-              country=" "
-              disableSearchIcon={false}
-            />
+            country={'bd'}
+            value={values.phone}
+            onChange={(phone, country, e, fv) => {
+              setValues({...values, phone: fv});
+            }}
+          />
           </div>
 
-          <div className="Lang-input">
+          <div className="skilldev-input">
             <input
               id="email"
               type="email"
               name="email"
-              className="Lang-input-field"
-              value={email}
-              onChange={(e) => setemail(e.target.value)}
+              className="skilldev-input-field"
+              value={values.email}
+              onChange={handleChange}
               required
             />
-            <label htmlFor="email" className="Lang-input-label">
+            <label htmlFor="email" className="skilldev-input-label">
               Email
             </label>
           </div>
 
-          <div className="Lang-input">
+          <div className="skilldev-input">
             <select
               id="counselMode"
               type="text"
               name="counselMode"
-              className="Lang-input-field"
-              value={counselMode}
-              onChange={(e) => setcounselMode(e.target.value)}
+              className="input-field"
+              value={values.counselMode}
+              onChange={handleChange}
               required
             >
               <option value=""></option>
               <option value="In person">In Person</option>
-              <option value="Virtual counselling">Virtual Counselling</option>
+              <option value="Virtual counselling">Virtual</option>
             </select>
-            <label htmlFor="counselMode" className="Lang-input-label">
+            <label htmlFor="counselMode" className="input-label">
               Counselling Mode:
             </label>
           </div>
 
-          <div className="Lang-input">
+          <div className="skilldev-input">
             <select
-              id="language"
+              id="skill"
               type="text"
-              name="language"
-              className="Lang-input-field"
-              value={language}
-              onChange={(e) => setlanguage(e.target.value)}
+              name="skill"
+              className="skilldev-input-field"
+              value={values.skill}
+              onChange={handleChange}
               required
             >
               <option value=""></option>
-              <option value="English">English</option>
-              <option value="Chinese">Chinese</option>
-              <option value="Japanese">Japanese</option>
-              <option value="Russian">Russian</option>
-              <option value="French">French</option>
-              <option value="Arabic">Arabic</option>
+              <option value="English Spoken">English Spoken</option>
+              <option value="Communicative English">Communicative English</option>
+              <option value="Academic English">Academic English</option>
+              <option value="IELTS Preparation">IELTS Preparation</option>
+              <option value="Professional Graphic Design">Professional Graphic Design</option>
+              <option value="Web Design and Development">Web Design and Development</option>
+              <option value="Digital Marketing">Digital Marketing</option>
             </select>
-            <label htmlFor="language" className="Lang-input-label">
-              Language:
+            <label htmlFor="skill" className="skilldev-input-label">
+              Select Skill:
             </label>
           </div>
 
-          <div className="Lang-input">
+          <div className="skilldev-input">
             <select
               id="country"
               type="text"
               name="country"
               className="Agent-input-field"
-              value={country}
-              onChange={(e) => setcountry(e.target.value)}
+              value={values.country}
+              onChange={handleChange}
               required
             >
               <option value=""></option>
@@ -443,26 +404,26 @@ const LangForm = ({}) => {
             </label>
           </div>
 
-          <div className="Lang-card-info">
+          <div className="skilldev-card-info">
             <input
-              className="Lang-checkbox"
+              className="skilldev-checkbox"
               type="checkbox"
               id="terms"
-              onChange={(e) => setchecked(!checked)}
+              onChange={handleChange}
               value="agree"
               required
             />
-            <label className="Lang-checkboxinfo" htmlfor="terms">
+            <label className="skilldev-checkboxinfo" htmlfor="terms">
               I agree to the <a href="#">Terms and Conditions</a> and{" "}
               <a href="#">Privacy Policy</a>
             </label>
           </div>
 
-          <div className="Lang-action row">
+          <div className="skilldev-action row">
             <button
-              className="Lang-action-button"
+              className="skilldev-action-button"
               type="submit"
-              onClick={submitData}
+              
             >
               Submit
             </button>
@@ -472,4 +433,4 @@ const LangForm = ({}) => {
     </div>
   );
 };
-export default LangForm;
+export default SkillDevForm;

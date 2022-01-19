@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
+import ScholarshipForm from "../../../Forms/ScholarshipApplication/ScholarshipForm";
 import HeroImg from "../../../HeroSection/HeroImg";
 import "./ScholarshipForm.css";
-import ScholarshipForm from "../../Services/ScholarshipForm";
+
 
 export const ApplyScholarship = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  function submitForm() {
-    setIsSubmitted(true);
-  }
+  
 
   return (
     <>

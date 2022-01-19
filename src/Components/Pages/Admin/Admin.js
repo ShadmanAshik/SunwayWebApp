@@ -8,9 +8,9 @@ function Admin() {
   return (
     <div>
       <Navbar bg="light" variant="light">
-        <Container>
-          <Navbar.Brand href="/admin">Admin Page</Navbar.Brand>
-          <Nav className="me-auto">
+        
+          
+          <Nav className="m-auto">
             <Link className="adminNavItem" to="commonFormData">
               <Nav.Item>Common Data</Nav.Item>
             </Link>
@@ -23,14 +23,21 @@ function Admin() {
             <Link className="adminNavItem" to="skillFormData">
               <Nav.Item>Skills_From Data </Nav.Item>
             </Link> 
+            <Link className="adminNavItem" to="scholarshipFormData">
+              <Nav.Item>Scholarship Applications </Nav.Item>
+            </Link>  
+            <Link className="adminNavItem" to="admissionFormData">
+              <Nav.Item>Admission Applications </Nav.Item>
+            </Link>
+            <Link className="adminNavItem" to="tuitionData">
+              <Nav.Item>Tuition Data </Nav.Item>
+            </Link>  
             <Link className="adminNavItem" to="tutorData">
               <Nav.Item>Tutor Data </Nav.Item>
             </Link> 
-            <Link className="adminNavItem" to="tuitionData">
-              <Nav.Item>Tuition Data </Nav.Item>
-            </Link>        
+                 
           </Nav>
-        </Container>
+       
       </Navbar>
       <Outlet />
     </div>

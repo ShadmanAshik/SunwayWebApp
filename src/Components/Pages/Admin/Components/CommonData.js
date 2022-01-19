@@ -42,7 +42,7 @@ export class CommonData extends Component {
         );
         return (
             <Container>
-                <h1>Contact Information of Students</h1>
+                <h1>Common Information of Students</h1>
                 <table className="table table-bordered">
                 <thead>
                     <tr>
