@@ -5,7 +5,8 @@ import CommonForm from "../../Forms/CommonForm/CommonForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./VideoGallery.css";
 
-const VideoGallery = () => {
+const VideoGallery = (props) => {
+  let baseurl = props.base_url;
   return (
     <>
       <div>
@@ -18,7 +19,9 @@ const VideoGallery = () => {
                 <div className="listItem">
                   <div class="row">
                     <div class="col-sm-12">
-                    <h2>Justin Bieber - Baby (Official Music Video) ft. Ludacris</h2>
+                      <h2>
+                        Justin Bieber - Baby (Official Music Video) ft. Ludacris
+                      </h2>
                       <iframe
                         class="col-12"
                         width="560"
@@ -146,7 +149,7 @@ const VideoGallery = () => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm />
+                <CommonForm base_url={baseurl} />
               </div>
             </div>
           </div>

@@ -5,7 +5,8 @@ import CommonForm from "../../Forms/CommonForm/CommonForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Overseas.css";
 
-const Overseas = () => {
+const Overseas = (props) => {
+  let baseurl = props.base_url;
   return (
     <>
       <Container>
@@ -32,28 +33,27 @@ const Overseas = () => {
                         worldview and a new appreciation for other cultures and
                         people. It is actually a journey to discover the new
                         world. But almost 90% of you are not aware of admission
-                        procedure to reach out to success. 
+                        procedure to reach out to success.
                         <br />
-                        So if you want to be
-                        spontaneous in life and give your education life a new
-                        meaning, then join SSG to mold your career in the best
-                        possible means. This will be one of the best decisions
-                        that will take you closer to your dream. We continuously
-                        endeavor to provide our clients with the right path
-                        towards higher education in foreign countries like the
-                        USA, the UK, Canada, Australia, New Zealand, and many
-                        more. You will get the smartest solution with the help
-                        of our experienced immigration consultants. Our skilled
-                        team will also steer you towards a unique preparation
-                        for all the foreign examinations like SAT, GRE, GMAT,
-                        TOEFL, IELTS, etc.
+                        So if you want to be spontaneous in life and give your
+                        education life a new meaning, then join SSG to mold your
+                        career in the best possible means. This will be one of
+                        the best decisions that will take you closer to your
+                        dream. We continuously endeavor to provide our clients
+                        with the right path towards higher education in foreign
+                        countries like the USA, the UK, Canada, Australia, New
+                        Zealand, and many more. You will get the smartest
+                        solution with the help of our experienced immigration
+                        consultants. Our skilled team will also steer you
+                        towards a unique preparation for all the foreign
+                        examinations like SAT, GRE, GMAT, TOEFL, IELTS, etc.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm />
+                <CommonForm base_url={baseurl} />
               </div>
             </div>
           </div>

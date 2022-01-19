@@ -1,13 +1,14 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
-import CommonForm from '../../Forms/CommonForm/CommonForm';
+import React from "react";
+import { Container } from "react-bootstrap";
+import CommonForm from "../../Forms/CommonForm/CommonForm";
 
-import HeroImg from '../../HeroSection/HeroImg';
-import './Counselling.css'
+import HeroImg from "../../HeroSection/HeroImg";
+import "./Counselling.css";
 
-const Counselling = () => {
-    return (
-      <div>
+const Counselling = (props) => {
+  let baseurl = props.base_url;
+  return (
+    <div>
       <Container>
         <HeroImg imgSrc="/img/banner1.jpg" />
         <div>
@@ -26,21 +27,28 @@ const Counselling = () => {
                     </div>
                     <div class="col-sm-12">
                       <p className="Counselling-listPara">
-                      Most of the students applying for further education abroad can not go through the right way to success. It’s a crucial point. Our counseling for the right country and  University choice. More ever our advisor will help you to make the right career decision considering your educational background and career objective. Students can  join our free counseling season  to find the  most aspired academic goal by  choosing the best career path.
+                        Most of the students applying for further education
+                        abroad can not go through the right way to success. It’s
+                        a crucial point. Our counseling for the right country
+                        and University choice. More ever our advisor will help
+                        you to make the right career decision considering your
+                        educational background and career objective. Students
+                        can join our free counseling season to find the most
+                        aspired academic goal by choosing the best career path.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm />
+                <CommonForm base_url={baseurl} />
               </div>
             </div>
           </div>
         </div>
       </Container>
     </div>
-    );
+  );
 };
 
 export default Counselling;

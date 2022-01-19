@@ -5,7 +5,8 @@ import CommonForm from "../../Forms/CommonForm/CommonForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./IELTSPreparation.css";
 
-const IELTSPreparation = () => {
+const IELTSPreparation = (props) => {
+  let baseurl = props.base_url;
   return (
     <>
       <div>
@@ -17,7 +18,7 @@ const IELTSPreparation = () => {
                 <h1 className="renovation">Renovation in progress...</h1>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm />
+                <CommonForm base_url={baseurl} />
               </div>
             </div>
           </div>

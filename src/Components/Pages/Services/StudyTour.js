@@ -5,7 +5,8 @@ import CommonForm from "../../Forms/CommonForm/CommonForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./StudyTour.css";
 
-const StudyTour = () => {
+const StudyTour = (props) => {
+  let baseurl = props.base_url;
   return (
     <>
       <Container>
@@ -53,7 +54,7 @@ const StudyTour = () => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm />
+              <CommonForm base_url={baseurl} />
               </div>
             </div>
           </div>

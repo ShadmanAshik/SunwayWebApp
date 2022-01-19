@@ -5,7 +5,8 @@ import CommonForm from "../../Forms/CommonForm/CommonForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./GlobalUniversity.css";
 
-function GlobalUniversity() {
+function GlobalUniversity(props) {
+  let baseurl = props.base_url;
   return (
     <div>
       <div>
@@ -17,7 +18,7 @@ function GlobalUniversity() {
                 <h1 className="renovation">Renovation in progress...</h1>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm />
+                <CommonForm base_url={baseurl} />
               </div>
             </div>
           </div>

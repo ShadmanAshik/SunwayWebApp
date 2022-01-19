@@ -3,11 +3,11 @@ import { Col, Container, Row } from "react-bootstrap";
 import EventCards from "../../Card/EventCards.js";
 import CommonForm from "../../Forms/CommonForm/CommonForm.js";
 
-
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Events.css";
 
-const Events = () => {
+const Events = (props) => {
+  let baseurl = props.base_url;
   return (
     <>
       <div>
@@ -26,19 +26,27 @@ const Events = () => {
                     />
                   </Col>
                   <Col>
-                    <EventCards imgSrc="/static/dummy.jpg" text="Event Detail" />
+                    <EventCards
+                      imgSrc="/static/dummy.jpg"
+                      text="Event Detail"
+                    />
                   </Col>
                   <Col>
-                    <EventCards imgSrc="/static/dummy.jpg" text="Event Detail" />
+                    <EventCards
+                      imgSrc="/static/dummy.jpg"
+                      text="Event Detail"
+                    />
                   </Col>
                   <Col>
-                    <EventCards imgSrc="/static/dummy.jpg" text="Event Detail" />
+                    <EventCards
+                      imgSrc="/static/dummy.jpg"
+                      text="Event Detail"
+                    />
                   </Col>
-
                 </Row>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm />
+                <CommonForm base_url={baseurl} />
               </div>
             </div>
           </div>

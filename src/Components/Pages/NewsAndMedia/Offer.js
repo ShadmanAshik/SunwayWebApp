@@ -5,7 +5,8 @@ import "./Offer.css";
 import Cards from "../../Card/OfferCards";
 import CommonForm from "../../Forms/CommonForm/CommonForm";
 
-const Offer = () => {
+const Offer = (props) => {
+  let baseurl = props.base_url;
   return (
     <>
       <div>
@@ -36,7 +37,7 @@ const Offer = () => {
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <CommonForm />
+            <CommonForm base_url={baseurl} />
             </div>
           </div>
         </div>
