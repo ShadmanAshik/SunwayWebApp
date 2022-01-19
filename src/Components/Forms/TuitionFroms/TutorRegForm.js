@@ -1,75 +1,20 @@
-import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./TutorRegForm.css";
+import { React } from "react";
 import PhoneInput from "react-phone-input-2";
-// import validate from "./ValidateInfo";
-// import useForm from "./useForm";
-import axios from "axios";
+import "./TutorRegForm.css";
+import useForm from "./useForm";
+import validate from "./ValidateInfo";
 
-const TutorRegForm = ({}) => {
-  // const navigate = useNavigate();
-  // const { handleChange, handleSubmit, values, error } = useForm(
-  //   submitForm,
-  //   validate
-  // );
-  const [fName, setfName] = useState("");
-  const [lName, setlName] = useState("");
-  const [checked, setchecked] = useState(false);
-  const [email, setemail] = useState("");
-  const [countryCode, setcountryCode] = useState("");
-  const [phone, setphone] = useState("");
-  const [address, setaddress] = useState("");
-
-  const [city, setcity] = useState("");
-  const [degreeobtained, setdegreeobtained] = useState("");
-  const [EducationOrganization, setEducationOrganization] = useState("");
-  const [EducationBackground, setEducationBackground] = useState("");
-  const [gender, setgender] = useState("");
-  const [tuitionarea, settuitionarea] = useState("");
-  const [membertype, setmembertype] = useState("");
-  const [password, setpassword] = useState("");
-  const [confirmpassword, setconfirmpassword] = useState("");
-
-  const submitData = async () => {
-    let formField = new FormData();
-
-    formField.append("email", email);
-    formField.append("countryCode", countryCode);
-    formField.append("phone", phone);
-    formField.append("address", address);
-    formField.append("fName", fName);
-    formField.append("lName", lName);
-    formField.append("city", city);
-
-    formField.append("degreeobtained", degreeobtained);
-    formField.append("EducationOrganization", EducationOrganization);
-    formField.append("EducationBackground", EducationBackground);
-    formField.append("gender", gender);
-    formField.append("tuitionarea", tuitionarea);
-    formField.append("membertype", membertype);
-    formField.append("password", password);
-    formField.append("confirmpassword", confirmpassword);
-
-    const headers = {
-      "Content-Type": "application/json",
-    };
-
-    axios
-      .post("http://127.0.0.1:8000/contactformdata/", formField, {
-        headers: headers,
-      })
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+const TutorRegForm = (props) => {
+  const { handleChange, tutorReghandleSubmit, values, error, setValues} = useForm(
+    props,
+    validate
+  );
+ 
 
   return (
     <div className="container" id="TutorReg-formContiner">
       <div className="TutorReg-form">
-        <form className="TutorReg-card-form">
+        <form className="TutorReg-card-form" onSubmit={tutorReghandleSubmit}>
           <div className="TutorReg-form-title">
             <h2>Become a Tutor.</h2>
             <p className="TutorReg-title-description">
@@ -83,8 +28,8 @@ const TutorRegForm = ({}) => {
                 type="text"
                 name="fname"
                 className="TutorReg-input-field"
-                value={fName}
-                onChange={(e) => setfName(e.target.value)}
+                value={values.fName}
+                onChange={handleChange}
                 required
               />
               <label htmlFor="fname" className="TutorReg-input-labelrow">
@@ -98,8 +43,8 @@ const TutorRegForm = ({}) => {
                 type="text"
                 name="lname"
                 className="TutorReg-input-field"
-                value={lName}
-                onChange={(e) => setlName(e.target.value)}
+                value={values.lName}
+                onChange={handleChange}
                 required
               />
               <label htmlFor="lname" className="TutorReg-input-label">
@@ -109,22 +54,18 @@ const TutorRegForm = ({}) => {
           </div>
 
           <div>
-            <PhoneInput
+          <PhoneInput
             inputProps={{
               name: 'phone',
               required: true,
+              autoFocus: true
             }}
-              id="phone"
-              placeholder=""
-              type="tel"
-              value={phone}
-              onChange={setphone}
-              enableSearch
-              specialLabel="Phone:"
-              countryCodeEditable={false}
-              country=" "
-              disableSearchIcon={false}
-            />
+            country={'bd'}
+            value={values.phone}
+            onChange={(phone, country, e, fv) => {
+              setValues({...values, phone: fv});
+            }}
+          />
           </div>
 
           <div className="TutorReg-input">
@@ -133,8 +74,8 @@ const TutorRegForm = ({}) => {
               type="email"
               name="email"
               className="TutorReg-input-field"
-              value={email}
-              onChange={(e) => setemail(e.target.value)}
+              value={values.email}
+              onChange={handleChange}
               required
             />
             <label htmlFor="email" className="TutorReg-input-label">
@@ -149,8 +90,8 @@ const TutorRegForm = ({}) => {
                 type="text"
                 name="address"
                 className="TutorReg-input-field"
-                value={address}
-                onChange={(e) => setaddress(e.target.value)}
+                value={values.address}
+                onChange={handleChange}
                 required
               />
               <label htmlFor="address" className="TutorReg-input-labelrow">
@@ -164,8 +105,8 @@ const TutorRegForm = ({}) => {
                 type="text"
                 name="city"
                 className="HireTutor-input-field"
-                value={city}
-                onChange={(e) => setcity(e.target.value)}
+                value={values.city}
+                onChange={handleChange}
                 required
               >
                 <option value=""></option>
@@ -190,8 +131,8 @@ const TutorRegForm = ({}) => {
               type="text"
               name="degreeobtained"
               className="HireTutor-input-field"
-              value={degreeobtained}
-              onChange={(e) => setdegreeobtained(e.target.value)}
+              value={values.degreeobtained}
+              onChange={handleChange}
               required
             >
               <option value=""></option>
@@ -214,8 +155,8 @@ const TutorRegForm = ({}) => {
               type="text"
               name="EducationOrganization"
               className="TutorReg-input-field"
-              value={EducationOrganization}
-              onChange={(e) => setEducationOrganization(e.target.value)}
+              value={values.EducationOrganization}
+              onChange={handleChange}
               required
             />
             <label
@@ -232,8 +173,8 @@ const TutorRegForm = ({}) => {
               type="text"
               name="EducationBackground"
               className="TutorReg-input-field"
-              value={EducationBackground}
-              onChange={(e) => setEducationBackground(e.target.value)}
+              value={values.EducationBackground}
+              onChange={handleChange}
               required
             >
               <option value=""></option>
@@ -254,8 +195,8 @@ const TutorRegForm = ({}) => {
               type="text"
               name="gender"
               className="TutorReg-input-field"
-              value={gender}
-              onChange={(e) => setgender(e.target.value)}
+              value={values.gender}
+              onChange={handleChange}
               required
             >
               <option value=""></option>
@@ -275,8 +216,8 @@ const TutorRegForm = ({}) => {
               type="text"
               name="tuitionarea"
               className="TutorReg-input-field"
-              value={tuitionarea}
-              onChange={(e) => settuitionarea(e.target.value)}
+              value={values.tuitionarea}
+              onChange={handleChange}
               required
             />
             <label
@@ -293,8 +234,8 @@ const TutorRegForm = ({}) => {
               type="text"
               name="membertype"
               className="TutorReg-input-field"
-              value={membertype}
-              onChange={(e) => setmembertype(e.target.value)}
+              value={values.membertype}
+              onChange={handleChange}
               required
             >
               <option value=""></option>
@@ -313,8 +254,8 @@ const TutorRegForm = ({}) => {
               type="text"
               name="password"
               className="TutorReg-input-field"
-              value={password}
-              onChange={(e) => setpassword(e.target.value)}
+              value={values.password}
+              onChange={handleChange}
               required
             />
             <label
@@ -327,13 +268,13 @@ const TutorRegForm = ({}) => {
 
           <div className="TutorReg-input">
             <input
-              style={password===confirmpassword ? {backgroundColor:"#ffffff00"}:{backgroundColor:"#f700003b"}}
+              style={values.password===values.confirmpassword ? {backgroundColor:"#ffffff00"}:{backgroundColor:"#f700003b"}}
               id="confirmpassword"
               type="text"
               name="confirmpassword"
               className="TutorReg-input-field"
-              value={confirmpassword}
-              onChange={(e) => setconfirmpassword(e.target.value)}
+              value={values.confirmpassword}
+              onChange={handleChange}
               required
             />
             <label
@@ -349,7 +290,7 @@ const TutorRegForm = ({}) => {
               className="TutorReg-checkbox"
               type="checkbox"
               id="terms"
-              onChange={(e) => setchecked(!checked)}
+              onChange={handleChange}
               value="agree"
               required
             />
@@ -362,10 +303,9 @@ const TutorRegForm = ({}) => {
 
           <div className="TutorReg-action row">
             <button
-              disabled={password===confirmpassword ? false : true}
+              disabled={values.password===values.confirmpassword ? false : true}
               className="TutorReg-action-button"
               type="submit"
-              onClick={submitData}
             >
               Register
             </button>
