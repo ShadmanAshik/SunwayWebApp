@@ -1,5 +1,5 @@
 import PhoneInput from "react-phone-input-2";
-import { React, useState } from "react";
+import { React} from "react";
 
 import "./LangForm.css"
 import validate from "./ValidateInfo";
@@ -97,7 +97,7 @@ const LangForm = ({submitForm}) => {
             >
               <option value=""></option>
               <option value="In person">In Person</option>
-              <option value="Virtual counselling">Virtual Counselling</option>
+              <option value="Virtual counselling">Virtual</option>
             </select>
             <label htmlFor="counselMode" className="Lang-input-label">
               Counselling Mode:

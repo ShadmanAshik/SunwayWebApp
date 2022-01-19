@@ -6,7 +6,7 @@ const useForm = (props, validate) => {
     fName: "",
     lName: "",
     phone: "",
-    counselingMode: "",
+    counselMode: "",
     language: "",
     country:""
   });

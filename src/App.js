@@ -59,7 +59,7 @@ import GlobalUniversity from "./Components/Pages/University/GlobalUniversity";
 
 
 function App() {
-  const base_url="http://127.0.0.1:8000";
+  const base_url="http://127.0.0.1:8000/";
   return (
     <div className="App">
       <BrowserRouter>
@@ -68,23 +68,22 @@ function App() {
         </Sticky>
         <Routes>
         studentHomePage
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home base_url={base_url}/>} />
           <Route exact path="/agentHomePage" element={<Home />} />
           <Route exact path="/studentHomePage" element={<Home />} />
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/about" element={<AboutUS />} />
           <Route exact path="/whyssg" element={<WhySSG />} />
-          <Route exact path="/contact" element={<ContactUs />} />
+          <Route exact path="/contact" element={<ContactUs base_url={base_url}/>} />
           <Route exact path="/mission" element={<Mission />} />
           <Route exact path="/ourteam" element={<OurTeam />} />
           <Route exact path="/policy" element={<Policy />} />
-          <Route exact path="/contact" element={<ContactUs />} />
           <Route exact path="/login" element={<LoginAndSignup base_url={base_url} />} />
           <Route exact path="/overseas" element={<Overseas />} />
-          <Route exact path="/language" element={<Language />} />
-          <Route exact path="/skilldev" element={<SkillDevelopment />} />
-          <Route exact path="/tuition" element={<Tuition />} />
-          <Route exact path="/agent" element={<Agent />} />
+          <Route exact path="/language" element={<Language base_url={base_url}/>} />
+          <Route exact path="/skilldev" element={<SkillDevelopment base_url={base_url} />} />
+          <Route exact path="/tuition" element={<Tuition base_url={base_url}/>} />
+          <Route exact path="/agent" element={<Agent base_url={base_url}/>} />
           <Route exact path="/advocacy" element={<Advocacy />} />
 
           <Route exact path="/studentCounseling" element={<Counseling />} />
@@ -97,7 +96,7 @@ function App() {
           <Route
             exact
             path="/scholarshipSupport"
-            element={<ScholarshipSupport />}
+            element={<ScholarshipSupport base_url={base_url}/>}
           />
           <Route
             exact
@@ -138,7 +137,7 @@ function App() {
           <Route exact path="AdmissionForm" element={<Application />} />
           <Route exact path="/ScholarshipForm" element={<ApplyScholarship />} />
 
-          <Route exact path="adminDashboard" element={<Admin />}>
+          <Route exact path="adminDashboard" element={<Admin base_url={base_url}/>}>
             <Route path="commonFormData" element={<CommonData />} />
             <Route path="contactUsData" element={<ContactData />} />
             <Route path="agentData" element={<AgentData />} />
