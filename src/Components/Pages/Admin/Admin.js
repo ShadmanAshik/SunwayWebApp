@@ -4,7 +4,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, Outlet } from "react-router-dom";
 import "./Admin.css";
 
-function Admin() {
+function Admin( ) {
   return (
     <div>
       <Navbar bg="light" variant="light">

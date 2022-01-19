@@ -6,7 +6,8 @@ import { Container, Table } from "react-bootstrap";
 class Snippet extends React.Component {
   render() {
     return (
-      <tr>        
+      <tr>
+              
         <td>{this.props.snippet.fName} {this.props.snippet.lName}</td>
         <td>{this.props.snippet.email}</td>
         <td>{this.props.snippet.phone}</td>
@@ -27,7 +28,7 @@ export class LanguageFormData extends Component {
   }
   updateSnippetList() {
     axios
-      .get("http://127.0.0.1:8000/form/language/")
+      .get(this.props.base_url+"form/language/")
       .then((response) => {
         console.log("==> response: ", response);
         this.setState({ snippets: response.data });
@@ -47,18 +48,18 @@ export class LanguageFormData extends Component {
           <Table striped bordered hover variant="dark">
             <thead>
               <tr>
+               
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
-                <th>Language</th>
-                
+                <th>Language</th>            
                 <th>Country</th>
                 <th>Counseling Mode</th>
               </tr>
             </thead>
             <tbody>
               {this.state.snippets.map((value, index) => {
-                return <Snippet snippet={value} snipIndex={index} />;
+                return <Snippet snippet={value}/>;
               })}
             </tbody>
           </Table>

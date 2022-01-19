@@ -29,7 +29,7 @@ export class ScholarshipFormData extends Component {
   }
   updateSnippetList() {
     axios
-      .get("http://127.0.0.1:8000/form/scholarship/")
+      .get(this.props.base_url+"form/scholarship/")
       .then((response) => {
         console.log("==> response: ", response);
         this.setState({ snippets: response.data });
@@ -45,7 +45,7 @@ export class ScholarshipFormData extends Component {
     return (
       <div>
         <Container>
-          <h1>Contact Us Form's Data</h1>
+          <h1>Scholarship Applications</h1>
           <Table striped bordered hover size="sm">
             <thead>
               <tr>

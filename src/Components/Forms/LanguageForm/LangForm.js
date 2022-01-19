@@ -6,10 +6,10 @@ import validate from "./ValidateInfo";
 import useForm from "./useForm";
 
 
-const LangForm = ({submitForm}) => {
+const LangForm = (props) => {
   
   const { handleChange, handleSubmit, values, setValues } = useForm(
-    submitForm,
+    props,
     validate
   );
   

@@ -9,7 +9,7 @@ const ContactForm = (props) => {
     props,
     validate
   );
-  
+  console.log("Base URL=>", values.baseurl);
   return (
     <div className="container" id="formContiner">
       <div className="contactus-form">

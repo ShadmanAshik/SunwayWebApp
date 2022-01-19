@@ -5,7 +5,9 @@ import GoogleMap from "../../GoogleMap/GoogleMap";
 import HeroImg from "../../HeroSection/HeroImg";
 
 import "./ContactUs.css";
-const ContactUs = () => {
+const ContactUs = (props) => {
+  let baseurl=props.base_url;
+  console.log(baseurl);
   return (
     <div>
       <Container>
@@ -42,7 +44,7 @@ const ContactUs = () => {
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <ContactForm/>
+              <ContactForm base_url={baseurl}/>
             </div>
           </div>
         </div>

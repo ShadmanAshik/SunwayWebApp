@@ -5,7 +5,8 @@ import CommonForm from "../../Forms/CommonForm/CommonForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./WhySSG.css";
 
-const WhySSG = () => {
+const WhySSG = (props) => {
+  let baseurl = props.base_url;
   return (
     <>
       <Container>
@@ -67,7 +68,7 @@ const WhySSG = () => {
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12">
-            <CommonForm />
+            <CommonForm base_url={baseurl} />
           </div>
         </div>
       </Container>

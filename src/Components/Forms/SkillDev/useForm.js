@@ -10,7 +10,7 @@ const useForm = (props, validate) => {
     phone: "",
     skill:"",
     country:"",
-    baseurl: props.baseurl,
+    baseurl: props.base_url,
   });
   console.log("=====> Values.baseurl",values.baseurl);
  
@@ -35,7 +35,7 @@ const useForm = (props, validate) => {
 
     setErrors(validate(values));
     setIsSubmitting(true);
-    axios.post("http://127.0.0.1:8000/form/skilldev/", values, {
+    axios.post(values.baseurl+"form/skilldev/", values, {
       headers: headers
     })
     .then((response) => {

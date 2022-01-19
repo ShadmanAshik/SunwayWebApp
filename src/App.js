@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./App.css";
 import Footer from "./Components/Footer/Footer";
+import CommonForm from "./Components/Forms/CommonForm/CommonForm";
 import Header from "./Components/Header/Header";
 import AboutUS from "./Components/Pages/AboutUs/AboutUS";
 import ContactUs from "./Components/Pages/AboutUs/ContactUs";
@@ -57,9 +58,9 @@ import VisaApplication from "./Components/Pages/Services/VisaApplication";
 import BangladeshUniversity from "./Components/Pages/University/BangladeshUniversity";
 import GlobalUniversity from "./Components/Pages/University/GlobalUniversity";
 
-
-function App() {
-  const base_url="http://127.0.0.1:8000/";
+const base_url="http://127.0.0.1:8000/";
+const App = ()=> {
+  
   return (
     <div className="App">
       <BrowserRouter>
@@ -72,27 +73,26 @@ function App() {
           <Route exact path="/agentHomePage" element={<Home />} />
           <Route exact path="/studentHomePage" element={<Home />} />
           <Route exact path="/home" element={<Home />} />
-          <Route exact path="/about" element={<AboutUS />} />
-          <Route exact path="/whyssg" element={<WhySSG />} />
+          <Route exact path="/about" element={<AboutUS base_url={base_url}/>} />
+          <Route exact path="/whyssg" element={<WhySSG base_url={base_url}/>} />
           <Route exact path="/contact" element={<ContactUs base_url={base_url}/>} />
-          <Route exact path="/mission" element={<Mission />} />
-          <Route exact path="/ourteam" element={<OurTeam />} />
-          <Route exact path="/policy" element={<Policy />} />
+          <Route exact path="/mission" element={<Mission base_url={base_url}/>} />
+          <Route exact path="/ourteam" element={<OurTeam base_url={base_url}/>} />
+          <Route exact path="/policy" element={<Policy base_url={base_url}/>} />
           <Route exact path="/login" element={<LoginAndSignup base_url={base_url} />} />
-          <Route exact path="/overseas" element={<Overseas />} />
+          <Route exact path="/overseas" element={<Overseas base_url={base_url}/>} />
           <Route exact path="/language" element={<Language base_url={base_url}/>} />
           <Route exact path="/skilldev" element={<SkillDevelopment base_url={base_url} />} />
           <Route exact path="/tuition" element={<Tuition base_url={base_url}/>} />
           <Route exact path="/agent" element={<Agent base_url={base_url}/>} />
-          <Route exact path="/advocacy" element={<Advocacy />} />
-
-          <Route exact path="/studentCounseling" element={<Counseling />} />
+          <Route exact path="/advocacy" element={<Advocacy base_url={base_url}/>} />
+          <Route exact path="/studentCounseling" element={<Counseling base_url={base_url}/>} />
           <Route
             exact
             path="/applicationProcessing"
-            element={<ApplicationProcessing />}
+            element={<ApplicationProcessing base_url={base_url}/>}
           />
-          <Route exact path="/visaApplication" element={<VisaApplication />} />
+          <Route exact path="/visaApplication" element={<VisaApplication base_url={base_url}/>} />
           <Route
             exact
             path="/scholarshipSupport"
@@ -101,52 +101,51 @@ function App() {
           <Route
             exact
             path="/admissionSupport"
-            element={<AdmissionSupoort />}
+            element={<AdmissionSupoort base_url={base_url}/>}
           />
-          <Route exact path="/studyTour" element={<StudyTour />} />
-
-          <Route exact path="/BDUni" element={<BangladeshUniversity />} />
-          <Route exact path="/GUni" element={<GlobalUniversity />} />
+          <Route exact path="/studyTour" element={<StudyTour base_url={base_url}/>} />
+          <Route exact path="/BDUni" element={<BangladeshUniversity base_url={base_url}/>} />
+          <Route exact path="/GUni" element={<GlobalUniversity base_url={base_url}/>} />
           <Route
             exact
             path="/WebDesignAndDevelopment"
-            element={<WebDesignAndDevelopment />}
+            element={<WebDesignAndDevelopment base_url={base_url}/>}
           />
           <Route
             exact
             path="/ProfessionalGraphicDesign"
-            element={<ProfessionalGraphicDesign />}
+            element={<ProfessionalGraphicDesign base_url={base_url}/>}
           />
-          <Route exact path="/LanguageCourses" element={<LanguageCourses />} />
-          <Route exact path="/IELTSPreparation" element={<IELTSPreparation />} />
-          <Route exact path="/EnglishSpoken" element={<EnglishSpoken />} />
-          <Route exact path="/DigitalMarketing" element={<DigitalMarketing />} />
+          <Route exact path="/LanguageCourses" element={<LanguageCourses base_url={base_url}/>} />
+          <Route exact path="/IELTSPreparation" element={<IELTSPreparation base_url={base_url}/>} />
+          <Route exact path="/EnglishSpoken" element={<EnglishSpoken base_url={base_url}/>} />
+          <Route exact path="/DigitalMarketing" element={<DigitalMarketing base_url={base_url}/>} />
           <Route
             exact
             path="/CommunicativeEnglish"
-            element={<CommunicativeEnglish />}
+            element={<CommunicativeEnglish base_url={base_url}/>}
           />
-          <Route exact path="/AcademicEnglish" element={<AcademicEnglish />} />
-          <Route exact path="/Testimonial" element={<Testimonial />} />
-          <Route exact path="/VideoGallery" element={<VideoGallery />} />
-          <Route exact path="/PhotoGallery" element={<PhotoGallery />} />
-          <Route exact path="/Events" element={<Events />} />
-          <Route exact path="/Offer" element={<Offer />} />
-          <Route exact path="/News" element={<News />} />
-          <Route exact path="/Blog" element={<Blog />} />
-          <Route exact path="AdmissionForm" element={<Application />} />
-          <Route exact path="/ScholarshipForm" element={<ApplyScholarship />} />
+          <Route exact path="/AcademicEnglish" element={<AcademicEnglish base_url={base_url}/>} />
+          <Route exact path="/Testimonial" element={<Testimonial base_url={base_url}/>} />
+          <Route exact path="/VideoGallery" element={<VideoGallery base_url={base_url}/>} />
+          <Route exact path="/PhotoGallery" element={<PhotoGallery base_url={base_url}/>} />
+          <Route exact path="/Events" element={<Events base_url={base_url}/>} />
+          <Route exact path="/Offer" element={<Offer base_url={base_url}/>} />
+          <Route exact path="/News" element={<News base_url={base_url}/>} />
+          <Route exact path="/Blog" element={<Blog base_url={base_url}/>} />
+          <Route exact path="AdmissionForm" element={<Application base_url={base_url}/>} />
+          <Route exact path="/ScholarshipForm" element={<ApplyScholarship base_url={base_url}/>} />
 
-          <Route exact path="adminDashboard" element={<Admin base_url={base_url}/>}>
-            <Route path="commonFormData" element={<CommonData />} />
-            <Route path="contactUsData" element={<ContactData />} />
-            <Route path="agentData" element={<AgentData />} />
-            <Route path="languageFormData" element={<LanguageFormData />} />
-            <Route path="skillFormData" element={<SkillFormData />} />
-            <Route path="tutorData" element={<TutorData />} />
-            <Route path="tuitionData" element={<TuitionsData />} />
-            <Route path="scholarshipFormData" element={<ScholarshipFormData />} />
-            <Route path="admissionFormData" element={<AdmissionApplications />} />
+          <Route exact path="adminDashboard" element={<Admin/>}>
+            <Route path="commonFormData" element={<CommonData base_url={base_url}/>} />
+            <Route path="contactUsData" element={<ContactData base_url={base_url}/>} />
+            <Route path="agentData" element={<AgentData base_url={base_url}/>} />
+            <Route path="languageFormData" element={<LanguageFormData base_url={base_url} />} />
+            <Route path="skillFormData" element={<SkillFormData base_url={base_url}/>} />
+            <Route path="tutorData" element={<TutorData base_url={base_url}/>} />
+            <Route path="tuitionData" element={<TuitionsData base_url={base_url}/>} />
+            <Route path="scholarshipFormData" element={<ScholarshipFormData base_url={base_url}/>} />
+            <Route path="admissionFormData" element={<AdmissionApplications base_url={base_url}/>} />
             
           </Route>
 

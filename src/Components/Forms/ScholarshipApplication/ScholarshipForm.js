@@ -6,9 +6,9 @@ import useForm from "./useForm";
 import validate from "./ValidateInfo"
 
 
-const ScholarshipForm = ({ submitForm }) => {
+const ScholarshipForm = ( props ) => {
   const { handleChange, handleSubmit, values, setValues } = useForm(
-    submitForm,
+    props,
     validate
   );
   

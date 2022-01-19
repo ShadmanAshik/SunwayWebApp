@@ -6,7 +6,9 @@ import HeroImg from "../../HeroSection/HeroImg";
 import "./SkillDevelopment.css";
 
 
-const SkillDevelopment = () => {
+const SkillDevelopment = (props) => {
+  let baseurl=props.base_url;
+  console.log("skillDev url=",baseurl);
   return (
     <>
       <Container>
@@ -41,7 +43,7 @@ const SkillDevelopment = () => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
-                <SkillDevForm />
+                <SkillDevForm base_url={baseurl}/>
               </div>
             </div>
           </div>

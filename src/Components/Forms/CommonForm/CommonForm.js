@@ -7,9 +7,9 @@ import "react-phone-input-2/lib/material.css";
 import validate from "./ValidateInfo";
 import useForm from "./useForm";
 
-const CommonForm = ({ submitForm }) => {
+const CommonForm = ( props ) => {
   const { handleChange, handleSubmit, values, setValues } = useForm(
-    submitForm,
+    props,
     validate
   );
   return (

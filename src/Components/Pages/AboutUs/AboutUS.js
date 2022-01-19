@@ -5,7 +5,8 @@ import CommonForm from "../../Forms/CommonForm/CommonForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./AboutUS.css";
 
-function AboutUS() {
+function AboutUS(props) {
+  let baseurl=props.base_url;
   return (
     <>
       <Container>
@@ -60,7 +61,7 @@ function AboutUS() {
           </div>
 
           <div class="col-lg-4 col-md-6 col-sm-12">
-            <CommonForm/>
+            <CommonForm base_url={baseurl}/>
           </div>
         </div>
       </Container>

@@ -5,7 +5,8 @@ import HeroSection from "../../HeroSection/HeroSection";
 import ProgramSlider from "../../Slider/ProgramSlider";
 import ServicesSlider from "../../Slider/ServicesSlider";
 import "./Home.css";
-const Home = () => {
+const Home = (props) => {
+  let baseurl=props.base_url;
   return (
     <>
       <Container>
@@ -20,7 +21,7 @@ const Home = () => {
                 <ServicesSlider />
               </div>
               <div class="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm />
+                <CommonForm base_url={baseurl}/>
               </div>
             </div>
           </div>

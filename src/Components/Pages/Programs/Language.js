@@ -5,7 +5,8 @@ import LangForm from "../../Forms/LanguageForm/LangForm";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Language.css";
 
-const Language = () => {
+const Language = (props) => {
+  let baseurl=props.base_url;
   return (
     <>
       <Container>
@@ -56,7 +57,7 @@ const Language = () => {
                 </div>
               </div>
               <div className=" col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
-                <LangForm />
+                <LangForm base_url={baseurl}/>
               </div>
             </div>
           </div>

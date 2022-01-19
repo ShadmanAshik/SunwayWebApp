@@ -36,16 +36,16 @@ const UseForm = (props, validate) => {
     setIsSubmitting(true);
 
     let data = {
-      // 'is_agent': values.group == "User" ? false : true,
+      // 'is_employee': values.group == "User" ? false : true,
       'email': values.email,
       'password': values.loginPassword
     };
 
 
-    axios.post(values.base_url+"/accounts/token/login/", data)
+    axios.post(values.base_url+"accounts/token/login/", data)
       .then((res)=>{
 
-        console.log("/accounts/token/login res: ", res);
+        console.log("accounts/token/login res: ", res);
         localStorage.setItem('auth_token', res.data.auth_token);
         let config = {
           'headers': {
@@ -53,12 +53,12 @@ const UseForm = (props, validate) => {
           }
         };
         axios.get(
-          values.base_url+"/accounts/users/me/", 
+          values.base_url+"accounts/users/me/", 
           config
         ).then((res)=>{
-          console.log("===> ", values.base_url+"/accounts/users/ ===> ", res);
+          console.log("===> ", values.base_url+"accounts/users/ ===> ", res);
           localStorage.setItem(
-            'user_type', res.data.is_agent? "Agent" : (res.data.is_student ? "Student" :(res.data.is_admin? "Admin":false))
+            'user_type', res.data.is_employee? "Employee" : (res.data.is_appointee ? "Appointee" :(res.data.is_admin? "Admin":false))
           );
           setValues({
             ...values, 
@@ -75,11 +75,12 @@ const UseForm = (props, validate) => {
               'is_authenticated': undefined
             });
           });
-  
+
       }).catch((err)=>{console.log("errors: ", err);});
-      
+
     console.log("==> axios called finished!");
-  };   
+  };
+ 
   const signupSubmit = (e) => {
     e.preventDefault();
     
@@ -95,11 +96,11 @@ const UseForm = (props, validate) => {
     };
 
 
-    axios.post(values.base_url+"/accounts/users/", data)
+    axios.post(values.base_url+"accounts/users/", data)
       .then((res)=>{
         alert("Registration Complete!")
         window.location.reload();
-        console.log("/accounts/users/ res: ", res);
+        console.log("accounts/users/ res: ", res);
   
       }).catch((err)=>{console.log("errors: ", err);});
       

@@ -4,6 +4,7 @@ import { Container, Table } from "react-bootstrap";
 
 class Snippet extends React.Component {
   render() {
+    
     return (
       <tr>
         <td>{this.props.snippet.name}</td>
@@ -22,9 +23,10 @@ export class ContactData extends Component {
     };
     this.updateSnippetList = this.updateSnippetList.bind(this);
   }
+  
   updateSnippetList() {
     axios
-      .get("http://127.0.0.1:8000/form/contactus/")
+      .get(this.props.base_url+"form/contactus/")
       .then((response) => {
         console.log("==> response: ", response);
         this.setState({ snippets: response.data });
@@ -37,6 +39,7 @@ export class ContactData extends Component {
     this.updateSnippetList();
   }
   render() {
+    console.log("URL=>", this.props.base_url)
     return (
       <div>
         <Container>

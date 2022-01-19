@@ -5,15 +5,14 @@ import HeroImg from "../../../HeroSection/HeroImg";
 import "./ScholarshipForm.css";
 
 
-export const ApplyScholarship = () => {
-  
-
+export const ApplyScholarship = (props) => {
+  let baseurl=props.base_url;
   return (
     <>
       <Container>
         <HeroImg imgSrc="/img/banner1.jpg" />
         <div className="ScholarshipForm">
-          <ScholarshipForm />
+          <ScholarshipForm base_url={baseurl}/>
         </div>
       </Container>
     </>

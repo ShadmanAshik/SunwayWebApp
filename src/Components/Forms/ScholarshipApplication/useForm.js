@@ -10,7 +10,7 @@ const useForm = (props, validate) => {
     studyLevel: "",
     studycountry:"",
     counselMode:"",
-
+    baseurl: props.base_url,
   });
   const [error, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -32,7 +32,7 @@ const useForm = (props, validate) => {
 
     setErrors(validate(values));
     setIsSubmitting(true);
-    axios.post('http://127.0.0.1:8000/form/scholarship/', values, {
+    axios.post(values.baseurl+'form/scholarship/', values, {
       headers: headers
     })
     .then((response) => {
