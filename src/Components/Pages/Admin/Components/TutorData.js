@@ -69,7 +69,7 @@ export class TutorData extends Component {
                 <th>Degree Obtained</th>
                 <th>Edu Org</th>
                 <th>Edu Background</th>
-                <th>gender</th>
+                <th>Gender</th>
                 <th>Tuition Area</th>
                 
               </tr>

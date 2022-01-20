@@ -62,11 +62,11 @@ export class TuitionsData extends Component {
                 <th>Students's Name</th>
                 <th>Phone</th>
                 <th>Email</th>              
-                <th>address</th>
-                <th>requirements</th>
+                <th>Address</th>
+                <th>Requirements</th>
                 <th>Class</th>
-                <th>institution</th>
-                <th>medium</th>
+                <th>Institution</th>
+                <th>Medium</th>
               </tr>
             </thead>
             <tbody>

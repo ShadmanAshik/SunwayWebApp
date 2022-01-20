@@ -1,74 +1,82 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Table} from 'react-bootstrap';
+import axios from "axios";
 
+
+
+class Snippet extends React.Component {
+    render() {
+      
+      return (
+        <tr>
+          <td>{this.props.snippet.fName} {this.props.snippet.fName}</td>
+          <td>{this.props.snippet.email}</td>
+          <td>{this.props.snippet.phone}</td>
+          <td>{this.props.snippet.studyLevel}</td>
+          <td>{this.props.snippet.country}</td>
+          <td>{this.props.snippet.counselMode}</td>
+        </tr>
+      );
+    }
+  }
 export class CommonData extends Component {
-    constructor(){
-        super();
-        this.state={
-            dataOfTable:[]
+    constructor(props) {
+        super(props);
+        this.state = {
+          snippets: [],
         };
+        this.updateSnippetList = this.updateSnippetList.bind(this);
         this.config = {
-            'headers': {
-              'Authorization': "Token "+localStorage.getItem('auth_token')
-            }
+          'headers': {
+            'Authorization': "Token "+localStorage.getItem('auth_token')
           }
-    }
-
-    fetchData(){
-        fetch(this.props.base_url+"form/commonformget",this.config)
-        .then(response=>response.json())
-        .then((data)=>{
-            this.setState({
-                dataOfTable:data
-            });
-        });
-    }
-
-    componentDidMount(){
-        this.fetchData();
-    }
-
-    render(){
-       
-        const empData=this.state.dataOfTable;
-        const rows=empData.map((formdata)=>
-            <tr key={formdata.id}>
-                <td>{formdata.fName}</td>
-                <td>{formdata.lName}</td>
-                <td>{formdata.email}</td>
-                <td>{formdata.countryCode}{formdata.phone}</td>
-                <td>{formdata.country}</td>
-                <td>{formdata.counselingMode}</td>
-                {/* <td>
-                    <Link to={'update/'+formdata.id} className="btn btn-info mr-2">Update</Link>
-                    <button onClick={()=>this.deleteData(formdata.id)} className="btn btn-danger">Delete</button>
-                </td> */}
-            </tr>
-        );
+        };
+      }
+      
+    
+    
+      updateSnippetList() {
+        axios
+          .get(this.props.base_url+"form/commonformget/",this.config)
+          .then((response) => {
+            console.log("==> response: ", response);
+            this.setState({ snippets: response.data });
+          })
+          .catch((errors) => {
+            console.log("===> errors: ", errors);
+          });
+      }
+      componentDidMount() {
+        this.updateSnippetList();
+      }
+      render() {
+        console.log("URL=>", this.props.base_url)
         return (
+          <div>
             <Container>
-                <h1>Common Information of Students</h1>
-                <table className="table table-bordered">
+              <h1>Contact Us Form's Data</h1>
+              <Table striped bordered hover size="sm">
                 <thead>
-                    <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Contact</th>
-                        <th>Country</th>
-                        <th>Counselling Mode</th>
-                        {/* <th>Action</th> */}
-                    </tr>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Study Level</th>
+                    <th>Country</th>
+                    <th>Counselling Mode</th>
+                  </tr>
                 </thead>
                 <tbody>
-                    {rows}
+                  {this.state.snippets.map((value, index) => {
+                    return <Snippet snippet={value} />;
+                  })}
                 </tbody>
-            </table>
+              </Table>
             </Container>
-            
+          </div>
         );
+      }
     }
-}
-
+    
 export default CommonData
 

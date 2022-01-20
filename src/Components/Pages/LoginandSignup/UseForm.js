@@ -36,7 +36,7 @@ const UseForm = (props, validate) => {
     setIsSubmitting(true);
 
     let data = {
-      // 'is_employee': values.group == "User" ? false : true,
+      // 'is_agent': values.group == "User" ? false : true,
       'email': values.email,
       'password': values.loginPassword
     };
@@ -58,7 +58,7 @@ const UseForm = (props, validate) => {
         ).then((res)=>{
           console.log("===> ", values.base_url+"accounts/users/ ===> ", res);
           localStorage.setItem(
-            'user_type', res.data.is_employee? "Employee" : (res.data.is_appointee ? "Appointee" :(res.data.is_admin? "Admin":false))
+            'user_type', res.data.is_agent? "Agent" : (res.data.is_student ? "Student" :(res.data.is_admin? "Admin":false))
           );
           setValues({
             ...values, 

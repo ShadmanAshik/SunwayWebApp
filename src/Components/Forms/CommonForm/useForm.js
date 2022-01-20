@@ -6,7 +6,7 @@ const useForm = (props, validate) => {
     fName: "",
     lName: "",
     phone: "",
-    counselingMode: "",
+    counselMode: "",
     studyLevel: "",
     country:"",
     base_url: props.base_url,

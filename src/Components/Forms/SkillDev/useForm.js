@@ -40,6 +40,7 @@ const useForm = (props, validate) => {
     })
     .then((response) => {
       console.log(response.data);
+      alert("Submitted Successfull");
       window.location.reload();
     })
     .catch((error) => {
@@ -51,7 +52,7 @@ const useForm = (props, validate) => {
 
   useEffect(() => {
     if (Object.keys(error).length === 0 && isSubmitting) {
-      alert("Submitted Successfull")
+      
     }
   }, [error]);
 

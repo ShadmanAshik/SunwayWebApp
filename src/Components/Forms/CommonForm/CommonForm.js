@@ -90,11 +90,11 @@ const CommonForm = ( props ) => {
 
           <div className="input">
             <select
-              id="counselingMode"
+              id="counselMode"
               type="text"
-              name="counselingMode"
+              name="counselMode"
               className="input-field"
-              value={values.counselingMode}
+              value={values.counselMode}
               onChange={handleChange}
               required
             >
