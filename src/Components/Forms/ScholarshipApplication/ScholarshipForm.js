@@ -18,9 +18,9 @@ const ScholarshipForm = ( props ) => {
       <div className="Scholarship-form">
         <form className="Scholarship-card-form" onSubmit={handleSubmit}>
           <div className="Scholarship-form-title">
-            <h2>Scholarships to Study Abroad.</h2>
+            <h2>Scholarship to Study Abroad.</h2>
             <p className="Scholarship-title-description">
-              Just enter your details below And we'll reach you soon.
+              Just enter your details below, we'll reach you soon.
             </p>
           </div>
           <div className="row">
@@ -35,7 +35,7 @@ const ScholarshipForm = ( props ) => {
                 required
               />
               <label htmlFor="fname" className="Scholarship-input-labelrowAgent">
-                First Name
+                First Name<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -50,19 +50,22 @@ const ScholarshipForm = ( props ) => {
                 required
               />
               <label htmlFor="lname" className="Scholarship-input-label">
-                Last Name
+                Last Name<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
 
-          <div>
+          <div className=".ScholarshipForm">
           <PhoneInput
               inputProps={{
                 name: "phone",
                 required: true,
-                autoFocus: true,
+                
               }}
-              country={"bd"}
+              country=" "
+              specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
+              enableSearch
+              placeholder=" "
               value={values.phone}
               onChange={(phone, country, e, fv) => {
                 setValues({ ...values, phone: fv });
@@ -81,7 +84,7 @@ const ScholarshipForm = ( props ) => {
               required
             />
             <label htmlFor="email" className="Scholarship-input-label">
-              Email
+              Email<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -96,7 +99,7 @@ const ScholarshipForm = ( props ) => {
               required
             />
             <label htmlFor="studywhen" className="Scholarship-input-label">
-              When do you plan to study?
+              When do you plan to study?<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -372,7 +375,7 @@ const ScholarshipForm = ( props ) => {
               <option value="Zimbabwe">Zimbabwe</option>
             </select>
             <label htmlFor="studycountry" className="Agent-input-label">
-              Preferred Study Destination:
+              Preferred Study Destination:<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -391,7 +394,7 @@ const ScholarshipForm = ( props ) => {
               <option value="Virtual counselling">Virtual</option>
             </select>
             <label htmlFor="counselMode" className="input-label">
-              Counselling Mode:
+              Counselling Mode:<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -421,7 +424,7 @@ const ScholarshipForm = ( props ) => {
               <option value="Engineering">Engineering</option>
             </select>
             <label htmlFor="Studylevel" className="input-label">
-              Preferred Study Level:
+              Preferred Study Level:<span style={{color:"red"}}>*</span>
             </label>
           </div>
 

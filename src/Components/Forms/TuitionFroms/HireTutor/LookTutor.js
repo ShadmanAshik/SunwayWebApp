@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import PhoneInput from "react-phone-input-2";
-import "./HireTutorForm.css" 
+import "./HireTutorForm.css";
 class LookTutor extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +15,6 @@ class LookTutor extends React.Component {
       institution: "",
       medium: "",
       Class: "",
-     
     };
   }
 
@@ -44,11 +43,11 @@ class LookTutor extends React.Component {
             <div className="HireTutor-form-title">
               <h2>Looking for a Tutor?</h2>
               <p className="HireTutor-title-description">
-                Just enter your details below And we'll reach you soon.
+                Just enter your details below, we'll reach you soon.
               </p>
             </div>
             <div className="row">
-              <div className="HireTutor-input col-6">
+              <div className="HireTutor-input">
                 <input
                   id="YourName"
                   type="text"
@@ -59,34 +58,22 @@ class LookTutor extends React.Component {
                   }}
                   required
                 />
-                <label
-                  htmlFor="YourName"
-                  className="HireTutor-input-labelrowAgent"
-                >
-                  Your Name:
-                </label>
-              </div>
-
-              <div className="HireTutor-input col-6">
-                <input
-                  id="StudentName"
-                  type="text"
-                  name="StudentName"
-                  className="HireTutor-input-field"
-                  onChange={(e) => {
-                    this.setState({ studentName: e.target.value });
-                  }}
-                  required
-                />
-                <label htmlFor="StudentName" className="HireTutor-input-label">
-                  Student Name:
+                <label htmlFor="YourName" className="HireTutor-input-label">
+                  Your Name:<span style={{color:"red"}}>*</span>
                 </label>
               </div>
             </div>
 
-            <div>
+            <div className="HireTutor">
               <PhoneInput
-                country={"bd"}
+                inputProps={{
+                  name: "phone",
+                  required: true,
+                }}
+                specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
+                country=" "
+                enableSearch
+                placeholder=" "
                 value={this.state.phone}
                 onChange={(phone) => this.setState({ phone })}
               />
@@ -97,14 +84,14 @@ class LookTutor extends React.Component {
                 id="email"
                 type="email"
                 name="email"
-                className="HireTutor-input-field"
+                placeholder=" "
+                className="HireTutor-input-field-notreq"
                 onChange={(e) => {
                   this.setState({ email: e.target.value });
                 }}
-                required
               />
-              <label htmlFor="email" className="HireTutor-input-label">
-                Email
+              <label htmlFor="email" className="HireTutor-input-label-notreq">
+                Email (If Any)
               </label>
             </div>
 
@@ -120,7 +107,7 @@ class LookTutor extends React.Component {
                 required
               />
               <label htmlFor="address" className="HireTutor-input-label">
-                Address:
+                Address:<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -135,7 +122,23 @@ class LookTutor extends React.Component {
                 }}
               />
               <label htmlFor="requirements" className="input-label-Requirement">
-                Please Mention Your Requirement (if any):
+                Please Mention Your Requirement (If Any):
+              </label>
+            </div>
+
+            <div className="HireTutor-input">
+              <input
+                id="StudentName"
+                type="text"
+                name="StudentName"
+                className="HireTutor-input-field"
+                onChange={(e) => {
+                  this.setState({ studentName: e.target.value });
+                }}
+                required
+              />
+              <label htmlFor="StudentName" className="HireTutor-input-label">
+                Student Name:<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -151,23 +154,7 @@ class LookTutor extends React.Component {
                 required
               />
               <label htmlFor="Class" className="HireTutor-input-label">
-                Class:
-              </label>
-            </div>
-
-            <div className="HireTutor-input">
-              <input
-                id="institution"
-                type="text"
-                name="institution"
-                className="HireTutor-input-field"
-                onChange={(e) => {
-                  this.setState({ institution: e.target.value });
-                }}
-                required
-              />
-              <label htmlFor="institution" className="HireTutor-input-label">
-                Institution Name:
+                Class:<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -190,7 +177,22 @@ class LookTutor extends React.Component {
                 <option value="American Curriculum">American Curriculum</option>
               </select>
               <label htmlFor="medium" className="HireTutor-input-label">
-                Institution Medium:
+                Study Medium:<span style={{color:"red"}}>*</span>
+              </label>
+            </div>
+            <div className="HireTutor-input">
+              <input
+                id="institution"
+                type="text"
+                name="institution"
+                className="HireTutor-input-field"
+                onChange={(e) => {
+                  this.setState({ institution: e.target.value });
+                }}
+                required
+              />
+              <label htmlFor="institution" className="HireTutor-input-label">
+                Institution:<span style={{color:"red"}}>*</span>
               </label>
             </div>
 

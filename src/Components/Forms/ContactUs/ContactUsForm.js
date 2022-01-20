@@ -16,7 +16,7 @@ const ContactForm = (props) => {
         <div className="contactus-form-title">
           <h2>Contact With Us</h2>
           <p className="title-description">
-            Just enter your details below And we'll reach you soon.
+            Just enter your details below, we'll reach you soon.
           </p>
         </div>
         <form className="card-form" onSubmit={handleSubmit}>
@@ -31,7 +31,7 @@ const ContactForm = (props) => {
               required
             />
             <label htmlFor="fname" className="input-label">
-              Name
+              Name<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -47,19 +47,21 @@ const ContactForm = (props) => {
             />
 
             <label htmlFor="email" className="input-label">
-              Email
+              Email<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
           <div>
-            <div>
+            <div className="contactus">
               <PhoneInput
                 inputProps={{
                   name: "phone",
                   required: true,
-                  autoFocus: true,
                 }}
-                country={"bd"}
+                specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
+                country=" "
+                enableSearch
+                placeholder=" "
                 value={values.phone}
                 onChange={(phone, country, e, fv) => {
                   setValues({ ...values, phone: fv });
@@ -79,7 +81,7 @@ const ContactForm = (props) => {
               required
             />
             <label htmlFor="message" className="input-label-Message">
-              Message
+              Message<span style={{color:"red"}}>*</span>
             </label>
           </div>
           <div className="action">

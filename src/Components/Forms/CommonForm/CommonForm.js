@@ -19,7 +19,7 @@ const CommonForm = ( props ) => {
           <div className="contact-form-title">
             <h2>Interested in Studying Abroad with SSG?</h2>
             <p className="title-description">
-              Just enter your details bellow And we'll reach you soon.
+              Just enter your details below, we'll reach you soon.
             </p>
           </div>
           <div className="row">
@@ -34,7 +34,7 @@ const CommonForm = ( props ) => {
                 required
               />
               <label htmlFor="fname" className="input-labelrow">
-                First Name
+                First Name<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -49,7 +49,7 @@ const CommonForm = ( props ) => {
                 required
               />
               <label htmlFor="lname" className="input-label">
-                Last Name
+                Last Name<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
@@ -65,18 +65,22 @@ const CommonForm = ( props ) => {
             />
 
             <label htmlFor="email" className="input-label">
-              Email
+              Email<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
-          <div>
+          <div className="CommonForm">
             <PhoneInput
               inputProps={{
                 name: "phone",
                 required: true,
-                autoFocus: true,
+                
               }}
-              country={"bd"}
+              placeholder=" "
+              specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
+              enableSearch
+              type='tel'
+              countryCodeEditable={false}
               value={values.phone}
               onChange={(phone, country, e, fv) => {
                 setValues({ ...values, phone: fv, country: country.name });
@@ -99,7 +103,7 @@ const CommonForm = ( props ) => {
               <option value="Virtual">Virtual</option>
             </select>
             <label htmlFor="counselMode" className="input-label">
-              Counselling Mode:
+              Counselling Mode:<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -135,7 +139,7 @@ const CommonForm = ( props ) => {
               <option value="IELTS">IELTS</option>
             </select>
             <label htmlFor="Studylevel" className="input-label">
-              Study Level:
+              Study Level:<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -410,7 +414,7 @@ const CommonForm = ( props ) => {
               <option value="Zimbabwe">Zimbabwe</option>
             </select>
             <label htmlFor="country" className="input-label">
-              Country:
+              Country:<span style={{color:"red"}}>*</span>
             </label>
           </div>
 

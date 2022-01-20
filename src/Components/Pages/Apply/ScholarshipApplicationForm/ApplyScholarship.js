@@ -10,7 +10,7 @@ export const ApplyScholarship = (props) => {
   return (
     <>
       <Container>
-        <HeroImg imgSrc="/img/banner1.jpg" />
+        <HeroImg imgSrc="static/banner1.jpg" />
         <div className="ScholarshipForm">
           <ScholarshipForm base_url={base_url}/>
         </div>

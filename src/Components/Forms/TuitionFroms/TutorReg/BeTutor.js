@@ -49,7 +49,7 @@ class BeTutor extends React.Component {
             <div className="TutorReg-form-title">
               <h2>Become a Tutor.</h2>
               <p className="TutorReg-title-description">
-                Just enter your details below And we'll reach you soon.
+                Just enter your details below, we'll reach you soon.
               </p>
             </div>
             <div className="row">
@@ -65,7 +65,7 @@ class BeTutor extends React.Component {
                   required
                 />
                 <label htmlFor="fname" className="TutorReg-input-labelrow">
-                  First Name
+                  First Name<span style={{color:"red"}}>*</span>
                 </label>
               </div>
 
@@ -81,14 +81,21 @@ class BeTutor extends React.Component {
                   required
                 />
                 <label htmlFor="lname" className="TutorReg-input-label">
-                  Last Name
+                  Last Name<span style={{color:"red"}}>*</span>
                 </label>
               </div>
             </div>
 
-            <div>
+            <div className="TutorReg">
               <PhoneInput
-                country={"bd"}
+                inputProps={{
+                  name: "phone",
+                  required: true,
+                }}
+                specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
+                country=" "
+                enableSearch
+                placeholder=" "
                 value={this.state.phone}
                 onChange={(phone) => this.setState({ phone })}
               />
@@ -106,7 +113,7 @@ class BeTutor extends React.Component {
                 required
               />
               <label htmlFor="email" className="TutorReg-input-label">
-                Email
+                Email<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -123,7 +130,7 @@ class BeTutor extends React.Component {
                   required
                 />
                 <label htmlFor="address" className="TutorReg-input-labelrow">
-                  Address:
+                  Address:<span style={{color:"red"}}>*</span>
                 </label>
               </div>
 
@@ -149,7 +156,7 @@ class BeTutor extends React.Component {
                   <option value="Sylhet">Sylhet</option>
                 </select>
                 <label htmlFor="city" className="TutorReg-input-label">
-                  City
+                  City:<span style={{color:"red"}}>*</span>
                 </label>
               </div>
             </div>
@@ -175,7 +182,7 @@ class BeTutor extends React.Component {
                 <option value="Other">Other</option>
               </select>
               <label htmlFor="degreeobtained" className="TutorReg-input-label">
-                Last Degree Obtained
+                Last Obtained Degree<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -194,7 +201,7 @@ class BeTutor extends React.Component {
                 htmlFor="EducationOrganization"
                 className="TutorReg-input-label"
               >
-                Last Education Organization Name:
+                Last Education Institution:<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -220,7 +227,7 @@ class BeTutor extends React.Component {
                 htmlFor="EducationBackground"
                 className="TutorReg-input-label"
               >
-                Educational Background:
+                Educational Background:<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -241,7 +248,7 @@ class BeTutor extends React.Component {
                 <option value="others">Others</option>
               </select>
               <label htmlFor="gender" className="TutorReg-input-label">
-                Gender:
+                Gender:<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -257,7 +264,7 @@ class BeTutor extends React.Component {
                 required
               />
               <label htmlFor="tuitionarea" className="TutorReg-input-label">
-                Expected Tuition Area:
+                Expected Tuition Area:<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -277,7 +284,7 @@ class BeTutor extends React.Component {
                 <option value="Premium">Premium</option>
               </select>
               <label htmlFor="membertype" className="TutorReg-input-label">
-                Member Type:
+                Member Type:<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -293,7 +300,7 @@ class BeTutor extends React.Component {
                 required
               />
               <label htmlFor="password" className="TutorReg-input-label">
-                Password:
+                Password:<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -314,7 +321,7 @@ class BeTutor extends React.Component {
                 required
               />
               <label htmlFor="confirmpassword" className="TutorReg-input-label">
-                Confirm Password:
+                Confirm Password:<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
