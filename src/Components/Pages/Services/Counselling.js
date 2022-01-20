@@ -6,11 +6,11 @@ import HeroImg from "../../HeroSection/HeroImg";
 import "./Counselling.css";
 
 const Counselling = (props) => {
-  let baseurl = props.base_url;
+  let base_url = props.base_url;
   return (
     <div>
       <Container>
-        <HeroImg imgSrc="/img/banner1.jpg" />
+        <HeroImg imgSrc="/static/banner1.jpg" />
         <div>
           <div className="Counselling-container">
             <div class="row">
@@ -21,7 +21,7 @@ const Counselling = (props) => {
                     <div class=" col-sm-12">
                       <img
                         className="Counselling-listImg"
-                        src="/img/Student-Counselling.jpg"
+                        src="/static/Student-Counselling.jpg"
                         alt="Image"
                       />
                     </div>
@@ -41,7 +41,7 @@ const Counselling = (props) => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm base_url={baseurl} />
+                <CommonForm base_url={base_url} />
               </div>
             </div>
           </div>

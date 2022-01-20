@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 
 
@@ -8,10 +8,15 @@ export class AgentData extends Component {
         this.state={
             dataOfTable:[]
         };
+        this.config = {
+            'headers': {
+              'Authorization': "Token "+localStorage.getItem('auth_token')
+            }
+          }
     }
 
     fetchData(){
-        fetch('http://127.0.0.1:8000/contactformdata/')
+        fetch(this.props.base_url+"contactformdataget/",this.config)
         .then(response=>response.json())
         .then((data)=>{
             this.setState({
@@ -24,18 +29,6 @@ export class AgentData extends Component {
         this.fetchData();
     }
 
-    deleteData(id){
-        fetch('http://127.0.0.1:8000/contactfromdata/'+id+'/',{
-            method:'DELETE',
-            body:JSON.stringify(this.state),
-        })
-        .then(response=>response)
-        .then((data)=>{
-            if(data){
-                this.fetchData();
-            }
-        });
-    }
 
     render(){
        

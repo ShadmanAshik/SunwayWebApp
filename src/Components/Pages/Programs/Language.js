@@ -6,7 +6,7 @@ import HeroImg from "../../HeroSection/HeroImg";
 import "./Language.css";
 
 const Language = (props) => {
-  let baseurl=props.base_url;
+  let base_url=props.base_url;
   return (
     <>
       <Container>
@@ -57,7 +57,7 @@ const Language = (props) => {
                 </div>
               </div>
               <div className=" col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
-                <LangForm base_url={baseurl}/>
+                <LangForm base_url={base_url}/>
               </div>
             </div>
           </div>

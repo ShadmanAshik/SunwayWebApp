@@ -5,11 +5,11 @@ import HeroImg from "../../HeroSection/HeroImg";
 import './AdmissionSupoort.css'
 
 const AdmissionSupoort = (props) => {
-  let baseurl = props.base_url;
+  let base_url = props.base_url;
   return (
     <div>
         <Container>
-          <HeroImg imgSrc="/img/banner1.jpg" />
+          <HeroImg imgSrc="/static/banner1.jpg" />
           <div>
             <div className="Admission-container">
               <div class="row">
@@ -20,7 +20,7 @@ const AdmissionSupoort = (props) => {
                       <div class=" col-sm-12">
                         <img
                           className="Admission-listImg"
-                          src="/img/Admission-Support.jpg"
+                          src="/static/Admission-Support.jpg"
                           alt="Image"
                         />
                       </div>
@@ -33,7 +33,7 @@ const AdmissionSupoort = (props) => {
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm base_url={baseurl} />
+                <CommonForm base_url={base_url} />
                 </div>
               </div>
             </div>

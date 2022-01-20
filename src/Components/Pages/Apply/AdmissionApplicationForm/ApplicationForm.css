@@ -7,7 +7,7 @@
   padding: 10px;
   color:white;
   background-color: var(--main-deepBlue);
-  text-align: left;
+  text-align: center;
 }
 .Application-title-description{
   color: white !important;;
@@ -17,19 +17,19 @@
 }
 
 /* for the phone no component */
-.special-label{
+.ApplicationForm .special-label{
   background-color: inherit !important ;
   top:2px !important;
   left: 55px !important;
   color: #66737c !important;
   font-size: inherit !important;
 }
-.react-tel-input{
+.ApplicationForm .react-tel-input{
   display: flex !important;
   flex-direction: column-reverse !important;
   padding-top: 20px !important;
 }
-.form-control {
+.ApplicationForm .form-control {
   border: 0 !important;
   z-index: 1 !important;
   background-color: transparent !important;
@@ -43,12 +43,20 @@
   outline: none !important;
   transition: 0.25s ease !important;
 }
-.flag{
+.ApplicationForm .flag{
   position:absolute !important;
   top: 50%;
   margin-top: 0px !important;
   z-index: 2 !important;
 }
+
+.ApplicationForm .form-control:focus,.ApplicationForm .form-control:valid{
+  outline: none !important;
+  border-bottom-color: var(--main-blue) !important;
+  box-shadow:none !important;
+}
+/* for the phone no component */
+
 .divider-application{
   margin: 0px;
   text-align: center;
@@ -66,13 +74,6 @@
   color: var(--main-blue);
   font-size: 22px;
 }
-.form-control:focus,.form-control:valid{
-  outline: none !important;
-  border-bottom-color: var(--main-blue) !important;
-  box-shadow:none !important;
-}
-/* for the phone no component */
-
 .Application-input-field-file {
   border: 0;
   z-index: 1;
@@ -170,7 +171,78 @@
   font-size: 1.125rem;
   padding: 0.2rem 0;
 }
+/* FOR NOT REQUIRED */
 
+.Application-input-field-notreq {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
+  font-size: 1.125rem;
+  padding: 0.2rem 0;
+}
+.Application-input-field-date-notreq {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
+  font-size: 1.125rem;
+  padding: 0.2rem 0;
+}
+.Application-input-field-file-notreq {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border: 1px solid #eee;
+  font: inherit;
+  font-size: 1.125rem;
+  padding: 0.2rem 0.2rem;
+} 
+
+.Application-input-field-file-notreq:focus {
+  border-color: var(--main-blue);
+}
+
+
+.Application-input-field-date-notreq:focus {
+  outline: 0;
+  border-bottom-color: var(--main-blue);
+}
+
+.Application-input-field-notreq:focus,
+.Application-input-field-notreq:not(:placeholder-shown) {
+  outline: 0;
+  border-bottom-color: var(--main-blue);
+}
+
+.Application-input-field-notreq:focus + .Application-input-label-notreq,
+.Application-input-field-notreq:not(:placeholder-shown) + .Application-input-label-notreq {
+  color: black;
+  transform: translateY(-1.5rem);
+}
+
+.Application-input-field-notreq:focus + .Application-input-labelrow-notreq,
+.Application-input-field-notreq:not(:placeholder-shown) + .Application-input-labelrow-notreq {
+  color: black;
+  transform: translateY(-1.5rem);
+}
+
+.Application-input-label-notreq {
+  color: #8597a3;
+  position: absolute;
+  top: 1.5rem;
+  transition: 0.25s ease;
+}
+.Application-input-labelrow-notreq{
+  color: #8597a3;
+  position: absolute;
+  top: 2.1rem;
+  transition: 0.25s ease;
+}
+
+/* FOR NOT REQUIRED */
 
 .Application-input-field-file {
   border: 0;

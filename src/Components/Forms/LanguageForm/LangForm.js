@@ -18,9 +18,9 @@ const LangForm = (props) => {
       <div className="Lang-form">
         <form className="Lang-card-form" onSubmit={handleSubmit}>
           <div className="Lang-form-title">
-            <h2>Interested in Enriching Your Language Proficiency with SSG?</h2>
+            <h2>Enrich Your Language Proficiency</h2>
             <p className="Lang-title-description">
-              Just enter your details below And we'll reach you soon.
+              Just enter your details below, we'll reach you soon.
             </p>
           </div>
           <div className="row">
@@ -35,7 +35,7 @@ const LangForm = (props) => {
                 required
               />
               <label htmlFor="fname" className="Lang-input-labelrowAgent">
-                First Name
+                First Name<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -50,19 +50,22 @@ const LangForm = (props) => {
                 required
               />
               <label htmlFor="lname" className="Lang-input-label">
-                Last Name
+                Last Name<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
 
-          <div>
+          <div className="Lang">
           <PhoneInput
               inputProps={{
                 name: "phone",
                 required: true,
-                autoFocus: true,
+                
               }}
-              country={"bd"}
+              country=" "
+              specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
+              placeholder=" "
+              enableSearch
               value={values.phone}
               onChange={(phone, country, e, fv) => {
                 setValues({ ...values, phone: fv, country: country.name });
@@ -81,7 +84,7 @@ const LangForm = (props) => {
               required
             />
             <label htmlFor="email" className="Lang-input-label">
-              Email
+              Email<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -100,7 +103,7 @@ const LangForm = (props) => {
               <option value="Virtual counselling">Virtual</option>
             </select>
             <label htmlFor="counselMode" className="Lang-input-label">
-              Counselling Mode:
+              Counselling Mode:<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -123,7 +126,7 @@ const LangForm = (props) => {
               <option value="Arabic">Arabic</option>
             </select>
             <label htmlFor="language" className="Lang-input-label">
-              Language:
+              Language:<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -399,7 +402,7 @@ const LangForm = (props) => {
               <option value="Zimbabwe">Zimbabwe</option>
             </select>
             <label htmlFor="country" className="Agent-input-label">
-              Country:
+              Country:<span style={{color:"red"}}>*</span>
             </label>
           </div>
 

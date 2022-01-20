@@ -21,6 +21,7 @@ const ApplicationForm = ({}) => {
   const [phone, setphone] = useState("");
   const [language, setlanguage] = useState("");
   const [demo, setdemo] = useState("");
+  const [demo1, setdemo1] = useState("");
   const [country, setcountry] = useState("");
 
   function decrement() {
@@ -41,6 +42,7 @@ const ApplicationForm = ({}) => {
     formField.append("phone", phone);
     formField.append("language", language);
     formField.append("demo", demo);
+    formField.append("demo1", demo1);
     formField.append("country", country);
 
     const headers = {
@@ -88,7 +90,7 @@ const ApplicationForm = ({}) => {
               htmlFor="agentphoto"
               className="Application-input-label-file"
             >
-              Upload your passport-sized photo.
+              Upload your passport-sized photo.<span style={{color:"red"}}>*</span>
               <i class="arrow uil uil-arrow-down-right" />
             </label>
           </div>
@@ -100,12 +102,13 @@ const ApplicationForm = ({}) => {
                 type="text"
                 name="fname"
                 className="Application-input-field"
+                placeholder=" "
                 value={fName}
                 onChange={(e) => setfName(e.target.value)}
                 required
               />
               <label htmlFor="fname" className="Application-input-labelrow">
-                First Name
+                First Name<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -120,13 +123,13 @@ const ApplicationForm = ({}) => {
                 required
               />
               <label htmlFor="lname" className="Application-input-label">
-                Last Name
+                Last Name<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
 
           <div className="row">
-            <div className="col-6">
+            <div className="ApplicationForm col-6">
               <PhoneInput
                 inputProps={{
                   name: "phone",
@@ -138,7 +141,7 @@ const ApplicationForm = ({}) => {
                 value={phone}
                 onChange={setphone}
                 enableSearch
-                specialLabel="Phone:"
+                specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
                 countryCodeEditable={false}
                 country=" "
                 disableSearchIcon={false}
@@ -156,47 +159,43 @@ const ApplicationForm = ({}) => {
                 required
               />
               <label htmlFor="email" className="Application-input-label">
-                Email
+                Email<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
 
           <div className="row">
-            <div className="Application-input col-6">
+          <div className="Application-input col-6">
               <input
                 id="passportno"
                 type="text"
                 name="passportno"
-                className="Application-input-field"
-                placeholder=""
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
-                required
+                className="Application-input-field-notreq"
+                placeholder=" "
+                
+                
               />
-              <label
-                htmlFor="passportno"
-                className="Application-input-labelrow"
-              >
-                Passport Number
+              <label htmlFor="passportno" className="Application-input-labelrow-notreq">
+                Passport No. (If Any)
               </label>
             </div>
+
             <div className="Application-input col-6">
-              <label
-                htmlFor="passportExpireDate"
-                className="Application-input-label-date"
-              >
-                Passport Expire Date
-              </label>
+              
               <input
                 id="passportExpireDate"
                 type="date"
                 name="passportExpireDate"
-                className="Application-input-field"
-                placeholder=""
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
-                required
+                className="Application-input-field-date-notreq"
+                placeholder=" "
+                
               />
+              <label
+                htmlFor="passportExpireDate"
+                className="Application-input-label-date"
+              >
+                Passport Expire Date (If Any)
+              </label>
             </div>
           </div>
 
@@ -410,22 +409,21 @@ const ApplicationForm = ({}) => {
                 <option value="zimbabwean">Zimbabwean</option>
               </select>
               <label htmlFor="country" className="Application-input-labelrow">
-                Nationality:
+                Nationality:<span style={{color:"red"}}>*</span>
               </label>
             </div>
             <div className="Application-input col-6">
               <input
-                id="religion"
+                id="nid/birthredno"
                 type="text"
-                name="religion"
+                name="nid/birthredno"
                 className="Application-input-field"
-                placeholder=""
+                placeholder=" "
                 required
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                
               />
-              <label htmlFor="religion" className="Application-input-label">
-                Religion
+              <label htmlFor="nid/birthredno" className="Application-input-label">
+                NID / Birth Certificate Number<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
@@ -447,7 +445,7 @@ const ApplicationForm = ({}) => {
                 <option value="other">Other</option>
               </select>
               <label htmlFor="gender" className="Application-input-labelrow">
-                Gender
+                Gender<span style={{color:"red"}}>*</span>
               </label>
             </div>
             <div className="Application-input col-6">
@@ -465,7 +463,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="dateofbirth"
                 className="Application-input-label-date"
               >
-                Date of Birth
+                Date of Birth<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
@@ -486,7 +484,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="placeofbirth"
                 className="Application-input-labelrow"
               >
-                Place of Birth
+                Place of Birth<span style={{color:"red"}}>*</span>
               </label>
             </div>
             <div className="Application-input col-6">
@@ -507,7 +505,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="maritalstatus"
                 className="Application-input-label"
               >
-                Marital Status
+                Marital Status<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
@@ -525,10 +523,10 @@ const ApplicationForm = ({}) => {
                 onChange={(e) => setdemo(e.target.value)}
               />
               <label htmlFor="homeaddress" className="Application-input-label">
-                Homeland Address
+                Homeland Address<span style={{color:"red"}}>*</span>
               </label>
             </div>
-            <div className="col-6">
+            <div className="ApplicationForm col-6">
               <PhoneInput
                 inputProps={{
                   name: "Homephone",
@@ -540,7 +538,7 @@ const ApplicationForm = ({}) => {
                 value={demo}
                 onChange={setdemo}
                 enableSearch
-                specialLabel="Home Phone:"
+                specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
                 countryCodeEditable={false}
                 country=" "
                 disableSearchIcon={false}
@@ -564,7 +562,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="applyuniveristy"
                 className="Application-input-labelrow"
               >
-                Apply University
+                University Applying For:<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -580,7 +578,7 @@ const ApplicationForm = ({}) => {
                 onChange={(e) => setdemo(e.target.value)}
               />
               <label htmlFor="majorsub" className="Application-input-label">
-                Major Subject
+                Major Subject:<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
@@ -604,12 +602,13 @@ const ApplicationForm = ({}) => {
                 accept="application/pdf"
                 onChange={(e) => demo(e.target.value)}
                 required
+                
               />
               <label
                 htmlFor="certificate1"
                 className="Application-input-label-file"
               >
-                Certificate 1 Pdf
+                Certificate 1 Pdf<span style={{color:"red"}}>*</span>
                 <i class="arrow uil uil-arrow-down-right" />
               </label>
             </div>
@@ -629,7 +628,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="transcript1"
                 className="Application-input-label-file"
               >
-                Transcript 1 Pdf
+                Transcript 1 Pdf<span style={{color:"red"}}>*</span>
                 <i class="arrow uil uil-arrow-down-right" />
               </label>
             </div>
@@ -655,7 +654,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="certificate2"
                 className="Application-input-label-file"
               >
-                Certificate 2 Pdf
+                Certificate 2 Pdf<span style={{color:"red"}}>*</span>
                 <i class="arrow uil uil-arrow-down-right" />
               </label>
             </div>
@@ -676,7 +675,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="transcript2"
                 className="Application-input-label-file"
               >
-                Transcript 2 Pdf
+                Transcript 2 Pdf<span style={{color:"red"}}>*</span>
                 <i class="arrow uil uil-arrow-down-right" />
               </label>
             </div>
@@ -702,7 +701,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="certificate3"
                 className="Application-input-label-file"
               >
-                Certificate 3 Pdf
+                Certificate 3 Pdf<span style={{color:"red"}}>*</span>
                 <i class="arrow uil uil-arrow-down-right" />
               </label>
             </div>
@@ -723,7 +722,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="transcript3"
                 className="Application-input-label-file"
               >
-                Transcript 3 Pdf
+                Transcript 3 Pdf<span style={{color:"red"}}>*</span>
                 <i class="arrow uil uil-arrow-down-right" />
               </label>
             </div>
@@ -749,7 +748,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="certificate4"
                 className="Application-input-label-file"
               >
-                Certificate 4 Pdf
+                Certificate 4 Pdf<span style={{color:"red"}}>*</span>
                 <i class="arrow uil uil-arrow-down-right" />
               </label>
             </div>
@@ -770,7 +769,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="transcript4"
                 className="Application-input-label-file"
               >
-                Transcript 4 Pdf
+                Transcript 4 Pdf<span style={{color:"red"}}>*</span>
                 <i class="arrow uil uil-arrow-down-right" />
               </label>
             </div>
@@ -796,7 +795,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="certificate5"
                 className="Application-input-label-file"
               >
-                Certificate 5 Pdf
+                Certificate 5 Pdf<span style={{color:"red"}}>*</span>
                 <i class="arrow uil uil-arrow-down-right" />
               </label>
             </div>
@@ -817,7 +816,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="transcript5"
                 className="Application-input-label-file"
               >
-                Transcript 5 Pdf
+                Transcript 5 Pdf<span style={{color:"red"}}>*</span>
                 <i class="arrow uil uil-arrow-down-right" />
               </label>
             </div>
@@ -841,7 +840,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="profession"
                 className="Application-input-labelrow"
               >
-                Applicant Profession
+                Applicant's Profession<span style={{color:"red"}}>*</span>
               </label>
             </div>
             <div className="Application-input col-6">
@@ -855,7 +854,7 @@ const ApplicationForm = ({}) => {
                 onChange={(e) => setdemo(e.target.value)}
               />
               <label htmlFor="language" className="Application-input-label">
-                Mother Language
+                Mother Language<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
@@ -875,7 +874,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="fathername"
                 className="Application-input-labelrow"
               >
-                Father's Name
+                Father's Name<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -890,7 +889,7 @@ const ApplicationForm = ({}) => {
                 onChange={(e) => setdemo(e.target.value)}
               />
               <label htmlFor="mothername" className="Application-input-label">
-                Mother's Name
+                Mother's Name<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
@@ -910,7 +909,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="fatheremployement"
                 className="Application-input-labelrow"
               >
-                Father's Employment
+                Father's Profession<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -928,13 +927,13 @@ const ApplicationForm = ({}) => {
                 htmlFor="motheremployement"
                 className="Application-input-label"
               >
-                Mother's Employment
+                Mother's Profession<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
 
           <div className="row">
-            <div className="col-6">
+            <div className="ApplicationForm col-6">
               <PhoneInput
                 inputProps={{
                   name: "fathernumber",
@@ -946,13 +945,13 @@ const ApplicationForm = ({}) => {
                 value={phone}
                 onChange={setphone}
                 enableSearch
-                specialLabel="Father's Number:"
+                specialLabel="Father's Contact Number:"
                 countryCodeEditable={false}
                 country=" "
                 disableSearchIcon={false}
               />
             </div>
-            <div className="col-6">
+            <div className="ApplicationForm col-6">
               <PhoneInput
                 inputProps={{
                   name: "mothernumber",
@@ -964,7 +963,7 @@ const ApplicationForm = ({}) => {
                 value={phone}
                 onChange={setphone}
                 enableSearch
-                specialLabel="Mother's Number:"
+                specialLabel="Mother's Contact Number:"
                 countryCodeEditable={false}
                 country=" "
                 disableSearchIcon={false}
@@ -972,41 +971,24 @@ const ApplicationForm = ({}) => {
             </div>
           </div>
 
-          <div className="Application-input">
-            <textarea
-              id="requirements"
-              type="text"
-              name="requirements"
-              className="Application-input-field-hearaboutus"
-              value={demo}
-              onChange={(e) => setdemo(e.target.value)}
-            />
-            <label
-              htmlFor="requirements"
-              className="Application-input-label-hearaboutus"
-            >
-              Where did you hear about us?
-            </label>
-          </div>
           <br />
           <hr class="line solid" />
 
           <div className="row">
             <div className="Application-input col-6">
               <input
-                required
+                
                 id="passportscan"
                 type="file"
                 name="passportscan"
-                className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                className="Application-input-field-file-notreq"
+                accept="application/pdf"
               />
               <label
                 htmlFor="passportscan"
                 className="Application-input-label-file"
               >
-                Passport Scan Copy*
+                Passport Copy (If Any)
               </label>
             </div>
 
@@ -1016,91 +998,34 @@ const ApplicationForm = ({}) => {
                 id="academiccertificate"
                 type="file"
                 name="academiccertificate"
-                className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                className="Application-input-field-file"
+                accept="application/pdf"
               />
               <label
                 htmlFor="academiccertificate"
                 className="Application-input-label-file"
               >
-                Last Academic Certificates*
+                NID / Birth Certificate Copy<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
 
           <div className="row">
-            <div className="Application-input col-6">
-              <input
-                required
-                id="policyclearance"
-                type="file"
-                name="policyclearance"
-                className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
-              />
-              <label
-                htmlFor="policyclearance"
-                className="Application-input-label-file"
-              >
-                Police Clearance (if have)
-              </label>
-            </div>
 
-            <div className="Application-input col-6">
+            <div className="Application-input col">
               <input
-                required
+                
                 id="bankstatement"
                 type="file"
                 name="bankstatement"
-                className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                className="Application-input-field-file-notreq"
+                accept="application/pdf"
               />
               <label
                 htmlFor="bankstatement"
                 className="Application-input-label-file"
               >
-                Bank Statement (if have)
-              </label>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="Application-input col-6">
-              <input
-                required
-                id="englishprofeciencydoc"
-                type="file"
-                name="englishprofeciencydoc"
-                className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
-              />
-              <label
-                htmlFor="englishprofeciencydoc"
-                className="Application-input-label-file"
-              >
-                English Proficiency Document (if have)
-              </label>
-            </div>
-
-            <div className="Application-input col-6">
-              <input
-                required
-                id="otherdoc"
-                type="file"
-                name="otherdoc"
-                className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
-              />
-              <label
-                htmlFor="otherdoc"
-                className="Application-input-label-file"
-              >
-                Any Other Document (if have)
+                Bank Statement of last 6 months (if any)
               </label>
             </div>
           </div>
@@ -1108,36 +1033,34 @@ const ApplicationForm = ({}) => {
           <br />
           <hr class="line solid" />
           <p className="divider">
-            ONLY FOR MASTERS & PhD<i class="arrow uil uil-arrow-down-right"></i>
+            ONLY FOR MASTERS & PhD (OPTONAL)<i class="arrow uil uil-arrow-down-right"></i>
           </p>
           <div className="row">
             <div className="Application-input col-6">
               <input
-                required
+                
                 id="recommendationletter"
                 type="file"
                 name="recommendationletter"
-                className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                className="Application-input-field-date-notreq"
+                accept="application/pdf"
               />
               <label
                 htmlFor="recommendationletter"
                 className="Application-input-label-file"
               >
-                Recommendation Letter
+                Recommendation Letter 1
               </label>
             </div>
 
             <div className="Application-input col-6">
               <input
-                required
+                
                 id="recommendationletter2"
                 type="file"
                 name="recommendationlette2r"
-                className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                className="Application-input-field-file-notreq"
+                accept="application/pdf"
               />
               <label
                 htmlFor="recommendationletter2"
@@ -1151,13 +1074,12 @@ const ApplicationForm = ({}) => {
           <div className="row">
             <div className="Application-input col-6">
               <input
-                required
+                
                 id="recommendationletter3"
                 type="file"
                 name="recommendationletter3"
-                className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                className="Application-input-field-file-notreq"
+                accept="application/pdf"
               />
               <label
                 htmlFor="recommendationletter3"
@@ -1169,15 +1091,17 @@ const ApplicationForm = ({}) => {
 
             <div className="Application-input col-6">
               <input
-                required
+                
                 id="studyplan"
                 type="file"
                 name="studyplan"
-                className="Application-input-field-file"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                className="Application-input-field-file-notreq"
+                accept="application/pdf"
               />
-              <label htmlFor="studyplan" className="Application-input-label-file">
+              <label
+                htmlFor="studyplan"
+                className="Application-input-label-file"
+              >
                 Study Plan / Research Proposal
               </label>
             </div>

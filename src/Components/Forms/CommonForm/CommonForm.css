@@ -102,18 +102,18 @@
 } */
 
 /* for the phone no component */
-.special-label{
+.CommonForm .special-label{
   top:2px !important;
   left: 55px !important;
   color: #66737c !important;
   font-size: inherit !important;
 }
-.react-tel-input{
+.CommonForm .react-tel-input{
   display: flex !important;
   flex-direction: column-reverse !important;
   padding-top: 20px !important;
 }
-.form-control {
+.CommonForm .form-control {
   border: 0 !important;
   z-index: 1 !important;
   background-color: transparent !important;
@@ -127,14 +127,14 @@
   outline: none !important;
   transition: 0.25s ease !important;
 }
-.flag{
+.CommonForm .flag{
   position:absolute !important;
   top: 50%;
   margin-top: 0px !important;
   z-index: 2 !important;
 }
 
-.form-control:focus,.form-control:valid{
+.CommonForm .form-control:focus,.CommonForm .form-control:valid{
   outline: none !important;
   border-bottom-color: var(--main-blue) !important;
   box-shadow:none !important;

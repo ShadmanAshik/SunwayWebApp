@@ -6,7 +6,7 @@ import HeroImg from "../../HeroSection/HeroImg";
 import "./CommunicativeEnglish.css";
 
 const CommunicativeEnglish = (props) => {
-  let baseurl = props.base_url;
+  let base_url = props.base_url;
   return (
     <>
       <div>
@@ -18,7 +18,7 @@ const CommunicativeEnglish = (props) => {
                 <h1 className="renovation">Renovation in progress...</h1>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm base_url={baseurl} />
+                <CommonForm base_url={base_url} />
               </div>
             </div>
           </div>

@@ -7,8 +7,8 @@ import "./SkillDevelopment.css";
 
 
 const SkillDevelopment = (props) => {
-  let baseurl=props.base_url;
-  console.log("skillDev url=",baseurl);
+  let base_url=props.base_url;
+  console.log("skillDev url=",base_url);
   return (
     <>
       <Container>
@@ -43,7 +43,7 @@ const SkillDevelopment = (props) => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
-                <SkillDevForm base_url={baseurl}/>
+                <SkillDevForm base_url={base_url}/>
               </div>
             </div>
           </div>

@@ -16,13 +16,13 @@ const AgentForm = ({}) => {
   const [fName, setfName] = useState("");
   const [lName, setlName] = useState("");
   const [email, setemail] = useState("");
-  const [countryCode, setcountryCode] = useState("");
+  const [occupation, setoccupation] = useState("");
   const [phone, setphone] = useState("");
   const [country, setcountry] = useState("");
   const [company, setcompany] = useState("");
   const [city, setcity] = useState("");
   const [state, setstate] = useState("");
-  const [WAcountryCode, setWAcountryCode] = useState("");
+  const [AcademicCertificate, setAcademicCertificate] = useState("");
   const [WAphone, setWAphone] = useState("");
   const [agentType, setagentType] = useState("");
   const [Bemail, setBemail] = useState("");
@@ -34,7 +34,7 @@ const AgentForm = ({}) => {
   const [agentnid, setagentnid] = useState("");
   const [passport, setpassport] = useState("");
   const [tradelicense, settradelicense] = useState("");
-  const [busninessReg, setbusninessReg] = useState("");
+  const [busninessRtradeliscenseno, setbusninessRtradeliscenseno] = useState("");
   const [tinbin, settinbin] = useState("");
   const [contactyou, setcontactyou] = useState("");
 
@@ -43,13 +43,13 @@ const AgentForm = ({}) => {
     formField.append("fName", fName);
     formField.append("lName", lName);
     formField.append("email", email);
-    formField.append("countryCode", countryCode);
+    formField.append("occupation", occupation);
     formField.append("phone", phone);
     formField.append("country", country);
     formField.append("company", company);
     formField.append("city", city);
     formField.append("state", state);
-    formField.append("WAcountryCode", WAcountryCode);
+    formField.append("AcademicCertificate", AcademicCertificate);
     formField.append("WAphone", WAphone);
     formField.append("agentType", agentType);
     formField.append("Bemail", Bemail);
@@ -61,7 +61,7 @@ const AgentForm = ({}) => {
     formField.append("agentnid", agentnid);
     formField.append("passport", passport);
     formField.append("tradelicense", tradelicense);
-    formField.append("busninessReg", busninessReg);
+    formField.append("busninessRtradeliscenseno", busninessRtradeliscenseno);
     formField.append("tinbin", tinbin);
     formField.append("contactyou", contactyou);
 
@@ -103,7 +103,7 @@ const AgentForm = ({}) => {
                 required
               />
               <label htmlFor="fname" className="Agent-input-labelrowAgent">
-                First Name
+                First Name<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -118,7 +118,7 @@ const AgentForm = ({}) => {
                 required
               />
               <label htmlFor="lname" className="Agent-input-label">
-                Last Name
+                Last Name<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
@@ -138,7 +138,7 @@ const AgentForm = ({}) => {
               <option value="buninessagent">Business Agent</option>
             </select>
             <label htmlFor="agentType" className="Agent-input-label">
-              Agent Type:
+              Agent Type:<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -155,7 +155,53 @@ const AgentForm = ({}) => {
             <p className="divider">
               For Business Agent<i class="arrow uil uil-arrow-down-right"></i>
             </p>
-            <div>
+            <div className="Agent-input">
+              <input
+                id="company"
+                type="text"
+                name="company"
+                className="Agent-input-field"
+                value={company}
+                onChange={(e) => setcompany(e.target.value)}
+                disabled={agentType === "buninessagent" ? false : true}
+                required
+              />
+              <label htmlFor="company" className="Agent-input-label">
+                Business Name:<span style={{color:"red"}}>*</span>
+              </label>
+            </div>
+            <div className="Agent-input">
+              <input
+                id="busninessRtradeliscenseno"
+                type="text"
+                name="busninessRtradeliscenseno"
+                className="Agent-input-field"
+                value={busninessRtradeliscenseno}
+                onChange={(e) => setbusninessRtradeliscenseno(e.target.value)}
+                disabled={agentType === "buninessagent" ? false : true}
+                required
+              />
+              <label htmlFor="company" className="Agent-input-label">
+                Trade License Number:<span style={{color:"red"}}>*</span>
+              </label>
+            </div>
+            <div className="Agent-input">
+              <input
+                id="Baddress"
+                type="text"
+                name="Baddress"
+                className="Agent-input-field"
+                value={Baddress}
+                onChange={(e) => setBaddress(e.target.value)}
+                disabled={agentType === "buninessagent" ? false : true}
+                required
+              />
+              <label htmlFor="address" className="Agent-input-label">
+                Business Address:<span style={{color:"red"}}>*</span>
+              </label>
+            </div>
+
+            <div className="AgentForm">
               <PhoneInput
                 inputProps={{
                   name: "Bphone",
@@ -167,7 +213,7 @@ const AgentForm = ({}) => {
                 value={Bphone}
                 onChange={setBphone}
                 enableSearch
-                specialLabel="Business Number:"
+                specialLabel={ <span>Business Contact Number:<span style={{color:"red"}}>*</span></span>}
                 countryCodeEditable={false}
                 country=" "
                 disableSearchIcon={false}
@@ -187,39 +233,11 @@ const AgentForm = ({}) => {
                 required
               />
               <label htmlFor="email" className="Agent-input-label">
-                Business Email
+                Business Email:<span style={{color:"red"}}>*</span>
               </label>
             </div>
-            <div className="Agent-input">
-              <input
-                id="Baddress"
-                type="text"
-                name="Baddress"
-                className="Agent-input-field"
-                value={Baddress}
-                onChange={(e) => setBaddress(e.target.value)}
-                disabled={agentType === "buninessagent" ? false : true}
-                required
-              />
-              <label htmlFor="address" className="Agent-input-label">
-                Business Address
-              </label>
-            </div>
-            <div className="Agent-input">
-              <input
-                id="company"
-                type="text"
-                name="company"
-                className="Agent-input-field"
-                value={company}
-                onChange={(e) => setcompany(e.target.value)}
-                disabled={agentType === "buninessagent" ? false : true}
-                required
-              />
-              <label htmlFor="company" className="Agent-input-label">
-                Company Name
-              </label>
-            </div>
+            
+            
           </span>
 
           <div
@@ -235,7 +253,7 @@ const AgentForm = ({}) => {
             <p className="divider">
               For Individual Agent<i class="arrow uil uil-arrow-down-right"></i>
             </p>
-            <div>
+            <div className="AgentForm">
               <PhoneInput
                 inputProps={{
                   name: "phone",
@@ -247,7 +265,7 @@ const AgentForm = ({}) => {
                 value={phone}
                 onChange={setphone}
                 enableSearch
-                specialLabel="Phone:"
+                specialLabel={ <span>Contact Number:<span style={{color:"red"}}>*</span></span>}
                 countryCodeEditable={false}
                 country=" "
                 disableSearchIcon={false}
@@ -266,11 +284,27 @@ const AgentForm = ({}) => {
                 required
               />
               <label htmlFor="email" className="Agent-input-label">
-                Email
+                Email:<span style={{color:"red"}}>*</span>
               </label>
               {/* {error.email && (
                 <p data-tooltip="Invalid Email Address">{error.email}</p>
               )} */}
+            </div>
+            <div className="Agent-input">
+              <input
+                id="occupation"
+                type="text"
+                name="occupation"
+                className="Agent-input-field"
+                value={occupation}
+                onChange={(e) => setoccupation(e.target.value)}
+                disabled={agentType === "individualagent" ? false : true}
+                required
+              />
+              <label htmlFor="text" className="Agent-input-label">
+                Occupation:<span style={{color:"red"}}>*</span>
+              </label>
+              
             </div>
           </div>
 
@@ -546,26 +580,11 @@ const AgentForm = ({}) => {
               <option value="Zimbabwe">Zimbabwe</option>
             </select>
             <label htmlFor="country" className="Agent-input-label">
-              Country:
+              Country:<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
           <div className="row">
-            <div className="Agent-input col-6">
-              <input
-                id="city"
-                type="text"
-                name="city"
-                className="Agent-input-field"
-                value={city}
-                onChange={(e) => setcity(e.target.value)}
-                required
-              />
-              <label htmlFor="zipcode" className="Agent-input-labelrowAgent">
-                City
-              </label>
-            </div>
-
             <div className="Agent-input col-6">
               <input
                 id="state"
@@ -576,19 +595,34 @@ const AgentForm = ({}) => {
                 onChange={(e) => setstate(e.target.value)}
                 required
               />
-              <label htmlFor="state" className="Agent-input-label">
-                State / Area
+              <label htmlFor="state" className="Agent-input-labelrowAgent">
+                State / Area:<span style={{color:"red"}}>*</span>
+              </label>
+            </div>
+            <div className="Agent-input col-6">
+              <input
+                id="city"
+                type="text"
+                name="city"
+                className="Agent-input-field"
+                value={city}
+                onChange={(e) => setcity(e.target.value)}
+                required
+              />
+              <label htmlFor="zipcode" className="Agent-input-label">
+                City:<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
-          <div>
+          <div className="AgentForm-notreq">
             <PhoneInput
             inputProps={{
+              
               name: 'WAphone',
               required: false,
             }}
               id="WAphone"
-              placeholder="Whatsapp Number:"
+              placeholder="Whatsapp Number:(If Any)"
               type="tel"
               value={WAphone}
               onChange={setWAphone}
@@ -607,34 +641,25 @@ const AgentForm = ({}) => {
               id="webaddress"
               type="text"
               name="webaddress"
-              className="Agent-input-field"
+              className="Agent-input-field-notreq"
               value={webaddress}
               onChange={(e) => setwebaddress(e.target.value)}
-              placeholder="Website Address:"
+              placeholder=" "
             />
-            <label htmlFor="webaddress" className="Agent-input-label">
-              
+            <label htmlFor="webaddress" className="Agent-input-label-notreq">
+            Website Address / Social Media URL (If Any)
             </label>
           </div>
 
           <div className="Agent-input">
-            <select
-              id="contactyou"
-              type="text"
-              name="contactyou"
-              className="Agent-input-field"
-              value={contactyou}
-              onChange={(e) => setcontactyou(e.target.value)}
-            >
-              <option value=""></option>
-              <option value="Phone">Phone</option>
-              <option value="Email">Email</option>
-              <option value="Whatsapp">Whatsapp</option>
-              <option value="SMS">SMS</option>
-              <option value="All">All</option>
-            </select>
-            <label htmlFor="countryCode" className="Agent-input-label">
-              Best way to contact you:
+            <div className="row mt-3">
+              <div className="col-4">Phone <input type="checkbox" /></div>
+              <div className="col-4">Email <input type="checkbox" /></div>
+              <div className="col-4">SMS <input type="checkbox" /></div>
+              <div className="col-12">Whatsapp <input type="checkbox" /></div>
+            </div>
+            <label htmlFor="webaddress" className="Agent-input-label-checkbox">
+            Best way to contact you:
             </label>
           </div>
 
@@ -650,7 +675,7 @@ const AgentForm = ({}) => {
               required
             />
             <label htmlFor="agentphoto" className="Agent-input-label-file">
-              Agent Photo
+              Agent Photo<span style={{color:"red"}}>*</span>
               <i class="arrow uil uil-arrow-down-right" />
             </label>
           </div>
@@ -667,23 +692,7 @@ const AgentForm = ({}) => {
               required
             />
             <label htmlFor="agentnid" className="Agent-input-label-file">
-              Agent Scanned NID
-              <i class="arrow uil uil-arrow-down-right" />
-            </label>
-          </div>
-
-          <div className="Agent-input">
-            <input
-              id="passport"
-              type="file"
-              name="passport"
-              className="Agent-input-field-file"
-              accept="application/pdf"
-              value={passport}
-              onChange={(e) => setpassport(e.target.value)}
-            />
-            <label htmlFor="passport" className="Agent-input-label-file">
-              Scanned Passport
+              Agent NID<span style={{color:"red"}}>*</span>
               <i class="arrow uil uil-arrow-down-right" />
             </label>
           </div>
@@ -701,15 +710,20 @@ const AgentForm = ({}) => {
               accept="application/pdf"
               value={tradelicense}
               onChange={(e) => settradelicense(e.target.value)}
+              disabled={agentType === "buninessagent" ? false : true}
               required
             />
             <label htmlFor="tradelicense" className="Agent-input-label-file">
-              Scanned Trade License
+              Trade License<span style={{color:"red"}}>*</span>
               <i class="arrow uil uil-arrow-down-right" />
             </label>
           </div>
 
-          <div className="Agent-input">
+          <div className="Agent-input" style={
+              agentType === "buninessagent"
+                ? { display: "flex" }
+                : { display: "none" }
+            }> 
             <input
               id="tinbin"
               type="file"
@@ -717,11 +731,34 @@ const AgentForm = ({}) => {
               className="Agent-input-field-file"
               accept="application/pdf"
               value={tinbin}
+              disabled={agentType === "buninessagent" ? false : true}
               onChange={(e) => settinbin(e.target.value)}
               required
             />
             <label htmlFor="tinbin" className="Agent-input-label-file">
-              Scanned TIN / BIN
+              TIN / BIN<span style={{color:"red"}}>*</span>
+              <i class="arrow uil uil-arrow-down-right" />
+            </label>
+          </div>
+
+          <div className="Agent-input" style={
+              agentType === "individualagent"
+                ? { display: "flex" }
+                : { display: "none" }
+            }>
+            <input
+              id="AcademicCertificate"
+              type="file"
+              name="AcademicCertificate"
+              className="Agent-input-field-file"
+              accept="application/pdf"
+              value={AcademicCertificate}
+              onChange={(e) => setAcademicCertificate(e.target.value)}
+              disabled={agentType === "individualagent" ? false : true}
+              required
+            />
+            <label htmlFor="tradelicense" className="Agent-input-label-file">
+              Last Academic Certificate<span style={{color:"red"}}>*</span>
               <i class="arrow uil uil-arrow-down-right" />
             </label>
           </div>

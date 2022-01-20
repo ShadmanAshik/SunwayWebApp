@@ -6,7 +6,7 @@ import HeroImg from "../../HeroSection/HeroImg";
 import "./WhySSG.css";
 
 const WhySSG = (props) => {
-  let baseurl = props.base_url;
+  let base_url = props.base_url;
   return (
     <>
       <Container>
@@ -21,7 +21,7 @@ const WhySSG = (props) => {
                   <div class=" col-sm-12">
                     <img
                       className="whyssg-listImg"
-                      src="/img/Why-SSG.jpg"
+                      src="/static/Why-SSG.jpg"
                       alt="whyssg"
                     />
                   </div>
@@ -68,7 +68,7 @@ const WhySSG = (props) => {
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12">
-            <CommonForm base_url={baseurl} />
+            <CommonForm base_url={base_url} />
           </div>
         </div>
       </Container>

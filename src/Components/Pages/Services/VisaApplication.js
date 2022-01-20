@@ -6,11 +6,11 @@ import HeroImg from "../../HeroSection/HeroImg";
 import "./VisaApplication.css";
 
 const VisaApplication = (props) => {
-  let baseurl = props.base_url;
+  let base_url = props.base_url;
   return (
     <div>
       <Container>
-        <HeroImg imgSrc="/img/banner1.jpg" />
+        <HeroImg imgSrc="/static/banner1.jpg" />
         <div>
           <div className="Visa-container">
             <div class="row">
@@ -21,7 +21,7 @@ const VisaApplication = (props) => {
                     <div class=" col-sm-12">
                       <img
                         className="Visa-listImg"
-                        src="/img/visa-application-assistance.png"
+                        src="/static/visa-application-assistance.png"
                         alt="Image"
                       />
                     </div>
@@ -38,7 +38,7 @@ const VisaApplication = (props) => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm base_url={baseurl} />
+                <CommonForm base_url={base_url} />
               </div>
             </div>
           </div>

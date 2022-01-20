@@ -9,7 +9,7 @@ const useForm = (props, validate) => {
     counselingMode: "",
     studyLevel: "",
     country:"",
-    baseurl: props.base_url,
+    base_url: props.base_url,
   });
   const [error, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -31,7 +31,7 @@ const useForm = (props, validate) => {
 
     setErrors(validate(values));
     setIsSubmitting(true);
-    axios.post(values.baseurl+'cfd/Contactformdata/', values, {
+    axios.post(values.base_url+'form/commonformpost/', values, {
       headers: headers
     })
     .then((response) => {

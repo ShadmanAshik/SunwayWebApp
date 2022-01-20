@@ -23,7 +23,7 @@ export default class ProgramSlider extends Component {
         { breakpoint: 1200, settings: { slidesToShow: 1, slidesToScroll: 1 } },
       ],
     };
-    let baseurl = this.props.base_url;
+    let base_url = this.props.base_url;
     return (
       <>
         <div>
@@ -176,7 +176,7 @@ export default class ProgramSlider extends Component {
                 </div>
 
                 <div className="col-lg-4 col-md-6 col-sm-12">
-                  <CommonForm base_url={baseurl} />
+                  <CommonForm base_url={base_url} />
                 </div>
               </div>
             </div>

@@ -14,7 +14,7 @@ function Application() {
   return (
     <>
       <Container>
-        <HeroImg imgSrc="/img/banner1.jpg" />
+        <HeroImg imgSrc="static/banner1.jpg" />
         <div className="ApplicationForm">
           <ApplicationForm />
         </div>

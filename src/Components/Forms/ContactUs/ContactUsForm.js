@@ -1,22 +1,22 @@
-import { React, useState } from "react";
+import { React} from "react";
 import "./ContactUsForm.css";
 import validate from "./ValidateInfo";
 import PhoneInput from "react-phone-input-2";
 import useForm from "./useForm";
 
 const ContactForm = (props) => {
-  const { handleChange, handleSubmit, values, error, setValues } = useForm(
+  const { handleChange, handleSubmit, values, setValues } = useForm(
     props,
     validate
   );
-  console.log("Base URL=>", values.baseurl);
+  console.log("Base URL=>", values.base_url);
   return (
     <div className="container" id="formContiner">
       <div className="contactus-form">
         <div className="contactus-form-title">
           <h2>Contact With Us</h2>
           <p className="title-description">
-            Just enter your details below And we'll reach you soon.
+            Just enter your details below, we'll reach you soon.
           </p>
         </div>
         <form className="card-form" onSubmit={handleSubmit}>
@@ -31,7 +31,7 @@ const ContactForm = (props) => {
               required
             />
             <label htmlFor="fname" className="input-label">
-              Name
+              Name<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -47,25 +47,26 @@ const ContactForm = (props) => {
             />
 
             <label htmlFor="email" className="input-label">
-              Email
+              Email<span style={{color:"red"}}>*</span>
             </label>
-            
           </div>
 
           <div>
-            <div>
-            <PhoneInput
-            inputProps={{
-              name: 'phone',
-              required: true,
-              autoFocus: true
-            }}
-            country={'bd'}
-            value={values.phone}
-            onChange={(phone, country, e, fv) => {
-              setValues({...values, phone: fv});
-            }}
-          />
+            <div className="contactus">
+              <PhoneInput
+                inputProps={{
+                  name: "phone",
+                  required: true,
+                }}
+                specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
+                country=" "
+                enableSearch
+                placeholder=" "
+                value={values.phone}
+                onChange={(phone, country, e, fv) => {
+                  setValues({ ...values, phone: fv });
+                }}
+              />
             </div>
           </div>
 
@@ -80,14 +81,11 @@ const ContactForm = (props) => {
               required
             />
             <label htmlFor="message" className="input-label-Message">
-              Message
+              Message<span style={{color:"red"}}>*</span>
             </label>
           </div>
           <div className="action">
-            <button
-              className="action-button-Contactus m-2 col-6"
-              type="submit"
-            >
+            <button className="action-button-Contactus m-2 col-6" type="submit">
               Submit
             </button>
           </div>

@@ -5,11 +5,11 @@ import HeroImg from "../../HeroSection/HeroImg";
 import "./Advocacy.css";
 
 const Advocacy = (props) => {
-  let baseurl = props.base_url;
+  let base_url = props.base_url;
   return (
     <>
       <Container>
-        <HeroImg imgSrc="/img/banner1.jpg" />
+        <HeroImg imgSrc="/static/banner1.jpg" />
         <div>
           <div className="advocacy-container">
             <div class="row">
@@ -20,7 +20,7 @@ const Advocacy = (props) => {
                     <div class=" col-sm-12">
                       <img
                         className="advocacy-listImg"
-                        src="/img/Advocacy.png"
+                        src="/static/Advocacy.png"
                         alt="Image"
                       />
                     </div>
@@ -33,7 +33,7 @@ const Advocacy = (props) => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-              <CommonForm base_url={baseurl} />
+              <CommonForm base_url={base_url} />
               </div>
             </div>
           </div>

@@ -35,7 +35,7 @@ export default class ServicesSlider extends Component {
             <div>
               <Cards
                 title="Student Counseling"
-                imgSrc="/img/Student-Counselling.jpg"
+                imgSrc="/static/Student-Counselling.jpg"
                 text="Most of the students applying for further education abroad can not go through the right way to success. It’s a crucial point."
                 btn="See More"
                 link='/studentCounseling'
@@ -44,7 +44,7 @@ export default class ServicesSlider extends Component {
             <div>
               <Cards
                 title="Application Processing"
-                imgSrc="/img/Application-Processing.jpg"
+                imgSrc="/static/Application-Processing.jpg"
                 text="Send your students documents over our online system or  by email. After  sending an email please notify our consultant."
                 btn="See More"
                 link='/applicationProcessing'
@@ -53,7 +53,7 @@ export default class ServicesSlider extends Component {
             <div>
               <Cards
                 title="Visa Application"
-                imgSrc="/img/visa-application-assistance.png"
+                imgSrc="/static/visa-application-assistance.png"
                 text="Once student admission is done the next step is visa processing. Different countries have different requirements."
                 btn="See More"
                 link="/visaApplication"
@@ -62,7 +62,7 @@ export default class ServicesSlider extends Component {
             <div>
               <Cards
                 title="Study Tour"
-                imgSrc="/img/StudyTour.png"
+                imgSrc="/static/StudyTour.png"
                 text="Study tour is an experience where students study abroad as an alternative to traditional classroom based learning. . . ."
                 btn="See More"
                 link="/studyTour"
@@ -71,7 +71,7 @@ export default class ServicesSlider extends Component {
             <div>
               <Cards
                 title="Scholarship Support"
-                imgSrc="/img/scholarship-Support.jpg"
+                imgSrc="/static/scholarship-Support.jpg"
                 text="Scholarships are financial support granted to students depending on their academic performance and other criteria."
                 btn="See More"
                 link="/scholarshipSupport"
@@ -80,7 +80,7 @@ export default class ServicesSlider extends Component {
             <div>
               <Cards
                 title="Advocacy"
-                imgSrc="/img/Advocacy.png"
+                imgSrc="/static/Advocacy.png"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 btn="See More"
                 link="/advocacy"
@@ -89,7 +89,7 @@ export default class ServicesSlider extends Component {
             <div>
               <Cards
                 title="Admission Support"
-                imgSrc="/img/Admission-Support.jpg"
+                imgSrc="/static/Admission-Support.jpg"
                 text="Admission application is the most important part for a student aspiring for further education considering  this a first introduction to the  University authority."
                 btn="See More"
                 link="/admissionSupport"

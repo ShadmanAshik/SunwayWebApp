@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React, { Component } from 'react'
-import { Container, Table } from 'react-bootstrap'
+import React, { Component } from 'react';
+import { Container, Table } from 'react-bootstrap';
 
 
 class Snippet extends React.Component {
@@ -26,10 +26,15 @@ export class ScholarshipFormData extends Component {
       snippets: [],
     };
     this.updateSnippetList = this.updateSnippetList.bind(this);
+    this.config = {
+      'headers': {
+        'Authorization': "Token "+localStorage.getItem('auth_token')
+      }
+    }
   }
   updateSnippetList() {
     axios
-      .get(this.props.base_url+"form/scholarship/")
+      .get(this.props.base_url+"form/scholarshipget/",this.config)
       .then((response) => {
         console.log("==> response: ", response);
         this.setState({ snippets: response.data });

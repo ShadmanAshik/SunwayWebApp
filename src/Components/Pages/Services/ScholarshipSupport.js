@@ -5,11 +5,12 @@ import HeroImg from "../../HeroSection/HeroImg";
 
 import './ScholarshipSupport.css'
 
-const ScholarshipSupport = () => {
+const ScholarshipSupport = (props) => {
+  let base_url=props.base_url;
   return (
     <div>
         <Container>
-          <HeroImg imgSrc="/img/banner1.jpg" />
+          <HeroImg imgSrc="/static/banner1.jpg" />
           <div>
             <div className="ScholarshipSupport-container">
               <div class="row">
@@ -20,7 +21,7 @@ const ScholarshipSupport = () => {
                       <div class=" col-sm-12">
                         <img
                           className="ScholarshipSupport-listImg"
-                          src="/img/scholarship-Support.jpg"
+                          src="/static/scholarship-Support.jpg"
                           alt="scholarship"
                         />
                       </div>
@@ -33,7 +34,7 @@ const ScholarshipSupport = () => {
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
-                  <ScholarshipForm />
+                  <ScholarshipForm base_url={base_url}/>
                 </div>
               </div>
             </div>

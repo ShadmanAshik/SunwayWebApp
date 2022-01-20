@@ -18,9 +18,9 @@ const SkillDevForm = (props) => {
       <div className="skilldev-form">
         <form className="skilldev-card-form" onSubmit={handleSubmit}>
           <div className="skilldev-form-title">
-            <h2>Interested in Developing Your Skills with SSG?</h2>
+            <h2>Develop Your Skills.</h2>
             <p className="skilldev-title-description">
-              Just enter your details below And we'll reach you soon.
+              Just enter your details below, we'll reach you soon.
             </p>
           </div>
           <div className="row">
@@ -35,7 +35,7 @@ const SkillDevForm = (props) => {
                 required
               />
               <label htmlFor="fname" className="skilldev-input-labelrowAgent">
-                First Name
+                First Name<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
@@ -50,19 +50,22 @@ const SkillDevForm = (props) => {
                 required
               />
               <label htmlFor="lname" className="skilldev-input-label">
-                Last Name
+                Last Name<span style={{color:"red"}}>*</span>
               </label>
             </div>
           </div>
 
-          <div>
+          <div className="skilldev">
           <PhoneInput
             inputProps={{
               name: 'phone',
               required: true,
-              autoFocus: true
+    
             }}
-            country={'bd'}
+            country=" "
+            specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
+            placeholder=" "
+            enableSearch
             value={values.phone}
             onChange={(phone, country, e, fv) => {
               setValues({...values, phone: fv});
@@ -81,7 +84,7 @@ const SkillDevForm = (props) => {
               required
             />
             <label htmlFor="email" className="skilldev-input-label">
-              Email
+              Email<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -100,7 +103,7 @@ const SkillDevForm = (props) => {
               <option value="Virtual counselling">Virtual</option>
             </select>
             <label htmlFor="counselMode" className="input-label">
-              Counselling Mode:
+              Counselling Mode:<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -124,7 +127,7 @@ const SkillDevForm = (props) => {
               <option value="Digital Marketing">Digital Marketing</option>
             </select>
             <label htmlFor="skill" className="skilldev-input-label">
-              Select Skill:
+              Select Skill:<span style={{color:"red"}}>*</span>
             </label>
           </div>
 
@@ -400,7 +403,7 @@ const SkillDevForm = (props) => {
               <option value="Zimbabwe">Zimbabwe</option>
             </select>
             <label htmlFor="country" className="Agent-input-label">
-              Country:
+              Country:<span style={{color:"red"}}>*</span>
             </label>
           </div>
 

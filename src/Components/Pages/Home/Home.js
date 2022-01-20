@@ -6,11 +6,11 @@ import ProgramSlider from "../../Slider/ProgramSlider";
 import ServicesSlider from "../../Slider/ServicesSlider";
 import "./Home.css";
 const Home = (props) => {
-  let baseurl=props.base_url;
+  let base_url=props.base_url;
   return (
     <>
       <Container>
-        <HeroSection />
+        <HeroSection base_url={base_url}/>
         <div class="row">
           <div className="cardContainer">
             <div class="row">
@@ -21,7 +21,7 @@ const Home = (props) => {
                 <ServicesSlider />
               </div>
               <div class="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm base_url={baseurl}/>
+                <CommonForm base_url={base_url}/>
               </div>
             </div>
           </div>

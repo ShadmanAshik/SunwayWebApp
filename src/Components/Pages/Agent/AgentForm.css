@@ -12,22 +12,93 @@
 .Agent-title-description{
   color: white !important;;
 }
-/* for the phone no component */
-.special-label{
+/* FOR NOT REQUIRED */
+
+.Agent-input-field-notreq {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
+  font-size: 1.125rem;
+  padding: 0.2rem 0;
+}
+.Agent-input-field-date-notreq {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
+  font-size: 1.125rem;
+  padding: 0.2rem 0;
+}
+.Agent-input-field-file-notreq {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border: 1px solid #eee;
+  font: inherit;
+  font-size: 1.125rem;
+  padding: 0.2rem 0.2rem;
+} 
+
+.Agent-input-field-file-notreq:focus {
+  border-color: var(--main-blue);
+}
+
+
+.Agent-input-field-date-notreq:focus {
+  outline: 0;
+  border-bottom-color: var(--main-blue);
+}
+
+.Agent-input-field-notreq:focus,
+.Agent-input-field-notreq:not(:placeholder-shown) {
+  outline: 0;
+  border-bottom-color: var(--main-blue);
+}
+
+.Agent-input-field-notreq:focus + .Agent-input-label-notreq,
+.Agent-input-field-notreq:not(:placeholder-shown) + .Agent-input-label-notreq {
+  color: black;
+  transform: translateY(-1.5rem);
+}
+
+.Agent-input-field-notreq:focus + .Agent-input-labelrow-notreq,
+.Agent-input-field-notreq:not(:placeholder-shown) + .Agent-input-labelrow-notreq {
+  color: black;
+  transform: translateY(-1.5rem);
+}
+
+.Agent-input-label-notreq {
+  color: #8597a3;
+  position: absolute;
+  top: 1.5rem;
+  transition: 0.25s ease;
+}
+.Agent-input-labelrow-notreq{
+  color: #8597a3;
+  position: absolute;
+  top: 2.1rem;
+  transition: 0.25s ease;
+}
+
+
+
+/* FOR NOT REQIRED PHONE NO */
+
+.AgentForm-notreq .special-label{
   top:2px !important;
   left: 55px !important;
   color: #66737c !important;
   font-size: inherit !important;
 }
-.react-tel-input{
+.AgentForm-notreq .react-tel-input{
   display: flex !important;
   flex-direction: column-reverse !important;
   padding-top: 20px !important;
 }
-::placeholder{
-  font-size: 16px!important;
-}
-.form-control {
+.AgentForm-notreq .form-control {
   border: 0 !important;
   z-index: 1 !important;
   background-color: transparent !important;
@@ -41,14 +112,62 @@
   outline: none !important;
   transition: 0.25s ease !important;
 }
-.flag{
+.AgentForm-notreq .flag{
   position:absolute !important;
   top: 50%;
   margin-top: 0px !important;
   z-index: 2 !important;
 }
 
-.form-control:focus,.form-control:valid{
+.AgentForm-notreq .form-control:focus,.AgentForm-notreq .form-control:not(:placeholder-shown){
+  outline: none !important;
+  border-bottom-color: var(--main-blue) !important;
+  box-shadow:none !important;
+}
+
+/* FOR NOT REQUIRED PHONE NO */
+
+/* FOR NOT REQUIRED */
+
+
+/* for the phone no component */
+.AgentForm .special-label{
+  top:2px !important;
+  left: 55px !important;
+  color: #66737c !important;
+  font-size: inherit !important;
+}
+.AgentForm .react-tel-input{
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  padding-top: 20px !important;
+}
+.AgentForm .form-control {
+  border: 0 !important;
+  z-index: 1 !important;
+  background-color: transparent !important;
+  border-bottom: 2px solid #eee !important;
+  font: inherit !important;
+  font-size: 1.125rem !important;
+  margin: 0px 0px 0px 58px !important;
+  padding: 0.2rem 0 !important;
+  width:auto !important;
+  border-radius: 0px!important;
+  outline: none !important;
+  transition: 0.25s ease !important;
+}
+.AgentForm .flag{
+  position:absolute !important;
+  top: 50%;
+  margin-top: 0px !important;
+  z-index: 2 !important;
+}
+ ::placeholder{
+   font-size: 16px !important;
+   color: #8597a3 !important;
+ }
+
+.AgentForm .form-control:focus,.AgentForm .form-control:valid{
   outline: none !important;
   border-bottom-color: var(--main-blue) !important;
   box-shadow:none !important;
@@ -109,6 +228,12 @@ hr.solid {
   color: #8597a3;
   position: absolute;
   top: 1.5rem;
+  transition: 0.25s ease;
+}
+.Agent-input-label-checkbox {
+  color: #8597a3;
+  position: absolute;
+  top: 0rem;
   transition: 0.25s ease;
 }
 .Agent-input-labelrowAgent{

@@ -7,10 +7,15 @@ export class CommonData extends Component {
         this.state={
             dataOfTable:[]
         };
+        this.config = {
+            'headers': {
+              'Authorization': "Token "+localStorage.getItem('auth_token')
+            }
+          }
     }
 
     fetchData(){
-        fetch('http://127.0.0.1:8000/cfd/Contactformdata/')
+        fetch(this.props.base_url+"form/commonformget",this.config)
         .then(response=>response.json())
         .then((data)=>{
             this.setState({

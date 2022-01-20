@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./App.css";
 import Footer from "./Components/Footer/Footer";
-import CommonForm from "./Components/Forms/CommonForm/CommonForm";
 import Header from "./Components/Header/Header";
 import AboutUS from "./Components/Pages/AboutUs/AboutUS";
 import ContactUs from "./Components/Pages/AboutUs/ContactUs";
@@ -70,9 +69,9 @@ const App = ()=> {
         <Routes>
         studentHomePage
           <Route exact path="/" element={<Home base_url={base_url}/>} />
-          <Route exact path="/agentHomePage" element={<Home />} />
-          <Route exact path="/studentHomePage" element={<Home />} />
-          <Route exact path="/home" element={<Home />} />
+          <Route exact path="/agentHomePage" element={<Home base_url={base_url}/>} />
+          <Route exact path="/studentHomePage" element={<Home base_url={base_url}/>} />
+          <Route exact path="/home" element={<Home base_url={base_url}/>} />
           <Route exact path="/about" element={<AboutUS base_url={base_url}/>} />
           <Route exact path="/whyssg" element={<WhySSG base_url={base_url}/>} />
           <Route exact path="/contact" element={<ContactUs base_url={base_url}/>} />
