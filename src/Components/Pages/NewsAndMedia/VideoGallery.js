@@ -6,7 +6,7 @@ import HeroImg from "../../HeroSection/HeroImg";
 import "./VideoGallery.css";
 
 const VideoGallery = (props) => {
-  let baseurl = props.base_url;
+  let base_url = props.base_url;
   return (
     <>
       <div>
@@ -149,7 +149,7 @@ const VideoGallery = (props) => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm base_url={baseurl} />
+                <CommonForm base_url={base_url} />
               </div>
             </div>
           </div>

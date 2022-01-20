@@ -6,11 +6,11 @@ import HeroImg from "../../HeroSection/HeroImg";
 import "./ApplicationProcessing.css";
 
 const ApplicationProcessing = (props) => {
-  let baseurl = props.base_url;
+  let base_url = props.base_url;
   return (
     <div>
       <Container>
-        <HeroImg imgSrc="/img/banner1.jpg" />
+        <HeroImg imgSrc="/static/banner1.jpg" />
         <div>
           <div className="Application-container">
             <div class="row">
@@ -21,7 +21,7 @@ const ApplicationProcessing = (props) => {
                     <div class=" col-sm-12">
                       <img
                         className="Application-listImg"
-                        src="/img/Application-Processing.jpg"
+                        src="/static/Application-Processing.jpg"
                         alt="app"
                       />
                     </div>
@@ -37,7 +37,7 @@ const ApplicationProcessing = (props) => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <CommonForm base_url={baseurl} />
+                <CommonForm base_url={base_url} />
               </div>
             </div>
           </div>

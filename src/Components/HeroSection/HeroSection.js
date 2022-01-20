@@ -5,14 +5,15 @@ import AgentForm from "../Pages/Agent/AgentForm";
 import "./HeroSection.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import LoginandSignup from "../Pages/LoginandSignup/LoginAndSignup";
-import TutorRegForm from "../Forms/TuitionFroms/TutorRegForm";
-import HireTutorForm from "../Forms/TuitionFroms/HireTutorForm";
 import ApplicationForm from "../Pages/Apply/AdmissionApplicationForm/ApplicationForm"
 import SkillDevForm from "../Forms/SkillDev/SkillDevForm";
 import LangForm from "../Forms/LanguageForm/LangForm";
-
+import LookTutor from "../Forms/TuitionFroms/HireTutor/LookTutor";
+import BeTutor from "../Forms/TuitionFroms/TutorReg/BeTutor";
 
 const HeroSection = (props) => {
+  let base_url=props.base_url;
+  console.log("hero bs=>", base_url)
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
@@ -88,7 +89,7 @@ const HeroSection = (props) => {
               lockScroll
               overlayStyle
             >
-              <ApplicationForm></ApplicationForm>
+              <ApplicationForm base_url={base_url}/>
             </Popup>
           </Carousel.Caption>
         </Carousel.Item>
@@ -120,7 +121,8 @@ const HeroSection = (props) => {
               lockScroll
               overlayStyle
             >
-              <LangForm />
+              
+              <LangForm base_url={base_url}/>
             </Popup>
           </Carousel.Caption>
         </Carousel.Item>
@@ -152,7 +154,7 @@ const HeroSection = (props) => {
               lockScroll
               overlayStyle
             >
-              <SkillDevForm />
+              <SkillDevForm base_url={base_url}/>
             </Popup>
           </Carousel.Caption>
         </Carousel.Item>
@@ -176,7 +178,7 @@ const HeroSection = (props) => {
               lockScroll
               overlayStyle
             >
-              <HireTutorForm />
+              <LookTutor base_url={base_url}/>
             </Popup>
             <Popup
               className="applybtn"
@@ -190,7 +192,7 @@ const HeroSection = (props) => {
               lockScroll
               overlayStyle
             >
-              <TutorRegForm />
+              <BeTutor base_url={base_url}/>
             </Popup>
           </Carousel.Caption>
         </Carousel.Item>
@@ -221,7 +223,7 @@ const HeroSection = (props) => {
               lockScroll
               overlayStyle
             >
-              <AgentForm />
+              <AgentForm base_url={base_url}/>
             </Popup>
           </Carousel.Caption>
         </Carousel.Item>

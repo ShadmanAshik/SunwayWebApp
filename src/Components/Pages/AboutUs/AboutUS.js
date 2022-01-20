@@ -6,7 +6,7 @@ import HeroImg from "../../HeroSection/HeroImg";
 import "./AboutUS.css";
 
 function AboutUS(props) {
-  let baseurl=props.base_url;
+  let base_url=props.base_url;
   return (
     <>
       <Container>
@@ -61,7 +61,7 @@ function AboutUS(props) {
           </div>
 
           <div class="col-lg-4 col-md-6 col-sm-12">
-            <CommonForm base_url={baseurl}/>
+            <CommonForm base_url={base_url}/>
           </div>
         </div>
       </Container>

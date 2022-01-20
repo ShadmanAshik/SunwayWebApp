@@ -1,14 +1,16 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import HireTutorForm from "../../Forms/TuitionFroms/HireTutorForm";
-import TutorRegForm from "../../Forms/TuitionFroms/TutorRegForm";
 
+import LookTutor from "../../Forms/TuitionFroms/HireTutor/LookTutor";
+import BeTutor from "../../Forms/TuitionFroms/TutorReg/BeTutor";
 
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Tuition.css";
 
 
-const Tuition = () => {
+const Tuition = (props) => {
+  let base_url=props.base_url;
+  console.log("tuition bs=>", base_url)
   return (
     <>
       <Container>
@@ -46,8 +48,9 @@ const Tuition = () => {
                   </div>
                   <div
                   className="row">
-                    <div className="TutorRegForm col-6 mt-5"><TutorRegForm/></div>
-                    <div className="HireTutorForm col-6 mt-5"><HireTutorForm/></div>
+                    <div className="TutorRegForm col-6 mt-5"><BeTutor base_url={base_url}/></div>
+                    
+                    <div className="HireTutorForm col-6 mt-5"><LookTutor base_url={base_url}/></div>
                   </div>
                 </div>
               </div>

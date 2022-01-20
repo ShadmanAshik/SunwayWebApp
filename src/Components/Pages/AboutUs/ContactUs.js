@@ -6,8 +6,8 @@ import HeroImg from "../../HeroSection/HeroImg";
 
 import "./ContactUs.css";
 const ContactUs = (props) => {
-  let baseurl=props.base_url;
-  console.log(baseurl);
+  let base_url=props.base_url;
+  console.log(base_url);
   return (
     <div>
       <Container>
@@ -44,7 +44,7 @@ const ContactUs = (props) => {
               </div>
             </div>
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <ContactForm base_url={baseurl}/>
+              <ContactForm base_url={base_url}/>
             </div>
           </div>
         </div>

@@ -1,15 +1,15 @@
-import { React, useState } from "react";
+import { React} from "react";
 import "./ContactUsForm.css";
 import validate from "./ValidateInfo";
 import PhoneInput from "react-phone-input-2";
 import useForm from "./useForm";
 
 const ContactForm = (props) => {
-  const { handleChange, handleSubmit, values, error, setValues } = useForm(
+  const { handleChange, handleSubmit, values, setValues } = useForm(
     props,
     validate
   );
-  console.log("Base URL=>", values.baseurl);
+  console.log("Base URL=>", values.base_url);
   return (
     <div className="container" id="formContiner">
       <div className="contactus-form">
@@ -49,23 +49,22 @@ const ContactForm = (props) => {
             <label htmlFor="email" className="input-label">
               Email
             </label>
-            
           </div>
 
           <div>
             <div>
-            <PhoneInput
-            inputProps={{
-              name: 'phone',
-              required: true,
-              autoFocus: true
-            }}
-            country={'bd'}
-            value={values.phone}
-            onChange={(phone, country, e, fv) => {
-              setValues({...values, phone: fv});
-            }}
-          />
+              <PhoneInput
+                inputProps={{
+                  name: "phone",
+                  required: true,
+                  autoFocus: true,
+                }}
+                country={"bd"}
+                value={values.phone}
+                onChange={(phone, country, e, fv) => {
+                  setValues({ ...values, phone: fv });
+                }}
+              />
             </div>
           </div>
 
@@ -84,10 +83,7 @@ const ContactForm = (props) => {
             </label>
           </div>
           <div className="action">
-            <button
-              className="action-button-Contactus m-2 col-6"
-              type="submit"
-            >
+            <button className="action-button-Contactus m-2 col-6" type="submit">
               Submit
             </button>
           </div>

@@ -6,13 +6,13 @@ import "./ScholarshipForm.css";
 
 
 export const ApplyScholarship = (props) => {
-  let baseurl=props.base_url;
+  let base_url=props.base_url;
   return (
     <>
       <Container>
         <HeroImg imgSrc="/img/banner1.jpg" />
         <div className="ScholarshipForm">
-          <ScholarshipForm base_url={baseurl}/>
+          <ScholarshipForm base_url={base_url}/>
         </div>
       </Container>
     </>
