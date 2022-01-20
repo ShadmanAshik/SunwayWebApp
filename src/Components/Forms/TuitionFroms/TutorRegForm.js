@@ -62,7 +62,7 @@ const TutorRegForm = (props) => {
             }}
             country={'bd'}
             value={values.phone}
-            onChange={(phone, country, e, fv) => {
+            onChange={(phone, e, fv) => {
               setValues({...values, phone: fv});
             }}
           />

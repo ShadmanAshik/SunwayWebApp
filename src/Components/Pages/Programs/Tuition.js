@@ -1,14 +1,14 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import HireTutorForm from "../../Forms/TuitionFroms/HireTutorForm";
+import HireTutor from "../../Forms/TuitionFroms/LookTutor";
 import TutorRegForm from "../../Forms/TuitionFroms/TutorRegForm";
-
-
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Tuition.css";
 
 
-const Tuition = () => {
+
+
+const Tuition = (props) => {
   return (
     <>
       <Container>
@@ -47,7 +47,7 @@ const Tuition = () => {
                   <div
                   className="row">
                     <div className="TutorRegForm col-6 mt-5"><TutorRegForm/></div>
-                    <div className="HireTutorForm col-6 mt-5"><HireTutorForm/></div>
+                    <div className="HireTutorForm col-6 mt-5"><HireTutor/></div>
                   </div>
                 </div>
               </div>
