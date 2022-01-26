@@ -1,0 +1,8 @@
+.adminNavItem{
+    padding: 5px 5px;
+  color: black;
+  font-size: 18px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none !important;
+}
