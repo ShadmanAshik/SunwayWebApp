@@ -32,7 +32,7 @@ const useForm = (props, validate) => {
 
     setErrors(validate(values));
     setIsSubmitting(true);
-    axios.post(values.base_url+'form/scholarshipost/', values, {
+    axios.post(values.base_url+'form/scholarshippost/', values, {
       headers: headers
     })
     .then((response) => {
