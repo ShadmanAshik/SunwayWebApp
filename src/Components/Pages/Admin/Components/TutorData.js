@@ -31,16 +31,11 @@ export class TutorData extends Component {
       snippets: [],
     };
     this.updateSnippetList = this.updateSnippetList.bind(this);
-    this.config = {
-      'headers': {
-        'Authorization': "Token "+localStorage.getItem('auth_token')
-      }
-    }
   }
-
+  
   updateSnippetList() {
     axios
-      .get(this.props.base_url+"form/betutorget/",this.config)
+      .get(this.props.base_url+"form/betutor/")
       .then((response) => {
         console.log("==> response: ", response);
         this.setState({ snippets: response.data });
@@ -69,7 +64,7 @@ export class TutorData extends Component {
                 <th>Degree Obtained</th>
                 <th>Edu Org</th>
                 <th>Edu Background</th>
-                <th>Gender</th>
+                <th>gender</th>
                 <th>Tuition Area</th>
                 
               </tr>

@@ -1,9 +1,16 @@
 import axios from "axios";
 import React from "react";
+import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "./TutorRegForm.css";
 
+const TutorRegForm = ({}) => {
+  const [password, setpassword] = useState("");
+  const [confirmpassword, setconfirmpassword] = useState("");
+}
+
 class BeTutor extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -41,7 +48,7 @@ class BeTutor extends React.Component {
       <div className="container" id="TutorReg-formContiner">
         <div className="TutorReg-form">
           <form
-            className="HireTutor-card-form"
+            className="TutorReg-card-form"
             onSubmit={(e) => {
               this.submitHandler(e);
             }}
@@ -139,7 +146,7 @@ class BeTutor extends React.Component {
                   id="city"
                   type="text"
                   name="city"
-                  className="HireTutor-input-field"
+                  className="TutorReg-input-field"
                   onChange={(e) => {
                     this.setState({ city: e.target.value });
                   }}
@@ -166,7 +173,7 @@ class BeTutor extends React.Component {
                 id="degreeobtained"
                 type="text"
                 name="degreeobtained"
-                className="HireTutor-input-field"
+                className="TutorReg-input-field"
                 onChange={(e) => {
                     this.setState({ degreeobtained: e.target.value });
                   }}
@@ -307,7 +314,7 @@ class BeTutor extends React.Component {
             <div className="TutorReg-input">
               <input
                 style={
-                  this.password ===this.confirmpassword
+                  this.state.password ===this.state.confirmpassword
                     ? { backgroundColor: "#ffffff00" }
                     : { backgroundColor: "#f700003b" }
                 }
@@ -343,7 +350,7 @@ class BeTutor extends React.Component {
             <div className="TutorReg-action row">
               <button
                 disabled={
-                  this.password === this.confirmpassword ? false : true
+                  this.state.password === this.state.confirmpassword ? false : true
                 }
                 className="TutorReg-action-button"
                 type="submit"

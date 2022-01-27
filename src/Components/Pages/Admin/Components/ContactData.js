@@ -22,18 +22,11 @@ export class ContactData extends Component {
       snippets: [],
     };
     this.updateSnippetList = this.updateSnippetList.bind(this);
-    this.config = {
-      'headers': {
-        'Authorization': "Token "+localStorage.getItem('auth_token')
-      }
-    };
   }
   
-
-
   updateSnippetList() {
     axios
-      .get(this.props.base_url+"form/contactusget/",this.config)
+      .get(this.props.base_url+"form/contactus/")
       .then((response) => {
         console.log("==> response: ", response);
         this.setState({ snippets: response.data });

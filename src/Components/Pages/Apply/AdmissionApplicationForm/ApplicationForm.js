@@ -66,7 +66,7 @@ const ApplicationForm = ({}) => {
       <div className="Application-form">
         <form className="Application-card-form">
           <div className="Application-form-title">
-            <h2>Application Form</h2>
+            <h2>Overseas Admission Form</h2>
             <p className="Application-title-description">
               Fill out the required information for applying for a degree.
             </p>
@@ -90,7 +90,7 @@ const ApplicationForm = ({}) => {
               htmlFor="agentphoto"
               className="Application-input-label-file"
             >
-              Upload your passport-sized photo.<span style={{color:"red"}}>*</span>
+              Upload your passport-size photo.<span style={{color:"red"}}>*</span>
               <i class="arrow uil uil-arrow-down-right" />
             </label>
           </div>
@@ -129,7 +129,7 @@ const ApplicationForm = ({}) => {
           </div>
 
           <div className="row">
-            <div className="ApplicationForm col-6">
+            <div className="Application col-6">
               <PhoneInput
                 inputProps={{
                   name: "phone",
@@ -194,7 +194,7 @@ const ApplicationForm = ({}) => {
                 htmlFor="passportExpireDate"
                 className="Application-input-label-date"
               >
-                Passport Expire Date (If Any)
+                Passport Expire Date
               </label>
             </div>
           </div>
@@ -526,7 +526,7 @@ const ApplicationForm = ({}) => {
                 Homeland Address<span style={{color:"red"}}>*</span>
               </label>
             </div>
-            <div className="ApplicationForm col-6">
+            <div className="Application col-6">
               <PhoneInput
                 inputProps={{
                   name: "Homephone",
@@ -933,7 +933,7 @@ const ApplicationForm = ({}) => {
           </div>
 
           <div className="row">
-            <div className="ApplicationForm col-6">
+            <div className="Application col-6">
               <PhoneInput
                 inputProps={{
                   name: "fathernumber",
@@ -951,7 +951,7 @@ const ApplicationForm = ({}) => {
                 disableSearchIcon={false}
               />
             </div>
-            <div className="ApplicationForm col-6">
+            <div className="Application col-6">
               <PhoneInput
                 inputProps={{
                   name: "mothernumber",
@@ -1033,7 +1033,7 @@ const ApplicationForm = ({}) => {
           <br />
           <hr class="line solid" />
           <p className="divider">
-            ONLY FOR MASTERS & PhD (OPTONAL)<i class="arrow uil uil-arrow-down-right"></i>
+            ONLY FOR MASTERS & PhD (OPTIONAL)<i class="arrow uil uil-arrow-down-right"></i>
           </p>
           <div className="row">
             <div className="Application-input col-6">

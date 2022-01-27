@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import MessengerCustomerChat from "react-messenger-customer-chat";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import Sticky from "react-stickynode";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -13,16 +13,16 @@ import Mission from "./Components/Pages/AboutUs/Mission";
 import OurTeam from "./Components/Pages/AboutUs/OurTeam";
 import Policy from "./Components/Pages/AboutUs/Policy";
 import WhySSG from "./Components/Pages/AboutUs/WhySSG";
-import Admin from "./Components/Pages/Admin/Admin";
-import AdmissionApplications from "./Components/Pages/Admin/Components/AdmissionApplications";
-import AgentData from "./Components/Pages/Admin/Components/AgentData";
-import CommonData from "./Components/Pages/Admin/Components/CommonData";
-import ContactData from "./Components/Pages/Admin/Components/ContactData";
-import LanguageFormData from "./Components/Pages/Admin/Components/LanguageFormData";
-import ScholarshipFormData from "./Components/Pages/Admin/Components/ScholarshipFormData";
-import SkillFormData from "./Components/Pages/Admin/Components/SkillFormData";
-import TuitionsData from "./Components/Pages/Admin/Components/TuitionsData";
-import TutorData from "./Components/Pages/Admin/Components/TutorData";
+import TableNav from "./Components/Pages/Admin/TableNav";
+import AdmissionApplications from "./Components/Pages/Admin/FormData/AdmissionApplications";
+import AgentData from "./Components/Pages/Admin/FormData/AgentData";
+import CommonData from "./Components/Pages/Admin/FormData/CommonData";
+import ContactData from "./Components/Pages/Admin/FormData/ContactData";
+import LanguageFormData from "./Components/Pages/Admin/FormData/LanguageFormData";
+import ScholarshipFormData from "./Components/Pages/Admin/FormData/ScholarshipFormData";
+import SkillFormData from "./Components/Pages/Admin/FormData/SkillFormData";
+import TuitionsData from "./Components/Pages/Admin/FormData/TuitionsData";
+import TutorData from "./Components/Pages/Admin/FormData/TutorData";
 import Agent from "./Components/Pages/Agent/Agent";
 import Application from "./Components/Pages/Apply/AdmissionApplicationForm/Application";
 import ApplyScholarship from "./Components/Pages/Apply/ScholarshipApplicationForm/ApplyScholarship";
@@ -56,6 +56,8 @@ import StudyTour from "./Components/Pages/Services/StudyTour";
 import VisaApplication from "./Components/Pages/Services/VisaApplication";
 import BangladeshUniversity from "./Components/Pages/University/BangladeshUniversity";
 import GlobalUniversity from "./Components/Pages/University/GlobalUniversity";
+import AdminDashboard from "./Components/Pages/Admin/AdminDashboard";
+import Sidebar from "./Components/Pages/Admin/SideNav/Sidebar";
 
 // const base_url="http://127.0.0.1:8000/";
 const base_url="/";
@@ -67,8 +69,7 @@ const App = ()=> {
         <Sticky enabled={true} top={0} bottomBoundary={12000} innerZ={20}>
           <Header />
         </Sticky>
-        <Routes>
-        
+        <Routes>        
           <Route exact path="/" element={<Home base_url={base_url}/>} />
           <Route exact path="/agentHomePage" element={<Home base_url={base_url}/>} />
           <Route exact path="/studentHomePage" element={<Home base_url={base_url}/>} />
@@ -112,8 +113,7 @@ const App = ()=> {
             element={<WebDesignAndDevelopment base_url={base_url}/>}
           />
           <Route
-            exact
-            path="/ProfessionalGraphicDesign"
+            exact path="/ProfessionalGraphicDesign"
             element={<ProfessionalGraphicDesign base_url={base_url}/>}
           />
           <Route exact path="/LanguageCourses" element={<LanguageCourses base_url={base_url}/>} />
@@ -121,8 +121,7 @@ const App = ()=> {
           <Route exact path="/EnglishSpoken" element={<EnglishSpoken base_url={base_url}/>} />
           <Route exact path="/DigitalMarketing" element={<DigitalMarketing base_url={base_url}/>} />
           <Route
-            exact
-            path="/CommunicativeEnglish"
+            exact path="/CommunicativeEnglish"
             element={<CommunicativeEnglish base_url={base_url}/>}
           />
           <Route exact path="/AcademicEnglish" element={<AcademicEnglish base_url={base_url}/>} />
@@ -135,20 +134,21 @@ const App = ()=> {
           <Route exact path="/Blog" element={<Blog base_url={base_url}/>} />
           <Route exact path="AdmissionForm" element={<Application base_url={base_url}/>} />
           <Route exact path="/ScholarshipForm" element={<ApplyScholarship base_url={base_url}/>} />
-
-          <Route exact path="adminDashboard" element={<Admin/>}>
-            <Route path="commonFormData" element={<CommonData base_url={base_url}/>} />
-            <Route path="contactUsData" element={<ContactData base_url={base_url}/>} />
-            <Route path="agentData" element={<AgentData base_url={base_url}/>} />
-            <Route path="languageFormData" element={<LanguageFormData base_url={base_url} />} />
-            <Route path="skillFormData" element={<SkillFormData base_url={base_url}/>} />
-            <Route path="tutorData" element={<TutorData base_url={base_url}/>} />
-            <Route path="tuitionData" element={<TuitionsData base_url={base_url}/>} />
-            <Route path="scholarshipFormData" element={<ScholarshipFormData base_url={base_url}/>} />
-            <Route path="admissionFormData" element={<AdmissionApplications base_url={base_url}/>} />
+          <Route exact path="/adminDashboard" element={<AdminDashboard base_url={base_url}/>}>
+            {/* <Route path="commonFormData" element={<CommonData base_url={base_url}/>} /> */}
             
+            {/* <Route exact path="formData" element={<TableNav base_url={base_url}/>}> */}
+              <Route index element={<CommonData base_url={base_url}/>} />
+              <Route path="contactUsData" element={<ContactData base_url={base_url}/>} />
+              <Route path="agentData" element={<AgentData base_url={base_url}/>} />
+              <Route path="languageFormData" element={<LanguageFormData base_url={base_url} />} />
+              <Route path="skillFormData" element={<SkillFormData base_url={base_url}/>} />
+              <Route path="tutorData" element={<TutorData base_url={base_url}/>} />
+              <Route path="tuitionData" element={<TuitionsData base_url={base_url}/>} />
+              <Route path="scholarshipFormData" element={<ScholarshipFormData base_url={base_url}/>} />
+              <Route path="admissionFormData" element={<AdmissionApplications base_url={base_url}/>} />           
+            {/* </Route>            */}
           </Route>
-
         </Routes>
         <Footer />
       </BrowserRouter>

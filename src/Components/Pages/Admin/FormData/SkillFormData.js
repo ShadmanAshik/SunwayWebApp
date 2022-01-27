@@ -1,38 +1,39 @@
-import axios from 'axios';
-import React, { Component } from 'react'
-import { Container, Table } from 'react-bootstrap'
+import axios from "axios";
+import React, { Component } from "react";
+import { Container, Table } from "react-bootstrap";
 
 
 class Snippet extends React.Component {
   render() {
-    
     return (
       <tr>
-        <td>{this.props.snippet.yourName}</td>
-        <td>{this.props.snippet.studentName}</td>
-        <td>{this.props.snippet.phone}</td>
+        <td>{this.props.snippet.fName} {this.props.snippet.lName}</td>
         <td>{this.props.snippet.email}</td>
-        <td>{this.props.snippet.address}</td>
-        <td>{this.props.snippet.requirements}</td>
-        <td>{this.props.snippet.Class}</td>
-        <td>{this.props.snippet.institution}</td>
-        <td>{this.props.snippet.medium}</td>
+        <td>{this.props.snippet.phone}</td>
+        <td>{this.props.snippet.skill}</td>
+        <td>{this.props.snippet.counselMode}</td>
+        <td>{this.props.snippet.country}</td>
       </tr>
     );
   }
 }
-export class TuitionsData extends Component {
+export class SkillFormData extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
       snippets: [],
     };
     this.updateSnippetList = this.updateSnippetList.bind(this);
+    this.config = {
+      'headers': {
+        'Authorization': "Token "+localStorage.getItem('auth_token')
+      }
+    }
   }
-  
   updateSnippetList() {
     axios
-      .get(this.props.base_url+"form/looktutor/")
+      .get(this.props.base_url+"form/skilldevget/",this.config)
       .then((response) => {
         console.log("==> response: ", response);
         this.setState({ snippets: response.data });
@@ -45,23 +46,20 @@ export class TuitionsData extends Component {
     this.updateSnippetList();
   }
   render() {
-    console.log("URL=>", this.props.base_url)
     return (
       <div>
         <Container>
-          <h1>Tuition Form's Data</h1>
+          <h1>Skill Development Form's Data</h1>
           <Table striped bordered hover size="sm">
             <thead>
               <tr>
-                <th>Parent's Name</th>
-                <th>Students's Name</th>
+                <th>Name</th>
+                <th>Email</th>
                 <th>Phone</th>
-                <th>Email</th>              
-                <th>address</th>
-                <th>requirements</th>
-                <th>Class</th>
-                <th>institution</th>
-                <th>medium</th>
+                <th>Skill</th>
+                <th>Counselinng Mode</th>
+                <th>Country</th>
+
               </tr>
             </thead>
             <tbody>
@@ -75,4 +73,5 @@ export class TuitionsData extends Component {
     );
   }
 }
-export default TuitionsData
+
+export default SkillFormData;

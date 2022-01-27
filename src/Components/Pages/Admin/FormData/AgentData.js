@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 
-export class CommonData extends Component {
+
+export class AgentData extends Component {
     constructor(){
         super();
         this.state={
             dataOfTable:[]
         };
+        this.config = {
+            'headers': {
+              'Authorization': "Token "+localStorage.getItem('auth_token')
+            }
+          }
     }
 
     fetchData(){
-        fetch('http://127.0.0.1:8000/cfd/Contactformdata/')
+        fetch(this.props.base_url+"contactformdataget/",this.config)
         .then(response=>response.json())
         .then((data)=>{
             this.setState({
@@ -23,9 +29,11 @@ export class CommonData extends Component {
         this.fetchData();
     }
 
+
     render(){
        
         const empData=this.state.dataOfTable;
+       
         const rows=empData.map((formdata)=>
             <tr key={formdata.id}>
                 <td>{formdata.fName}</td>
@@ -42,7 +50,7 @@ export class CommonData extends Component {
         );
         return (
             <Container>
-                <h1>Common Information of Students</h1>
+                <h1>Agent Informations</h1>
                 <table className="table table-bordered">
                 <thead>
                     <tr>
@@ -65,5 +73,5 @@ export class CommonData extends Component {
     }
 }
 
-export default CommonData
+export default AgentData
 

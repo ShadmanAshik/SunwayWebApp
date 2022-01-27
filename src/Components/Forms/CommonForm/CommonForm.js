@@ -80,7 +80,7 @@ const CommonForm = ( props ) => {
               specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
               enableSearch
               type='tel'
-              countryCodeEditable={false}
+              
               value={values.phone}
               onChange={(phone, country, e, fv) => {
                 setValues({ ...values, phone: fv, country: country.name });

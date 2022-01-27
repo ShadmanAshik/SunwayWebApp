@@ -25,16 +25,10 @@ export class LanguageFormData extends Component {
       snippets: [],
     };
     this.updateSnippetList = this.updateSnippetList.bind(this);
-    this.config = {
-      'headers': {
-        'Authorization': "Token "+localStorage.getItem('auth_token')
-      }
-    }
-
   }
   updateSnippetList() {
     axios
-      .get(this.props.base_url+"form/languageget/",this.config)
+      .get(this.props.base_url+"form/language/")
       .then((response) => {
         console.log("==> response: ", response);
         this.setState({ snippets: response.data });

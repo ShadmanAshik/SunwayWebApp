@@ -25,15 +25,10 @@ export class SkillFormData extends Component {
       snippets: [],
     };
     this.updateSnippetList = this.updateSnippetList.bind(this);
-    this.config = {
-      'headers': {
-        'Authorization': "Token "+localStorage.getItem('auth_token')
-      }
-    }
   }
   updateSnippetList() {
     axios
-      .get(this.props.base_url+"form/skilldevget/",this.config)
+      .get(this.props.base_url+"form/skilldev/")
       .then((response) => {
         console.log("==> response: ", response);
         this.setState({ snippets: response.data });
