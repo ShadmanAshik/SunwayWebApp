@@ -1,8 +1,8 @@
 export default function validateinfo(values) {
   let error = {};
 
-  if (!values.name.trim()) {
-    error.name = "Required!";
+  if (!values.fName.trim()) {
+    error.fName = "Required!";
   }
   if (!values.passportno.trim()) {
     error.passportno = "Required!";

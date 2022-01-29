@@ -1,13 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
-import { Menu, MenuItem, ProSidebar, SubMenu } from "react-pro-sidebar";
 import { Link, Outlet } from "react-router-dom";
-import Sidebar from "./SideNav/Sidebar";
 
 function AdminDashboard() {
   return (
     <div className="sidebar">
-      <ProSidebar>
+      {/* <ProSidebar>
           <Menu iconShape="square">
             <Link to="formData">
               <MenuItem> Form Data</MenuItem>
@@ -42,8 +40,8 @@ function AdminDashboard() {
           </Menu>
         </ProSidebar>
         <Outlet/>
-        <h1>Sidebar</h1>
-      {/* <Navbar bg="light" variant="light">
+        <h1>Sidebar</h1> */}
+      <Navbar bg="light" variant="light">
         <Nav className="m-auto">
           <Link className="tableNavItem" to="commonFormData">
             <Nav.Item>Common Data</Nav.Item>
@@ -71,7 +69,7 @@ function AdminDashboard() {
           </Link>
         </Nav>
       </Navbar> 
-      <Outlet />*/}
+      <Outlet />
     </div>
   );
 }

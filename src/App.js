@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import MessengerCustomerChat from "react-messenger-customer-chat";
-import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Sticky from "react-stickynode";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -13,7 +13,7 @@ import Mission from "./Components/Pages/AboutUs/Mission";
 import OurTeam from "./Components/Pages/AboutUs/OurTeam";
 import Policy from "./Components/Pages/AboutUs/Policy";
 import WhySSG from "./Components/Pages/AboutUs/WhySSG";
-import TableNav from "./Components/Pages/Admin/TableNav";
+import AdminDashboard from "./Components/Pages/Admin/AdminDashboard";
 import AdmissionApplications from "./Components/Pages/Admin/FormData/AdmissionApplications";
 import AgentData from "./Components/Pages/Admin/FormData/AgentData";
 import CommonData from "./Components/Pages/Admin/FormData/CommonData";
@@ -56,11 +56,9 @@ import StudyTour from "./Components/Pages/Services/StudyTour";
 import VisaApplication from "./Components/Pages/Services/VisaApplication";
 import BangladeshUniversity from "./Components/Pages/University/BangladeshUniversity";
 import GlobalUniversity from "./Components/Pages/University/GlobalUniversity";
-import AdminDashboard from "./Components/Pages/Admin/AdminDashboard";
-import Sidebar from "./Components/Pages/Admin/SideNav/Sidebar";
 
-// const base_url="http://127.0.0.1:8000/";
-const base_url="/";
+const base_url="http://127.0.0.1:8000/";
+// const base_url="/";
 const App = ()=> {
   
   return (

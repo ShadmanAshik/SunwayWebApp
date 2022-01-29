@@ -1,70 +1,36 @@
+import { React } from "react";
 import PhoneInput from "react-phone-input-2";
-import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./ApplicationForm.css";
-// import validate from "./ValidateInfo";
-// import useForm from "./useForm";
-import axios from "axios";
+import useForm from "./useForm";
+import validate from "./validateinfo";
 
-const ApplicationForm = ({}) => {
-  // const navigate = useNavigate();
-  // const { handleChange, handleSubmit, values, error } = useForm(
-  //   submitForm,
-  //   validate
-  // );
-  const [count, setCount] = useState(1);
-  const [checked, setchecked] = useState(false);
-  const [fName, setfName] = useState("");
-  const [lName, setlName] = useState("");
-  const [email, setemail] = useState("");
-  const [countryCode, setcountryCode] = useState("");
-  const [phone, setphone] = useState("");
-  const [language, setlanguage] = useState("");
-  const [demo, setdemo] = useState("");
-  const [demo1, setdemo1] = useState("");
-  const [country, setcountry] = useState("");
+const ApplicationForm = (props) => {
+  const { handleChange, handleSubmit, values, setCount, count, setValues} = useForm(
+    props,
+    validate
+  
+  );
 
+  console.log("base_url",props.base_url);
   function decrement() {
     setCount((prevCount) => prevCount - 1);
-    if (count == 1) setCount(1);
+    if (count === 1) setCount(1);
   }
   function increment() {
     setCount((prevCount) => prevCount + 1);
-    if (count == 5) setCount(5);
+    if (count === 5) setCount(5);
   }
 
-  const submitData = async () => {
-    let formField = new FormData();
-    formField.append("fName", fName);
-    formField.append("lName", lName);
-    formField.append("email", email);
-    formField.append("countryCode", countryCode);
-    formField.append("phone", phone);
-    formField.append("language", language);
-    formField.append("demo", demo);
-    formField.append("demo1", demo1);
-    formField.append("country", country);
 
-    const headers = {
-      "Content-Type": "application/json",
-    };
-
-    axios
-      .post("http://127.0.0.1:8000/contactformdata/", formField, {
-        headers: headers,
-      })
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
 
   return (
     <div className="container" id="Application-formContiner">
       <div className="Application-form">
-        <form className="Application-card-form">
+        <form className="Application-card-form" onSubmit={(e)=>{
+          console.log("sssss");
+          handleSubmit(e);
+          console.log("submit")
+        }}>
           <div className="Application-form-title">
             <h2>Overseas Admission Form</h2>
             <p className="Application-title-description">
@@ -77,17 +43,22 @@ const ApplicationForm = ({}) => {
             style={{ margin: "0px auto" }}
           >
             <input
-              id="agentphoto"
+              id="profilephoto"
               type="file"
-              name="agentphoto"
+              name="profilephoto"
               className="Application-input-field-file"
-              value={demo}
-              onChange={(e) => setdemo(e.target.value)}
+              onChange={
+                (e)=>{ 
+                    e.preventDefault();
+                    console.log("===> values 1st: ", values);
+                    setValues({...values, profilephoto: e.target.files[0]});
+                    console.log("===> values 2nd: ", values);
+                }}
               accept="image/png, image/jpeg"
               required
             />
             <label
-              htmlFor="agentphoto"
+              htmlFor="profilephoto"
               className="Application-input-label-file"
             >
               Upload your passport-size photo.<span style={{color:"red"}}>*</span>
@@ -100,11 +71,11 @@ const ApplicationForm = ({}) => {
               <input
                 id="fname"
                 type="text"
-                name="fname"
+                name="fName"
                 className="Application-input-field"
                 placeholder=" "
-                value={fName}
-                onChange={(e) => setfName(e.target.value)}
+                value={values.fName}
+                onChange={handleChange}
                 required
               />
               <label htmlFor="fname" className="Application-input-labelrow">
@@ -116,10 +87,10 @@ const ApplicationForm = ({}) => {
               <input
                 id="lname"
                 type="text"
-                name="lname"
+                name="lName"
                 className="Application-input-field"
-                value={lName}
-                onChange={(e) => setlName(e.target.value)}
+                value={values.lName}
+                onChange={handleChange}
                 required
               />
               <label htmlFor="lname" className="Application-input-label">
@@ -130,21 +101,19 @@ const ApplicationForm = ({}) => {
 
           <div className="row">
             <div className="Application col-6">
-              <PhoneInput
+            <PhoneInput
                 inputProps={{
                   name: "phone",
                   required: true,
                 }}
-                id="phone"
-                placeholder=""
-                type="tel"
-                value={phone}
-                onChange={setphone}
-                enableSearch
                 specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
-                countryCodeEditable={false}
                 country=" "
-                disableSearchIcon={false}
+                enableSearch
+                placeholder=" "
+                value={values.phone}
+                onChange={(phone, country, e, fv) => {
+                  setValues({ ...values, phone: fv });
+                }}
               />
             </div>
 
@@ -154,8 +123,8 @@ const ApplicationForm = ({}) => {
                 type="email"
                 name="email"
                 className="Application-input-field"
-                value={email}
-                onChange={(e) => setemail(e.target.value)}
+                value={values.email}
+                onChange={handleChange}
                 required
               />
               <label htmlFor="email" className="Application-input-label">
@@ -163,7 +132,6 @@ const ApplicationForm = ({}) => {
               </label>
             </div>
           </div>
-
           <div className="row">
           <div className="Application-input col-6">
               <input
@@ -204,11 +172,11 @@ const ApplicationForm = ({}) => {
               <select
                 id="country"
                 type="text"
-                name="country"
+                name="nationality"
                 className="Application-input-field"
-                value={country}
+                value={values.nationality}
+                onChange={handleChange}
                 required
-                onChange={(e) => setcountry(e.target.value)}
               >
                 <option value=""></option>
                 <option value="afghan">Afghan</option>
@@ -416,9 +384,11 @@ const ApplicationForm = ({}) => {
               <input
                 id="nid/birthredno"
                 type="text"
-                name="nid/birthredno"
+                name="nID_birthNumber"
                 className="Application-input-field"
                 placeholder=" "
+                value={values.nID_birthNumber}
+                onChange={handleChange}
                 required
                 
               />
@@ -435,9 +405,9 @@ const ApplicationForm = ({}) => {
                 type="text"
                 name="gender"
                 className="Application-input-field"
-                value={demo}
+                value={values.gender}
                 required
-                onChange={(e) => setdemo(e.target.value)}
+                onChange={handleChange}
               >
                 <option value=""></option>
                 <option value="male">Male</option>
@@ -455,9 +425,9 @@ const ApplicationForm = ({}) => {
                 name="dateofbirth"
                 className="Application-input-field"
                 placeholder=""
-                value={demo}
+                value={values.dateofbirth}
                 required
-                onChange={(e) => setdemo(e.target.value)}
+                onChange={handleChange}
               />
               <label
                 htmlFor="dateofbirth"
@@ -476,9 +446,9 @@ const ApplicationForm = ({}) => {
                 name="placeofbirth"
                 className="Application-input-field"
                 placeholder=""
-                value={demo}
+                value={values.placeofbirth}
                 required
-                onChange={(e) => setdemo(e.target.value)}
+                onChange={handleChange}
               />
               <label
                 htmlFor="placeofbirth"
@@ -494,8 +464,8 @@ const ApplicationForm = ({}) => {
                 type="text"
                 name="maritalstatus"
                 className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                value={values.maritalstatus}
+                onChange={handleChange}
               >
                 <option value=""></option>
                 <option value="married">Married</option>
@@ -519,29 +489,27 @@ const ApplicationForm = ({}) => {
                 name="homeaddress"
                 className="Application-input-field"
                 placeholder=""
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                value={values.homeaddress}
+                onChange={handleChange}
               />
               <label htmlFor="homeaddress" className="Application-input-label">
                 Homeland Address<span style={{color:"red"}}>*</span>
               </label>
             </div>
             <div className="Application col-6">
-              <PhoneInput
+            <PhoneInput
                 inputProps={{
-                  name: "Homephone",
+                  name: "homephone",
                   required: true,
                 }}
-                id="Homephone"
-                placeholder=""
-                type="tel"
-                value={demo}
-                onChange={setdemo}
-                enableSearch
                 specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
-                countryCodeEditable={false}
                 country=" "
-                disableSearchIcon={false}
+                enableSearch
+                placeholder=" "
+                value={values.homephone}
+                onChange={(homephone, country, e, fv) => {
+                  setValues({ ...values, homephone: fv });
+                }}
               />
             </div>
           </div>
@@ -555,8 +523,8 @@ const ApplicationForm = ({}) => {
                 name="applyuniveristy"
                 className="Application-input-field"
                 placeholder=""
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                value={values.applyuniveristy}
+                onChange={handleChange}
               />
               <label
                 htmlFor="applyuniveristy"
@@ -574,8 +542,8 @@ const ApplicationForm = ({}) => {
                 name="majorsub"
                 className="Application-input-field"
                 placeholder=""
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                value={values.majorsub}
+                onChange={handleChange}
               />
               <label htmlFor="majorsub" className="Application-input-label">
                 Major Subject:<span style={{color:"red"}}>*</span>
@@ -594,18 +562,22 @@ const ApplicationForm = ({}) => {
           <div className="row">
             <div className="Application-input col-6">
               <input
-                id="certificate1"
+                id="academiccertificate"
                 type="file"
-                name="certificate1"
+                name="academiccertificate"
                 className="Application-input-field-file"
-                value={demo}
-                accept="application/pdf"
-                onChange={(e) => demo(e.target.value)}
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("===> values 1st: ", values);
+                      setValues({...values, academiccertificate: e.target.files[0]});
+                      console.log("===> values 2st: ", values);
+                  }}
                 required
                 
               />
               <label
-                htmlFor="certificate1"
+                htmlFor=""
                 className="Application-input-label-file"
               >
                 Certificate 1 Pdf<span style={{color:"red"}}>*</span>
@@ -615,13 +587,16 @@ const ApplicationForm = ({}) => {
 
             <div className="Application-input col-6">
               <input
-                id="transcript1"
+                id="transcript"
                 type="file"
-                name="transcript1"
+                name="transcript"
                 className="Application-input-field-file"
-                value={demo}
-                accept="application/pdf"
-                onChange={(e) => demo(e.target.value)}
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, transcript: e.target.files[0]});
+                  }}
                 required
               />
               <label
@@ -640,13 +615,17 @@ const ApplicationForm = ({}) => {
           >
             <div className="Application-input col-6">
               <input
-                id="certificate2"
+                id="academiccertificate2"
                 type="file"
-                name="certificate2"
+                name="academiccertificate2"
                 className="Application-input-field-file"
-                value={demo}
                 accept="application/pdf"
-                onChange={(e) => demo(e.target.value)}
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, academiccertificate2: e.target.files[0]});
+                  }}
                 disabled={count < 2 ? true : false}
                 required
               />
@@ -665,9 +644,13 @@ const ApplicationForm = ({}) => {
                 type="file"
                 name="transcript2"
                 className="Application-input-field-file"
-                value={demo}
                 accept="application/pdf"
-                onChange={(e) => demo(e.target.value)}
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, transcript2: e.target.files[0]});
+                  }}
                 disabled={count < 2 ? true : false}
                 required
               />
@@ -687,13 +670,17 @@ const ApplicationForm = ({}) => {
           >
             <div className="Application-input col-6">
               <input
-                id="certificate3"
+                id="academiccertificate3"
                 type="file"
-                name="certificate3"
+                name="academiccertificate3"
                 className="Application-input-field-file"
-                value={demo}
                 accept="application/pdf"
-                onChange={(e) => demo(e.target.value)}
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, academiccertificate3: e.target.files[0]});
+                  }}
                 disabled={count < 3 ? true : false}
                 required
               />
@@ -712,9 +699,13 @@ const ApplicationForm = ({}) => {
                 type="file"
                 name="transcript3"
                 className="Application-input-field-file"
-                value={demo}
                 accept="application/pdf"
-                onChange={(e) => demo(e.target.value)}
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, transcript3: e.target.files[0]});
+                  }}
                 disabled={count < 3 ? true : false}
                 required
               />
@@ -734,13 +725,17 @@ const ApplicationForm = ({}) => {
           >
             <div className="Application-input col-6">
               <input
-                id="certificate4"
+                id="academiccertificate4"
                 type="file"
-                name="certificate4"
+                name="academiccertificate4"
                 className="Application-input-field-file"
-                value={demo}
                 accept="application/pdf"
-                onChange={(e) => demo(e.target.value)}
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, academiccertificate4: e.target.files[0]});
+                  }}
                 disabled={count < 4 ? true : false}
                 required
               />
@@ -759,9 +754,13 @@ const ApplicationForm = ({}) => {
                 type="file"
                 name="transcript4"
                 className="Application-input-field-file"
-                value={demo}
                 accept="application/pdf"
-                onChange={(e) => demo(e.target.value)}
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, transcript4: e.target.files[0]});
+                  }}
                 disabled={count < 4 ? true : false}
                 required
               />
@@ -781,13 +780,17 @@ const ApplicationForm = ({}) => {
           >
             <div className="Application-input col-6">
               <input
-                id="certificate5"
+                id="academiccertificate5"
                 type="file"
-                name="certificate5"
+                name="academiccertificate5"
                 className="Application-input-field-file"
-                value={demo}
                 accept="application/pdf"
-                onChange={(e) => demo(e.target.value)}
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, academiccertificate5: e.target.files[0]});
+                  }}
                 disabled={count < 5 ? true : false}
                 required
               />
@@ -805,10 +808,14 @@ const ApplicationForm = ({}) => {
                 id="transcript5"
                 type="file"
                 name="transcript5"
-                className="Application-input-field-file"
-                value={demo}
+                className="Application-input-field-file"              
                 accept="application/pdf"
-                onChange={(e) => demo(e.target.value)}
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, transcript5: e.target.files[0]});
+                  }}
                 disabled={count < 5 ? true : false}
                 required
               />
@@ -833,8 +840,8 @@ const ApplicationForm = ({}) => {
                 type="text"
                 name="profession"
                 className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                value={values.profession}
+                onChange={handleChange}
               />
               <label
                 htmlFor="profession"
@@ -850,8 +857,8 @@ const ApplicationForm = ({}) => {
                 type="text"
                 name="language"
                 className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                value={values.language}
+                onChange={handleChange}
               />
               <label htmlFor="language" className="Application-input-label">
                 Mother Language<span style={{color:"red"}}>*</span>
@@ -867,8 +874,8 @@ const ApplicationForm = ({}) => {
                 type="text"
                 name="fathername"
                 className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                value={values.fathername}
+                onChange={handleChange}
               />
               <label
                 htmlFor="fathername"
@@ -885,8 +892,8 @@ const ApplicationForm = ({}) => {
                 type="text"
                 name="mothername"
                 className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                value={values.mothername}
+                onChange={handleChange}
               />
               <label htmlFor="mothername" className="Application-input-label">
                 Mother's Name<span style={{color:"red"}}>*</span>
@@ -902,8 +909,8 @@ const ApplicationForm = ({}) => {
                 type="text"
                 name="fatheremployement"
                 className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                value={values.fatheremployement}
+                onChange={handleChange}
               />
               <label
                 htmlFor="fatheremployement"
@@ -920,8 +927,8 @@ const ApplicationForm = ({}) => {
                 type="text"
                 name="motheremployement"
                 className="Application-input-field"
-                value={demo}
-                onChange={(e) => setdemo(e.target.value)}
+                value={values.motheremployement}
+                onChange={handleChange}
               />
               <label
                 htmlFor="motheremployement"
@@ -934,39 +941,35 @@ const ApplicationForm = ({}) => {
 
           <div className="row">
             <div className="Application col-6">
-              <PhoneInput
+            <PhoneInput
                 inputProps={{
                   name: "fathernumber",
                   required: true,
                 }}
-                id="fathernumber"
-                placeholder=""
-                type="tel"
-                value={phone}
-                onChange={setphone}
-                enableSearch
-                specialLabel="Father's Contact Number:"
-                countryCodeEditable={false}
+                specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
                 country=" "
-                disableSearchIcon={false}
+                enableSearch
+                placeholder=" "
+                value={values.fathernumber}
+                onChange={(fathernumber, country, e, fv) => {
+                  setValues({ ...values, fathernumber: fv });
+                }}
               />
             </div>
             <div className="Application col-6">
-              <PhoneInput
+            <PhoneInput
                 inputProps={{
                   name: "mothernumber",
                   required: true,
                 }}
-                id="mothernumber"
-                placeholder=""
-                type="tel"
-                value={phone}
-                onChange={setphone}
-                enableSearch
-                specialLabel="Mother's Contact Number:"
-                countryCodeEditable={false}
+                specialLabel={ <span>Phone:<span style={{color:"red"}}>*</span></span>}
                 country=" "
-                disableSearchIcon={false}
+                enableSearch
+                placeholder=" "
+                value={values.mothernumber}
+                onChange={(mothernumber, country, e, fv) => {
+                  setValues({ ...values, mothernumber: fv });
+                }}
               />
             </div>
           </div>
@@ -983,6 +986,12 @@ const ApplicationForm = ({}) => {
                 name="passportscan"
                 className="Application-input-field-file-notreq"
                 accept="application/pdf"
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, passportscan: e.target.files[0]});
+                  }}
               />
               <label
                 htmlFor="passportscan"
@@ -995,11 +1004,17 @@ const ApplicationForm = ({}) => {
             <div className="Application-input col-6">
               <input
                 required
-                id="academiccertificate"
+                id="nIDscan"
                 type="file"
-                name="academiccertificate"
+                name="nIDscan"
                 className="Application-input-field-file"
                 accept="application/pdf"
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, nIDscan: e.target.files[0]});
+                  }}
               />
               <label
                 htmlFor="academiccertificate"
@@ -1020,6 +1035,12 @@ const ApplicationForm = ({}) => {
                 name="bankstatement"
                 className="Application-input-field-file-notreq"
                 accept="application/pdf"
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, bankstatement: e.target.files[0]});
+                  }}
               />
               <label
                 htmlFor="bankstatement"
@@ -1044,6 +1065,12 @@ const ApplicationForm = ({}) => {
                 name="recommendationletter"
                 className="Application-input-field-date-notreq"
                 accept="application/pdf"
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, recommendationletter: e.target.files[0]});
+                  }}
               />
               <label
                 htmlFor="recommendationletter"
@@ -1058,9 +1085,15 @@ const ApplicationForm = ({}) => {
                 
                 id="recommendationletter2"
                 type="file"
-                name="recommendationlette2r"
+                name="recommendationlette2"
                 className="Application-input-field-file-notreq"
                 accept="application/pdf"
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, recommendationlette2: e.target.files[0]});
+                  }}
               />
               <label
                 htmlFor="recommendationletter2"
@@ -1080,6 +1113,12 @@ const ApplicationForm = ({}) => {
                 name="recommendationletter3"
                 className="Application-input-field-file-notreq"
                 accept="application/pdf"
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, recommendationletter3: e.target.files[0]});
+                  }}
               />
               <label
                 htmlFor="recommendationletter3"
@@ -1097,6 +1136,12 @@ const ApplicationForm = ({}) => {
                 name="studyplan"
                 className="Application-input-field-file-notreq"
                 accept="application/pdf"
+                onChange={
+                  (e)=>{ 
+                      e.preventDefault();
+                      console.log("e.target: ", e.target);
+                      setValues({...values, studyplan: e.target.files[0]});
+                  }}
               />
               <label
                 htmlFor="studyplan"
@@ -1112,7 +1157,7 @@ const ApplicationForm = ({}) => {
               className="Application-checkbox"
               type="checkbox"
               id="terms"
-              onChange={(e) => setchecked(!checked)}
+              onChange={handleChange}
               value="agree"
               required
             />
@@ -1125,8 +1170,7 @@ const ApplicationForm = ({}) => {
           <div className="Application-action row">
             <button
               className="Application-action-button"
-              type="submit"
-              onClick={submitData}
+             type="button" onClick={handleSubmit}
             >
               Submit
             </button>
