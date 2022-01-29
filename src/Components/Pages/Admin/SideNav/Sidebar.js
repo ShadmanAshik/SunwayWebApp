@@ -14,15 +14,35 @@ export class Sidebar extends Component {
               <MenuItem> Form Data</MenuItem>
             </Link>
             <MenuItem>Dashboard</MenuItem>
-            <SubMenu title="Components">
+            <SubMenu title="Form Data">
               <Link to='commonFormData'>
                 <MenuItem>Common Form</MenuItem>
               </Link>
+              <Link to='contactUsData'>
+                <MenuItem>Contact Us Form</MenuItem>
+              </Link>
+              <Link to='scholarshipFormData'>
+                <MenuItem>Contact Us Form</MenuItem>
+              </Link>
+              <Link to='skillFormData'>
+                <MenuItem>Skill Dev Form</MenuItem>
+              </Link>
+              <Link to='languageFormData'>
+                <MenuItem>Language Form</MenuItem>
+              </Link>
+              
+              <Link to='tuitionData'>
+                <MenuItem>Hire Tutor Form</MenuItem>
+              </Link>
+              <Link to='tutorData'>
+                <MenuItem>Be Tuotr Form</MenuItem>
+              </Link>
 
-              <MenuItem>Component 2</MenuItem>
+              
             </SubMenu>
           </Menu>
         </ProSidebar>
+        <Outlet/>
         
       </div>
     );

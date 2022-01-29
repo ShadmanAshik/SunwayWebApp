@@ -7,43 +7,17 @@ import Sidebar from "./SideNav/Sidebar";
 function AdminDashboard() {
   return (
     <div className="sidebar">
-      <ProSidebar>
-          <Menu iconShape="square">
-            <Link to="formData">
-              <MenuItem> Form Data</MenuItem>
-            </Link>
-            <MenuItem>Dashboard</MenuItem>
-            <SubMenu title="Form Data">
-              <Link to='commonFormData'>
-                <MenuItem>Common Form</MenuItem>
-              </Link>
-              <Link to='contactUsData'>
-                <MenuItem>Contact Us Form</MenuItem>
-              </Link>
-              <Link to='scholarshipFormData'>
-                <MenuItem>Contact Us Form</MenuItem>
-              </Link>
-              <Link to='skillFormData'>
-                <MenuItem>Skill Dev Form</MenuItem>
-              </Link>
-              <Link to='languageFormData'>
-                <MenuItem>Language Form</MenuItem>
-              </Link>
-              
-              <Link to='tuitionData'>
-                <MenuItem>Hire Tutor Form</MenuItem>
-              </Link>
-              <Link to='tutorData'>
-                <MenuItem>Be Tuotr Form</MenuItem>
-              </Link>
-
-              
-            </SubMenu>
-          </Menu>
-        </ProSidebar>
-        <Outlet/>
-        <h1>Sidebar</h1>
-      {/* <Navbar bg="light" variant="light">
+        {/* <div className="row">
+          <div className="col-lg-3">
+            <Sidebar/>
+            <Outlet/>
+          </div>
+          <div className="col-lg-9">
+          <h1>Sidebar</h1>
+          </div>
+        </div> */}
+        
+      <Navbar bg="light" variant="light">
         <Nav className="m-auto">
           <Link className="tableNavItem" to="commonFormData">
             <Nav.Item>Common Data</Nav.Item>
@@ -71,7 +45,7 @@ function AdminDashboard() {
           </Link>
         </Nav>
       </Navbar> 
-      <Outlet />*/}
+      <Outlet />
     </div>
   );
 }
