@@ -75,12 +75,11 @@ const UseForm = (props, validate) => {
               'is_authenticated': undefined
             });
           });
-
+  
       }).catch((err)=>{console.log("errors: ", err);});
-
+      
     console.log("==> axios called finished!");
-  };
- 
+  };   
   const signupSubmit = (e) => {
     e.preventDefault();
     

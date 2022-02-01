@@ -5,12 +5,13 @@ import useForm from "./useForm";
 import validate from "./validateinfo";
 
 const ApplicationForm = (props) => {
-  const { handleChange, handleSubmit, values, setCount, count, setValues} = useForm(
+  
+  const { handleChange, handleSubmit, values,  count, setCount, setValues} = useForm(
     props,
-    validate
+    validate,
   
   );
-
+  
   console.log("base_url",props.base_url);
   function decrement() {
     setCount((prevCount) => prevCount - 1);

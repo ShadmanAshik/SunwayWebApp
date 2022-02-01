@@ -1,8 +1,8 @@
-import "../LoginandSignup/LoginAndSignup.css";
-import validate from "./ValidateInfo";
-import UseForm from "./UseForm";
 import React from "react";
 import { Navigate } from "react-router-dom";
+import "../LoginandSignup/LoginAndSignup.css";
+import UseForm from "./UseForm";
+import validate from "./ValidateInfo";
 
 const LoginAndSignup = ( props ) => {
   
@@ -20,7 +20,7 @@ const LoginAndSignup = ( props ) => {
     return <Navigate to="/studentHomePage" />;
   } else if (values.is_authenticated === true && values.group === "Admin") {
     console.log("===> appointee home", values);
-    return <Navigate to="/adminDashboard/commonFormData" />;
+    return <Navigate to="/adminDashboard" />;
   }
   console.log("====> reg-log: ", document.getElementById("reg-log"));
 

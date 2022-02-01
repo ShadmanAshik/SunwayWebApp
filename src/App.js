@@ -57,8 +57,8 @@ import VisaApplication from "./Components/Pages/Services/VisaApplication";
 import BangladeshUniversity from "./Components/Pages/University/BangladeshUniversity";
 import GlobalUniversity from "./Components/Pages/University/GlobalUniversity";
 
-const base_url="http://127.0.0.1:8000/";
-// const base_url="/";
+// const base_url="http://127.0.0.1:8000/";
+const base_url="/";
 const App = ()=> {
   
   return (
@@ -133,10 +133,10 @@ const App = ()=> {
           <Route exact path="AdmissionForm" element={<Application base_url={base_url}/>} />
           <Route exact path="/ScholarshipForm" element={<ApplyScholarship base_url={base_url}/>} />
           <Route exact path="/adminDashboard" element={<AdminDashboard base_url={base_url}/>}>
-            {/* <Route path="commonFormData" element={<CommonData base_url={base_url}/>} /> */}
+            <Route path="commonFormData" element={<CommonData base_url={base_url}/>} />
             
             {/* <Route exact path="formData" element={<TableNav base_url={base_url}/>}> */}
-              <Route index element={<CommonData base_url={base_url}/>} />
+              {/* <Route index element={<CommonData base_url={base_url}/>} /> */}
               <Route path="contactUsData" element={<ContactData base_url={base_url}/>} />
               <Route path="agentData" element={<AgentData base_url={base_url}/>} />
               <Route path="languageFormData" element={<LanguageFormData base_url={base_url} />} />

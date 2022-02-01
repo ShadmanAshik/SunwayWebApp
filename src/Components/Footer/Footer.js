@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
-import {Link } from "react-router-dom";
 
 
-function Footer() {
+function Footer(props) {
   return (
     <>
       <div className="footer-part-1">
@@ -30,61 +30,61 @@ function Footer() {
             <div className="col-lg-3 col-md-4 col-sm-12 ">
               <div className="footer-column">
                 <h3 className="footer-title">Important Links</h3>
-                <a target="_blank" href="https://www.qs.com/rankings/">
+                <a target="_blank" href="https://www.qs.com/rankings/" rel="noreferrer">
                   QS Ranking
                 </a>
                 <br />
-                <a target="_blank" href="https://www.britishcouncil.org/">
+                <a target="_blank" href="https://www.britishcouncil.org/" rel="noreferrer">
                   British Council
                 </a>
                 <br />
                 <a
                   target="_blank"
-                  href="https://cscuk.fcdo.gov.uk/apply/masters-scholarships/"
+                  href="https://cscuk.fcdo.gov.uk/apply/masters-scholarships/" rel="noreferrer"
                 >
                   Commonwealth Scholarship
                 </a>
                 <br />
                 <a
                   target="_blank"
-                  href="https://www.cic.gc.ca/english/helpcentre/results-by-topic.asp?top=29"
+                  href="https://www.cic.gc.ca/english/helpcentre/results-by-topic.asp?top=29" rel="noreferrer"
                 >
                   Canada Express Entry
                 </a>
                 <br />
                 <a
                   target="_blank"
-                  href="https://www.gov.uk/browse/visas-immigration"
+                  href="https://www.gov.uk/browse/visas-immigration" rel="noreferrer"
                 >
                   Living in UK
                 </a>
                 <br />
                 <a
                   target="_blank"
-                  href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html"
+                  href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html" rel="noreferrer"
                 >
                   Study in Canada
                 </a>
                 <br />
                 <a
                   target="_blank"
-                  href="https://bangladesh.embassy.gov.au/daca/home.html"
+                  href="https://bangladesh.embassy.gov.au/daca/home.html" rel="noreferrer"
                 >
                   Australian High Commission
                 </a>
                 <br />
                 <a
                   target="_blank"
-                  href="https://www.internationalstudent.com/study_usa/"
+                  href="https://www.internationalstudent.com/study_usa/" rel="noreferrer"
                 >
                   Study in USA
                 </a>
                 <br />
-                <a target="_blank" href="https://www.biman-airlines.com/">
+                <a target="_blank" href="https://www.biman-airlines.com/" rel="noreferrer">
                   Bangladesh Airlines
                 </a>
                 <br />
-                <a target="_blank" href="https://www.timeshighereducation.com/">
+                <a target="_blank" href="https://www.timeshighereducation.com/" rel="noreferrer">
                   Times Higher Education
                 </a>
                 <br />
@@ -134,7 +134,7 @@ function Footer() {
                       <div className="social-icons-container">
                         <a
                           target="_blank"
-                          href="https://www.facebook.com/Sunway.Study.Group/"
+                          href="https://www.facebook.com/Sunway.Study.Group/" rel="noreferrer"
                         >
                           <img
                             className="icons"
@@ -145,7 +145,7 @@ function Footer() {
 
                         <a
                           target="_blank"
-                          href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw"
+                          href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw" rel="noreferrer"
                         >
                           <img
                             className="icons"
@@ -156,7 +156,7 @@ function Footer() {
 
                         <a
                           target="_blank"
-                          href="https://www.instagram.com/sunway_study_group/"
+                          href="https://www.instagram.com/sunway_study_group/" rel="noreferrer"
                         >
                           <img
                             className="icons"
@@ -165,7 +165,7 @@ function Footer() {
                           ></img>
                         </a>
 
-                        <a target="_blank" href="https://www.linkedin.com/company/sunway-study-group/">
+                        <a target="_blank" href="https://www.linkedin.com/company/sunway-study-group/" rel="noreferrer">
                           <img
                             className="icons"
                             src="/static/linkedin.png"
@@ -186,7 +186,7 @@ function Footer() {
       <div className="footer-2">
         <p class="col">
           Copyright ©2021 All rights reserved | IT Partner
-          <a target="_blank" href="http://www.ositsltd.com/index.html">
+          <a target="_blank" href="http://www.ositsltd.com/index.html" rel="noreferrer">
             <img className="ositimg" src="/static/osit.png" alt="osit" />
           </a>
         </p>

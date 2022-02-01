@@ -48,6 +48,7 @@ const useForm = (props) => {
     base_url:props.base_url,
   });
   const [error, setErrors] = useState({});
+  const [count, setCount] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -90,7 +91,7 @@ const useForm = (props) => {
     }
   }, [error]);
 
-  return { handleChange, values, handleSubmit, error, setValues};
+  return { handleChange, values, count, handleSubmit, error, setValues,setCount};
 };
 
 export default useForm;
