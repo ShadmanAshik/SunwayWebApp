@@ -55,7 +55,7 @@ const ScholarshipForm = ( props ) => {
             </div>
           </div>
 
-          <div className="ScholarshipForm">
+          <div className="Scholarship">
           <PhoneInput
               inputProps={{
                 name: "phone",

@@ -16,7 +16,7 @@ class Snippet extends React.Component {
       );
     }
   }
-export class AgentData extends Component {
+export class BusAgentData extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -68,5 +68,5 @@ export class AgentData extends Component {
         );
       }
     }
-export default AgentData
+export default BusAgentData
 

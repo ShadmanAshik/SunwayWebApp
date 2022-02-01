@@ -17,18 +17,18 @@
 }
 
 /* for the phone no component */
-.ScholarshipForm .special-label{
+.Scholarship .special-label{
   top:2px !important;
   left: 55px !important;
   color: #66737c !important;
   font-size: inherit !important;
 }
-.ScholarshipForm .react-tel-input{
+.Scholarship .react-tel-input{
   display: flex !important;
   flex-direction: column-reverse !important;
   padding-top: 20px !important;
 }
-.ScholarshipForm .form-control {
+.Scholarship .form-control {
   border: 0 !important;
   z-index: 1 !important;
   background-color: transparent !important;
@@ -42,14 +42,14 @@
   outline: none !important;
   transition: 0.25s ease !important;
 }
-.ScholarshipForm .flag{
+.Scholarship .flag{
   position:absolute !important;
   top: 50%;
   margin-top: 0px !important;
   z-index: 2 !important;
 }
 
-.ScholarshipForm .form-control:focus,.ScholarshipForm .form-control:valid{
+.Scholarship .form-control:focus,.Scholarship .form-control:valid{
   outline: none !important;
   border-bottom-color: var(--main-blue) !important;
   box-shadow:none !important;

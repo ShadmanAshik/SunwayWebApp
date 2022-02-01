@@ -1,17 +1,17 @@
-import { React, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import PhoneInput from "react-phone-input-2";
-import "./AgentForm.css";
 // import validate from "./ValidateInfo";
 // import useForm from "./useForm";
 import axios from "axios";
+import { React, useState } from "react";
+import PhoneInput from "react-phone-input-2";
+import "./AgentForm.css";
 
-const AgentForm = ({}) => {
+const AgentForm = (props) => {
   // const navigate = useNavigate();
   // const { handleChange, handleSubmit, values, error } = useForm(
   //   submitForm,
   //   validate
   // );
+  let base_url=props.base_url;
   const [checked, setchecked] = useState(false);
   const [fName, setfName] = useState("");
   const [lName, setlName] = useState("");
@@ -19,26 +19,24 @@ const AgentForm = ({}) => {
   const [occupation, setoccupation] = useState("");
   const [phone, setphone] = useState("");
   const [country, setcountry] = useState("");
-  const [company, setcompany] = useState("");
+  const [businessName, setbusinessName] = useState("");
   const [city, setcity] = useState("");
   const [state, setstate] = useState("");
-  const [AcademicCertificate, setAcademicCertificate] = useState("");
-  const [WAphone, setWAphone] = useState("");
+  const [academicCertificate, setacademicCertificate] = useState("");
+  const [whatsappnumber, setwhatsappnumber] = useState("");
   const [agentType, setagentType] = useState("");
-  const [Bemail, setBemail] = useState("");
-  const [Baddress, setBaddress] = useState("");
-  const [Bphone, setBphone] = useState("");
-  const [BcountryCode, setBcountryCode] = useState("");
+  const [businessemail, setbusinessemail] = useState("");
+  const [businessAddress, setbusinessAddress] = useState("");
+  const [businessNum, setbusinessNum] = useState("");
+  const [tradeNum, settradeNum] = useState("");
   const [webaddress, setwebaddress] = useState("");
   const [agentphoto, setagentphoto] = useState("");
   const [agentnid, setagentnid] = useState("");
-  const [passport, setpassport] = useState("");
   const [tradelicense, settradelicense] = useState("");
-  const [busninessRtradeliscenseno, setbusninessRtradeliscenseno] = useState("");
   const [tinbin, settinbin] = useState("");
-  const [contactyou, setcontactyou] = useState("");
-
-  const submitData = async () => {
+  const submitData = (e) => {
+    e.preventDefault();
+    console.log("submit data: ", e);
     let formField = new FormData();
     formField.append("fName", fName);
     formField.append("lName", lName);
@@ -46,31 +44,48 @@ const AgentForm = ({}) => {
     formField.append("occupation", occupation);
     formField.append("phone", phone);
     formField.append("country", country);
-    formField.append("company", company);
     formField.append("city", city);
     formField.append("state", state);
-    formField.append("AcademicCertificate", AcademicCertificate);
-    formField.append("WAphone", WAphone);
-    formField.append("agentType", agentType);
-    formField.append("Bemail", Bemail);
-    formField.append("Baddress", Baddress);
-    formField.append("Bphone", phone);
-    formField.append("BcountryCode", BcountryCode);
-    formField.append("webaddress", webaddress);
+    formField.append("academicCertificate", academicCertificate);
+    formField.append("agentType",agentType);
+    formField.append("businessName",businessName);   
     formField.append("agentphoto", agentphoto);
-    formField.append("agentnid", agentnid);
-    formField.append("passport", passport);
-    formField.append("tradelicense", tradelicense);
-    formField.append("busninessRtradeliscenseno", busninessRtradeliscenseno);
-    formField.append("tinbin", tinbin);
-    formField.append("contactyou", contactyou);
+    formField.append("agentnid", agentnid);   
+    formField.append("tinbin",tinbin);
+    formField.append("tradelicense",tradelicense);
+    formField.append("tradeNum",tradeNum);
+    formField.append("businessNum",businessNum);
+    formField.append("businessemail",businessemail);
+    formField.append("businessAddress",businessAddress);
+    // formField.append("tradelicense",tradelicense);
+    // formField.append("tradelicense",tradelicense);
 
+
+    // console.log("formadat: ", formField);
+    // console.log("agentphoto: ", agentphoto);
     const headers = {
-      "Content-Type": "application/json",
+      'content-type': 'multipart/form-data'
     };
-
-    axios
-      .post("http://127.0.0.1:8000/contactformdata/", formField, {
+    console.log("agencytype: ", agentType);
+    if(agentType==="buninessagent"){
+      console.log("business");
+      axios
+      .post(base_url+"form/businessagentpost/", formField, {
+        headers: headers,
+      })
+      .then((response) => {
+        alert("Successfully Submited!");
+        window.location.reload();
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    }
+    else if(agentType==="individualagent"){
+      console.log("agenc");
+      axios
+      .post(base_url+"form/individualagentpost/", formField, {
         headers: headers,
       })
       .then((response) => {
@@ -79,6 +94,7 @@ const AgentForm = ({}) => {
       .catch((error) => {
         console.log(error);
       });
+    }
   };
 
   return (
@@ -159,10 +175,10 @@ const AgentForm = ({}) => {
               <input
                 id="company"
                 type="text"
-                name="company"
+                name="businessName"
                 className="Agent-input-field"
-                value={company}
-                onChange={(e) => setcompany(e.target.value)}
+                value={businessName}
+                onChange={(e) => setbusinessName(e.target.value)}
                 disabled={agentType === "buninessagent" ? false : true}
                 required
               />
@@ -174,10 +190,10 @@ const AgentForm = ({}) => {
               <input
                 id="busninessRtradeliscenseno"
                 type="text"
-                name="busninessRtradeliscenseno"
+                name="tradeNum"
                 className="Agent-input-field"
-                value={busninessRtradeliscenseno}
-                onChange={(e) => setbusninessRtradeliscenseno(e.target.value)}
+                value={tradeNum}
+                onChange={(e) => settradeNum(e.target.value)}
                 disabled={agentType === "buninessagent" ? false : true}
                 required
               />
@@ -189,10 +205,10 @@ const AgentForm = ({}) => {
               <input
                 id="Baddress"
                 type="text"
-                name="Baddress"
+                name="businessAddress"
                 className="Agent-input-field"
-                value={Baddress}
-                onChange={(e) => setBaddress(e.target.value)}
+                value={businessAddress}
+                onChange={(e) => setbusinessAddress(e.target.value)}
                 disabled={agentType === "buninessagent" ? false : true}
                 required
               />
@@ -204,14 +220,14 @@ const AgentForm = ({}) => {
             <div className="AgentForm">
               <PhoneInput
                 inputProps={{
-                  name: "Bphone",
+                  name: "businessNum",
                   required: true,
                 }}
                 id="Bphone"
                 placeholder=""
                 type="tel"
-                value={Bphone}
-                onChange={setBphone}
+                value={businessNum}
+                onChange={setbusinessNum}
                 enableSearch
                 specialLabel={ <span>Business Contact Number:<span style={{color:"red"}}>*</span></span>}
                 countryCodeEditable={false}
@@ -225,10 +241,10 @@ const AgentForm = ({}) => {
               <input
                 id="Bemail"
                 type="email"
-                name="Bemail"
+                name="businessemail"
                 className="Agent-input-field"
-                value={Bemail}
-                onChange={(e) => setBemail(e.target.value)}
+                value={businessemail}
+                onChange={(e) => setbusinessemail(e.target.value)}
                 disabled={agentType === "buninessagent" ? false : true}
                 required
               />
@@ -621,11 +637,11 @@ const AgentForm = ({}) => {
               name: 'WAphone',
               required: false,
             }}
-              id="WAphone"
+              id="whatsappnumber"
               placeholder="Whatsapp Number:(If Any)"
               type="tel"
-              value={WAphone}
-              onChange={setWAphone}
+              value={whatsappnumber}
+              onChange={setwhatsappnumber}
               enableSearch
               specialLabel=""
               countryCodeEditable={false}
@@ -669,8 +685,8 @@ const AgentForm = ({}) => {
               type="file"
               name="agentphoto"
               className="Agent-input-field-file"
-              value={agentphoto}
-              onChange={(e) => setagentphoto(e.target.value)}
+              // value={agentphoto}
+              onChange={(e) => { e.preventDefault(); setagentphoto(e.target.files[0]); }}
               accept="image/png, image/jpeg"
               required
             />
@@ -686,9 +702,9 @@ const AgentForm = ({}) => {
               type="file"
               name="agentnid"
               className="Agent-input-field-file"
-              value={agentnid}
+              // value={agentnid}
               accept="application/pdf"
-              onChange={(e) => setagentnid(e.target.value)}
+              onChange={(e) => { e.preventDefault(); setagentnid(e.target.files[0]); }}
               required
             />
             <label htmlFor="agentnid" className="Agent-input-label-file">
@@ -708,8 +724,8 @@ const AgentForm = ({}) => {
               name="tradelicense"
               className="Agent-input-field-file"
               accept="application/pdf"
-              value={tradelicense}
-              onChange={(e) => settradelicense(e.target.value)}
+              // value={tradelicense}
+              onChange={(e) => { e.preventDefault(); settradelicense(e.target.files[0]); }}
               disabled={agentType === "buninessagent" ? false : true}
               required
             />
@@ -730,9 +746,9 @@ const AgentForm = ({}) => {
               name="tinbin"
               className="Agent-input-field-file"
               accept="application/pdf"
-              value={tinbin}
+              // value={tinbin}
               disabled={agentType === "buninessagent" ? false : true}
-              onChange={(e) => settinbin(e.target.value)}
+              onChange={(e) => { e.preventDefault(); settinbin(e.target.files[0]); }}
               required
             />
             <label htmlFor="tinbin" className="Agent-input-label-file">
@@ -749,15 +765,15 @@ const AgentForm = ({}) => {
             <input
               id="AcademicCertificate"
               type="file"
-              name="AcademicCertificate"
+              name="academicCertificate"
               className="Agent-input-field-file"
               accept="application/pdf"
-              value={AcademicCertificate}
-              onChange={(e) => setAcademicCertificate(e.target.value)}
+              // value={academicCertificate}
+              onChange={(e) => { e.preventDefault(); setacademicCertificate(e.target.files[0]); }}
               disabled={agentType === "individualagent" ? false : true}
               required
             />
-            <label htmlFor="tradelicense" className="Agent-input-label-file">
+            <label htmlFor="academicCertificate" className="Agent-input-label-file">
               Last Academic Certificate<span style={{color:"red"}}>*</span>
               <i class="arrow uil uil-arrow-down-right" />
             </label>
@@ -781,8 +797,8 @@ const AgentForm = ({}) => {
           <div className="Agent-action row">
             <button
               className="Agent-action-button"
-              type="submit"
-              onClick={submitData}
+              type="button"
+              onClick={(e)=>{e.preventDefault(); console.log("==========="); submitData(e)}}
             >
               Submit
             </button>

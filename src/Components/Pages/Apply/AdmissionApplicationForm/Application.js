@@ -1,22 +1,20 @@
-import React, { useState } from "react";
-import ApplicationForm from "./ApplicationForm";
-import AdmissionFormSuccess from "./AdmissionFormSuccess";
-import "./Application.css";
+import React from "react";
 import { Container } from "react-bootstrap";
 import HeroImg from "../../../HeroSection/HeroImg";
+import "./Application.css";
+import ApplicationForm from "./ApplicationForm";
 
-function Application() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+function Application(props) {
+  // const [isSubmitted, setIsSubmitted] = useState(false);
 
-  function submitForm() {
-    setIsSubmitted(true);
-  }
+let base_url=props.base_url;
+console.log("base_url",base_url);
   return (
     <>
       <Container>
         <HeroImg imgSrc="static/banner1.jpg" />
         <div className="ApplicationForm">
-          <ApplicationForm />
+          <ApplicationForm base_url={base_url}/>
         </div>
       </Container>
     </>

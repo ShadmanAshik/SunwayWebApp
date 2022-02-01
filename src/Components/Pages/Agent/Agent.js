@@ -2,10 +2,11 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import HeroImg from "../../HeroSection/HeroImg";
 import "./Agent.css";
-import AgentForm from "./AgentForm"
+import AgentForm from "./AgentForm";
 
 
-const Agent = () => {
+const Agent = (props) => {
+
   return (
     <>
       <div>
@@ -65,7 +66,7 @@ const Agent = () => {
                   </div>
                 </div>
                 <div className=" col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
-                  <AgentForm />
+                  <AgentForm base_url={props.base_url}/>
                 </div>
               </div>
             </div>

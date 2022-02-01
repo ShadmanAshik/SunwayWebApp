@@ -1,83 +1,96 @@
-import { useState, useEffect } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-const useForm = (callback, validate) => {
+const useForm = (props) => {
   const [values, setValues] = useState({
-    photo: "",
-    name: "",
+    profilephoto: "",
+    fName: "",
+    lName: "",
     passportno: "",
     passportExpireDate: "",
     nationality: "",
-    religion: "",
+    nID_birthNumber:"",
     gender: "",
     dateofbirth: "",
     placeofbirth: "",
     maritalstatus: "",
     email: "",
-    phoneno: "",
+    phone: "",
     homeaddress: "",
     homephone: "",
     applyuniveristy: "",
     majorsub: "",
-    institutename: "",
-    fieldofstudy: "",
-    startdate: "",
-    enddate: "",
-    cgpa: "",
-    institutename2: "",
-    fieldofstudy2: "",
-    startdate2: "",
-    enddate2: "",
-    cgpa2: "",
     profession: "",
     language: "",
     fathername: "",
     mothername: "",
-    fatherage: "",
-    motherage: "",
     fatheremployement: "",
     motheremployement: "",
     fathernumber: "",
     mothernumber: "",
-    wherehearaboutus: "",
     passportscan: "",
+    nIDscan: "",
     academiccertificate: "",
+    academiccertificate2: "",
+    academiccertificate3: "",
+    academiccertificate4: "",
+    academiccertificate5: "",
     transcript: "",
     transcript2: "",
-    policyclearance: "",
+    transcript3: "",
+    transcript4: "",
+    transcript5: "",
     bankstatement: "",
-    bankstatement2: "",
-    englishprofeciencydoc: "",
-    otherdoc: "",
     recommendationletter: "",
     recommendationletter2: "",
     recommendationletter3: "",
     studyplan: "",
+    base_url:props.base_url,
   });
   const [error, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.log("Name",name,value);
     setValues({
       ...values,
       [name]: value,
     });
   };
-
+  const headers = {
+    
+    'content-type': 'multipart/form-data'
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    setErrors(validate(values));
+    let formdata = new FormData();
+    console.log("values",values);
+    Object.keys(values).map((v,i)=>{
+      console.log("v> ", v, "| value: ", values[v]);
+      return formdata.append(v, values[v])});
+    console.log("Form Data",formdata);
+    // setErrors(validate(values));
     setIsSubmitting(true);
+    console.log("Neww",props.base_url);
+    axios.post(props.base_url+"form/admissionpost/", formdata, {
+      headers: headers
+    })
+    .then((response) => {
+      console.log(response.data);
+      alert("Submitted Successfull");
+      window.location.reload();
+    })
+    .catch((error) => {
+      console.log(error)
+    })
   };
 
   useEffect(() => {
     if (Object.keys(error).length === 0 && isSubmitting) {
-      callback();
     }
   }, [error]);
 
-  return { handleChange, values, handleSubmit, error };
+  return { handleChange, values, handleSubmit, error, setValues};
 };
 
 export default useForm;
