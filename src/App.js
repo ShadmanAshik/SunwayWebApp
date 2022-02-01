@@ -15,7 +15,6 @@ import Policy from "./Components/Pages/AboutUs/Policy";
 import WhySSG from "./Components/Pages/AboutUs/WhySSG";
 import AdminDashboard from "./Components/Pages/Admin/AdminDashboard";
 import AdmissionApplications from "./Components/Pages/Admin/FormData/AdmissionApplications";
-import AgentData from "./Components/Pages/Admin/FormData/AgentData";
 import BusAgentData from "./Components/Pages/Admin/FormData/BusAgentData";
 import CommonData from "./Components/Pages/Admin/FormData/CommonData";
 import ContactData from "./Components/Pages/Admin/FormData/ContactData";
@@ -140,7 +139,6 @@ const App = ()=> {
               <Route path="admissionFormData" element={<AdmissionApplications base_url={base_url}/>}/>
               <Route path="commonFormData" element={<CommonData base_url={base_url}/>} />
               <Route path="contactUsData" element={<ContactData base_url={base_url}/>} />
-              <Route path="agentData" element={<AgentData base_url={base_url}/>} />
               <Route path="languageFormData" element={<LanguageFormData base_url={base_url} />} />
               <Route path="skillFormData" element={<SkillFormData base_url={base_url}/>} />
               <Route path="tutorData" element={<TutorData base_url={base_url}/>} />
