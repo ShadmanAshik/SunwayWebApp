@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Container, Table} from 'react-bootstrap';
 import axios from "axios";
+import React, { Component } from 'react';
+import { Container, Table } from 'react-bootstrap';
 
 
 
@@ -37,7 +37,7 @@ export class CommonData extends Component {
     
       updateSnippetList() {
         axios
-          .get(this.props.base_url+"form/commonformget/",this.config)
+          .get(this.props.base_url+"/form/commonformget/",this.config)
           .then((response) => {
             console.log("==> response: ", response);
             this.setState({ snippets: response.data });

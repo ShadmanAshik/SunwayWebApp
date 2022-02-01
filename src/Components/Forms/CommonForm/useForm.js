@@ -31,7 +31,7 @@ const useForm = (props, validate) => {
 
     setErrors(validate(values));
     setIsSubmitting(true);
-    axios.post(values.base_url+'form/commonformpost/', values, {
+    axios.post(values.base_url+'/form/commonformpost/', values, {
       headers: headers
     })
     .then((response) => {

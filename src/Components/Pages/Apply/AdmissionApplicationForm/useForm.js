@@ -73,7 +73,7 @@ const useForm = (props) => {
     // setErrors(validate(values));
     setIsSubmitting(true);
     console.log("Neww",props.base_url);
-    axios.post(props.base_url+"form/admissionpost/", formdata, {
+    axios.post(props.base_url+"/form/admissionpost/", formdata, {
       headers: headers
     })
     .then((response) => {

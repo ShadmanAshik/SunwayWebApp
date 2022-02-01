@@ -34,7 +34,7 @@ export class LanguageFormData extends Component {
   }
   updateSnippetList() {
     axios
-      .get(this.props.base_url+"form/languageget/",this.config)
+      .get(this.props.base_url+"/form/languageget/",this.config)
       .then((response) => {
         console.log("==> response: ", response);
         this.setState({ snippets: response.data });

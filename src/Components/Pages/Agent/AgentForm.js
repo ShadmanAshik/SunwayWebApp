@@ -70,26 +70,25 @@ const AgentForm = (props) => {
     if(agentType==="buninessagent"){
       console.log("business");
       axios
-      .post(base_url+"form/businessagentpost/", formField, {
+      .post(base_url+"/form/businessagentpost/", formField, {
         headers: headers,
       })
       .then((response) => {
-        alert("Successfully Submited!");
+        alert("Successfully Submitted!");
         window.location.reload();
-        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
     }
     else if(agentType==="individualagent"){
-      console.log("agenc");
       axios
-      .post(base_url+"form/individualagentpost/", formField, {
+      .post(base_url+"/form/individualagentpost/", formField, {
         headers: headers,
       })
       .then((response) => {
-        console.log(response.data);
+        alert("Successfully Submitted!");
+        window.location.reload();
       })
       .catch((error) => {
         console.log(error);

@@ -34,7 +34,7 @@ export class ScholarshipFormData extends Component {
   }
   updateSnippetList() {
     axios
-      .get(this.props.base_url+"form/scholarshipget/",this.config)
+      .get(this.props.base_url+"/form/scholarshipget/",this.config)
       .then((response) => {
         console.log("==> response: ", response);
         this.setState({ snippets: response.data });

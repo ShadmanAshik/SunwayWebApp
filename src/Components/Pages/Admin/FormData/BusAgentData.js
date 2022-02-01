@@ -2,23 +2,28 @@ import axios from "axios";
 import React, { Component } from "react";
 import { Container, Table } from "react-bootstrap";
 
-
 class Snippet extends React.Component {
   render() {
     return (
       <tr>
-        <td>{this.props.snippet.fName} {this.props.snippet.lName}</td>
-        <td>{this.props.snippet.email}</td>
-        <td>{this.props.snippet.phone}</td>
-        <td>{this.props.snippet.skill}</td>
-        <td>{this.props.snippet.counselMode}</td>
+        <td>
+          {this.props.snippet.fName} {this.props.snippet.fName}
+        </td>
+        <td>{this.props.snippet.businessemail}</td>
+        <td>{this.props.snippet.businessNumber}</td>
+        <td>{this.props.snippet.whatsappnumber}</td>
+        <td>{this.props.snippet.businessName}</td>
+        <td>{this.props.snippet.webaddress}</td>
+        <td>{this.props.snippet.businessAddress}</td>
         <td>{this.props.snippet.country}</td>
+        <td>{this.props.snippet.tradelicense}</td>
+        
+        
       </tr>
     );
   }
 }
-export class SkillFormData extends Component {
-  
+export class BusAgentData extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,14 +31,14 @@ export class SkillFormData extends Component {
     };
     this.updateSnippetList = this.updateSnippetList.bind(this);
     this.config = {
-      'headers': {
-        'Authorization': "Token "+localStorage.getItem('auth_token')
-      }
-    }
+      headers: {
+        Authorization: "Token " + localStorage.getItem("auth_token"),
+      },
+    };
   }
   updateSnippetList() {
     axios
-      .get(this.props.base_url+"/form/skilldevget/",this.config)
+      .get(this.props.base_url + "/form/businessagentget/", this.config)
       .then((response) => {
         console.log("==> response: ", response);
         this.setState({ snippets: response.data });
@@ -49,17 +54,19 @@ export class SkillFormData extends Component {
     return (
       <div>
         <Container>
-          <h1>Skill Development Form's Data</h1>
-          <Table striped bordered hover size="sm">
+          <h1>Business Agent's Data</h1>
+          <Table striped bordered hover variant="dark">
             <thead>
               <tr>
                 <th>Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Skill</th>
-                <th>Counselinng Mode</th>
+                <th>Business Email</th>
+                <th>Business Phone</th>
+                <th>Whatsapp</th>
+                <th>Business Name</th>
+                <th>Wbsite/Social URL</th>
+                <th>Business Address</th>
                 <th>Country</th>
-
+                <th>Trade License</th>
               </tr>
             </thead>
             <tbody>
@@ -73,5 +80,4 @@ export class SkillFormData extends Component {
     );
   }
 }
-
-export default SkillFormData;
+export default BusAgentData;

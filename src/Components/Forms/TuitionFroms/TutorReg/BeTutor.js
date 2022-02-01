@@ -1,6 +1,5 @@
 import axios from "axios";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "./TutorRegForm.css";
 
@@ -35,7 +34,7 @@ class BeTutor extends React.Component {
     console.log("state: ", this.state);
 
     axios
-      .post(this.props.base_url + "form/betutorpost/", this.state)
+      .post(this.props.base_url + "/form/betutorpost/", this.state)
       .then((response) => {
         console.log("Got response: ", response);
         alert("Form Submitted!");

@@ -62,6 +62,12 @@ function AdminDashboard() {
           <Link className="tableNavItem" to="admissionFormData">
             <Nav.Item>Admission Applications </Nav.Item>
           </Link>
+          <Link className="tableNavItem" to="busAgentData">
+            <Nav.Item>Business Agent</Nav.Item>
+          </Link>
+          <Link className="tableNavItem" to="indAgentData">
+            <Nav.Item>Individual Agent</Nav.Item>
+          </Link>
           <Link className="tableNavItem" to="tuitionData">
             <Nav.Item>Tuition Data </Nav.Item>
           </Link>

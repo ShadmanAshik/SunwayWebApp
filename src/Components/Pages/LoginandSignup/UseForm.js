@@ -42,10 +42,8 @@ const UseForm = (props, validate) => {
     };
 
 
-    axios.post(values.base_url+"accounts/token/login/", data)
+    axios.post(values.base_url+"/accounts/token/login/", data)
       .then((res)=>{
-
-        console.log("accounts/token/login res: ", res);
         localStorage.setItem('auth_token', res.data.auth_token);
         let config = {
           'headers': {
@@ -53,10 +51,9 @@ const UseForm = (props, validate) => {
           }
         };
         axios.get(
-          values.base_url+"accounts/users/me/", 
+          values.base_url+"/accounts/users/me/", 
           config
         ).then((res)=>{
-          console.log("===> ", values.base_url+"accounts/users/ ===> ", res);
           localStorage.setItem(
             'user_type', res.data.is_agent? "Agent" : (res.data.is_student ? "Student" :(res.data.is_admin? "Admin":false))
           );
@@ -95,11 +92,10 @@ const UseForm = (props, validate) => {
     };
 
 
-    axios.post(values.base_url+"accounts/users/", data)
+    axios.post(values.base_url+"/accounts/users/", data)
       .then((res)=>{
         alert("Registration Complete!")
         window.location.reload();
-        console.log("accounts/users/ res: ", res);
   
       }).catch((err)=>{console.log("errors: ", err);});
       

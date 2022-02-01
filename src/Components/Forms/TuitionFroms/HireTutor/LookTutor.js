@@ -23,7 +23,7 @@ class LookTutor extends React.Component {
     console.log("state: ", this.state);
 
     axios
-      .post(this.props.base_url + "form/looktutorpost/", this.state)
+      .post(this.props.base_url + "/form/looktutorpost/", this.state)
       .then((response) => {
         console.log("Got response: ", response);
         alert("Form Submitted!");

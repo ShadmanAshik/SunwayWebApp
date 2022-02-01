@@ -33,7 +33,7 @@ export class ContactData extends Component {
 
   updateSnippetList() {
     axios
-      .get(this.props.base_url+"form/contactusget/",this.config)
+      .get(this.props.base_url+"/form/contactusget/",this.config)
       .then((response) => {
         console.log("==> response: ", response);
         this.setState({ snippets: response.data });
