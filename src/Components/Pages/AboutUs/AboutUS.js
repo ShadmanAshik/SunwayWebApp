@@ -20,7 +20,7 @@ function AboutUS(props) {
                 <div class=" col-sm-12">
                   <img
                     className="listImg-aboutus"
-                    src="/static/About-Us.png"
+                    src="/static/ABOUT SSG Banner -01.jpg"
                     alt="aboutus"
                   />
                 </div>

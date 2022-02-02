@@ -10,13 +10,13 @@ class Snippet extends React.Component {
           {this.props.snippet.fName} {this.props.snippet.fName}
         </td>
         <td>{this.props.snippet.businessemail}</td>
-        <td>{this.props.snippet.businessNumber}</td>
+        <td>{this.props.snippet.businessNum}</td>
         <td>{this.props.snippet.whatsappnumber}</td>
         <td>{this.props.snippet.businessName}</td>
         <td>{this.props.snippet.webaddress}</td>
         <td>{this.props.snippet.businessAddress}</td>
         <td>{this.props.snippet.country}</td>
-        <td>{this.props.snippet.tradelicense}</td>
+        <td>{this.props.snippet.tradeNum}</td>
         
         
       </tr>

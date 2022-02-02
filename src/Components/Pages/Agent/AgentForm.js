@@ -255,7 +255,7 @@ const AgentForm = (props) => {
             
           </span>
 
-          <div
+          <span
             className="agentfield"
             style={
               agentType === "individualagent"
@@ -321,7 +321,7 @@ const AgentForm = (props) => {
               </label>
               
             </div>
-          </div>
+          </span>
 
           <div className="Agent-input">
             <select
@@ -631,9 +631,8 @@ const AgentForm = (props) => {
           </div>
           <div className="AgentForm-notreq">
             <PhoneInput
-            inputProps={{
-              
-              name: 'WAphone',
+            inputProps={{             
+              name: 'whatsappnumber',
               required: false,
             }}
               id="whatsappnumber"

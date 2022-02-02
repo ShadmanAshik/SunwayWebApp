@@ -109,9 +109,9 @@ function Footer(props) {
                   <br />
                   <br />
                 </a>
-                <a href="tel:+8809642676767">
+                <a href="tel:+8809638224455">
                   <i id="contactIcon" class="fas fa-phone-alt"></i>
-                  +8809642676767
+                  +8809638224455
                 </a>
               </div>
             </div>
