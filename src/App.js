@@ -58,8 +58,8 @@ import VisaApplication from "./Components/Pages/Services/VisaApplication";
 import BangladeshUniversity from "./Components/Pages/University/BangladeshUniversity";
 import GlobalUniversity from "./Components/Pages/University/GlobalUniversity";
 
-// const base_url="http://127.0.0.1:8000";
-const base_url="";
+const base_url="http://127.0.0.1:8000";
+// const base_url="";
 const App = ()=> {
   
   return (

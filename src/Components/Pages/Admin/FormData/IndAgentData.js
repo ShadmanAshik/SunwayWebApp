@@ -13,7 +13,6 @@ class Snippet extends React.Component {
         <td>{this.props.snippet.phone}</td>
         <td>{this.props.snippet.occupation}</td>
         <td>{this.props.snippet.whatsappnumber}</td>
-
         <td>{this.props.snippet.state}</td>
         <td>{this.props.snippet.city}</td>
         <td>{this.props.snippet.country}</td>
