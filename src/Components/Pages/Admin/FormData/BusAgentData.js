@@ -16,7 +16,7 @@ class Snippet extends React.Component {
         <td>{this.props.snippet.webaddress}</td>
         <td>{this.props.snippet.businessAddress}</td>
         <td>{this.props.snippet.country}</td>
-        <td>{this.props.snippet.tradelicense}</td>
+        <td>{this.props.snippet.tradeNum}</td>
         
         
       </tr>
