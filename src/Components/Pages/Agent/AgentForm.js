@@ -6,11 +6,6 @@ import PhoneInput from "react-phone-input-2";
 import "./AgentForm.css";
 
 const AgentForm = (props) => {
-  // const navigate = useNavigate();
-  // const { handleChange, handleSubmit, values, error } = useForm(
-  //   submitForm,
-  //   validate
-  // );
   let base_url=props.base_url;
   const [checked, setchecked] = useState(false);
   const [fName, setfName] = useState("");
@@ -59,8 +54,8 @@ const AgentForm = (props) => {
     formField.append("businessNum",businessNum);
     formField.append("businessemail",businessemail);
     formField.append("businessAddress",businessAddress);
-    // formField.append("tradelicense",tradelicense);
-    // formField.append("tradelicense",tradelicense);
+    formField.append("webaddress",webaddress);
+    formField.append("whatsappnumber",whatsappnumber);
 
 
     // console.log("formadat: ", formField);
