@@ -42,11 +42,11 @@ const Header = () => {
                   ></img>
                 </a>
 
-                <a href="tel:+8809642676767">
+                <a href="tel:+8809638224455">
                   <i class="phonicn fas fa-phone-alt"></i>
                 </a>
-                <a href="tel:+8809642676767">
-                  <p className="HeaderNo">+8809642676767</p>
+                <a href="tel:+8809638224455">
+                  <p className="HeaderNo">+8809638224455</p>
                 </a>
               </div>
             </div>

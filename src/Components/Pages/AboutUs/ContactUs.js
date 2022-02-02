@@ -33,8 +33,8 @@ const ContactUs = (props) => {
                     <br />
                     <br />
                   </a>
-                  <a href="tel:+8809642676767">
-                    <i class="fas fa-headset"></i>+8809642676767
+                  <a href="tel:+8809638224455">
+                    <i class="fas fa-headset"></i>+8809638224455
                     <br />
                   </a>
               </div>

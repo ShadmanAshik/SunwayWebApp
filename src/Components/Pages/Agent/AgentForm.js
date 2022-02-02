@@ -46,6 +46,8 @@ const AgentForm = (props) => {
     formField.append("country", country);
     formField.append("city", city);
     formField.append("state", state);
+    formField.append("whatsappnumber", whatsappnumber);
+    formField.append("webaddress", webaddress);
     formField.append("academicCertificate", academicCertificate);
     formField.append("agentType",agentType);
     formField.append("businessName",businessName);   
