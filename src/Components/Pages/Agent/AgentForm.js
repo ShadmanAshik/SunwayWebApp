@@ -54,12 +54,7 @@ const AgentForm = (props) => {
     formField.append("businessNum",businessNum);
     formField.append("businessemail",businessemail);
     formField.append("businessAddress",businessAddress);
-    formField.append("webaddress",webaddress);
-    formField.append("whatsappnumber",whatsappnumber);
 
-
-    // console.log("formadat: ", formField);
-    // console.log("agentphoto: ", agentphoto);
     const headers = {
       'content-type': 'multipart/form-data'
     };
