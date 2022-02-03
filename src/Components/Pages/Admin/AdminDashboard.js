@@ -1,5 +1,4 @@
 import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
 import { Link, Outlet } from "react-router-dom";
 import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
