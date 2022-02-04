@@ -7,7 +7,7 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import axios from 'axios';
 
 function Editpost(props) {
-  let history = useHistory();
+  
   const [userInfo, setuserInfo] = useState({
     title: props.postList[0].title,
   });
@@ -43,7 +43,7 @@ function Editpost(props) {
       })
       .then(res => { // then print response status
         if(res.data.success === true){
-          history.push('/');
+        //   history.push('/');
         }
       })
     } catch (error) { throw error;}    

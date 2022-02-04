@@ -24,6 +24,8 @@ import ScholarshipFormData from "./Components/Pages/Admin/FormData/ScholarshipFo
 import SkillFormData from "./Components/Pages/Admin/FormData/SkillFormData";
 import TuitionsData from "./Components/Pages/Admin/FormData/TuitionsData";
 import TutorData from "./Components/Pages/Admin/FormData/TutorData";
+import Add from "./Components/Pages/Admin/PageEditor/Add";
+import Edit from "./Components/Pages/Admin/PageEditor/Edit";
 import Agent from "./Components/Pages/Agent/Agent";
 import Application from "./Components/Pages/Apply/AdmissionApplicationForm/Application";
 import ApplyScholarship from "./Components/Pages/Apply/ScholarshipApplicationForm/ApplyScholarship";
@@ -117,6 +119,8 @@ const App = ()=> {
           
           <Route exact path="/adminDashboard/" element={<AdminDashboard base_url={base_url}/>}>
               
+              <Route path="add" element={<Add base_url={base_url}/>}/>
+              <Route path="edit/:postId" element={<Edit base_url={base_url}/>}/>           
               <Route path="busAgentData" element={<BusAgentData base_url={base_url}/>}/>
               <Route path="indAgentData" element={<IndAgentData base_url={base_url}/>}/>
               <Route path="admissionFormData" element={<AdmissionApplications base_url={base_url}/>}/>
