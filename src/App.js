@@ -34,9 +34,11 @@ import EnglishSpoken from "./Components/Pages/Courses/EnglishSpoken";
 import IELTSPreparation from "./Components/Pages/Courses/IELTSPreparation";
 import LanguageCourses from "./Components/Pages/Courses/LanguageCourses";
 import ProfessionalGraphicDesign from "./Components/Pages/Courses/ProfessionalGraphicDesign";
+import Test from "./Components/Pages/Courses/Test";
 import WebDesignAndDevelopment from "./Components/Pages/Courses/WebDesignAndDevelopment";
 import Home from "./Components/Pages/Home/Home";
 import LoginAndSignup from "./Components/Pages/LoginandSignup/LoginAndSignup";
+import Logout from "./Components/Pages/LoginandSignup/Logout";
 import Blog from "./Components/Pages/NewsAndMedia/Blog";
 import Events from "./Components/Pages/NewsAndMedia/Events";
 import News from "./Components/Pages/NewsAndMedia/News";
@@ -111,7 +113,7 @@ const App = ()=> {
           <Route exact path="/Blog" element={<Blog base_url={base_url}/>} />
           <Route exact path="AdmissionForm" element={<Application base_url={base_url}/>} />
           <Route exact path="/ScholarshipForm" element={<ApplyScholarship base_url={base_url}/>} />
-        
+          <Route exact path="/test" element={<Test/>}/>
           
           <Route exact path="/adminDashboard/" element={<AdminDashboard base_url={base_url}/>}>
               
@@ -125,6 +127,7 @@ const App = ()=> {
               <Route path="tutorData" element={<TutorData base_url={base_url}/>} />
               <Route path="tuitionData" element={<TuitionsData base_url={base_url}/>} />
               <Route path="scholarshipFormData" element={<ScholarshipFormData base_url={base_url}/>} />
+              <Route path="logout" element={<Logout/>}/>
               
           </Route>
         </Routes>

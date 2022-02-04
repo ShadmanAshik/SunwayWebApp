@@ -1,5 +1,3 @@
-// import validate from "./ValidateInfo";
-// import useForm from "./useForm";
 import axios from "axios";
 import { React, useState } from "react";
 import PhoneInput from "react-phone-input-2";
@@ -54,7 +52,6 @@ const AgentForm = (props) => {
     formField.append("businessNum",businessNum);
     formField.append("businessemail",businessemail);
     formField.append("businessAddress",businessAddress);
-
     const headers = {
       'content-type': 'multipart/form-data'
     };

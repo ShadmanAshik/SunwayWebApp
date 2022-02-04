@@ -58,6 +58,10 @@ function AdminDashboard() {
                   <Link to="tutorData" />
                 </MenuItem>
               </SubMenu>
+              <MenuItem>
+                  LogOut
+                  <Link to="logout" />
+                </MenuItem>
             </Menu>
           </ProSidebar>
         </div>
