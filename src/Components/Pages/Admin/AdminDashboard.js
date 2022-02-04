@@ -8,7 +8,7 @@ function AdminDashboard() {
   return (
     <div className="sidebar">
       <div className="row">
-        <div className="col-md-1">
+        <div className="col-md-2">
           <ProSidebar>
             <Menu>
               <MenuItem>
@@ -65,7 +65,7 @@ function AdminDashboard() {
             </Menu>
           </ProSidebar>
         </div>
-        <div className="col-md-11">
+        <div className="col-md-10">
           <Outlet />
         </div>
       </div>

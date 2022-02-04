@@ -7,7 +7,6 @@ import { useHistory } from "react-router-dom";
 import axios from 'axios';
 
 function Add() {
-  let history = useHistory();
   const [userInfo, setuserInfo] = useState({
     title: '',
   });
@@ -39,7 +38,6 @@ function Add() {
       })
       .then(res => {
         if(res.data.success === true){
-          history.push('/');
         }
       })
     } catch (error) { throw error;}    
