@@ -1,10 +1,9 @@
-import React,{useState} from 'react';
-import { EditorState, convertToRaw} from 'draft-js';
-import { Editor } from 'react-draft-wysiwyg';
-import draftToHtml from 'draftjs-to-html';
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import { useHistory } from "react-router-dom";
 import axios from 'axios';
+import { convertToRaw, EditorState } from 'draft-js';
+import draftToHtml from 'draftjs-to-html';
+import React, { useState } from 'react';
+import { Editor } from 'react-draft-wysiwyg';
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 function Add() {
   const [userInfo, setuserInfo] = useState({
@@ -32,7 +31,7 @@ function Add() {
         setError('Required, Add description minimum length 50 characters');
         return;
       }
-      axios.post(`http://localhost:8080/addArticle`, {
+      axios.post("http://127.0.0.1:8000/editor/post/", {
         title: userInfo.title,
         description: userInfo.description.value
       })
