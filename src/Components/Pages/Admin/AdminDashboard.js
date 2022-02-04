@@ -1,7 +1,7 @@
 import React from "react";
-import { Menu, MenuItem, ProSidebar, SubMenu } from "react-pro-sidebar";
-import "react-pro-sidebar/dist/css/styles.css";
 import { Link, Outlet } from "react-router-dom";
+import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
+import "react-pro-sidebar/dist/css/styles.css";
 import "./AdminDashboard.css";
 
 function AdminDashboard() {

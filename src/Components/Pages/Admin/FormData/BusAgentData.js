@@ -55,7 +55,7 @@ export class BusAgentData extends Component {
       <div>
         <Container>
           <h1>Business Agent's Data</h1>
-          <Table striped bordered hover variant="dark">
+          <Table responsive="lg" striped bordered hover variant="dark">
             <thead>
               <tr>
                 <th>Name</th>
