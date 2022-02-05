@@ -47,7 +47,7 @@ const Tuition = (props) => {
                     </div>
                   </div>
                   <div
-                  className="row">
+                  className="TuitionForms">
                     <div className="TutorRegForm col-6 mt-5"><BeTutor base_url={base_url}/></div>
                     
                     <div className="HireTutorForm col-6 mt-5"><LookTutor base_url={base_url}/></div>
