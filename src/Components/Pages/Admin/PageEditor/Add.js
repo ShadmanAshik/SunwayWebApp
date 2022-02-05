@@ -18,6 +18,7 @@ function Add() {
   
   let editorState = EditorState.createEmpty();
   const [description, setDescription] = useState(editorState);
+  const [hasPhoto, sethasPhoto]=useState(false);
   const onEditorStateChange = (editorState) => {
     setDescription(editorState);
   }
