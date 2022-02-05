@@ -57,6 +57,7 @@ import StudyTour from "./Components/Pages/Services/StudyTour";
 import VisaApplication from "./Components/Pages/Services/VisaApplication";
 import BangladeshUniversity from "./Components/Pages/University/BangladeshUniversity";
 import GlobalUniversity from "./Components/Pages/University/GlobalUniversity";
+import ScrollToTop from "./Components/ScrollToTop"
 
 const base_url="http://127.0.0.1:8000";
 // const base_url="";
@@ -65,6 +66,7 @@ const App = ()=> {
   return (
     <div className="App">
       <BrowserRouter>
+      <ScrollToTop />
         <Sticky enabled={true} top={0} bottomBoundary={12000} innerZ={20}>
           <Header />
         </Sticky>

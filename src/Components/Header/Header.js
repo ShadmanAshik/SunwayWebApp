@@ -1,11 +1,6 @@
 import React from "react";
 import "./Header.css";
-import { 
-  Container,
-  Nav,
-  Navbar,
-  NavDropdown,
-} from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 
@@ -17,24 +12,40 @@ const Header = () => {
           <div className="row" id="head">
             <div className="socials col-lg-4 col-md-6">
               <div className="iconContainer">
-                <a target="_blank"href="https://www.facebook.com/Sunway.Study.Group/">
-                  <img className="headerIcons" src="/static/fb.png" alt="fb"></img>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/Sunway.Study.Group/"
+                >
+                  <img
+                    className="headerIcons"
+                    src="/static/fb.png"
+                    alt="fb"
+                  ></img>
                 </a>
-                <a target="_blank"href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/channel/UCerSddy20Rx9ic7TB9tIznw"
+                >
                   <img
                     className="headerIcons"
                     src="/static/youtube.png"
                     alt="fb"
                   ></img>
                 </a>
-                <a target="_blank"href="https://www.instagram.com/sunway_study_group/">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/sunway_study_group/"
+                >
                   <img
                     className="headerIcons"
                     src="/static/instagram.png"
                     alt="fb"
                   ></img>
                 </a>
-                <a target="_blank"href="https://www.linkedin.com/company/sunway-study-group/">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/company/sunway-study-group/"
+                >
                   <img
                     className="headerIcons"
                     src="/static/linkedin.png"
@@ -78,7 +89,7 @@ const Header = () => {
         </div>
       </div>
 
-      <Navbar className="nav" expand="lg">
+      <Navbar collapseOnSelect className="nav" expand="lg">
         <Container>
           <Navbar.Brand href="/home">
             <Link to="/home">
@@ -87,10 +98,13 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
+
             <Nav className="ms-auto">
-              <Link className="navItem" to="/home">
-                <Nav.Item id="navlink">Home</Nav.Item>
-              </Link>
+              <Nav.Item>
+                <Nav.Link className="navItem" id="navlink" eventKey="1" as={Link} to="/home">
+                  Home
+                </Nav.Link>
+              </Nav.Item>
 
               <NavDropdown
                 renderMenuOnMount={true}
@@ -103,36 +117,36 @@ const Header = () => {
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/about">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/about">
                     <div className="highlightItem">About SSG</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/whyssg">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/whyssg">
                     <div className="highlightItem">Why SSG</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/mission">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/mission">
                     <div className="highlightItem">Mission &amp; Vission</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/policy">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/policy">
                     <div className="highlightItem">Policy</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/ourteam">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/ourteam">
                     <div className="highlightItem">Our Team</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/contact">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/contact">
                     <div className="highlightItem">Contact Us</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
               </NavDropdown>
 
@@ -147,26 +161,26 @@ const Header = () => {
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/overseas">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/overseas">
                     <div className="highlightItem">Overseas Admission</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/language">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/language">
                     <div className="highlightItem">Language Proficiency</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/skilldev">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/skilldev">
                     <div className="highlightItem">Skill Development</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/tuition">
+                  <Nav.Link eventKey="1"  as={Link}className="dropdownItem" to="/tuition">
                     <div className="highlightItem">Tuition Media</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
               </NavDropdown>
 
@@ -181,42 +195,42 @@ const Header = () => {
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/studentCounseling">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/studentCounseling">
                     <div className="highlightItem">Student Counselling</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/applicationProcessing">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/applicationProcessing">
                     <div className="highlightItem">Application Processing</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/visaApplication">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/visaApplication">
                     <div className="highlightItem">
                       Visa Application Assistance
                     </div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/scholarshipSupport">
+                  <Nav.Link eventKey="1"  as={Link}className="dropdownItem" to="/scholarshipSupport">
                     <div className="highlightItem">Scholarship Support</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/admissionSupport">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/admissionSupport">
                     <div className="highlightItem">Admission Support</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/studyTour">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/studyTour">
                     <div className="highlightItem">Study Tour</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/advocacy">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/advocacy">
                     <div className="highlightItem">Advocacy</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
               </NavDropdown>
 
@@ -231,15 +245,15 @@ const Header = () => {
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/BDUni">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/BDUni">
                     <div className="highlightItem">Bangladeshi University</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/GUni">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/GUni">
                     <div className="highlightItem">Global University</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
               </NavDropdown>
 
@@ -254,58 +268,58 @@ const Header = () => {
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/EnglishSpoken">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/EnglishSpoken">
                     <div className="highlightItem">English Spoken</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/CommunicativeEnglish">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/CommunicativeEnglish">
                     <div className="highlightItem">Communicative English</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/AcademicEnglish">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/AcademicEnglish">
                     <div className="highlightItem">Academic English</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/IELTSPreparation">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/IELTSPreparation">
                     <div className="highlightItem">IELTS Preparation</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/LanguageCourses">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/LanguageCourses">
                     <div className="highlightItem">Language Courses</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item className="dropdownItem">
-                  <Link
+                  <Nav.Link eventKey="1"  as={Link}
                     className="dropdownItem"
                     to="/ProfessionalGraphicDesign"
                   >
                     <div className="highlightItem">
                       Professional Graphic Design
                     </div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/WebDesignAndDevelopment">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/WebDesignAndDevelopment">
                     <div className="highlightItem">
                       Web Design & Development
                     </div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
 
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/DigitalMarketing">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/DigitalMarketing">
                     <div className="highlightItem">Digital Marketing</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
               </NavDropdown>
 
@@ -319,41 +333,42 @@ const Header = () => {
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/Blog">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/Blog">
                     <div className="highlightItem">Blog</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/Events">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/Events">
                     <div className="highlightItem">Events</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/News">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/News">
                     <div className="highlightItem">News</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/Offer">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/Offer">
                     <div className="highlightItem">Offer</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/PhotoGallery">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/PhotoGallery">
                     <div className="highlightItem">Photo Gallery</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/Testimonial">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/Testimonial">
                     <div className="highlightItem">Testimonial</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/VideoGallery">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/VideoGallery">
                     <div className="highlightItem">Video Gallery</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
               </NavDropdown>
+
               <NavDropdown
                 renderMenuOnMount={true}
                 title={
@@ -364,14 +379,14 @@ const Header = () => {
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/AdmissionForm">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/AdmissionForm">
                     <div className="highlightItem">Admission</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="dropdownItem">
-                  <Link className="dropdownItem" to="/ScholarshipForm">
+                  <Nav.Link eventKey="1"  as={Link} className="dropdownItem" to="/ScholarshipForm">
                     <div className="highlightItem">Scholarship</div>
-                  </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>

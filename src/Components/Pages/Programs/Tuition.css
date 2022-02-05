@@ -26,3 +26,19 @@
   width: 37%;
   margin: 100px auto;
 }
+.TuitionForms{
+  display: flex;
+}
+@media only screen and (max-width: 1000px) {
+  .HireTutorForm{
+    width:fit-content;
+    
+  }
+  .TutorRegForm{
+    width:fit-content;
+    
+  }
+  .TuitionForms{
+    display:inline-block;
+  }
+}
