@@ -1,82 +1,74 @@
 import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
 import { Link, Outlet } from "react-router-dom";
-import "./TableNav.css";
+import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
+import "react-pro-sidebar/dist/css/styles.css";
+import "./AdminDashboard.css";
 
 function AdminDashboard() {
   return (
     <div className="sidebar">
-      {/* <ProSidebar>
-          <Menu iconShape="square">
-            <Link to="formData">
-              <MenuItem> Form Data</MenuItem>
-            </Link>
-            <MenuItem>Dashboard</MenuItem>
-            <SubMenu title="Form Data">
-              <Link to='commonFormData'>
-                <MenuItem>Common Form</MenuItem>
-              </Link>
-              <Link to='contactUsData'>
-                <MenuItem>Contact Us Form</MenuItem>
-              </Link>
-              <Link to='scholarshipFormData'>
-                <MenuItem>Contact Us Form</MenuItem>
-              </Link>
-              <Link to='skillFormData'>
-                <MenuItem>Skill Dev Form</MenuItem>
-              </Link>
-              <Link to='languageFormData'>
-                <MenuItem>Language Form</MenuItem>
-              </Link>
-              
-              <Link to='tuitionData'>
-                <MenuItem>Hire Tutor Form</MenuItem>
-              </Link>
-              <Link to='tutorData'>
-                <MenuItem>Be Tuotr Form</MenuItem>
-              </Link>
+      <div className="row">
+        <div className="col-md-2">
+          <ProSidebar>
+            <Menu>
+              <MenuItem>
+                Admin AdminDashboard
+                <Link to="/adminDashboard" />
+              </MenuItem>
 
-              
-            </SubMenu>
-          </Menu>
-        </ProSidebar>
-        <Outlet/>
-        <h1>Sidebar</h1> */}
-      <Navbar bg="light" variant="light">
-        <Nav className="m-auto">
-          <Link className="tableNavItem" to="commonFormData">
-            <Nav.Item>Common Data</Nav.Item>
-          </Link>
-          <Link className="tableNavItem" to="contactUsData">
-            <Nav.Item>Contact_Us Data</Nav.Item>
-          </Link>
-          <Link className="tableNavItem" to="languageFormData">
-            <Nav.Item>Language_Form Data </Nav.Item>
-          </Link>
-          <Link className="tableNavItem" to="skillFormData">
-            <Nav.Item>Skills_From Data </Nav.Item>
-          </Link>
-          <Link className="tableNavItem" to="scholarshipFormData">
-            <Nav.Item>Scholarship Applications </Nav.Item>
-          </Link>
-          <Link className="tableNavItem" to="admissionFormData">
-            <Nav.Item>Admission Applications </Nav.Item>
-          </Link>
-          <Link className="tableNavItem" to="busAgentData">
-            <Nav.Item>Business Agent</Nav.Item>
-          </Link>
-          <Link className="tableNavItem" to="indAgentData">
-            <Nav.Item>Individual Agent</Nav.Item>
-          </Link>
-          <Link className="tableNavItem" to="tuitionData">
-            <Nav.Item>Tuition Data </Nav.Item>
-          </Link>
-          <Link className="tableNavItem" to="tutorData">
-            <Nav.Item>Tutor Data </Nav.Item>
-          </Link>
-        </Nav>
-      </Navbar> 
-      <Outlet />
+              <SubMenu title="Form Data">
+                <MenuItem>
+                  Admission Form
+                  <Link to="admissionFormData" />
+                </MenuItem>
+                <MenuItem>
+                  Business Agents
+                  <Link to="busAgentData" />
+                </MenuItem>
+                <MenuItem>
+                  Individual Agents
+                  <Link to="indAgentData" />
+                </MenuItem>
+                <MenuItem>
+                  Common Form
+                  <Link to="commonFormData" />
+                </MenuItem>
+                <MenuItem>
+                  Contact Us Form
+                  <Link to="contactUsData" />
+                </MenuItem>
+                <MenuItem>
+                  Language Form
+                  <Link to="languageFormData" />
+                </MenuItem>
+                <MenuItem>
+                  Scholarship Form
+                  <Link to="scholarshipFormData" />
+                </MenuItem>
+                <MenuItem>
+                  Skill Form
+                  <Link to="skillFormData" />
+                </MenuItem>
+                <MenuItem>
+                  Hire Tutor Form
+                  <Link to="tuitionData" />
+                </MenuItem>
+                <MenuItem>
+                  Become Tutor Form
+                  <Link to="tutorData" />
+                </MenuItem>
+              </SubMenu>
+              <MenuItem>
+                  LogOut
+                  <Link to="logout" />
+                </MenuItem>
+            </Menu>
+          </ProSidebar>
+        </div>
+        <div className="col-md-10">
+          <Outlet />
+        </div>
+      </div>
     </div>
   );
 }

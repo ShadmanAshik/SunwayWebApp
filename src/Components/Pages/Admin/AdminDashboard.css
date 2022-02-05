@@ -1,0 +1,29 @@
+.tableNavItem{
+    padding: 5px 5px;
+  color: black;
+  font-size: 18px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none !important;
+}
+.pro-sidebar{
+  color: black;
+  height: 80vh;
+  width: 100%;
+  z-index: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.pro-sidebar > .pro-sidebar-inner {
+  background:white;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+.pro-sidebar .pro-menu > ul > .pro-sub-menu > .pro-inner-list-item {
+  position: relative;
+  background-color: whitesmoke;
+}
+
+.pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item:hover {
+  color:var(--main-deepOrange);
+}

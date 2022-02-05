@@ -6,7 +6,7 @@ import HeroImg from "../../HeroSection/HeroImg";
 import "./Language.css";
 
 const Language = (props) => {
-  let base_url=props.base_url;
+  let base_url = props.base_url;
   return (
     <>
       <Container>
@@ -32,11 +32,13 @@ const Language = (props) => {
                           Language proficiency is multidimensional and entails
                           linguistic, cognitive, and socio-cultural factors.
                         </li>
+
                         <li>
                           As students learn a second language, they progress at
                           different rates along a continuum of predictable
                           stages.
                         </li>
+
                         <li>
                           <strong>CAN DO</strong> Descriptors depict what
                           students can do with language at different levels of
@@ -57,7 +59,7 @@ const Language = (props) => {
                 </div>
               </div>
               <div className=" col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
-                <LangForm base_url={base_url}/>
+                <LangForm base_url={base_url} />
               </div>
             </div>
           </div>
