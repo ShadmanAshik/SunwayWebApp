@@ -218,7 +218,7 @@ const AgentForm = (props) => {
                 onChange={setbusinessNum}
                 enableSearch
                 specialLabel={ <span>Business Contact Number:<span style={{color:"red"}}>*</span></span>}
-                countryCodeEditable={false}
+                countryCodeEditable={true}
                 country=" "
                 disableSearchIcon={false}
                 disabled={agentType === "buninessagent" ? false : true}
@@ -270,7 +270,7 @@ const AgentForm = (props) => {
                 onChange={setphone}
                 enableSearch
                 specialLabel={ <span>Contact Number:<span style={{color:"red"}}>*</span></span>}
-                countryCodeEditable={false}
+                countryCodeEditable={true}
                 country=" "
                 disableSearchIcon={false}
                 disabled={agentType === "individualagent" ? false : true}
@@ -631,7 +631,7 @@ const AgentForm = (props) => {
               onChange={setwhatsappnumber}
               enableSearch
               specialLabel=""
-              countryCodeEditable={false}
+              countryCodeEditable={true}
               country=" "
               disableSearchIcon={false}
             />

@@ -14,7 +14,6 @@
 .caurousel-caption {
   top: 50%;
   transform: translateY(-35%);
-  
 }
 
 .popup-content {
@@ -143,6 +142,9 @@
     font-size: 20px;
     
   }
+  .caurousel-caption {
+    top: 45%;
+  }
   .hero img{
     
     height: 50vw;
@@ -155,5 +157,20 @@
   }
   .heroImg {
     height: 200px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .caurousel-caption {
+    top: 35%;
+    transform: translateY(-35%);
+  }
+  .caurousel-caption h1 {
+    font-size: 25px;
+    
+  }
+  .heroBtn {
+    font-size: 12px;
+    width: 100px;
+    padding: 4px;
   }
 }

@@ -184,8 +184,8 @@ function Footer(props) {
       </div>
 
       <div className="footer-2">
-        <p class="col">
-          Copyright ©2021 All rights reserved | IT Partner
+        <p class="col"> 
+          Copyright ©<span>{(new Date().getFullYear())}</span> All rights reserved | IT Partner
           <a target="_blank" href="http://www.ositsltd.com/index.html" rel="noreferrer">
             <img className="ositimg" src="/static/osit.png" alt="osit" />
           </a>
