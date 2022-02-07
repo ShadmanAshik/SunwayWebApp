@@ -166,8 +166,8 @@
 .action-button-Contactus {
   font: inherit;
   font-size: 24px;
-  /* padding: 10px;
-  padding: 5px 35px; */
+  /* padding: 10px; */
+  padding: 5px 35px; 
   font-weight: 500;
   background-color: var(--main-deepBlue);
   border-radius: 4px;
@@ -175,7 +175,6 @@
   border: 0;
   text-align: center;
   transition: 0.3s ease;
-  max-width: 200px;
 }
 
 .action-button-Contactus:hover {

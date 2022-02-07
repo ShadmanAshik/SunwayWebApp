@@ -85,7 +85,7 @@ const ContactForm = (props) => {
             </label>
           </div>
           <div className="action">
-            <button className="action-button-Contactus m-2 col-6" type="submit">
+            <button className="action-button-Contactus" type="submit">
               Submit
             </button>
           </div>

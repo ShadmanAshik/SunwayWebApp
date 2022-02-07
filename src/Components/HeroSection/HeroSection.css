@@ -24,7 +24,7 @@
   border-radius: 10px;
 }
 .regbtn-content{
-  height: 100% !important;
+  height: 70% !important;
   overflow-y:scroll;
 }
 .applybtn-content{
@@ -129,21 +129,24 @@
   text-align: center;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 440px) {
   .d-block {
     height: 200px;
   }
   .heroBtn {
     font-size: 12px;
-    width: 84px;
+    width: 100px;
     padding: 4px;
   }
   .caurousel-caption h1 {
-    font-size: 20px;
+    font-size: 19px;
     
   }
   .caurousel-caption {
-    top: 45%;
+    
+    top: 42%;
+    transform: translateY(-35%);
+    
   }
   .hero img{
     
@@ -157,20 +160,5 @@
   }
   .heroImg {
     height: 200px;
-  }
-}
-@media only screen and (max-width: 770px) {
-  .caurousel-caption {
-    top: 35%;
-    transform: translateY(-35%);
-  }
-  .caurousel-caption h1 {
-    font-size: 25px;
-    
-  }
-  .heroBtn {
-    font-size: 12px;
-    width: 100px;
-    padding: 4px;
   }
 }
