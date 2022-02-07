@@ -46,7 +46,7 @@ const HeroSection = (props) => {
               Explore more
             </Button>
             <Popup
-              className="regbtn"
+              className="logbtn"
               trigger={
                 <Button className="heroBtn" id="btn2" variant="secondary">
                   Register Now

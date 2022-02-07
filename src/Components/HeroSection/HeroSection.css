@@ -23,8 +23,12 @@
   position: relative;
   border-radius: 10px;
 }
+.logbtn-content{
+  height:80%!important;
+  overflow-y:scroll;
+}
 .regbtn-content{
-  height: 70% !important;
+  height: 80% !important;
   overflow-y:scroll;
 }
 .applybtn-content{
@@ -61,6 +65,11 @@
   width: 10px;
   position: relative;
   height: 50px !important;
+  right:30px;
+}
+.logbtn-content::-webkit-scrollbar{
+  width: 0px;
+  position: relative;
   right:30px;
 }
 .regbtn-content::-webkit-scrollbar{
