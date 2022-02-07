@@ -163,13 +163,13 @@ const ApplicationForm = (props) => {
                 htmlFor="passportExpireDate"
                 className="Application-input-label-date"
               >
-                Passport Expire Date
+                Passport Exp. Date
               </label>
             </div>
           </div>
 
-          <div className="row">
-            <div className="Application-input col-6">
+          <div className="">
+            <div className="Application-input ">
               <select
                 id="country"
                 type="text"
@@ -377,11 +377,11 @@ const ApplicationForm = (props) => {
                 <option value="zambian">Zambian</option>
                 <option value="zimbabwean">Zimbabwean</option>
               </select>
-              <label htmlFor="country" className="Application-input-labelrow">
+              <label htmlFor="country" className="Application-input-label">
                 Nationality:<span style={{color:"red"}}>*</span>
               </label>
             </div>
-            <div className="Application-input col-6">
+            <div className="Application-input ">
               <input
                 id="nid/birthredno"
                 type="text"
@@ -515,8 +515,8 @@ const ApplicationForm = (props) => {
             </div>
           </div>
 
-          <div className="row">
-            <div className="Application-input col-6">
+          <div className="">
+            <div className="Application-input">
               <input
                 required
                 id="applyuniveristy"
@@ -529,13 +529,13 @@ const ApplicationForm = (props) => {
               />
               <label
                 htmlFor="applyuniveristy"
-                className="Application-input-labelrow"
+                className="Application-input-label"
               >
                 University Applying For:<span style={{color:"red"}}>*</span>
               </label>
             </div>
 
-            <div className="Application-input col-6">
+            <div className="Application-input">
               <input
                 required
                 id="majorsub"
@@ -833,8 +833,8 @@ const ApplicationForm = (props) => {
           <br />
           <hr class="line solid" />
 
-          <div className="row">
-            <div className="Application-input col-6">
+          <div className="">
+            <div className="Application-input">
               <input
                 required
                 id="profession"
@@ -846,12 +846,12 @@ const ApplicationForm = (props) => {
               />
               <label
                 htmlFor="profession"
-                className="Application-input-labelrow"
+                className="Application-input-label"
               >
                 Applicant's Profession<span style={{color:"red"}}>*</span>
               </label>
             </div>
-            <div className="Application-input col-6">
+            <div className="Application-input">
               <input
                 required
                 id="language"
