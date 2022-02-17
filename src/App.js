@@ -116,12 +116,12 @@ const App = ()=> {
           <Route exact path="/Blog" element={<Blog base_url={base_url}/>} />
           <Route exact path="AdmissionForm" element={<Application base_url={base_url}/>} />
           <Route exact path="/ScholarshipForm" element={<ApplyScholarship base_url={base_url}/>} />
-          <Route exact path="/test" element={<Test/>}/>
+          <Route exact path="/test" element={<Test base_url={base_url}/>}/>
           
           <Route exact path="/adminDashboard/" element={<AdminDashboard base_url={base_url}/>}>
               
               <Route path="add" element={<Add base_url={base_url}/>}/>
-              <Route path="edit/:postId" element={<Edit base_url={base_url}/>}/>           
+              <Route path="edit" element={<Edit base_url={base_url}/>}/>           
               <Route path="busAgentData" element={<BusAgentData base_url={base_url}/>}/>
               <Route path="indAgentData" element={<IndAgentData base_url={base_url}/>}/>
               <Route path="admissionFormData" element={<AdmissionApplications base_url={base_url}/>}/>
