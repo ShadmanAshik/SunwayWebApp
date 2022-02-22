@@ -4,6 +4,7 @@ import CommonForm from "../../Forms/CommonForm/CommonForm";
 import HeroSection from "../../HeroSection/HeroSection";
 import ProgramSlider from "../../Slider/ProgramSlider";
 import ServicesSlider from "../../Slider/ServicesSlider";
+import ProductSlider from "../../Slider/ProductSlider";
 import "./Home.css";
 const Home = (props) => {
   let base_url=props.base_url;
@@ -19,6 +20,8 @@ const Home = (props) => {
                 <ProgramSlider />
                 <h1 className="title">Explore Our Services</h1>
                 <ServicesSlider />
+                <h1 className="title">Our Digital Educational Content</h1>
+                <ProductSlider/>
               </div>
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <CommonForm base_url={base_url}/>

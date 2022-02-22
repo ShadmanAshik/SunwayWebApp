@@ -1,0 +1,14 @@
+.subheading{
+    position: relative;
+    left:8px;
+    text-align: left;
+    font-size: 25px;
+    margin-top:30px;
+}
+.subheading2{
+    background-color: var(--main-deepOrange);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    margin-top:30px;
+}
